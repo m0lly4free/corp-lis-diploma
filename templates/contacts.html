@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Контакты — Корпорация ЛИС{% endblock %}
+
+{% block content %}
+  <section class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-6">Контакты</h1>
+
+    <!-- Информация -->
+    <div class="mb-10">
+      <h2 class="text-xl font-semibold mb-3">Адрес и реквизиты</h2>
+      <p>г. Москва, ул. Ленина, д. 10</p>
+      <p>Телефон: +7 (495) 123-45-67</p>
+      <p>Email: info@corp-lis.ru</p>
+      <div class="mt-4">
+        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor:..." width="100%" height="300" frameborder="0"></iframe>
+      </div>
+    </div>
+
+    <!-- Форма обратной связи -->
+    <div>
+      <h2 class="text-xl font-semibold mb-4">Напишите нам</h2>
+      {% if messages %}
+        {% for message in messages %}
+          <div class="mb-4 p-3 bg-green-100 text-green-800 rounded">{{ message }}</div>
+        {% endfor %}
+      {% endif %}
+
+      <form method="post" class="space-y-4">
+        {% csrf_token %}
+        <div>
+          <label class="block text-sm font-medium mb-1" for="{{ form.name.id_for_label }}">Имя *</label>
+          {{ form.name }}
+          {% if form.name.errors %}<p class="text-red-600 text-sm">{{ form.name.errors }}</p>{% endif %}
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="{{ form.email.id_for_label }}">Email *</label>
+          {{ form.email }}
+          {% if form.email.errors %}<p class="text-red-600 text-sm">{{ form.email.errors }}</p>{% endif %}
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="{{ form.phone.id_for_label }}">Телефон</label>
+          {{ form.phone }}
+          {% if form.phone.errors %}<p class="text-red-600 text-sm">{{ form.phone.errors }}</p>{% endif %}
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1" for="{{ form.message.id_for_label }}">Сообщение *</label>
+          {{ form.message }}
+          {% if form.message.errors %}<p class="text-red-600 text-sm">{{ form.message.errors }}</p>{% endif %}
+        </div>
+        <button type="submit" class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+          Отправить
+        </button>
+      </form>
+    </div>
+  </section>
+{% endblock %}

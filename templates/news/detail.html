@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}{{ news.title }} — Новости{% endblock %}
+
+{% block content %}
+  <article class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">{{ news.title }}</h1>
+    <time class="text-sm text-gray-500 mb-6 block">{{ news.created_at|date:"d.m.Y H:i" }}</time>
+
+    {% if news.preview_image %}
+      <img src="{{ news.preview_image.url }}" class="w-full max-w-3xl mx-auto rounded-lg mb-6" alt="{{ news.title }}">
+    {% endif %}
+
+    <div class="prose max-w-none text-gray-800">
+      {{ news.content|linebreaks }}
+    </div>
+
+    <a href="{% url 'news:list' %}" class="mt-6 inline-block text-blue-600 hover:underline">← Назад к списку новостей</a>
+  </article>
+{% endblock %}

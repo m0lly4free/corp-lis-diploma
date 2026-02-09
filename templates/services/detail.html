@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}{{ service.title }} — Услуги{% endblock %}
+
+{% block content %}
+  <article class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-4">{{ service.title }}</h1>
+
+    {% if service.image %}
+      <img src="{{ service.image.url }}" class="w-full max-w-2xl mx-auto rounded-lg mb-6" alt="{{ service.title }}">
+    {% endif %}
+
+    <div class="prose max-w-none text-gray-800">
+      {{ service.description|linebreaks }}
+    </div>
+
+    <a href="{% url 'services:list' %}" class="mt-6 inline-block text-blue-600 hover:underline">← Назад к списку услуг</a>
+  </article>
+{% endblock %}

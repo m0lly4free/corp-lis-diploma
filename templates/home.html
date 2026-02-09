@@ -1,0 +1,35 @@
+{% block title %}АО «Корпорация ЛИС» — Официальный сайт{% endblock %}
+
+{% block content %}
+  <section class="text-center py-12">
+    <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">АО «Корпорация ЛИС»</h1>
+    <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+      Лидер в области инновационных решений для промышленности с 2005 года
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/services/" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Наши услуги</a>
+      <a href="/contacts/" class="px-6 py-3 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">Связаться</a>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <h2 class="text-3xl font-bold text-center mb-10">Почему выбирают нас</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="text-blue-600 text-5xl mb-4">✓</div>
+        <h3 class="text-xl font-semibold mb-2">Надёжность</h3>
+        <p>Более 500 успешно завершённых проектов</p>
+      </div>
+      <div class="text-center">
+        <div class="text-blue-600 text-5xl mb-4">⚡</div>
+        <h3 class="text-xl font-semibold mb-2">Скорость</h3>
+        <p>Решения под ключ в кратчайшие сроки</p>
+      </div>
+      <div class="text-center">
+        <div class="text-blue-600 text-5xl mb-4">🌍</div>
+        <h3 class="text-xl font-semibold mb-2">Экспертиза</h3>
+        <p>Команда сертифицированных специалистов</p>
+      </div>
+    </div>
+  </section>
+{% endblock %}

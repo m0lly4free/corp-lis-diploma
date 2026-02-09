@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Новости — Корпорация ЛИС{% endblock %}
+
+{% block content %}
+  <h1 class="text-3xl font-bold mb-6">Новости</h1>
+
+  {% if page_obj %}
+    <div class="space-y-8">
+      {% for item in page_obj %}
+        <article class="border-b pb-6">
+          <div class="flex flex-col md:flex-row gap-6">
+            {% if item.preview_image %}
+              <div class="md:w-1/3">
+                <img src="{{ item.preview_image.url }}" class="w-full h-auto rounded object-cover" alt="{{ item.title }}">
+              </div>
+            {% endif %}
+            <div class="md:w-2/3">
+              <time class="text-sm text-gray-500">{{ item.created_at|date:"d.m.Y" }}</time>
+              <h2 class="text-xl font-semibold mt-1"><a href="{% url 'news:detail' item.pk %}" class="hover:underline">{{ item.title }}</a></h2>
+              <p class="mt-2 text-gray-700">{{ item.content|truncatewords:30 }}</p>
+              <a href="{% url 'news:detail' item.pk %}" class="text-blue-600 hover:underline mt-3 inline-block">Читать далее →</a>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <!-- Пагинация -->
+    {% if page_obj.has_other_pages %}
+      <div class="mt-8 flex justify-center space-x-2">
+        {% if page_obj.has_previous %}
+          <a href="?page=1" class="px-3 py-1 border rounded">&laquo; Первая</a>
+          <a href="?page={{ page_obj.previous_page_number }}" class="px-3 py-1 border rounded">Предыдущая</a>
+        {% endif %}
+
+        <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded">
+          {{ page_obj.number }} из {{ page_obj.paginator.num_pages }}
+        </span>
+
+        {% if page_obj.has_next %}
+          <a href="?page={{ page_obj.next_page_number }}" class="px-3 py-1 border rounded">Следующая</a>
+          <a href="?page={{ page_obj.paginator.num_pages }}" class="px-3 py-1 border rounded">Последняя &raquo;</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  {% else %}
+    <p>Новостей пока нет.</p>
+  {% endif %}
+{% endblock %}
