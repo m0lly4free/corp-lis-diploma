@@ -1,13 +1,14 @@
-<header class="bg-blue-900 text-white shadow-md">
-  <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
-    <div class="text-xl font-bold">АО «Корпорация ЛИС»</div>
-    <nav class="flex flex-wrap justify-center md:justify-start gap-6">
-      <a href="/" class="hover:underline {% if request.path == '/' %}font-semibold{% endif %}">Главная</a>
-      <a href="/about/" class="hover:underline {% if request.path == '/about/' %}font-semibold{% endif %}">О компании</a>
-      <a href="/services/" class="hover:underline {% if request.path == '/services/' %}font-semibold{% endif %}">Услуги</a>
-      <a href="/news/" class="hover:underline {% if request.path == '/news/' %}font-semibold{% endif %}">Новости</a>
-      <a href="/partners/" class="hover:underline {% if request.path == '/partners/' %}font-semibold{% endif %}">Партнёры</a>
-      <a href="/contacts/" class="hover:underline {% if request.path == '/contacts/' %}font-semibold{% endif %}">Контакты</a>
-    </nav>
+<header>
+  <div class="header-container container">
+    <a href="/" class="logo">АО «Корпорация <span>ЛИС</span></a>
+    
+    <ul class="nav-menu">
+      <li><a href="/">Главная</a></li>
+      <li><a href="/about/">О компании</a></li>
+      <li><a href="/services/">Услуги</a></li>
+      <li><a href="/news/">Новости</a></li>
+      <li><a href="/partners/">Партнёры</a></li>
+      <li><a href="/contacts/">Контакты</a></li>
+    </ul>
   </div>
 </header>

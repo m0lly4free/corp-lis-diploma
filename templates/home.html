@@ -1,35 +1,794 @@
-{% block title %}АО «Корпорация ЛИС» — Официальный сайт{% endblock %}
 
-{% block content %}
-  <section class="text-center py-12">
-    <h1 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6">АО «Корпорация ЛИС»</h1>
-    <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-      Лидер в области инновационных решений для промышленности с 2005 года
-    </p>
-    <div class="flex flex-col sm:flex-row justify-center gap-4">
-      <a href="/services/" class="px-6 py-3 bg-blue-600 text-white rounded hover:bg-blue-700 transition">Наши услуги</a>
-      <a href="/contacts/" class="px-6 py-3 border border-blue-600 text-blue-600 rounded hover:bg-blue-50 transition">Связаться</a>
+
+  <!-- Hero Section -->
+  <section class="hero" style="
+    background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
+    color: white;
+    padding: 6rem 0.4rem;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
+  
+    
+  </div>
+  <div style="
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 800px;
+    padding: 0.8rem;
+    z-index: 10;
+  ">
+  <!-- Навигационное меню внизу -->
+  <div style="position: absolute; bottom: 0.5rem; left: 50%; transform: translateX(-50%); width: 100%; max-width: 800px;">
+    <nav style="display: flex; justify-content: center; gap: 1.5rem; width: 100%;">
+      <a href="/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        min-width: 140px;
+        text-align: center;
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        Главная
+      </a>
+      
+      <a href="/about/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        min-width: 140px;
+        text-align: center;
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        О компании
+      </a>
+      
+      <a href="/services/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        min-width: 140px;
+        text-align: center;
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        Услуги
+      </a>
+      
+      <a href="/documents/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        min-width: 140px;
+        text-align: center;
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        Документы
+      </a>
+      
+      <a href="/contacts/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        min-width: 140px;
+        text-align: center;
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        Контакты
+      </a>
+    </nav>
+  </div>
+  </div>
+        </a>
+      </nav>
+    </div>
+    <div style="width: 100%; max-width: 1200px; text-align: center;">
+    <h1 style="
+      font-size: 3.8rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    ">АО «Корпорация ЛИС»</h1>
+    <h2 style="
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      line-height: 1.2;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    ">Заготовка и переработка цветного и чёрного металлолома</h2>
+  </div>
+  </section>
+
+  <!-- Company Info Section -->
+  <section class="section" style="padding: 0rem 0;">
+    <div class="container" style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+  ">
+        <div style="flex: 1; min-width: 300px;">
+          <img src="static/images/cor.jpg" alt="Компания" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+        </div>
+        
+        <div style="flex: 1; min-width: 300px;">
+        <p style="color: #4a5568; line-height: 1.7; font-size: 2.1rem; text-align: justify; margin-bottom: 0.5rem;">
+          АО «Корпорация ЛИС» в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года, является полным правопреемником ООО «Корпорация ЛИС». Мы являемся максимально открытыми и прозрачными для наших партнеров и контролирующих организаций и всегда готовы ответить на все возникающие вопросы за исключением относящихся к коммерческой конфиденциальности и государственной тайне. Мы сотрудничаем только с юридическими лицами. Нашей специализацией является работа в условиях, которые являются сложными и невыполнимыми для большинства ломозаготовительных предприятий.
+        </p>
+        </div>
+        </div>
+  </section>
+
+  <section class="section" style="padding: 0rem 0;">
+    <div class="container" style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+  ">     
+  
+       <div style="
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    ">
+        <p style="color: #4a5568; line-height: 1.7; font-size: 2.1rem; text-align: justify; margin-bottom: 0.5rem;">
+        В отличие от подавляющего большинства из них мы нацелены на взаимовыгодное долгосрочное сотрудничество с нашими клиентами и способны:
+        </p>
+        <ul style="color: #4a5568; line-height: 1.8; font-size: 2.1rem; margin-top: 1rem; padding-left: 1.5rem; text-align: justify;">
+          <li style="margin-bottom: 0.5rem;">- участвовать во всех видах конкурсных процедур по реализации лома во всех отраслях во всех регионах Российской Федерации;</li>
+          <li style="margin-bottom: 0.5rem;">- заключать с ломосдатчиками индивидуальные долгосрочные специфические договоры поставки ломов, разработанные их юристами;</li>
+          <li style="margin-bottom: 0.5rem;">- закреплять за каждым ломосдатчиком персонального менеджера;</li>
+          <li style="margin-bottom: 0.5rem;">- производить 100% предоплаты за готовую к отгрузке партию ломов и даже за партию, которая только будет образовываться у ломосдатчика в течение срока действия договора (в течение одного-трех лет);</li>
+          <li style="margin-bottom: 0.5rem;">- жестко фиксировать наши закупочные цены не изменяя их в течение всего срока действия договора;</li>
+          <li style="margin-bottom: 0.5rem;">- осуществлять все операции по вывозу лома, начиная с их оценки на территории ломосдатчика по количеству, качеству, стоимости, радиационной и взрывобезопасности, и кончая разборкой крупногабаритного и крупнотоннажного лома, его погрузкой и вывозом собственными силами и за наш счет;</li>
+          <li style="margin-bottom: 0.5rem;">- осуществлять все операции по первичной переработке сложных видов амортизационных ломов (отходы кабельной продукции, электродвигатели, реакторы, генераторы, трансформаторы и т.п.), содержащих в своём составе разные цветные металлы с целью получения первосортного сырья, способного использоваться в качестве шихты на металлургических предприятиях.</li>
+        </ul>
+      </div>   
+       <div style="flex: 1; min-width: 100px; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+  <div style="width: 100%; max-width: 1000px;">
+    <img src="static/images/XXXL.jpg" alt="Производство"style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+  </div>
+  
+  <div style="width: 100%; max-width: 1000px;">
+    <img src="static/images/XXXS.jpg" alt="Производство" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+  </div>
+</div> 
+          
     </div>
   </section>
 
-  <section class="py-12">
-    <h2 class="text-3xl font-bold text-center mb-10">Почему выбирают нас</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="text-center">
-        <div class="text-blue-600 text-5xl mb-4">✓</div>
-        <h3 class="text-xl font-semibold mb-2">Надёжность</h3>
-        <p>Более 500 успешно завершённых проектов</p>
+  <!-- Why Choose Us Section -->
+  <section class="section" style="padding: 5rem 0;">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 1rem;
+      ">Почему выбирают нас</h2>
+      <p style="color: #718096; font-size: 1.1rem;">Более 30 лет опыта в области промышленных решений</p>
+    </div>
+    
+    <div class="cards" style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    ">
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
+        <div style="
+          width: 8px;
+          height: 80px;
+          background: linear-gradient(135deg, #0066cc, #00a8e8);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+        ">
+          <span style="
+            font-size: 2.5rem;
+            color: white;
+            font-weight: bold;
+          ">✓</span>
+        </div>
+        <h3 style="
+          color: #0066cc;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-align: center;
+        ">Надёжность</h3>
+        <p style="
+          color: #4a5568;
+          line-height: 1.7;
+          text-align: center;
+        ">Более 5000 успешно завершённых проектов и опыт работы на рынке промышленности с 1993 года.</p>
       </div>
-      <div class="text-center">
-        <div class="text-blue-600 text-5xl mb-4">⚡</div>
-        <h3 class="text-xl font-semibold mb-2">Скорость</h3>
-        <p>Решения под ключ в кратчайшие сроки</p>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
+        <div style="
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, #0066cc, #00a8e8);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+        ">
+          <span style="
+            font-size: 2.5rem;
+            color: white;
+          ">⚡</span>
+        </div>
+        <h3 style="
+          color: #0066cc;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-align: center;
+        ">Скорость</h3>
+        <p style="
+          color: #4a5568;
+          line-height: 1.7;
+          text-align: center;
+        ">Решения под ключ в кратчайшие сроки с использованием современных технологий.</p>
       </div>
-      <div class="text-center">
-        <div class="text-blue-600 text-5xl mb-4">🌍</div>
-        <h3 class="text-xl font-semibold mb-2">Экспертиза</h3>
-        <p>Команда сертифицированных специалистов</p>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
+        <div style="
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, #0066cc, #00a8e8);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 1.5rem;
+        ">
+          <span style="
+            font-size: 2.5rem;
+            color: white;
+          ">🎓</span>
+        </div>
+        <h3 style="
+          color: #0066cc;
+          font-size: 1.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          text-align: center;
+        ">Экспертиза</h3>
+        <p style="
+          color: #4a5568;
+          line-height: 1.7;
+          text-align: center;
+        ">Команда сертифицированных специалистов с глубокими знаниями в области промышленности.</p>
       </div>
     </div>
   </section>
-{% endblock %}
+
+  <!-- Services Section -->
+  <section class="section" style="
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  ">
+    <div style="text-align: center; margin-bottom: 3rem;">
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 1rem;
+      ">Наши услуги</h2>
+      <p style="color: #718096; font-size: 1.1rem;">Современные решения для промышленности</p>
+    </div>
+    
+    <div class="cards" style="
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    ">
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">⚙️</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Покупка</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Покупка ломов и других товарно-материальных ценностей от наших поставщиков.
+        </p>
+      </div>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">🔧</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Демонтаж</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Наше предприятие осуществляет демонтаж и разборку любых крупнотоннажных и крупногабаритных изделий.
+        </p>
+      </div>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">🤖</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Погрузка</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Наше предприятие способно выполнить комплекс погрузочно-разгрузочных, такелажных и перевалочных работ любой степени сложности.
+        </p>
+      </div>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 5px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.0)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">💬</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Самовывоз</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Наше предприятие способно в кратчайшие сроки вывезти любые количества металлолома и других товарно-материальных ценностей из любого региона нашей страны.
+        </p>
+      </div>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">🏭</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Производство</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Наше предприятие имеет прекрасно оборудованную производственную базу в Москве.
+        </p>
+      </div>
+      
+      <div class="card" style="
+        background: white;
+        padding: 2rem;
+        border-radius: 12px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
+        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+          <div style="
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0066cc, #00a8e8);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+          ">
+            <span style="color: white; font-size: 1.5rem;">📊</span>
+          </div>
+          <h3 style="
+            color: #0066cc;
+            font-size: 1.4rem;
+            font-weight: 700;
+          ">Продажа</h3>
+        </div>
+        <p style="color: #4a5568; line-height: 1.7;">
+          Наше предприятие нацелено на долгосрочное сотрудничество с крупными металлургическими и ломозаготовительными предприятиями.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section" style="
+    padding: 5rem 0;
+    background: linear-gradient(135deg, #066cc 0%, #00a8e8 100%);
+    color: white;
+    text-align: center;
+  ">
+    <div style="max-width: 700px; margin: 0 auto;">
+      <h2 style="
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        background-image: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      ">Готовы начать работу над вашим проектом?</h2>
+      <p style="
+        font-size: 1.2rem;
+        opacity: 0.95;
+        margin-bottom: 0rem;
+        line-height: 1.7;
+      ">Свяжитесь с нами сегодня, и мы поможем найти оптимальное решение для ваших задач.</p>
+      <a href="/contacts/" style="
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 1rem 2.5rem;
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
+        Связаться с нами
+      </a>
+    </div>
+  </section>
+
+<!-- Футер -->
+<footer style="
+  background: linear-gradient(-135deg, #0066cc 0%, #ff7e05 100%);
+  color: white;
+  padding: 3rem 0 1rem;
+">
+  <div style="
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+  ">
+    <!-- Логотип и название слева -->
+    <div style="
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    ">
+      <div style="
+        display: flex;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      ">
+        <img src="https://i.imgur.com/logo.png" alt="Логотип" style="
+          width: 60px;
+          height: 60px;
+          margin-right: 1rem;
+        ">
+        <div>
+          <h3 style="
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-bottom: 0.5rem;
+          ">Корпорация ЛИС</h3>
+          <p style="
+            color: #cbd5e1;
+            line-height: 1.6;
+          ">Заготовка и переработка цветного и чёрного металлолома</p>
+        </div>
+      </div>
+      <div style="
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      ">
+        <a href="#" style="
+          color: #cbd5e1;
+          text-decoration: none;
+          transition: color 0.3s;
+        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+          <i class="fab fa-facebook-f" style="font-size: 1.2rem;"></i>
+        </a>
+        <a href="#" style="
+          color: #cbd5e1;
+          text-decoration: none;
+          transition: color 0.3s;
+        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+          <i class="fab fa-twitter" style="font-size: 1.2rem;"></i>
+        </a>
+        <a href="#" style="
+          color: #cbd5e1;
+          text-decoration: none;
+          transition: color 0.3s;
+        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+          <i class="fab fa-linkedin-in" style="font-size: 1.2rem;"></i>
+        </a>
+        <a href="#" style="
+          color: #cbd5e1;
+          text-decoration: none;
+          transition: color 0.3s;
+        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+          <i class="fab fa-instagram" style="font-size: 1.2rem;"></i>
+        </a>
+      </div>
+    </div>
+    
+    <!-- Контакты и адрес справа -->
+    <div style="
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      flex-direction: column;
+    ">
+      <div style="
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      ">
+        <div>
+          <h4 style="
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin-bottom: 1rem;
+          ">Контакты</h4>
+          <div style="
+            margin-bottom: 1rem;
+            color: #cbd5e1;
+            line-height: 1.6;
+          ">
+            <a href="sek@corp-lis.ru" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              style="
+                color: #cbd5e1;
+                line-height: 1.6;
+                text-decoration: none;
+                transition: color 0.3s;
+                display: inline-block;
+              "
+              onmouseover="this.style.color='#90cdf4'" 
+              onmouseout="this.style.color='#cbd5e1'">
+              ⍌ sek@corp-lis.ru
+            </a>
+            <p style="
+              display: flex;
+              align-items: center;
+            ">
+              ☏ +7 (495) 381-95-47
+            </p>
+            <p style="
+              display: flex;
+              align-items: center;
+              margin-bottom: 0.5rem;
+            ">
+             
+              с 7.00 до 19.00 (без выходных)
+            </p>
+            
+          </div>
+        </div>
+        
+        <div>
+  <h4 style="
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    margin-bottom: 1rem;
+  ">Адрес</h4>
+  <a href="https://yandex.ru/maps/?text=г.%20Москва,%201-ый%20Дорожный%20проезд,%20дом%209" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     style="
+       color: #cbd5e1;
+       line-height: 1.6;
+       text-decoration: none;
+       transition: color 0.3s;
+       display: inline-block;
+     "
+     onmouseover="this.style.color='#90cdf4'" 
+     onmouseout="this.style.color='#cbd5e1'">
+    ⟟ г.Москва, 1-ый Дорожный проезд, д. 9
+  </a>
+</div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="
+    max-width: 1200px;
+    margin: 3rem auto 0;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #2d3748;
+    padding-top: 1.5rem;
+  ">
+    <p style="
+      color: #cbd5e1;
+      font-size: 0.9rem;
+      margin: 0;
+    ">© 2025 АО «Корпорация ЛИС». Все права защищены.</p>
+    <div style="
+      display: flex;
+      gap: 1.5rem;
+      color: #cbd5e1;
+      font-size: 0.9rem;
+    ">
+      <a href="#" style="
+        text-decoration: none;
+        color: #cbd5e1;
+        transition: color 0.3s;
+      " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+        Политика конфиденциальности
+      </a>
+      <a href="#" style="
+        text-decoration: none;
+        color: #cbd5e1;
+        transition: color 0.3s;
+      " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
+        Условия использования
+      </a>
+    </div>
+  </div>
+</footer>

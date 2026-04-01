@@ -1,26 +1,92 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% block title %}АО «Корпорация ЛИС»{% endblock %}</title>
-  <link href="/static/css/output.css" rel="stylesheet">
-  {% if page %}
-    {% if page.meta_description %}
-      <meta name="description" content="{{ page.meta_description }}">
-    {% endif %}
-    {% if page.meta_title %}
-      <meta property="og:title" content="{{ page.meta_title }}">
-    {% endif %}
-  {% endif %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+  </style>
 </head>
-<body class="font-sans bg-white text-gray-800">
-  {% include "includes/header.html" %}
+<body>
+  <!-- Верхнее меню -->
+  <nav class="bg-white shadow-md py-4">
+    <div class="container mx-auto px-4">
+      <div class="flex justify-between items-center">
+        <a href="/" class="flex items-center">
+          <div class="bg-blue-600 text-white rounded-xl w-10 h-10 flex items-center justify-center mr-3">
+            <span class="font-bold text-xl">Л</span>
+          </div>
+          <span class="text-2xl font-bold text-blue-900">АО «Корпорация ЛИС»</span>
+        </a>
+        
+        <!-- Навигационное меню -->
+        <div class="hidden md:flex space-x-6">
+          <a href="/" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Главная</a>
+          <a href="/about/" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">О компании</a>
+          <a href="/services/" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Услуги</a>
+          <a href="/documents/" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Документы</a>
+          <a href="/contacts/" class="nav-link text-gray-700 hover:text-blue-600 font-medium transition-colors">Контакты</a>
+        </div>
+        
+        <!-- Мобильное меню -->
+        <button class="md:hidden text-gray-600 hover:text-blue-600">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
 
   <main class="container mx-auto px-4 py-8 min-h-screen">
     {% block content %}{% endblock %}
   </main>
 
-  {% include "includes/footer.html" %}
+  <!-- Футер -->
+  <footer class="bg-gray-900 text-white py-8 mt-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">О компании</h3>
+          <p class="text-gray-400">Лидер в области инновационных решений для промышленности с 2005 года. Более 500 успешно завершённых проектов.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Контакты</h3>
+          <ul class="space-y-2 text-gray-400">
+            <li><i class="fas fa-map-marker-alt mr-2"></i> 125009, г. Москва, ул. Тверская, д. 1</li>
+            <li><i class="fas fa-phone mr-2"></i> +7 (495) 123-45-67</li>
+            <li><i class="fas fa-envelope mr-2"></i> info@corp-lis.ru</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold mb-4">Социальные сети</h3>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-facebook-f text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+              <i class="fab fa-instagram text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-800 mt-8 pt-6 text-center text-gray-400">
+        &copy; 2025 АО «Корпорация ЛИС». Все права защищены.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
