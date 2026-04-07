@@ -1,794 +1,402 @@
-
-
-  <!-- Hero Section -->
-  <section class="hero" style="
-    background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
-    color: white;
-    padding: 6rem 0.4rem;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-">
-  
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>АО «Корпорация ЛИС»</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #2d3748; background: #f8fafc; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.8rem; font-weight: 700; color: #0066cc; text-decoration: none; display: flex; align-items: center; }
+    .logo span { color: #ff7e05; margin-left: 5px; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 25px; }
+    nav ul li a { text-decoration: none; color: #4a5568; font-weight: 500; padding: 5px 0; position: relative; }
+    nav ul li a:hover { color: #0066cc; }
+    nav ul li a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #0066cc; border-radius: 2px; }
+    main { min-height: 70vh; padding: 40px 0; }
+    footer { background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%); color: white; padding: 40px 0 20px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .footer-col h3 { font-size: 1.4rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+    .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: #ff7e05; border-radius: 2px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .footer-col ul li a:hover { color: white; text-decoration: underline; }
+    .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); margin-top: 20px; }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; gap: 15px; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 8px 0; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
     
-  </div>
-  <div style="
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    max-width: 800px;
-    padding: 0.8rem;
-    z-index: 10;
-  ">
-  <!-- Навигационное меню внизу -->
-  <div style="position: absolute; bottom: 0.5rem; left: 50%; transform: translateX(-50%); width: 100%; max-width: 800px;">
-    <nav style="display: flex; justify-content: center; gap: 1.5rem; width: 100%;">
-      <a href="/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 0.8rem 5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        min-width: 140px;
-        text-align: center;
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        Главная
-      </a>
-      
-      <a href="/about/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 0.8rem 5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        min-width: 140px;
-        text-align: center;
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        О компании
-      </a>
-      
-      <a href="/services/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 0.8rem 5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        min-width: 140px;
-        text-align: center;
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        Услуги
-      </a>
-      
-      <a href="/documents/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 0.8rem 5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        min-width: 140px;
-        text-align: center;
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        Документы
-      </a>
-      
-      <a href="/contacts/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 0.8rem 5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        min-width: 140px;
-        text-align: center;
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        Контакты
-      </a>
-    </nav>
-  </div>
-  </div>
-        </a>
-      </nav>
-    </div>
-    <div style="width: 100%; max-width: 1200px; text-align: center;">
-    <h1 style="
-      font-size: 3.8rem;
+    /* Дополнительные стили для контента */
+    .hero {
+ background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
+      color: white;
+      padding: 8rem 0 6rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero h1 {
+      font-size: 3.2rem;
       font-weight: 700;
       margin-bottom: 1.5rem;
       line-height: 1.2;
       text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    ">АО «Корпорация ЛИС»</h1>
-    <h2 style="
+    }
+    .hero p {
+      font-size: 1.5rem;
+      opacity: 0.95;
+      margin-bottom: 2.5rem;
+      line-height: 1.6;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .btn {
+      display: inline-block;
+      background: white;
+      color: #0066cc;
+      padding: 1rem 2.5rem;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }
+    .btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    }
+    
+    .section {
+      padding: 5rem 0;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    .section-title p {
+      color: #718096;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+    }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      color: #0066cc;
       font-size: 1.6rem;
       font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    ">Заготовка и переработка цветного и чёрного металлолома</h2>
-  </div>
+      margin: 1.5rem 0 1rem;
+      padding: 0 1.8rem;
+    }
+    .card p {
+      color: #4a5568;
+      line-height: 1.7;
+      margin: 0 1.8rem 1.5rem;
+    }
+    .card a {
+      color: #0066cc;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      margin: 0 1.8rem 1.5rem;
+    }
+    .card a i {
+      margin-left: 0.5rem;
+    }
+    
+    .advantages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2.5rem;
+      text-align: center;
+    }
+    .advantage {
+      margin: 0 auto 1.5rem;
+    }
+    .advantage-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #0066cc, #00a8e8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
+      font-size: 2.2rem;
+      color: white;
+    }
+    .advantage h3 {
+      color: #0066cc;
+      font-size: 1.6rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+    .contact-item {
+      text-align: center;
+    }
+    .contact-item div {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 0.5rem;
+    }
+    .contact-item strong {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <!-- Шапка сайта с логотипом и меню -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">АО «Корпорация <span>ЛИС</span></a>
+        <nav>
+          <ul>
+            <li><a href="/" class="active">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section (Верхний баннер) -->
+  <section class="hero">
+    <div class="container" style="max-width: 900px; margin: 0 auto; position: relative; z-index: 1;">
+      <h1>Заготовка и переработка цветного и чёрного металлолома</h1>
+      <p style="margin-bottom: 2.5rem">Более 20 лет успешной работы на рынке металлургической промышленности России</p>
+      <a href="/about/" class="btn">Подробнее о компании</a>
+    </div>
+    
   </section>
 
-  <!-- Company Info Section -->
-  <section class="section" style="padding: 0rem 0;">
-    <div class="container" style="
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
-  ">
-        <div style="flex: 1; min-width: 300px;">
-          <img src="static/images/cor.jpg" alt="Компания" style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
+  <!-- Company Info Section (О компании кратко) -->
+  <section class="section" style="background: #f8fafc;">
+    <div class="container">
+      <div style="background: white; padding: 3rem; border-radius: 16px; box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.08);">
+        <div style="position: absolute; top: 0; left: 0; width: 8px; height: 100%; background: linear-gradient(180deg, #0066cc 0%, #00a8e8 100%);"></div>
+        <div style="position: relative; z-index: 1; padding: 0 1.8rem;">
+          <h2 style="font-size: 2.2rem; font-weight: 700; color: #0066cc; margin-bottom: 1.5rem; line-height: 1.3;">О компании</h2>
+          <p style="color: #4a5568; line-height: 1.8; font-size: 1.15rem; text-align: justify; margin-bottom: 1.5rem;">АО «Корпорация ЛИС» работает в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года. Являемся полным правопреемником ООО «Корпорация ЛИС».</p>
+          <p style="color: #4a5568; line-height: 1.8; font-size: 1.15rem; text-align: justify; margin-bottom: 2rem;">Мы максимально открыты и прозрачны для наших партнеров и контролирующих организаций. Всегда готовы ответить на все возникающие вопросы, за исключением относящихся к коммерческой конфиденциальности и государственной тайне. Сотрудничаем только с юридическими лицами.</p>
+          <a href="/about/" style="display: inline-block; background: #0066cc; color: white; padding: 0.8rem 2rem; border-radius: 6px; font-weight: 600; text-decoration: none; font-size: 1.1rem;">Полная информация о компании →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section (Основные направления деятельности) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Наши услуги</h2>
+       <p>Современные решения для промышленности и металлургического производства</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div class="card">
+          <div style="display: flex; align-items: center; padding: 1.8rem 0 0;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #00a8e8); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem;">
+              <span style="color: white; font-size: 1.8rem;">💰</span>
+            </div>
+            <h3>Покупка лома</h3>
+          </div>
+          <p>Покупка ломов и других товарно-материальных ценностей от наших поставщиков по всей России.</p>
+          <a href="/services/">Подробнее →</a>
         </div>
         
-        <div style="flex: 1; min-width: 300px;">
-        <p style="color: #4a5568; line-height: 1.7; font-size: 2.1rem; text-align: justify; margin-bottom: 0.5rem;">
-          АО «Корпорация ЛИС» в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года, является полным правопреемником ООО «Корпорация ЛИС». Мы являемся максимально открытыми и прозрачными для наших партнеров и контролирующих организаций и всегда готовы ответить на все возникающие вопросы за исключением относящихся к коммерческой конфиденциальности и государственной тайне. Мы сотрудничаем только с юридическими лицами. Нашей специализацией является работа в условиях, которые являются сложными и невыполнимыми для большинства ломозаготовительных предприятий.
-        </p>
+        <div class="card">
+          <div style="display: flex; align-items: center; padding: 1.8rem 0 0;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #00a8e8); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem;">
+              <span style="color: white; font-size: 1.8rem;">🔧</span>
+            </div>
+            <h3>Демонтаж</h3>
+          </div>
+          <p>Демонтаж и разборка любых крупнотоннажных и крупногабаритных изделий на территории заказчика.</p>
+          <a href="/services/">Подробнее →</a>
         </div>
+        
+        <div class="card">
+          <div style="display: flex; align-items: center; padding: 1.8rem 0 0;">
+            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #0066cc, #00a8e8); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-right: 1.2rem;">
+              <span style="color: white; font-size: 1.8rem;">🚚</span>
+            </div>
+            <h3>Самовывоз</h3>
+          </div>
+          <p>Вывоз любых количеств металлолома из любого региона России собственным транспортом.</p>
+          <a href="/services/">Подробнее →</a>
         </div>
-  </section>
-
-  <section class="section" style="padding: 0rem 0;">
-    <div class="container" style="
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    align-items: center;
-    width: 100%;
-  ">     
-  
-       <div style="
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-    ">
-        <p style="color: #4a5568; line-height: 1.7; font-size: 2.1rem; text-align: justify; margin-bottom: 0.5rem;">
-        В отличие от подавляющего большинства из них мы нацелены на взаимовыгодное долгосрочное сотрудничество с нашими клиентами и способны:
-        </p>
-        <ul style="color: #4a5568; line-height: 1.8; font-size: 2.1rem; margin-top: 1rem; padding-left: 1.5rem; text-align: justify;">
-          <li style="margin-bottom: 0.5rem;">- участвовать во всех видах конкурсных процедур по реализации лома во всех отраслях во всех регионах Российской Федерации;</li>
-          <li style="margin-bottom: 0.5rem;">- заключать с ломосдатчиками индивидуальные долгосрочные специфические договоры поставки ломов, разработанные их юристами;</li>
-          <li style="margin-bottom: 0.5rem;">- закреплять за каждым ломосдатчиком персонального менеджера;</li>
-          <li style="margin-bottom: 0.5rem;">- производить 100% предоплаты за готовую к отгрузке партию ломов и даже за партию, которая только будет образовываться у ломосдатчика в течение срока действия договора (в течение одного-трех лет);</li>
-          <li style="margin-bottom: 0.5rem;">- жестко фиксировать наши закупочные цены не изменяя их в течение всего срока действия договора;</li>
-          <li style="margin-bottom: 0.5rem;">- осуществлять все операции по вывозу лома, начиная с их оценки на территории ломосдатчика по количеству, качеству, стоимости, радиационной и взрывобезопасности, и кончая разборкой крупногабаритного и крупнотоннажного лома, его погрузкой и вывозом собственными силами и за наш счет;</li>
-          <li style="margin-bottom: 0.5rem;">- осуществлять все операции по первичной переработке сложных видов амортизационных ломов (отходы кабельной продукции, электродвигатели, реакторы, генераторы, трансформаторы и т.п.), содержащих в своём составе разные цветные металлы с целью получения первосортного сырья, способного использоваться в качестве шихты на металлургических предприятиях.</li>
-        </ul>
-      </div>   
-       <div style="flex: 1; min-width: 100px; display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-  <div style="width: 100%; max-width: 1000px;">
-    <img src="static/images/XXXL.jpg" alt="Производство"style="max-width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-  </div>
-  
-  <div style="width: 100%; max-width: 1000px;">
-    <img src="static/images/XXXS.jpg" alt="Производство" style="width: 100%; border-radius: 10px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);">
-  </div>
-</div> 
-          
-    </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section class="section" style="padding: 5rem 0;">
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <h2 style="
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 1rem;
-      ">Почему выбирают нас</h2>
-      <p style="color: #718096; font-size: 1.1rem;">Более 30 лет опыта в области промышленных решений</p>
-    </div>
-    
-    <div class="cards" style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    ">
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
-        <div style="
-          width: 8px;
-          height: 80px;
-          background: linear-gradient(135deg, #0066cc, #00a8e8);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 1.5rem;
-        ">
-          <span style="
-            font-size: 2.5rem;
-            color: white;
-            font-weight: bold;
-          ">✓</span>
-        </div>
-        <h3 style="
-          color: #0066cc;
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-          text-align: center;
-        ">Надёжность</h3>
-        <p style="
-          color: #4a5568;
-          line-height: 1.7;
-          text-align: center;
-        ">Более 5000 успешно завершённых проектов и опыт работы на рынке промышленности с 1993 года.</p>
       </div>
       
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
-        <div style="
-          width: 80px;
-          height: 80px;
-          background: linear-gradient(135deg, #0066cc, #00a8e8);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 1.5rem;
-        ">
-          <span style="
-            font-size: 2.5rem;
-            color: white;
-          ">⚡</span>
-        </div>
-        <h3 style="
-          color: #0066cc;
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-          text-align: center;
-        ">Скорость</h3>
-        <p style="
-          color: #4a5568;
-          line-height: 1.7;
-          text-align: center;
-        ">Решения под ключ в кратчайшие сроки с использованием современных технологий.</p>
-      </div>
-      
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-        border: 2px solid transparent;
-      " onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 12px 25px rgba(0,0,0,0.15)'; this.style.borderColor='#0066cc';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)'; this.style.borderColor='transparent';">
-        <div style="
-          width: 80px;
-          height: 80px;
-          background: linear-gradient(135deg, #0066cc, #00a8e8);
-          border-radius: 50%;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          margin: 0 auto 1.5rem;
-        ">
-          <span style="
-            font-size: 2.5rem;
-            color: white;
-          ">🎓</span>
-        </div>
-        <h3 style="
-          color: #0066cc;
-          font-size: 1.5rem;
-          font-weight: 700;
-          margin-bottom: 1rem;
-          text-align: center;
-        ">Экспертиза</h3>
-        <p style="
-          color: #4a5568;
-          line-height: 1.7;
-          text-align: center;
-        ">Команда сертифицированных специалистов с глубокими знаниями в области промышленности.</p>
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="/services/" style="display: inline-block; background: #0066cc; color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s ease;">Все услуги компании</a>
       </div>
     </div>
   </section>
 
-  <!-- Services Section -->
-  <section class="section" style="
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-  ">
-    <div style="text-align: center; margin-bottom: 3rem;">
-      <h2 style="
-        font-size: 2.2rem;
-        font-weight: 700;
-        color: #2d3748;
-        margin-bottom: 1rem;
-      ">Наши услуги</h2>
-      <p style="color: #718096; font-size: 1.1rem;">Современные решения для промышленности</p>
-    </div>
-    
-    <div class="cards" style="
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    ">
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">⚙️</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Покупка</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Покупка ломов и других товарно-материальных ценностей от наших поставщиков.
-        </p>
+  <!-- News Section (Новости) -->
+  <section class="section" style="background: #f8fafc;">
+    <div class="container">
+      <div class="section-title">
+        <h2>Новости компании</h2>
+        <p>Актуальная информация о деятельности и достижениях АО «Корпорация ЛИС»</p>
       </div>
       
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">🔧</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Демонтаж</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Наше предприятие осуществляет демонтаж и разборку любых крупнотоннажных и крупногабаритных изделий.
-        </p>
-      </div>
-      
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">🤖</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Погрузка</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Наше предприятие способно выполнить комплекс погрузочно-разгрузочных, такелажных и перевалочных работ любой степени сложности.
-        </p>
-      </div>
-      
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 5px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.0)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">💬</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Самовывоз</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Наше предприятие способно в кратчайшие сроки вывезти любые количества металлолома и других товарно-материальных ценностей из любого региона нашей страны.
-        </p>
-      </div>
-      
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">🏭</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Производство</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Наше предприятие имеет прекрасно оборудованную производственную базу в Москве.
-        </p>
-      </div>
-      
-      <div class="card" style="
-        background: white;
-        padding: 2rem;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-        transition: all 0.3s ease;
-      " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 10px 25px rgba(0,0,0,0.12)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.08)';">
-        <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-          <div style="
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(135deg, #0066cc, #00a8e8);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 1rem;
-          ">
-            <span style="color: white; font-size: 1.5rem;">📊</span>
-          </div>
-          <h3 style="
-            color: #0066cc;
-            font-size: 1.4rem;
-            font-weight: 700;
-          ">Продажа</h3>
-        </div>
-        <p style="color: #4a5568; line-height: 1.7;">
-          Наше предприятие нацелено на долгосрочное сотрудничество с крупными металлургическими и ломозаготовительными предприятиями.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="section" style="
-    padding: 5rem 0;
-    background: linear-gradient(135deg, #066cc 0%, #00a8e8 100%);
-    color: white;
-    text-align: center;
-  ">
-    <div style="max-width: 700px; margin: 0 auto;">
-      <h2 style="
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        background-image: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-      ">Готовы начать работу над вашим проектом?</h2>
-      <p style="
-        font-size: 1.2rem;
-        opacity: 0.95;
-        margin-bottom: 0rem;
-        line-height: 1.7;
-      ">Свяжитесь с нами сегодня, и мы поможем найти оптимальное решение для ваших задач.</p>
-      <a href="/contacts/" style="
-        display: inline-block;
-        background: white;
-        color: #0066cc;
-        padding: 1rem 2.5rem;
-        border-radius: 6px;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      " onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.3)';" 
-         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.2)';">
-        Связаться с нами
-      </a>
-    </div>
-  </section>
-
-<!-- Футер -->
-<footer style="
-  background: linear-gradient(-135deg, #0066cc 0%, #ff7e05 100%);
-  color: white;
-  padding: 3rem 0 1rem;
-">
-  <div style="
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2rem;
-  ">
-    <!-- Логотип и название слева -->
-    <div style="
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-    ">
-      <div style="
-        display: flex;
-        align-items: center;
-        margin-bottom: 1.5rem;
-      ">
-        <img src="https://i.imgur.com/logo.png" alt="Логотип" style="
-          width: 60px;
-          height: 60px;
-          margin-right: 1rem;
-        ">
-        <div>
-          <h3 style="
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            margin-bottom: 0.5rem;
-          ">Корпорация ЛИС</h3>
-          <p style="
-            color: #cbd5e1;
-            line-height: 1.6;
-          ">Заготовка и переработка цветного и чёрного металлолома</p>
-        </div>
-      </div>
-      <div style="
-        display: flex;
-        gap: 1rem;
-        margin-top: 1.5rem;
-      ">
-        <a href="#" style="
-          color: #cbd5e1;
-          text-decoration: none;
-          transition: color 0.3s;
-        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-          <i class="fab fa-facebook-f" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#" style="
-          color: #cbd5e1;
-          text-decoration: none;
-          transition: color 0.3s;
-        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-          <i class="fab fa-twitter" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#" style="
-          color: #cbd5e1;
-          text-decoration: none;
-          transition: color 0.3s;
-        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-          <i class="fab fa-linkedin-in" style="font-size: 1.2rem;"></i>
-        </a>
-        <a href="#" style="
-          color: #cbd5e1;
-          text-decoration: none;
-          transition: color 0.3s;
-        " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-          <i class="fab fa-instagram" style="font-size: 1.2rem;"></i>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Контакты и адрес справа -->
-    <div style="
-      flex: 1;
-      min-width: 300px;
-      display: flex;
-      flex-direction: column;
-    ">
-      <div style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1.5rem;
-      ">
-        <div>
-          <h4 style="
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #e2e8f0;
-            margin-bottom: 1rem;
-          ">Контакты</h4>
-          <div style="
-            margin-bottom: 1rem;
-            color: #cbd5e1;
-            line-height: 1.6;
-          ">
-            <a href="sek@corp-lis.ru" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              style="
-                color: #cbd5e1;
-                line-height: 1.6;
-                text-decoration: none;
-                transition: color 0.3s;
-                display: inline-block;
-              "
-              onmouseover="this.style.color='#90cdf4'" 
-              onmouseout="this.style.color='#cbd5e1'">
-              ⍌ sek@corp-lis.ru
-            </a>
-            <p style="
-              display: flex;
-              align-items: center;
-            ">
-              ☏ +7 (495) 381-95-47
-            </p>
-            <p style="
-              display: flex;
-              align-items: center;
-              margin-bottom: 0.5rem;
-            ">
-             
-              с 7.00 до 19.00 (без выходных)
-            </p>
-            
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <div class="card">
+          <div style="height: 200px; background: linear-gradient(135deg, #0066cc, #00a8e8); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">📰</div>
+          <div style="padding: 1.8rem;">
+            <div style="color: #718096; font-size: 0.95rem; margin-bottom: 0.8rem;">15 февраля 2026</div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 1rem;">Расширение производственных мощностей</h3>
+            <p style="color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem;">АО «Корпорация ЛИС» завершило модернизацию производственной базы в Москве, увеличив мощности переработки металлолома на 30%.</p>
+            <a href="/news/" style="color: #0066cc; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">Читать полностью →</a>
           </div>
         </div>
         
-        <div>
-  <h4 style="
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #e2e8f0;
-    margin-bottom: 1rem;
-  ">Адрес</h4>
-  <a href="https://yandex.ru/maps/?text=г.%20Москва,%201-ый%20Дорожный%20проезд,%20дом%209" 
-     target="_blank" 
-     rel="noopener noreferrer"
-     style="
-       color: #cbd5e1;
-       line-height: 1.6;
-       text-decoration: none;
-       transition: color 0.3s;
-       display: inline-block;
-     "
-     onmouseover="this.style.color='#90cdf4'" 
-     onmouseout="this.style.color='#cbd5e1'">
-    ⟟ г.Москва, 1-ый Дорожный проезд, д. 9
-  </a>
-</div>
+        <div class="card">
+          <div style="height: 200px; background: linear-gradient(135deg, #0066cc, #00a8e8); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🤝</div>
+          <div style="padding: 1.8rem;">
+            <div style="color: #718096; font-size: 0.95rem; margin-bottom: 0.8rem;">03 февраля 2026</div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 1rem;">Новый долгосрочный контракт</h3>
+            <p style="color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem;">Подписан договор о сотрудничестве с крупнейшим металлургическим комбинатом Урала на поставку 50 000 тонн вторичного сырья.</p>
+            <a href="/news/" style="color: #0066cc; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">Читать полностью →</a>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div style="height: 200px; background: linear-gradient(135deg, #0066cc, #00a8e8); display: flex; align-items: center; justify-content: center; color: white; font-size: 3rem;">🌱</div>
+          <div style="padding: 1.8rem;">
+            <div style="color: #718096; font-size: 0.95rem; margin-bottom: 0.8rem;">28 января 2026</div>
+            <h3 style="font-size: 1.5rem; font-weight: 700; color: #2d3748; margin-bottom: 1rem;">Экологическая инициатива</h3>
+            <p style="color: #4a5568; line-height: 1.7; margin-bottom: 1.5rem;">Компания запустила программу по снижению углеродного следа и внедрению энергоэффективных технологий на производстве.</p>
+            <a href="/news/" style="color: #0066cc; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center;">Читать полностью →</a>
+          </div>
+        </div>
+      </div>
+      
+      <div style="text-align: center; margin-top: 3rem;">
+        <a href="/news/" style="display: inline-block; background: #0066cc; color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s ease;">Все новости</a>
       </div>
     </div>
-  </div>
-  
-  <div style="
-    max-width: 1200px;
-    margin: 3rem auto 0;
-    padding: 0 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 1px solid #2d3748;
-    padding-top: 1.5rem;
-  ">
-    <p style="
-      color: #cbd5e1;
-      font-size: 0.9rem;
-      margin: 0;
-    ">© 2025 АО «Корпорация ЛИС». Все права защищены.</p>
-    <div style="
-      display: flex;
-      gap: 1.5rem;
-      color: #cbd5e1;
-      font-size: 0.9rem;
-    ">
-      <a href="#" style="
-        text-decoration: none;
-        color: #cbd5e1;
-        transition: color 0.3s;
-      " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-        Политика конфиденциальности
-      </a>
-      <a href="#" style="
-        text-decoration: none;
-        color: #cbd5e1;
-        transition: color 0.3s;
-      " onmouseover="this.style.color='#e2e8f0'" onmouseout="this.style.color='#cbd5e1'">
-        Условия использования
-      </a>
+  </section>
+
+  <!-- Advantages Section (Преимущества) -->
+  <section class="section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Почему выбирают нас</h2>
+        <p>Более 20 лет опыта в области промышленных решений и переработки металлолома</p>
+      </div>
+      
+      <div class="advantages-grid">
+        <div class="advantage">
+          <div class="advantage-icon">✓</div>
+          <h3>Надёжность</h3>
+          <p>Более 5000 успешно завершённых проектов и опыт работы на рынке с 2004 года.</p>
+        </div>
+        
+        <div class="advantage">
+          <div class="advantage-icon">⚡</div>
+          <h3>Скорость</h3>
+          <p>Решения под ключ в кратчайшие сроки с использованием современных технологий.</p>
+        </div>
+        
+        <div class="advantage">
+          <div class="advantage-icon">💼</div>
+          <h3>Экспертиза</h3>
+          <p>Команда сертифицированных специалистов с глубокими знаниями в области металлургии.</p>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
+  </section>
+
+  <!-- Contacts Section (Краткая контактная информация) -->
+  <section class="section" style="background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%); color: white;">
+    <div class="container" style="text-align: center;">
+      <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1.5rem;">Свяжитесь с нами</h2>
+      <p style="font-size: 1.3rem; opacity: 0.95; margin-bottom: 2.5rem; max-width: 700px; margin-left: auto; margin-right: auto; line-height: 1.7;">Готовы обсудить сотрудничество или ответить на ваши вопросы? Наша команда всегда на связи.</p>
+      
+      
+      
+      <a href="/contacts/" style="display: inline-block; background: white; color: #0066cc; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">Связаться</a>
+    </div>
+  </section>
+
+  <!-- Подвал сайта (Footer) -->
+  <footer style="background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);"
+  >
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>О компании</h3>
+          <p style="color: rgba(255,255,255,0.85); line-height: 1.6;">
+            АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+74953819547">+7 (495) 381-95-47</a></li>
+            <li><a href="mailto:sek@corp-lis.ru">sek@corp-lis.ru</a></li>
+            <li><a href="https://yandex.ru/maps/213/moscow/house/1_y_dorozhny_proyezd_9/Z04YcAVlTUwBQFtvfXpwdX5hYg==/?ll=37.625495%2C55.614226&z=16">г. Москва, 1-ый Дорожный проезд, д. 9</a></li>
+            <li>с 7:00 до 19:00 (без выходных)</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Разделы сайта</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 АО «Корпорация ЛИС». Все права защищены.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Услуги — АО «Корпорация ЛИС»</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #2d3748; background: #f8fafc; }
+    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 1.8rem; font-weight: 700; color: #0066cc; text-decoration: none; display: flex; align-items: center; }
+    .logo span { color: #ff7e05; margin-left: 5px; }
+    nav ul { display: flex; list-style: none; }
+    nav ul li { margin-left: 25px; }
+    nav ul li a { text-decoration: none; color: #4a5568; font-weight: 500; padding: 5px 0; position: relative; }
+    nav ul li a:hover { color: #0066cc; }
+    nav ul li a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #0066cc; border-radius: 2px; }
+    main { min-height: 70vh; padding: 40px 0; }
+    footer { background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%); color: white; padding: 40px 0 20px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
+    .footer-col h3 { font-size: 1.4rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
+    .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: #ff7e05; border-radius: 2px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 12px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .footer-col ul li a:hover { color: white; text-decoration: underline; }
+    .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); margin-top: 20px; }
+    @media (max-width: 768px) {
+      .header-inner { flex-direction: column; gap: 15px; }
+      nav ul { flex-direction: column; align-items: center; }
+      nav ul li { margin: 8px 0; }
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    }
+    
+    /* Стили для раздела "Услуги" */
+    .section {
+      padding: 5rem 0;
+      background: white;
+      border-radius: 16px;
+      margin-bottom: 2.5rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 6px;
+      height: 100%;
+      background: linear-gradient(180deg, #0066cc 0%, #00a8e8 100%);
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+    .section-title h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: #2d3748;
+      margin-bottom: 1rem;
+    }
+    .section-title p {
+      color: #718096;
+      font-size: 1.2rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+    .service-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+      border-color: #0066cc;
+    }
+    .service-icon {
+      height: 200px;
+      background: linear-gradient(135deg, #0066cc, #00a8e8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3.5rem;
+      color: white;
+    }
+    .service-content {
+      padding: 1.8rem;
+    }
+    .service-content h3 {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0066cc;
+      margin-bottom: 1rem;
+    }
+    .service-content p {
+      color: #4a5568;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .service-link {
+      color: #0066cc;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+    }
+    .service-link i {
+      margin-left: 0.5rem;
+    }
+    
+    .service-filter {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 2.5rem;
+      flex-wrap: wrap;
+    }
+    .filter-btn {
+      background: white;
+      border: 1px solid #e2e8f0;
+      padding: 0.7rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: #4a5568;
+    }
+    .filter-btn:hover {
+      background: #e0f2fe;
+      border-color: #0066cc;
+      color: #0066cc;
+    }
+    .filter-btn.active {
+      background: #0066cc;
+      border-color: #0066cc;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- Шапка сайта с логотипом и меню -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">АО «Корпорация <span>ЛИС</span></a>
+        <nav>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/" class="active">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Заголовок раздела -->
+    <div class="section-title">
+      <h2>Наши услуги</h2>
+      <p>Современные решения для промышленности и металлургического производства. Мы предоставляем комплексные услуги по заготовке и переработке металлолома.</p>
+    </div>
+
+    <!-- Фильтры услуг -->
+    <div class="service-filter">
+      <button class="filter-btn active" data-category="">Все услуги</button>
+      <button class="filter-btn" data-category="purchase">Покупка лома</button>
+      <button class="filter-btn" data-category="dismantling">Демонтаж</button>
+      <button class="filter-btn" data-category="self_transport">Самовывоз</button>
+      <button class="filter-btn" data-category="production">Производство</button>
+      <button class="filter-btn" data-category="sales">Продажа</button>
+      <button class="filter-btn" data-category="consulting">Консультации</button>
+    </div>
+
+    <!-- Сетка услуг -->
+    <div class="services-grid" id="services-grid">
+      {% for service in services %}
+  <div class="service-card">
+    <div class="service-icon">
+      {{ service.name|first|upper }} <!-- Или {{ service.image }} если есть изображение -->
+    </div>
+    <div class="service-content">
+      <h3>{{ service.name }}</h3>
+      <p>{{ service.short_description }}</p> <!-- Важно! Должно быть short_description -->
+      <a href="/services/{{ service.slug }}/" class="service-link">Подробнее →</a>
+    </div>
+  </div>
+{% endfor %}
+    </div>
+    
+    <!-- Кнопка для просмотра всех услуг -->
+    <div style="text-align: center; margin-top: 3rem;">
+      <a href="/services/all/" style="display: inline-block; background: #0066cc; color: white; padding: 1rem 2.5rem; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 1.2rem; transition: all 0.3s ease;">
+        Все услуги компании
+      </a>
+    </div>
+  </main>
+
+  <!-- Подвал сайта (Footer) -->
+  <footer style="background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);"
+  >
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>О компании</h3>
+          <p style="color: rgba(255,255,255,0.85); line-height: 1.6;">
+            АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+74953819547">+7 (495) 381-95-47</a></li>
+            <li><a href="mailto:sek@corp-lis.ru">sek@corp-lis.ru</a></li>
+            <li><a href="https://yandex.ru/maps/213/moscow/house/1_y_dorozhny_proyezd_9/Z04YcAVlTUwBQFtvfXpwdX5hYg==/?ll=37.625495%2C55.614226&z=16">г. Москва, 1-ый Дорожный проезд, д. 9</a></li>
+            <li>с 7:00 до 19:00 (без выходных)</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Разделы сайта</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 АО «Корпорация ЛИС». Все права защищены.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+  
+  <!-- Скрипт для фильтрации услуг -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const services = document.querySelectorAll('.service-card');
+      
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          // Обновление активной кнопки
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          this.classList.add('active');
+          
+          // Фильтрация услуг
+          const category = this.getAttribute('data-category');
+          services.forEach(service => {
+            if (category === '' || service.getAttribute('data-category') === category) {
+              service.style.display = 'block';
+            } else {
+              service.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

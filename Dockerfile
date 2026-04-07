@@ -1,14 +1,26 @@
 FROM python:3.11-slim
 
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# Установка зависимостей системы
+RUN apt-get update && apt-get install -y \
+    postgresql-client \
+    && rm -rf /var/lib/apt/lists/*
+
+# Установка директорий
 WORKDIR /app
 
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Копирование зависимостей
+COPY requirements.txt /app/
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
 
-COPY . .
+# Копирование проекта
+COPY . /app/
 
-RUN python manage.py collectstatic --noinput
-
+# Экспозиция порта
 EXPOSE 8000
 
-CMD ["gunicorn", "corp_lis.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Запуск сервера
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]

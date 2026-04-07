@@ -34,7 +34,7 @@ ROOT_URLCONF = 'corp_lis.urls'
 
 TEMPLATES = [{
     'BACKEND': 'django.template.backends.django.DjangoTemplates',
-    'DIRS': [os.path.join(BASE_DIR, 'templates')],
+    'DIRS': ['/app/templates'],
     'APP_DIRS': True,
     'OPTIONS': {
         'context_processors': [
@@ -49,17 +49,20 @@ TEMPLATES = [{
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
+        'NAME': 'corp_lis',
+        'USER': 'corp_lis_user',
+        'PASSWORD': 'corp_lis_pass',
+        'HOST': 'db',
         'PORT': '5432',
     }
 }
 
+# Настройки статики
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'),
+]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

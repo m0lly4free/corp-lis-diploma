@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: corp_lis_db
+    environment:
+      POSTGRES_DB: corp_lis
+      POSTGRES_USER: corp_lis_user
+      POSTGRES_PASSWORD: corp_lis_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    container_name: corp_lis_web
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+      - static_volume:/app/staticfiles
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=your-secret-key-here-1234567890
+      - DATABASE_URL=postgresql://corp_lis_user:corp_lis_pass@db:5432/corp_lis
+
+volumes:
+  postgres_data:
+  static_volume:
+  - .:/app
+  - static_volume:/staticfiles
