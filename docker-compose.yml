@@ -32,5 +32,4 @@ services:
 volumes:
   postgres_data:
   static_volume:
-  - .:/app
-  - static_volume:/staticfiles
+

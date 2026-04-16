@@ -11,6 +11,9 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('about/', views.about_view, name='about'),
     path('services/', include('services.urls', namespace='services')),
+    path('news/', include('news.urls', namespace='news')),
+    path('partners/', views.partners_view, name='partners'),
+    path('contacts/', views.contacts_view, name='contacts'),
 
 
 
