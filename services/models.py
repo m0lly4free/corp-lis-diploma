@@ -1,5 +1,6 @@
 from django.db import models
 from django.urls import reverse
+from core.fields import MediaImageField
 
 class Service(models.Model):
     """Модель для услуг компании"""
@@ -15,7 +16,7 @@ class Service(models.Model):
         ('sales', 'Продажа'),
         ('consulting', 'Консультации'),
     ))
-    image = models.ImageField(upload_to='services/', verbose_name='Основное изображение', null=True, blank=True)
+    image = MediaImageField(upload_to='services/', verbose_name='Основное изображение', null=True, blank=True)
     is_active = models.BooleanField(default=True, verbose_name='Активна')
     created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата создания')
     updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')

@@ -306,33 +306,54 @@
       <h2 style="font-size: 2rem; font-weight: 700; color: #0066cc; text-align: center; margin-bottom: 2rem;">Оставить заявку</h2>
       
       <div class="contact-form">
-        <div class="success-message" id="success-message">
-          Спасибо за ваше сообщение! Мы свяжемся с вами в ближайшее время.
-        </div>
+        {% if messages %}
+          {% for message in messages %}
+            <div class="success-message" style="display: block;">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
         
-        <form id="contact-form">
+        <form method="post" id="contact-form">
+          {% csrf_token %}
           <div class="form-group">
-            <label for="name">Ваше имя</label>
-            <input type="text" id="name" class="form-control" placeholder="Введите ваше имя" required>
-            <div class="error-message" id="name-error">Пожалуйста, укажите ваше имя</div>
+            <label for="id_name">Ваше имя</label>
+            {{ form.name }}
+            {% if form.name.errors %}
+              <div class="error-message" style="display: block;">
+                {{ form.name.errors }}
+              </div>
+            {% endif %}
           </div>
           
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" class="form-control" placeholder="Ваш email" required>
-            <div class="error-message" id="email-error">Пожалуйста, укажите корректный email</div>
+            <label for="id_email">Email</label>
+            {{ form.email }}
+            {% if form.email.errors %}
+              <div class="error-message" style="display: block;">
+                {{ form.email.errors }}
+              </div>
+            {% endif %}
           </div>
           
           <div class="form-group">
-            <label for="phone">Телефон</label>
-            <input type="tel" id="phone" class="form-control" placeholder="Ваш телефон">
-            <div class="error-message" id="phone-error">Пожалуйста, укажите корректный телефон</div>
+            <label for="id_phone">Телефон</label>
+            {{ form.phone }}
+            {% if form.phone.errors %}
+              <div class="error-message" style="display: block;">
+                {{ form.phone.errors }}
+              </div>
+            {% endif %}
           </div>
           
           <div class="form-group">
-            <label for="message">Сообщение</label>
-            <textarea id="message" class="form-control" rows="5" placeholder="Напишите ваше сообщение" required></textarea>
-            <div class="error-message" id="message-error">Пожалуйста, укажите текст сообщения</div>
+            <label for="id_message">Сообщение</label>
+            {{ form.message }}
+            {% if form.message.errors %}
+              <div class="error-message" style="display: block;">
+                {{ form.message.errors }}
+              </div>
+            {% endif %}
           </div>
           
           <button type="submit" class="submit-btn">Отправить сообщение</button>
@@ -342,8 +363,7 @@
   </main>
 
   <!-- Подвал сайта (Footer) -->
-  <footer style="background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);"
-  >
+  <footer style="background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-col">
@@ -380,75 +400,18 @@
   </footer>
 </body>
 </html>
-  
-  <!-- JavaScript для формы -->
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Валидация полей
-      let isValid = true;
-      
-      // Имя
-      const name = document.getElementById('name');
-      const nameError = document.getElementById('name-error');
-      if (!name.value.trim()) {
-        name.classList.add('error');
-        nameError.style.display = 'block';
-        isValid = false;
-      } else {
-        name.classList.remove('error');
-        nameError.style.display = 'none';
-      }
-      
-      // Email
-      const email = document.getElementById('email');
-      const emailError = document.getElementById('email-error');
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      if (!email.value.trim() || !emailRegex.test(email.value)) {
-        email.classList.add('error');
-        emailError.style.display = 'block';
-        isValid = false;
-      } else {
-        email.classList.remove('error');
-        emailError.style.display = 'none';
-      }
-      
-      // Телефон
-      const phone = document.getElementById('phone');
-      const phoneError = document.getElementById('phone-error');
-      if (phone.value.trim() && !/^\+?[\d\s\-\(\)]+$/.test(phone.value)) {
-        phone.classList.add('error');
-        phoneError.style.display = 'block';
-        isValid = false;
-      } else {
-        phone.classList.remove('error');
-        phoneError.style.display = 'none';
-      }
-      
-      // Сообщение
-      const message = document.getElementById('message');
-      const messageError = document.getElementById('message-error');
-      if (!message.value.trim()) {
-        message.classList.add('error');
-        messageError.style.display = 'block';
-        isValid = false;
-      } else {
-        message.classList.remove('error');
-        messageError.style.display = 'none';
-      }
-      
-      // Если все поля валидны
-      if (isValid) {
-        document.getElementById('success-message').style.display = 'block';
-        this.reset();
-        
-        // Скрытие сообщения через 5 секунд
-        setTimeout(() => {
-          document.getElementById('success-message').style.display = 'none';
-        }, 5000);
-      }
-    });
-  </script>
-</body>
-</html>
+
+<!-- Добавьте этот скрипт В КОНЕЦ ФАЙЛА contacts.html -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Проверяем наличие сообщений
+    const successMessage = document.querySelector('.success-message');
+    
+    // Если сообщение есть, устанавливаем таймер
+    if (successMessage && successMessage.style.display !== 'none') {
+      setTimeout(function() {
+        successMessage.style.display = 'none';
+      }, 3000); // 3000 мс = 3 секунды
+    }
+  });
+</script>

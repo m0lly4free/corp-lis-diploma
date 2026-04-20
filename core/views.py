@@ -1,7 +1,31 @@
-from django.http import HttpResponse
-from django.shortcuts import render
 import os
+from django.http import HttpResponse, Http404
+from django.shortcuts import render
+from django.conf import settings
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
+from django.views.generic import View
 
+@login_required
+def protected_media(request, path):
+    """
+    Защищенный доступ к медиафайлам только для авторизованных пользователей
+    """
+    # Проверка пути на безопасность
+    if '..' in path or path.startswith('/'):
+        raise Http404("Недопустимый путь")
+    
+    file_path = os.path.join(settings.MEDIA_ROOT, path)
+    
+    if not os.path.exists(file_path):
+        raise Http404("Файл не найден")
+    
+    # Чтение файла и отправка ответа
+    with open(file_path, 'rb') as f:
+        response = HttpResponse(f.read(), content_type='application/octet-stream')
+        response['Content-Disposition'] = f'attachment; filename="{os.path.basename(file_path)}"'
+        return response
+    
 def home_view(request):
     template_path = '/app/templates/home.html'
     if os.path.exists(template_path):
@@ -29,8 +53,9 @@ def partners_view(request):
     else:
         return HttpResponse(f"Файл не найден: {template_path}")
 
-def contacts_view(request):
-    template_path = '/app/templates/contacts.html'
+    
+def page_view(request, slug):
+    template_path = '/app/templates/pages/page.html'
     if os.path.exists(template_path):
         with open(template_path, 'r', encoding='utf-8') as f:
             content = f.read()

@@ -194,7 +194,7 @@
       {% for service in services %}
   <div class="service-card">
     <div class="service-icon">
-      {{ service.name|first|upper }} <!-- Или {{ service.image }} если есть изображение -->
+      <img src="{{ service.image.url }}" alt="{{ service.name }}" style="width: 100%; height: 100%; object-fit: cover;">
     </div>
     <div class="service-content">
       <h3>{{ service.name }}</h3>

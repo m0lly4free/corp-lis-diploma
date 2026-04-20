@@ -197,7 +197,7 @@
         <div class="news-content">
           <span class="news-date">{{ n.created_at|date:"d F Y" }}</span>
           <h3>{{ n.title }}</h3>
-          <p>{{ n.short_description }}</p>
+          <p>{{ n.short_description|safe }}</p>
           <a href="/news/{{ n.slug }}/" class="news-link">Подробнее →</a>
         </div>
       </div>

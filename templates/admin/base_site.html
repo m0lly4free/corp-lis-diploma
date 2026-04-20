@@ -1,0 +1,25 @@
+{% extends "admin/base.html" %}
+{% load static %}
+
+{% block title %}{{ title }} | АО «Корпорация ЛИС» Админ-панель{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">
+        АО «Корпорация ЛИС» — Админ-панель
+    </a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block extrahead %}
+    <!-- Force HTTPS -->
+    {% if not debug %}
+    <script>
+        if (location.protocol !== 'https:') {
+            location.replace('https:' + location.href.substring(location.protocol.length));
+        }
+    </script>
+    {% endif %}
+{% endblock %}
