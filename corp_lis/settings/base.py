@@ -105,7 +105,7 @@ LOGIN_REDIRECT_URL = '/admin/'
 LOGOUT_REDIRECT_URL = '/admin/'
 
 # Django Axes - ограничение попыток входа
-AXES_ENABLED = True
+AXES_ENABLED = False
 AXES_FAILURE_LIMIT = 5  # Максимум 5 неудачных попыток
 AXES_COOLOFF_TIME = timedelta(minutes=30)  # Блокировка на 30 минут
 AXES_LOCKOUT_CALLABLE = 'axes.helpers.lockout_response'
@@ -114,6 +114,10 @@ AXES_META_PRECEDENCE_ORDER = [
     'HTTP_X_FORWARDED_FOR',
     'REMOTE_ADDR',
 ]
+# В настройках django-axes добавьте:
+AXES_USE_USER_AGENT = False  # ← ВАЖНО: Отключаем User-Agent
+AXES_SESSION_KEY = 'axes_session_hash'  # ← Фиксируем ключ сессии
+AXES_USE_SESSION = True  # ← Убедитесь, что сессия используется
 
 # CORS (если используется API)
 CORS_ALLOWED_ORIGINS = [
@@ -231,6 +235,12 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 # В production (DEBUG=False) автоматически включаются все HTTPS-настройки
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+    SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+else:
+    SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
+    SESSION_COOKIE_SECURE = True
+    SESSION_COOKIE_HTTPONLY = True
+    SESSION_COOKIE_SAMESITE = 'Strict'
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
@@ -238,6 +248,7 @@ if not DEBUG:
     SECURE_HSTS_SECONDS = 31536000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
+    SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
 else:
     # В режиме разработки отключаем HTTPS для локального тестирования
     SECURE_SSL_REDIRECT = False
