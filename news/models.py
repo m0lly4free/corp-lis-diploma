@@ -1,21 +1,28 @@
 from django.db import models
 from django.urls import reverse
+from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
 
 class News(models.Model):
     """Модель для новостей компании"""
-    title = models.CharField(max_length=255, verbose_name='Заголовок')
-    slug = models.SlugField(unique=True, verbose_name='Слаг')
-    content = models.TextField(verbose_name='Основной текст')
-    short_description = models.TextField(verbose_name='Краткий анонс', blank=True)
-    image = MediaImageField(upload_to='news/', verbose_name='Изображение', null=True, blank=True)
-    is_active = models.BooleanField(default=True, verbose_name='Активна')
-    created_at = models.DateTimeField(auto_now_add=True, verbose_name='Дата публикации')
-    updated_at = models.DateTimeField(auto_now=True, verbose_name='Дата обновления')
+    title = models.CharField(max_length=255, verbose_name=_('Заголовок'))
+    slug = models.SlugField(unique=True, verbose_name=_('Слаг'))
+    content = models.TextField(verbose_name=_('Основной текст'))
+    short_description = models.TextField(verbose_name=_('Краткий анонс'), blank=True)
+    image = MediaImageField(
+        upload_to='news/', 
+        verbose_name=_('Изображение'), 
+        null=True, 
+        blank=True
+    )
+    is_active = models.BooleanField(default=True, verbose_name=_('Активна'))
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата публикации'))
+    updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Дата обновления'))
+    version = models.IntegerField(default=0, editable=False)
 
     class Meta:
-        verbose_name = 'Новость'
-        verbose_name_plural = 'Новости'
+        verbose_name = _('Новость')
+        verbose_name_plural = _('Новости')
         ordering = ['-created_at']
         db_table = 'news'
 
@@ -29,4 +36,9 @@ class News(models.Model):
         # Автоматическое заполнение short_description, если не указано
         if not self.short_description and self.content:
             self.short_description = self.content[:200] + '...' if len(self.content) > 200 else self.content
+        
+        # Обновление версии при редактировании
+        if self.pk:
+            self.version += 1
+            
         super().save(*args, **kwargs)

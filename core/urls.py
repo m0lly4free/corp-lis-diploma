@@ -18,7 +18,7 @@ urlpatterns = [
     path('partners/', views.partners_view, name='partners'),
     path('contacts/', include('contacts.urls', namespace='contact')),
     path('page/', include('pages.urls', namespace='pages')),
-
+    path('api/', include('api.urls', namespace='api')),
 
 
 

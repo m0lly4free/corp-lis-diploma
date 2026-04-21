@@ -18,13 +18,14 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'axes',  # ← ДОЛЖНО БЫТЬ ЗДЕСЬ
+    'axes',
     'core',
     'services',
     'news',
     'contacts',
     'pages',
     'users',
+    'api',
 ]
 
 MIDDLEWARE = [
@@ -36,8 +37,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    
-    'axes.middleware.AxesMiddleware',  # ← ДОЛЖНО БЫТЬ ЗДЕСЬ
+    'axes.middleware.AxesMiddleware',
 ]
 
 ROOT_URLCONF = 'corp_lis.urls'
@@ -64,9 +64,11 @@ DATABASES = {
         'PASSWORD': 'corp_lis_pass',
         'HOST': 'db',
         'PORT': '5432',
+        
     }
 }
-
+# Статические файлы
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 # Настройки статики
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
@@ -79,7 +81,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 SECRET_KEY = config('SECRET_KEY', default='fallback-key-123')
 
 AUTHENTICATION_BACKENDS = [
-    'axes.backends.AxesStandaloneBackend',  # ← ДОЛЖНО БЫТЬ ЗДЕСЬ
+    'axes.backends.AxesStandaloneBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
 
@@ -117,6 +119,7 @@ AXES_META_PRECEDENCE_ORDER = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+
 ]
 
 # Разрешенные форматы файлов
@@ -140,6 +143,10 @@ LOGGING = {
             'format': '{levelname} {message}',
             'style': '{',
         },
+        'email_formatter': {
+            'format': '{levelname} {asctime} {module} {message}',
+            'style': '{',
+        },
     },
     'handlers': {
         'file': {
@@ -153,6 +160,12 @@ LOGGING = {
             'class': 'logging.StreamHandler',
             'formatter': 'simple',
         },
+        'email_file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs', 'email_notifications.log'),
+            'formatter': 'email_formatter',
+        },
     },
     'loggers': {
         'django': {
@@ -165,8 +178,48 @@ LOGGING = {
             'level': 'WARNING',
             'propagate': False,
         },
+        'email_notifications': {
+            'handlers': ['email_file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
     },
 }
+
+# Кэширование для ускорения работы админ-панели
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
+        'LOCATION': 'admin-cache',
+        'OPTIONS': {
+            'MAX_ENTRIES': 1000
+        }
+    }
+}
+# Локализация
+LANGUAGE_CODE = 'ru-ru'
+TIME_ZONE = 'Europe/Moscow'
+USE_I18N = True
+USE_L10N = True
+USE_TZ = True
+
+LANGUAGES = [
+    ('ru', 'Русский'),
+]
+
+LOCALE_PATHS = [
+    os.path.join(BASE_DIR, 'locale'),
+]
+
+# Настройки электронной почты
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
+EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
+EMAIL_USE_TLS = config('EMAIL_USE_TLS', default=True, cast=bool)
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL', default='noreply@corp-lis.ru')
 
 # Создание директории для логов
 os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)
@@ -174,16 +227,20 @@ os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)
 # DEBUG режим (по умолчанию True для разработки)
 DEBUG = config('DEBUG', default=True, cast=bool)
 
-# ВАЖНО: НЕ ДОБАВЛЯЙТЕ НИКАКИХ HTTPS-НАСТРОЕК В РЕЖИМЕ РАЗРАБОТКИ
+# Соответствие ТЗ 3.2.8 - Использование HTTPS
+# В production (DEBUG=False) автоматически включаются все HTTPS-настройки
 if DEBUG:
-    SECURE_SSL_REDIRECT = False
-    SESSION_COOKIE_SECURE = False
-    CSRF_COOKIE_SECURE = False
-    SECURE_HSTS_SECONDS = 0
-else:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
     SECURE_HSTS_SECONDS = 31536000
     SECURE_HSTS_INCLUDE_SUBDOMAINS = True
     SECURE_HSTS_PRELOAD = True
+else:
+    # В режиме разработки отключаем HTTPS для локального тестирования
+    SECURE_SSL_REDIRECT = False
+    SESSION_COOKIE_SECURE = False
+    CSRF_COOKIE_SECURE = False
+    SECURE_HSTS_SECONDS = 0
