@@ -44,6 +44,10 @@ urlpatterns = [
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps}, name='django.contrib.sitemaps.views.sitemap'),
     path('robots.txt', TemplateView.as_view(template_name='seo/robots.txt', content_type='text/plain'), name='robots_txt'),
 
+    # Тест ошиб страничек (временно)
+    path('test-404/', lambda request: custom_404(request, Exception("Тестовая 404 ошибка"))),
+    path('test-500/', lambda request: custom_500(request)),
+
 ]
 
 urlpatterns += [
