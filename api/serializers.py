@@ -3,6 +3,7 @@ from services.models import Service
 from news.models import News
 from contacts.models import ContactMessage
 from pages.models import Page
+import re
 
 class ServiceSerializer(serializers.ModelSerializer):
     """Сериализатор для услуг"""
@@ -29,7 +30,7 @@ class NewsSerializer(serializers.ModelSerializer):
         read_only_fields = ['id', 'created_at', 'updated_at']
 
 class ContactMessageSerializer(serializers.ModelSerializer):
-    """Сериализатор для формы обратной связи"""
+    """Сериализатор для формы обратной связи с защитой от спама"""
     
     class Meta:
         model = ContactMessage
@@ -39,6 +40,29 @@ class ContactMessageSerializer(serializers.ModelSerializer):
             'email': {'required': True, 'allow_blank': False},
             'message': {'required': True, 'allow_blank': False}
         }
+    
+    def validate_name(self, value):
+        """Валидация имени - защита от спама"""
+        if len(value) < 2:
+            raise serializers.ValidationError("Имя должно содержать минимум 2 символа.")
+        
+        # Проверка на наличие только букв и пробелов
+        if not re.match(r'^[а-яА-Яa-zA-Z\s]+$', value):
+            raise serializers.ValidationError("Имя может содержать только буквы и пробелы.")
+        
+        return value
+    
+    def validate_message(self, value):
+        """Валидация сообщения - защита от спама"""
+        if len(value) < 10:
+            raise serializers.ValidationError("Сообщение должно содержать минимум 10 символов.")
+        
+        # Проверка на количество ссылок (спам часто содержит много ссылок)
+        url_count = len(re.findall(r'http[s]?://|www\.', value))
+        if url_count > 2:
+            raise serializers.ValidationError("Сообщение содержит слишком много ссылок.")
+        
+        return value
     
     def validate_email(self, value):
         """Валидация email"""

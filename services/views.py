@@ -3,6 +3,10 @@ from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
 from .models import Service
+import logging
+from django.http import Http404
+
+logger = logging.getLogger('system_errors')
 
 # Функциональное представление для списка услуг (для совместимости)
 def services_list(request):
@@ -34,11 +38,14 @@ class ServiceListView(ListView):
     
     def get_queryset(self):
         return Service.objects.filter(is_active=True).select_related().order_by('name')
+    def dispatch(self, request, *args, **kwargs):
+        try:
+            return super().dispatch(request, *args, **kwargs)
+        except Exception as e:
+            logger.error(f"Error in ServiceListView: {str(e)}")
+            raise
 
 class ServiceDetailView(DetailView):
-    """
-    Детальная страница конкретной услуги с оптимизированными запросами
-    """
     model = Service
     template_name = 'services/detail.html'
     context_object_name = 'service'
@@ -47,3 +54,16 @@ class ServiceDetailView(DetailView):
     
     def get_queryset(self):
         return Service.objects.select_related()
+    
+    def get_object(self, queryset=None):
+        try:
+            obj = super().get_object(queryset)
+            if not obj.is_active:
+                raise Http404("Услуга не найдена")
+            return obj
+        except Service.DoesNotExist:
+            logger.warning(f"Service not found: {self.kwargs.get('slug')}")
+            raise Http404("Услуга не найдена")
+        except Exception as e:
+            logger.error(f"Error in ServiceDetailView: {str(e)}")
+            raise

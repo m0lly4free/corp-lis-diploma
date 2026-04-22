@@ -86,6 +86,22 @@ class AboutView(TemplateView):
 class PartnersView(TemplateView):
     template_name = 'core/partners.html'
     
+import logging
+from django.shortcuts import render
+from django.http import HttpResponseServerError, HttpResponseNotFound
+
+logger = logging.getLogger('system_errors')
+
+def custom_404(request, exception):
+    """Обработчик ошибки 404"""
+    logger.warning(f"404 error: {request.path} - {str(exception)}")
+    return HttpResponseNotFound(render(request, 'errors/404.html'))
+
+def custom_500(request):
+    """Обработчик ошибки 500"""
+    logger.error(f"500 error: {request.path}")
+    return HttpResponseServerError(render(request, 'errors/500.html'))
+
 
     
 

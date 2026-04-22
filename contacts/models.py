@@ -19,6 +19,9 @@ class ContactMessage(models.Model):
     # Статус обработки
     is_processed = models.BooleanField(default=False, verbose_name=_('Обработано'))
     
+    # IP-адрес отправителя для логирования и блокировок
+    ip_address = models.GenericIPAddressField(verbose_name=_('IP адрес'), null=True, blank=True)
+    
     # Служебные поля
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата отправки'))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Дата последнего обновления'))

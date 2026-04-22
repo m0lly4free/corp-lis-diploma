@@ -4474,3 +4474,429 @@ INFO 2026-04-22 21:19:44,867 autoreload 45 130257156387584 /app/news/urls.py cha
 INFO 2026-04-22 21:19:46,601 autoreload 47 137599249158912 Watching for file changes with StatReloader
 INFO 2026-04-22 21:19:56,767 autoreload 47 137599249158912 /app/news/admin.py changed, reloading.
 INFO 2026-04-22 21:19:58,651 autoreload 49 132833872315136 Watching for file changes with StatReloader
+INFO 2026-04-22 21:20:07,407 basehttp 49 132833786980032 "GET /services/ HTTP/1.1" 200 11482
+WARNING 2026-04-22 21:20:07,465 log 49 132833786980032 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:20:07,468 basehttp 49 132833786980032 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:20:09,646 basehttp 49 132833786980032 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:20:09,693 log 49 132833786980032 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:20:09,694 basehttp 49 132833786980032 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:20:09,706 basehttp 49 132833778587328 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:20:15,382 basehttp 49 132833778587328 "GET / HTTP/1.1" 200 20294
+WARNING 2026-04-22 21:20:15,437 log 49 132833778587328 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:20:15,438 basehttp 49 132833778587328 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:23:10,658 autoreload 49 132833872315136 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 21:23:13,387 autoreload 53 134864775537408 Watching for file changes with StatReloader
+INFO 2026-04-22 21:24:58,865 autoreload 53 134864775537408 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 21:25:01,414 autoreload 55 134494781256448 Watching for file changes with StatReloader
+INFO 2026-04-22 21:25:02,704 basehttp 55 134494696761024 "GET /admin/news/news/ HTTP/1.1" 302 0
+INFO 2026-04-22 21:25:02,800 basehttp 55 134494696761024 "GET /admin/login/?next=/admin/news/news/ HTTP/1.1" 200 3772
+WARNING 2026-04-22 21:25:02,860 basehttp 55 134494696761024 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 21:25:02,957 basehttp 55 134494619170496 "GET /admin/login/?next=/admin/news/news/ HTTP/1.1" 200 3772
+WARNING 2026-04-22 21:25:03,006 basehttp 55 134494619170496 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 21:25:07,985 basehttp 55 134494696761024 "POST /admin/login/?next=/admin/news/news/ HTTP/1.1" 302 0
+INFO 2026-04-22 21:25:08,120 basehttp 55 134494696761024 "GET /admin/news/news/ HTTP/1.1" 200 18721
+WARNING 2026-04-22 21:25:08,186 basehttp 55 134494619170496 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 21:25:08,192 basehttp 55 134494696761024 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 21:25:08,201 basehttp 55 134494609729216 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:26:30,987 autoreload 55 134494781256448 /app/contacts/models.py changed, reloading.
+INFO 2026-04-22 21:26:33,346 autoreload 62 129066118955776 Watching for file changes with StatReloader
+INFO 2026-04-22 21:26:47,761 autoreload 62 129066118955776 /app/contacts/models.py changed, reloading.
+INFO 2026-04-22 21:26:49,735 autoreload 64 133201679516416 Watching for file changes with StatReloader
+INFO 2026-04-22 21:27:13,590 autoreload 64 133201679516416 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 21:27:15,509 autoreload 66 125367520834304 Watching for file changes with StatReloader
+INFO 2026-04-22 21:27:33,606 basehttp 66 125367437223616 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x00ÕPN¡¦×{n\x07YuyùÔ³Ä±tv©g\x1a\x84<¯ª\x965)'\\\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-22 21:27:33,607 basehttp 66 125367437223616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 21:27:33,620 basehttp 66 125367437223616 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03')
+ERROR 2026-04-22 21:27:33,621 basehttp 66 125367437223616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 21:27:33,629 basehttp 66 125367437223616 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03á®±x\x7fms\x15Èì\x1bQ')
+ERROR 2026-04-22 21:27:33,630 basehttp 66 125367437223616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 21:27:33,639 basehttp 66 125367437223616 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03¨l\x86o\x14Ú7({ª\x16')
+ERROR 2026-04-22 21:27:33,640 basehttp 66 125367437223616 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 21:27:39,536 autoreload 66 125367520834304 /app/api/serializers.py changed, reloading.
+INFO 2026-04-22 21:27:41,214 autoreload 72 132759628841728 Watching for file changes with StatReloader
+INFO 2026-04-22 21:27:57,037 autoreload 72 132759628841728 /app/api/serializers.py changed, reloading.
+INFO 2026-04-22 21:27:58,922 autoreload 74 124757456986880 Watching for file changes with StatReloader
+INFO 2026-04-22 21:31:16,438 autoreload 74 124757456986880 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 21:31:18,909 autoreload 76 126574140207872 Watching for file changes with StatReloader
+ERROR 2026-04-22 21:31:20,628 log 76 126574055646912 Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py", line 43, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/contacts/views.py", line 64, in contact_view
+    return render(request, 'contacts/contact.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contacts/contact.html
+ERROR 2026-04-22 21:31:20,640 basehttp 76 126574055646912 "GET /contacts/ HTTP/1.1" 500 88715
+WARNING 2026-04-22 21:31:20,682 log 76 126574055646912 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:31:20,683 basehttp 76 126574055646912 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:31:41,467 autoreload 76 126574140207872 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 21:31:43,338 autoreload 80 127232327729920 Watching for file changes with StatReloader
+ERROR 2026-04-22 21:31:44,654 log 80 127232243656384 Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py", line 43, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/contacts/views.py", line 64, in contact_view
+    return render(request, 'contacts/contacts.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contacts/contacts.html
+ERROR 2026-04-22 21:31:44,669 basehttp 80 127232243656384 "GET /contacts/ HTTP/1.1" 500 88724
+INFO 2026-04-22 21:31:52,077 autoreload 80 127232327729920 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 21:31:53,937 autoreload 84 129276990608128 Watching for file changes with StatReloader
+ERROR 2026-04-22 21:31:55,085 log 84 129276837885632 Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py", line 43, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/contacts/views.py", line 64, in contact_view
+    return render(request, 'contact/contacts.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: contact/contacts.html
+ERROR 2026-04-22 21:31:55,101 basehttp 84 129276837885632 "GET /contacts/ HTTP/1.1" 500 88702
+INFO 2026-04-22 21:32:15,076 autoreload 84 129276990608128 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 21:32:17,096 autoreload 88 125608680268544 Watching for file changes with StatReloader
+ERROR 2026-04-22 21:32:18,294 log 88 125608595023552 Internal Server Error: /contacts/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/http.py", line 43, in inner
+    return func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/contacts/views.py", line 64, in contact_view
+    return render(request, 'templates/contacts.html', {'form': form})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: templates/contacts.html
+ERROR 2026-04-22 21:32:18,309 basehttp 88 125608595023552 "GET /contacts/ HTTP/1.1" 500 88746
+INFO 2026-04-22 21:32:31,302 autoreload 88 125608680268544 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 21:32:33,278 autoreload 92 137548732310272 Watching for file changes with StatReloader
+INFO 2026-04-22 21:32:34,645 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 21:37:01,305 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:37:02,447 basehttp 92 137548648146624 "GET /news/ HTTP/1.1" 200 10346
+INFO 2026-04-22 21:37:02,526 basehttp 92 137548648146624 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:37:02,901 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-22 21:37:03,484 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:38:24,641 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-22 21:38:46,884 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:39:01,264 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-22 21:41:24,352 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19119
+INFO 2026-04-22 21:42:05,959 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19117
+INFO 2026-04-22 21:44:15,762 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19232
+INFO 2026-04-22 21:44:16,991 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:44:42,926 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19242
+INFO 2026-04-22 21:44:43,788 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:44:46,985 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+INFO 2026-04-22 21:45:29,585 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19242
+INFO 2026-04-22 21:45:35,963 basehttp 92 137548648146624 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 21:45:38,812 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 19242
+INFO 2026-04-22 21:45:59,546 basehttp 92 137548648146624 "GET /partners/ HTTP/1.1" 200 18054
+INFO 2026-04-22 21:46:12,337 basehttp 92 137548648146624 "GET /contacts/ HTTP/1.1" 200 14180
+WARNING 2026-04-22 21:47:52,687 log 92 137548648146624 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:47:52,689 basehttp 92 137548648146624 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:50:47,973 basehttp 92 137548648146624 "POST /contacts/ HTTP/1.1" 200 14496
+WARNING 2026-04-22 21:50:48,045 log 92 137548648146624 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:50:48,049 basehttp 92 137548648146624 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:50:54,936 basehttp 92 137548648146624 "GET /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 21:50:54,994 basehttp 92 137548648146624 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 21:50:55,048 basehttp 92 137548648146624 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 21:51:00,850 basehttp 92 137548639753920 "POST /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 302 0
+ERROR 2026-04-22 21:51:00,933 log 92 137548639753920 Internal Server Error: /admin/contacts/contactmessage/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedColumn: column contact_messages.ip_address does not exist
+LINE 1: ...es"."message", "contact_messages"."is_processed", "contact_m...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 2065, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+                                                           ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: column contact_messages.ip_address does not exist
+LINE 1: ...es"."message", "contact_messages"."is_processed", "contact_m...
+                                                             ^
+
+ERROR 2026-04-22 21:51:00,940 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/ HTTP/1.1" 500 153692
+WARNING 2026-04-22 21:52:13,830 log 92 137548639753920 Forbidden (CSRF token from POST incorrect.): /contacts/
+WARNING 2026-04-22 21:52:13,832 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 403 2560
+WARNING 2026-04-22 21:52:13,883 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:52:13,884 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:52:21,800 log 92 137548639753920 Forbidden (CSRF token from POST incorrect.): /contacts/
+WARNING 2026-04-22 21:52:21,802 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 403 2560
+WARNING 2026-04-22 21:52:21,845 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:52:21,847 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:52:22,833 basehttp 92 137548639753920 "GET /contacts/ HTTP/1.1" 200 14180
+WARNING 2026-04-22 21:52:22,876 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:52:22,878 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:52:24,965 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:52:24,967 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:52:26,558 basehttp 92 137548639753920 "GET /contacts/ HTTP/1.1" 200 14180
+WARNING 2026-04-22 21:52:26,616 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:52:26,617 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:58:53,580 basehttp 92 137548639753920 "GET /contacts/ HTTP/1.1" 200 14180
+WARNING 2026-04-22 21:58:53,634 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:58:53,635 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:59:54,569 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14708
+WARNING 2026-04-22 21:59:54,629 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:59:54,631 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:00:01,918 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 21508
+WARNING 2026-04-22 22:00:01,975 basehttp 92 137548648146624 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:00:01,987 basehttp 92 137548639753920 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:00:05,627 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/19/change/ HTTP/1.1" 200 15870
+WARNING 2026-04-22 22:00:05,669 basehttp 92 137548639753920 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:00:05,675 basehttp 92 137548648146624 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:00:38,250 basehttp 92 137548648146624 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:00:38,307 log 92 137548648146624 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:00:38,308 basehttp 92 137548648146624 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:00:49,139 basehttp 92 137548648146624 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 22009
+INFO 2026-04-22 22:00:51,668 basehttp 92 137548648146624 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 22009
+WARNING 2026-04-22 22:00:51,716 basehttp 92 137548639753920 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:00:51,718 basehttp 92 137548648146624 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:00:52,696 basehttp 92 137548648146624 "GET /admin/contacts/contactmessage/20/change/ HTTP/1.1" 200 16011
+WARNING 2026-04-22 22:00:52,744 basehttp 92 137548648146624 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:00:52,753 basehttp 92 137548639753920 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:00:56,960 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:00:57,018 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:00:57,020 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:00:59,040 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:00:59,090 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:00:59,092 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:01:01,399 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:01:01,450 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:01:01,452 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:01:03,122 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:01:03,183 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:01:03,184 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:01:04,859 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:01:04,909 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:01:04,910 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:01:07,797 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 24514
+INFO 2026-04-22 22:02:34,077 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14865
+WARNING 2026-04-22 22:02:34,142 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:02:34,144 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:02:40,379 basehttp 92 137548639753920 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 22:02:40,430 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:02:40,431 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:02:40,454 basehttp 92 137548639753920 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 22:02:41,038 basehttp 92 137548639753920 "GET /contacts/ HTTP/1.1" 200 14180
+WARNING 2026-04-22 22:02:41,080 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:02:41,082 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:04:11,369 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14682
+WARNING 2026-04-22 22:04:11,438 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:04:11,439 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:11:36,521 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14678
+WARNING 2026-04-22 22:11:36,584 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:11:36,590 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:11:41,951 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 26034
+WARNING 2026-04-22 22:11:42,006 basehttp 92 137548648146624 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:11:42,015 basehttp 92 137548639753920 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:11:53,426 basehttp 92 137548639753920 "POST /contacts/ HTTP/1.1" 200 14678
+WARNING 2026-04-22 22:11:53,489 log 92 137548639753920 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:11:53,492 basehttp 92 137548639753920 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:11:56,339 basehttp 92 137548639753920 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 26030
+WARNING 2026-04-22 22:11:56,390 basehttp 92 137548648146624 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:11:56,394 basehttp 92 137548639753920 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:15:11,349 autoreload 92 137548732310272 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 22:15:13,588 autoreload 141 125100752356096 Watching for file changes with StatReloader
+INFO 2026-04-22 22:15:22,307 autoreload 141 125100752356096 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 22:15:24,029 autoreload 143 140471360529152 Watching for file changes with StatReloader
+INFO 2026-04-22 22:15:38,249 autoreload 143 140471360529152 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 22:15:40,124 autoreload 145 138567988589312 Watching for file changes with StatReloader
+INFO 2026-04-22 22:15:44,654 autoreload 145 138567988589312 /app/contacts/views.py changed, reloading.
+INFO 2026-04-22 22:15:46,972 autoreload 147 124348245336832 Watching for file changes with StatReloader
+INFO 2026-04-22 22:15:48,496 basehttp 147 124348160534208 "GET /partners/ HTTP/1.1" 200 18054
+WARNING 2026-04-22 22:15:48,560 log 147 124348160534208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:15:48,562 basehttp 147 124348160534208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:15:49,593 basehttp 147 124348160534208 "GET /contacts/ HTTP/1.1" 200 14191
+WARNING 2026-04-22 22:15:49,633 log 147 124348160534208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 22:15:49,635 basehttp 147 124348160534208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 22:20:04,948 basehttp 147 124348160534208 "POST /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 22:20:05,024 basehttp 147 124348160534208 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:20:05,086 basehttp 147 124348160534208 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:20:12,988 basehttp 147 124348152141504 "POST /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 22:20:13,134 basehttp 147 124348152141504 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 26030
+WARNING 2026-04-22 22:20:13,195 basehttp 147 124348160534208 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:20:13,205 basehttp 147 124348152141504 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:20:28,583 basehttp 147 124348152141504 "POST /admin/contacts/contactmessage/ HTTP/1.1" 200 13642
+WARNING 2026-04-22 22:20:28,634 basehttp 147 124348152141504 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:20:28,640 basehttp 147 124348160534208 "GET /static/admin/js/cancel.js HTTP/1.1" 200 884
+INFO 2026-04-22 22:20:29,853 basehttp 147 124348160534208 "POST /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 22:20:29,898 basehttp 147 124348160534208 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 20669
+WARNING 2026-04-22 22:20:29,952 basehttp 147 124348152141504 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:20:29,960 basehttp 147 124348160534208 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 22:27:33,656 basehttp 147 124348160534208 code 400, message Bad request version ('>µÖ\x01«RuC×¬')
+ERROR 2026-04-22 22:27:33,657 basehttp 147 124348160534208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 22:27:33,667 basehttp 147 124348160534208 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03.¦\x12\x11¤±-N\x1a\x8a\x9aê%')
+ERROR 2026-04-22 22:27:33,668 basehttp 147 124348160534208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 22:27:33,674 basehttp 147 124348160534208 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03þÿ\x8c\x94»K4Ñù3\x89Î')
+ERROR 2026-04-22 22:27:33,675 basehttp 147 124348160534208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 22:27:33,682 basehttp 147 124348160534208 code 400, message Bad request version ("(§¡R´óÈ\xadè»t²ã¤Þ=;Ï\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-22 22:27:33,683 basehttp 147 124348160534208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 22:27:33,690 basehttp 147 124348160534208 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03ðnFG8°Í£\x96\x93Á7àëOMÝ§\x973û?83\x88')
+ERROR 2026-04-22 22:27:33,690 basehttp 147 124348160534208 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 22:28:53,962 autoreload 147 124348245336832 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 22:36:42,065 autoreload 7 137275714257664 Watching for file changes with StatReloader
+INFO 2026-04-22 22:36:48,698 autoreload 7 137275714257664 /app/services/views.py changed, reloading.
+INFO 2026-04-22 22:36:50,677 autoreload 9 138428600021760 Watching for file changes with StatReloader
+INFO 2026-04-22 22:37:02,882 autoreload 7 137128694387456 Watching for file changes with StatReloader
+INFO 2026-04-22 22:37:06,992 basehttp 7 137128609572544 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 22:37:09,822 basehttp 7 137128609572544 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 22:37:10,914 basehttp 7 137128609572544 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-22 22:37:48,314 autoreload 7 137128694387456 /app/services/views.py changed, reloading.
+INFO 2026-04-22 22:37:50,542 autoreload 11 132763700376320 Watching for file changes with StatReloader
+INFO 2026-04-22 22:37:56,504 autoreload 11 132763700376320 /app/services/views.py changed, reloading.
+INFO 2026-04-22 22:37:58,754 autoreload 13 133477694649088 Watching for file changes with StatReloader
+INFO 2026-04-22 22:38:00,809 basehttp 13 133477610546880 "GET /contacts/ HTTP/1.1" 200 14105
+INFO 2026-04-22 22:38:02,291 basehttp 13 133477610546880 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 22:38:02,824 basehttp 13 133477610546880 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 22:38:21,657 basehttp 13 133477610546880 "GET /services/222 HTTP/1.1" 301 0
+WARNING 2026-04-22 22:38:21,681 log 13 133477602154176 Not Found: /services/222/
+WARNING 2026-04-22 22:38:21,683 basehttp 13 133477602154176 "GET /services/222/ HTTP/1.1" 404 3068
+WARNING 2026-04-22 22:38:30,419 log 13 133477602154176 Not Found: /services/non-existent-slug/
+WARNING 2026-04-22 22:38:30,422 basehttp 13 133477602154176 "GET /services/non-existent-slug/ HTTP/1.1" 404 3110
+INFO 2026-04-22 22:42:40,620 autoreload 13 133477694649088 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 22:42:42,881 autoreload 18 139933604385536 Watching for file changes with StatReloader
+INFO 2026-04-22 22:42:51,668 autoreload 18 139933604385536 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 22:42:53,706 autoreload 20 138711268979456 Watching for file changes with StatReloader
+WARNING 2026-04-22 22:43:51,497 log 20 138711184434880 Not Found: /services/non-existent-slug/
+WARNING 2026-04-22 22:43:51,498 basehttp 20 138711184434880 "GET /services/non-existent-slug/ HTTP/1.1" 404 3110
+INFO 2026-04-22 22:43:53,012 basehttp 20 138711184434880 "GET /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 22:43:53,100 basehttp 20 138711184434880 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:43:53,152 basehttp 20 138711184434880 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:44:14,412 autoreload 20 138711268979456 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 22:44:16,809 autoreload 24 134989550449408 Watching for file changes with StatReloader
+WARNING 2026-04-22 22:44:18,173 log 24 134989466298048 Not Found: /services/non-existent-slug/
+WARNING 2026-04-22 22:44:18,174 basehttp 24 134989466298048 "GET /services/non-existent-slug/ HTTP/1.1" 404 3110
+WARNING 2026-04-22 22:44:19,062 log 24 134989466298048 Not Found: /services/non-existent-slug/
+WARNING 2026-04-22 22:44:19,064 basehttp 24 134989466298048 "GET /services/non-existent-slug/ HTTP/1.1" 404 3110
+INFO 2026-04-22 22:44:20,383 basehttp 24 134989466298048 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:44:20,430 basehttp 24 134989466298048 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:44:20,903 basehttp 24 134989457905344 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:44:20,950 basehttp 24 134989457905344 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:44:21,406 basehttp 24 134989466298048 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:44:21,460 basehttp 24 134989466298048 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 22:44:21,541 basehttp 24 134989457905344 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 22:44:21,579 basehttp 24 134989457905344 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+WARNING 2026-04-22 22:45:07,336 log 24 134989466298048 Not Found: /services/non-existent-slug/
+WARNING 2026-04-22 22:45:07,336 basehttp 24 134989466298048 "GET /services/non-existent-slug/ HTTP/1.1" 404 3110
+INFO 2026-04-22 22:45:11,657 basehttp 24 134989466298048 "GET /services HTTP/1.1" 301 0

@@ -16,7 +16,7 @@ from .serializers import (
 )
 from core.util.email import send_contact_notification
 import logging 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('api_errors')
 
 class ServiceListView(generics.ListAPIView):
     """
@@ -31,6 +31,7 @@ class ServiceListView(generics.ListAPIView):
         try:
             return super().get(request, *args, **kwargs)
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             return Response(
                 {'error': _('Ошибка при получении списка услуг')}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -52,6 +53,7 @@ class ServiceDetailView(generics.RetrieveAPIView):
         except Service.DoesNotExist:
             raise NotFound(_('Услуга не найдена'))
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             raise NotFound(_('Ошибка при получении услуги'))
 
 class NewsListView(generics.ListAPIView):
@@ -67,6 +69,7 @@ class NewsListView(generics.ListAPIView):
         try:
             return super().get(request, *args, **kwargs)
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             return Response(
                 {'error': _('Ошибка при получении списка новостей')}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -88,11 +91,12 @@ class NewsDetailView(generics.RetrieveAPIView):
         except News.DoesNotExist:
             raise NotFound(_('Новость не найдена'))
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             raise NotFound(_('Ошибка при получении новости'))
 
 class ContactMessageCreateView(generics.CreateAPIView):
     """
-    Отправка данных формы обратной связи
+    Отправка данных формы обратной связи с защитой от спама
     POST /api/contact/
     """
     serializer_class = ContactMessageSerializer
@@ -102,7 +106,23 @@ class ContactMessageCreateView(generics.CreateAPIView):
         try:
             serializer = self.get_serializer(data=request.data)
             serializer.is_valid(raise_exception=True)
-            self.perform_create(serializer)
+            
+            # Получаем IP-адрес отправителя
+            x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
+            if x_forwarded_for:
+                ip_address = x_forwarded_for.split(',')[0]
+            else:
+                ip_address = request.META.get('REMOTE_ADDR')
+            
+            # Сохраняем сообщение с IP-адресом
+            contact_message = serializer.save(ip_address=ip_address)
+            
+            # Отправляем уведомление администратору
+            if not send_contact_notification(contact_message):
+                logger.error(
+                    _("Не удалось отправить уведомление для обращения #{id}").format(id=contact_message.id)
+                )
+            
             headers = self.get_success_headers(serializer.data)
             return Response(
                 {'message': _('Ваше сообщение успешно отправлено!')}, 
@@ -110,16 +130,21 @@ class ContactMessageCreateView(generics.CreateAPIView):
                 headers=headers
             )
         except serializers.ValidationError as e:
+            # Логирование попыток спама
+            logger.warning(
+                f"Попытка отправки спама через API: {e.detail}, "
+                f"IP={request.META.get('REMOTE_ADDR', 'unknown')}"
+            )
             return Response(
                 {'error': _('Ошибка валидации данных'), 'details': e.detail}, 
                 status=status.HTTP_400_BAD_REQUEST
             )
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             return Response(
                 {'error': _('Ошибка при отправке сообщения')}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
-
 class PageDetailView(generics.RetrieveAPIView):
     """
     Получение статической страницы по slug
@@ -136,6 +161,7 @@ class PageDetailView(generics.RetrieveAPIView):
         except Page.DoesNotExist:
             raise NotFound(_('Страница не найдена'))
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             raise NotFound(_('Ошибка при получении страницы'))
         
 class ContactMessageCreateView(generics.CreateAPIView):
@@ -171,6 +197,7 @@ class ContactMessageCreateView(generics.CreateAPIView):
                 status=status.HTTP_400_BAD_REQUEST
             )
         except Exception as e:
+            logger.error(f"API error in ServiceListView: {str(e)}")
             return Response(
                 {'error': _('Ошибка при отправке сообщения')}, 
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR

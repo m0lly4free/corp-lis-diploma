@@ -316,6 +316,11 @@
         
         <form method="post" id="contact-form">
           {% csrf_token %}
+          <!-- Honeypot поле (скрытое) - защищает от спама -->
+          {{ form.hp_email }}
+          {{ form.hp_name }}
+          {{ form.timestamp }}
+          
           <div class="form-group">
             <label for="id_name">Ваше имя</label>
             {{ form.name }}
@@ -401,7 +406,7 @@
 </body>
 </html>
 
-<!-- Добавьте этот скрипт В КОНЕЦ ФАЙЛА contacts.html -->
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     // Проверяем наличие сообщений

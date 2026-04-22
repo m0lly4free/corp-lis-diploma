@@ -15,6 +15,9 @@ from core.sitemaps import (
 )
 from django.views.generic import TemplateView
 from django.urls import get_resolver
+from core.views import custom_404, custom_500
+
+
 
 # Определение карты сайта
 sitemaps = {
@@ -63,3 +66,7 @@ def check_sitemaps():
 # Вызовите проверку при старте
 if __name__ == '__main__':
     check_sitemaps()
+
+# Обработчики ошибок
+handler404 = 'core.views.custom_404'
+handler500 = 'core.views.custom_500'

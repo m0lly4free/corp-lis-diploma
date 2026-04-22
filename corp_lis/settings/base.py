@@ -107,10 +107,15 @@ LOGIN_URL = '/admin/login/'
 LOGIN_REDIRECT_URL = '/admin/'
 LOGOUT_REDIRECT_URL = '/admin/'
 
+DEBUG = config('DEBUG', default=True, cast=bool)
 # Django Axes - ограничение попыток входа
-AXES_ENABLED = False
-AXES_FAILURE_LIMIT = 5  # Максимум 5 неудачных попыток
-AXES_COOLOFF_TIME = timedelta(minutes=30)  # Блокировка на 30 минут
+if not DEBUG:
+    AXES_ENABLED = True
+if DEBUG:
+    AXES_ENABLED = False
+
+AXES_FAILURE_LIMIT = 5  
+AXES_COOLOFF_TIME = timedelta(minutes=30)  
 AXES_LOCKOUT_CALLABLE = 'axes.helpers.lockout_response'
 AXES_RESET_ON_SUCCESS = True  # Сброс счетчика при успешном входе
 AXES_META_PRECEDENCE_ORDER = [
@@ -137,6 +142,11 @@ MAX_FILE_SIZE = 5 * 1024 * 1024  # 5 MB
 # Для генерации миниатюр
 THUMBNAIL_SIZE = (300, 300)
 
+import os
+
+# Директория для логов
+LOGS_DIR = os.path.join(BASE_DIR, 'logs')
+os.makedirs(LOGS_DIR, exist_ok=True)
 # Логирование
 LOGGING = {
     'version': 1,
@@ -150,8 +160,16 @@ LOGGING = {
             'format': '{levelname} {message}',
             'style': '{',
         },
-        'email_formatter': {
-            'format': '{levelname} {asctime} {module} {message}',
+        'spam_formatter': {
+            'format': '{levelname} {asctime} {module} IP:{ip} {message}',
+            'style': '{',
+        },
+        'api_formatter': {
+            'format': '{levelname} {asctime} {module} API {message}',
+            'style': '{',
+        },
+        'error_formatter': {
+            'format': '{levelname} {asctime} {module} {pathname}:{lineno} {message}',
             'style': '{',
         },
     },
@@ -159,7 +177,7 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs', 'admin_actions.log'),
+            'filename': os.path.join(LOGS_DIR, 'admin_actions.log'),
             'formatter': 'verbose',
         },
         'console': {
@@ -170,13 +188,31 @@ LOGGING = {
         'email_file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'logs', 'email_notifications.log'),
-            'formatter': 'email_formatter',
+            'filename': os.path.join(LOGS_DIR, 'email_notifications.log'),
+            'formatter': 'verbose',
+        },
+        'spam_file': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGS_DIR, 'spam_attempts.log'),
+            'formatter': 'spam_formatter',
+        },
+        'api_file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGS_DIR, 'api_errors.log'),
+            'formatter': 'api_formatter',
+        },
+        'error_file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(LOGS_DIR, 'system_errors.log'),
+            'formatter': 'error_formatter',
         },
     },
     'loggers': {
         'django': {
-            'handlers': ['file', 'console'],
+            'handlers': ['file', 'console', 'error_file'],
             'level': 'INFO',
             'propagate': True,
         },
@@ -188,6 +224,21 @@ LOGGING = {
         'email_notifications': {
             'handlers': ['email_file', 'console'],
             'level': 'INFO',
+            'propagate': False,
+        },
+        'spam_protection': {
+            'handlers': ['spam_file', 'console'],
+            'level': 'WARNING',
+            'propagate': False,
+        },
+        'api_errors': {
+            'handlers': ['api_file', 'console'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'system_errors': {
+            'handlers': ['error_file', 'console'],
+            'level': 'ERROR',
             'propagate': False,
         },
     },
@@ -260,11 +311,15 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
+    handler404 = 'django.views.defaults.page_not_found'
+    handler500 = 'django.views.defaults.server_error'
 else:
     SESSION_ENGINE = 'django.contrib.sessions.backends.cached_db'
     SESSION_COOKIE_SECURE = True
     SESSION_COOKIE_HTTPONLY = True
     SESSION_COOKIE_SAMESITE = 'Strict'
+    handler404 = 'core.views.custom_404'
+    handler500 = 'core.views.custom_500'
 
 if not DEBUG:
     SECURE_SSL_REDIRECT = True
@@ -285,3 +340,5 @@ else:
 
 # Настройки Cache-Control для статических файлов
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+
+DEBUG=False
