@@ -3,7 +3,9 @@ from django.urls import reverse
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
-
+@classmethod
+def get_active_pages(cls):
+    return cls.objects.filter(is_active=True).select_related()
 class Page(models.Model):
     """Модель для управления основными страницами сайта"""
     
@@ -54,6 +56,13 @@ class Page(models.Model):
         if self.pk:
             self.version += 1
         super().save(*args, **kwargs)
+        
+        # Автоматическое обновление sitemap при сохранении
+        from django.contrib.sitemaps import ping_google
+        try:
+            ping_google()
+        except Exception:
+            pass  # Игнорируем ошибки пинга Google
     
     def get_absolute_url(self):
         return reverse('pages:detail', kwargs={'slug': self.slug})

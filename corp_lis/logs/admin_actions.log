@@ -2254,3 +2254,2223 @@ INFO 2026-04-21 19:00:23,026 autoreload 256 128220671968000 /app/core/util/email
 INFO 2026-04-21 19:00:24,689 autoreload 258 135554346259200 Watching for file changes with StatReloader
 INFO 2026-04-21 19:00:35,864 autoreload 258 135554346259200 /app/core/util/email.py changed, reloading.
 INFO 2026-04-21 19:00:37,981 autoreload 260 135005735154432 Watching for file changes with StatReloader
+INFO 2026-04-21 19:00:44,455 basehttp 260 135005650020032 "POST /api/contact/ HTTP/1.1" 201 8232
+INFO 2026-04-21 19:06:09,021 basehttp 260 135005650020032 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+INFO 2026-04-21 19:06:09,099 basehttp 260 135005650020032 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,102 basehttp 260 135005631137472 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,111 basehttp 260 135005622744768 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,118 basehttp 260 135005650020032 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,118 basehttp 260 135005631137472 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,119 basehttp 260 135005614352064 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-04-21 19:06:09,120 basehttp 260 135005605959360 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+WARNING 2026-04-21 19:06:09,120 basehttp 260 135005641627328 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+ERROR 2026-04-21 19:06:21,686 log 260 135005631137472 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (2, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:21.615932+00, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 109, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/signals.py", line 33, in handle_user_logged_in
+    AxesProxyHandler.user_logged_in(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/axes/helpers.py", line 538, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/proxy.py", line 127, in user_logged_in
+    return cls.get_implementation().user_logged_in(sender, request, user, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/database.py", line 278, in user_logged_in
+    AccessLog.objects.create(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (2, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:21.615932+00, null, null).
+
+ERROR 2026-04-21 19:06:21,699 basehttp 260 135005631137472 "POST /admin/login/?next=/admin/ HTTP/1.1" 500 248190
+INFO 2026-04-21 19:06:31,273 basehttp 260 135005631137472 "GET /admin/ HTTP/1.1" 302 0
+INFO 2026-04-21 19:06:31,289 basehttp 260 135005631137472 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+WARNING 2026-04-21 19:06:31,341 basehttp 260 135005631137472 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+ERROR 2026-04-21 19:06:37,559 log 260 135005650020032 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (3, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, 33366, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:37.525921+00, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 109, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/signals.py", line 33, in handle_user_logged_in
+    AxesProxyHandler.user_logged_in(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/axes/helpers.py", line 538, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/proxy.py", line 127, in user_logged_in
+    return cls.get_implementation().user_logged_in(sender, request, user, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/database.py", line 278, in user_logged_in
+    AccessLog.objects.create(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (3, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, 33366, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:37.525921+00, null, null).
+
+ERROR 2026-04-21 19:06:37,563 basehttp 260 135005650020032 "POST /admin/login/?next=/admin/ HTTP/1.1" 500 248227
+INFO 2026-04-21 19:06:40,474 basehttp 260 135005650020032 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+ERROR 2026-04-21 19:06:47,101 log 260 135005650020032 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (4, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:47.064865+00, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 109, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/signals.py", line 33, in handle_user_logged_in
+    AxesProxyHandler.user_logged_in(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/axes/helpers.py", line 538, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/proxy.py", line 127, in user_logged_in
+    return cls.get_implementation().user_logged_in(sender, request, user, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/database.py", line 278, in user_logged_in
+    AccessLog.objects.create(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (4, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:06:47.064865+00, null, null).
+
+ERROR 2026-04-21 19:06:47,107 basehttp 260 135005650020032 "POST /admin/login/?next=/admin/ HTTP/1.1" 500 248183
+INFO 2026-04-21 19:10:03,624 basehttp 260 135005631137472 code 400, message Bad request version ("\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-21 19:10:03,625 basehttp 260 135005631137472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-21 19:10:03,635 basehttp 260 135005631137472 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03W#¿ª\x93öÄÑ:\x11\x0exVâ\x86rß\x86ú@à¥Ýa\x0f\x17\x83b5-Ýe\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-21 19:10:03,635 basehttp 260 135005631137472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-21 19:10:03,641 basehttp 260 135005631137472 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03ä>\xadÞ\x91v½EM')
+ERROR 2026-04-21 19:10:03,642 basehttp 260 135005631137472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-21 19:10:03,649 basehttp 260 135005631137472 code 400, message Bad request version ("1Â÷¡ÙòTª³×P\x80\x11«Ö\xad\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-21 19:10:03,650 basehttp 260 135005631137472 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-21 19:25:04,938 autoreload 260 135005735154432 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:25:06,833 autoreload 274 133993048298240 Watching for file changes with StatReloader
+INFO 2026-04-21 19:25:21,622 autoreload 274 133993048298240 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:25:23,517 autoreload 276 138531498558208 Watching for file changes with StatReloader
+INFO 2026-04-21 19:25:33,207 autoreload 276 138531498558208 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:25:34,932 autoreload 278 138361167590144 Watching for file changes with StatReloader
+INFO 2026-04-21 19:25:57,013 autoreload 278 138361167590144 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:25:58,742 autoreload 280 133269496869632 Watching for file changes with StatReloader
+INFO 2026-04-21 19:26:46,371 autoreload 280 133269496869632 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:26:48,492 autoreload 282 129270682280704 Watching for file changes with StatReloader
+INFO 2026-04-21 19:30:00,823 basehttp 282 129270529652416 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+ERROR 2026-04-21 19:30:05,486 log 282 129270529652416 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.NotNullViolation: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (5, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:30:05.429535+00, null, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 153, in post
+    return self.form_valid(form)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 109, in form_valid
+    auth_login(self.request, form.get_user())
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 176, in send
+    return [
+           ^
+  File "/usr/local/lib/python3.11/site-packages/django/dispatch/dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/signals.py", line 33, in handle_user_logged_in
+    AxesProxyHandler.user_logged_in(*args, **kwargs)
+  File "/usr/local/lib/python3.11/site-packages/axes/helpers.py", line 538, in inner
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/proxy.py", line 127, in user_logged_in
+    return cls.get_implementation().user_logged_in(sender, request, user, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/axes/handlers/database.py", line 278, in user_logged_in
+    AccessLog.objects.create(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 658, in create
+    obj.save(force_insert=True, using=self.db)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 814, in save
+    self.save_base(
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 877, in save_base
+    updated = self._save_table(
+              ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1020, in _save_table
+    results = self._do_insert(
+              ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1061, in _do_insert
+    return manager._insert(
+           ^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1805, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1822, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.IntegrityError: null value in column "session_hash" of relation "axes_accesslog" violates not-null constraint
+DETAIL:  Failing row contains (5, Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KH..., 172.19.0.1, root, text/html,application/xhtml+xml,application/xml;q=0.9,image/avif..., /admin/login/, 2026-04-21 16:30:05.429535+00, null, null).
+
+ERROR 2026-04-21 19:30:05,491 basehttp 282 129270529652416 "POST /admin/login/?next=/admin/ HTTP/1.1" 500 248457
+INFO 2026-04-21 19:30:43,143 autoreload 282 129270682280704 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-21 19:30:45,412 autoreload 306 137773445473024 Watching for file changes with StatReloader
+WARNING 2026-04-21 19:30:49,570 log 306 137773289830080 Forbidden (CSRF token from POST incorrect.): /admin/login/
+WARNING 2026-04-21 19:30:49,572 basehttp 306 137773289830080 "POST /admin/login/?next=/admin/ HTTP/1.1" 403 2560
+INFO 2026-04-21 19:30:57,195 basehttp 306 137773289830080 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+INFO 2026-04-21 19:31:01,876 basehttp 306 137773289830080 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-04-21 19:31:01,915 basehttp 306 137773289830080 "GET /admin/ HTTP/1.1" 200 13174
+INFO 2026-04-21 19:31:01,976 basehttp 306 137773289830080 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2026-04-21 19:31:01,993 basehttp 306 137773273044672 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2026-04-21 19:31:01,997 basehttp 306 137773264651968 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2026-04-21 19:31:02,001 basehttp 306 137773256259264 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+WARNING 2026-04-21 19:31:02,001 basehttp 306 137773281437376 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:31:20,490 basehttp 306 137773256259264 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 18857
+INFO 2026-04-21 19:31:20,543 basehttp 306 137773256259264 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6566
+INFO 2026-04-21 19:31:20,565 basehttp 306 137773289830080 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2026-04-21 19:31:20,566 basehttp 306 137773247866560 "GET /static/admin/js/core.js HTTP/1.1" 200 5682
+INFO 2026-04-21 19:31:20,567 basehttp 306 137773256259264 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 8943
+WARNING 2026-04-21 19:31:20,568 basehttp 306 137773281437376 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:31:20,582 basehttp 306 137773264651968 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:31:20,586 basehttp 306 137773247866560 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2026-04-21 19:31:20,587 basehttp 306 137773239473856 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2026-04-21 19:31:20,587 basehttp 306 137773289830080 "GET /static/admin/js/actions.js HTTP/1.1" 200 7872
+INFO 2026-04-21 19:31:20,592 basehttp 306 137773247866560 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2026-04-21 19:31:20,595 basehttp 306 137773273044672 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 292458
+INFO 2026-04-21 19:31:20,602 basehttp 306 137773264651968 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 232381
+INFO 2026-04-21 19:31:20,624 basehttp 306 137773256259264 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2026-04-21 19:31:20,637 basehttp 306 137773264651968 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 200 1097
+WARNING 2026-04-21 19:31:31,859 log 306 137773264651968 Not Found: /contact/
+WARNING 2026-04-21 19:31:31,860 basehttp 306 137773264651968 "GET /contact/ HTTP/1.1" 404 3897
+WARNING 2026-04-21 19:31:37,051 log 306 137773264651968 Not Found: /contact
+WARNING 2026-04-21 19:31:37,053 basehttp 306 137773264651968 "GET /contact HTTP/1.1" 404 3894
+INFO 2026-04-21 19:31:40,365 basehttp 306 137773264651968 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-21 19:31:41,990 basehttp 306 137773264651968 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-21 19:31:55,188 basehttp 306 137773264651968 "POST /contacts/ HTTP/1.1" 200 14328
+INFO 2026-04-21 19:31:58,629 basehttp 306 137773264651968 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 19355
+WARNING 2026-04-21 19:31:58,681 basehttp 306 137773256259264 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:31:58,684 basehttp 306 137773264651968 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:33:21,951 basehttp 306 137773264651968 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-21 19:34:14,958 basehttp 306 137773264651968 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-21 19:34:23,081 basehttp 306 137773264651968 "GET /about/static/about/static/images/reck.jpg HTTP/1.1" 200 2356939
+INFO 2026-04-21 19:34:26,896 basehttp 306 137773264651968 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-21 19:34:26,960 basehttp 306 137773264651968 "GET /media/services/SIGIL_zKiQ5sU.webp HTTP/1.1" 304 0
+INFO 2026-04-21 19:34:29,151 basehttp 306 137773264651968 "GET /services/pokupka/ HTTP/1.1" 200 19556
+INFO 2026-04-21 19:34:34,800 basehttp 306 137773264651968 "GET /services/pokupka-test/ HTTP/1.1" 200 13077
+INFO 2026-04-21 19:34:37,368 basehttp 306 137773264651968 "GET /news/ HTTP/1.1" 200 9752
+INFO 2026-04-21 19:34:38,785 basehttp 306 137773264651968 "GET /news/test-shrift/ HTTP/1.1" 200 9873
+INFO 2026-04-21 19:34:42,788 basehttp 306 137773264651968 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-21 19:34:53,841 basehttp 306 137773264651968 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-21 19:35:03,189 basehttp 306 137773264651968 "GET /admin/contacts/contactmessage/16/change/ HTTP/1.1" 200 15266
+INFO 2026-04-21 19:35:03,257 basehttp 306 137773289830080 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-04-21 19:35:03,258 basehttp 306 137773264651968 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+WARNING 2026-04-21 19:35:03,259 basehttp 306 137773247866560 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:35:03,265 basehttp 306 137773273044672 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:35:03,270 basehttp 306 137773264651968 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2026-04-21 19:35:03,281 basehttp 306 137773264651968 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-04-21 19:35:07,536 basehttp 306 137773264651968 "POST /admin/contacts/contactmessage/16/change/ HTTP/1.1" 302 0
+INFO 2026-04-21 19:35:07,567 basehttp 306 137773264651968 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 19638
+WARNING 2026-04-21 19:35:07,620 basehttp 306 137773273044672 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:35:07,627 basehttp 306 137773264651968 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:35:07,647 basehttp 306 137773264651968 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-04-21 19:35:20,794 basehttp 306 137773264651968 "GET /admin/axes/accessattempt/ HTTP/1.1" 200 12062
+WARNING 2026-04-21 19:35:20,842 basehttp 306 137773289830080 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:35:20,848 basehttp 306 137773264651968 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:35:22,448 basehttp 306 137773264651968 "GET /admin/axes/ HTTP/1.1" 200 6161
+WARNING 2026-04-21 19:35:22,497 basehttp 306 137773264651968 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:35:23,824 basehttp 306 137773239473856 "GET /admin/axes/accessattempt/ HTTP/1.1" 200 12062
+INFO 2026-04-21 19:35:46,887 basehttp 306 137773239473856 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-21 19:35:48,505 basehttp 306 137773239473856 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-21 19:36:06,950 basehttp 306 137773239473856 "GET /admin/services/service/ HTTP/1.1" 200 17889
+WARNING 2026-04-21 19:36:07,012 basehttp 306 137773264651968 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-21 19:36:07,017 basehttp 306 137773239473856 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-21 19:36:07,047 basehttp 306 137773239473856 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-04-22 18:37:52,385 autoreload 7 127263743148800 Watching for file changes with StatReloader
+INFO 2026-04-22 18:37:54,524 basehttp 7 127263658993344 "GET / HTTP/1.1" 200 20294
+WARNING 2026-04-22 18:37:54,720 log 7 127263658993344 Not Found: /favicon.ico
+WARNING 2026-04-22 18:37:54,721 basehttp 7 127263658993344 "GET /favicon.ico HTTP/1.1" 404 3906
+INFO 2026-04-22 18:37:55,934 basehttp 7 127263658993344 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 18:37:55,990 basehttp 7 127263437747904 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:55,990 basehttp 7 127263658993344 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:55,991 basehttp 7 127263650600640 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:55,992 basehttp 7 127263429355200 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:57,052 basehttp 7 127263429355200 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-22 18:37:57,094 basehttp 7 127263650600640 "GET /media/services/SIGIL_zKiQ5sU.webp HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:57,097 basehttp 7 127263429355200 "GET /media/services/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_225050.png HTTP/1.1" 304 0
+INFO 2026-04-22 18:37:59,421 basehttp 7 127263429355200 "GET /news/ HTTP/1.1" 200 9752
+INFO 2026-04-22 18:37:59,469 basehttp 7 127263429355200 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_225203.png HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:00,172 basehttp 7 127263429355200 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-22 18:38:01,385 basehttp 7 127263429355200 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 18:38:11,734 basehttp 7 127263429355200 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+INFO 2026-04-22 18:38:11,791 basehttp 7 127263429355200 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:11,791 basehttp 7 127263437747904 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:11,792 basehttp 7 127263658993344 "GET /static/admin/css/login.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:11,798 basehttp 7 127263650600640 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:11,805 basehttp 7 127263412569792 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:11,809 basehttp 7 127263437747904 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+WARNING 2026-04-22 18:38:11,809 basehttp 7 127263420962496 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:38:11,810 basehttp 7 127263658993344 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:18,064 basehttp 7 127263437747904 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-04-22 18:38:18,112 basehttp 7 127263437747904 "GET /admin/ HTTP/1.1" 200 13218
+INFO 2026-04-22 18:38:18,164 basehttp 7 127263412569792 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:18,166 basehttp 7 127263658993344 "GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:18,168 basehttp 7 127263429355200 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+WARNING 2026-04-22 18:38:18,170 basehttp 7 127263437747904 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:38:18,171 basehttp 7 127263650600640 "GET /static/admin/img/icon-deletelink.svg HTTP/1.1" 200 392
+INFO 2026-04-22 18:38:35,855 basehttp 7 127263650600640 "GET /admin/auth/user/ HTTP/1.1" 200 17830
+INFO 2026-04-22 18:38:35,907 basehttp 7 127263650600640 "GET /static/admin/css/changelists.css HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,911 basehttp 7 127263437747904 "GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,917 basehttp 7 127263658993344 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,922 basehttp 7 127263420962496 "GET /static/admin/js/core.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,926 basehttp 7 127263658993344 "GET /static/admin/js/actions.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,928 basehttp 7 127263437747904 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 304 0
+WARNING 2026-04-22 18:38:35,928 basehttp 7 127263429355200 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:38:35,936 basehttp 7 127263412569792 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 18:38:35,936 basehttp 7 127263420962496 "GET /static/admin/js/urlify.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,939 basehttp 7 127263404177088 "GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,944 basehttp 7 127263412569792 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:35,947 basehttp 7 127263404177088 "GET /static/admin/img/search.svg HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:36,003 basehttp 7 127263412569792 "GET /static/admin/js/filters.js HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:36,016 basehttp 7 127263420962496 "GET /static/admin/img/sorting-icons.svg HTTP/1.1" 304 0
+INFO 2026-04-22 18:38:36,019 basehttp 7 127263404177088 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2026-04-22 18:38:39,890 basehttp 7 127263404177088 "GET /admin/auth/user/3/change/ HTTP/1.1" 200 23424
+INFO 2026-04-22 18:38:39,949 basehttp 7 127263404177088 "GET /static/admin/css/forms.css HTTP/1.1" 200 9047
+INFO 2026-04-22 18:38:39,955 basehttp 7 127263437747904 "GET /static/admin/js/calendar.js HTTP/1.1" 200 8466
+INFO 2026-04-22 18:38:39,958 basehttp 7 127263650600640 "GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+INFO 2026-04-22 18:38:39,961 basehttp 7 127263412569792 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 18:38:39,962 basehttp 7 127263658993344 "GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+INFO 2026-04-22 18:38:39,967 basehttp 7 127263404177088 "GET /static/admin/js/collapse.js HTTP/1.1" 200 1803
+WARNING 2026-04-22 18:38:39,969 basehttp 7 127263420962496 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:38:39,972 basehttp 7 127263650600640 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2026-04-22 18:38:39,972 basehttp 7 127263437747904 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11900
+INFO 2026-04-22 18:38:39,983 basehttp 7 127263437747904 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2026-04-22 18:38:40,043 basehttp 7 127263437747904 "GET /static/admin/img/inline-delete.svg HTTP/1.1" 200 560
+INFO 2026-04-22 18:38:40,099 basehttp 7 127263437747904 "GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+INFO 2026-04-22 18:38:40,099 basehttp 7 127263650600640 "GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+INFO 2026-04-22 18:38:54,625 basehttp 7 127263437747904 "POST /admin/auth/user/3/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 18:38:54,654 basehttp 7 127263437747904 "GET /admin/auth/user/ HTTP/1.1" 200 18122
+WARNING 2026-04-22 18:38:54,697 basehttp 7 127263650600640 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:38:54,702 basehttp 7 127263437747904 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 18:38:54,723 basehttp 7 127263437747904 "GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+INFO 2026-04-22 18:39:01,105 basehttp 7 127263437747904 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 19364
+WARNING 2026-04-22 18:39:01,146 basehttp 7 127263404177088 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:39:01,152 basehttp 7 127263437747904 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 18:39:04,954 basehttp 7 127263437747904 "GET /admin/news/news/ HTTP/1.1" 200 17379
+WARNING 2026-04-22 18:39:05,005 basehttp 7 127263412569792 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 18:39:05,008 basehttp 7 127263437747904 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 18:40:58,654 autoreload 7 127263743148800 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 18:41:00,390 autoreload 18 130286933500672 Watching for file changes with StatReloader
+INFO 2026-04-22 18:41:59,393 autoreload 18 130286933500672 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 18:42:01,059 autoreload 20 140371885175552 Watching for file changes with StatReloader
+INFO 2026-04-22 18:42:33,082 autoreload 20 140371885175552 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 18:42:34,899 autoreload 22 123239824614144 Watching for file changes with StatReloader
+INFO 2026-04-22 18:42:44,043 autoreload 22 123239824614144 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 18:42:45,885 autoreload 24 123223379337984 Watching for file changes with StatReloader
+INFO 2026-04-22 18:43:00,173 autoreload 24 123223379337984 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 18:43:01,761 autoreload 26 134323591762688 Watching for file changes with StatReloader
+INFO 2026-04-22 18:43:59,677 autoreload 26 134323591762688 /app/services/models.py changed, reloading.
+INFO 2026-04-22 18:44:01,341 autoreload 28 138356989895424 Watching for file changes with StatReloader
+INFO 2026-04-22 18:44:16,383 autoreload 28 138356989895424 /app/news/models.py changed, reloading.
+INFO 2026-04-22 18:44:18,070 autoreload 30 139970525741824 Watching for file changes with StatReloader
+INFO 2026-04-22 18:44:30,389 autoreload 30 139970525741824 /app/pages/models.py changed, reloading.
+INFO 2026-04-22 18:44:32,066 autoreload 32 130257891287808 Watching for file changes with StatReloader
+INFO 2026-04-22 18:45:18,334 autoreload 32 130257891287808 /app/services/views.py changed, reloading.
+INFO 2026-04-22 18:45:20,175 autoreload 34 134994899534592 Watching for file changes with StatReloader
+INFO 2026-04-22 18:45:42,049 autoreload 34 134994899534592 /app/pages/views.py changed, reloading.
+INFO 2026-04-22 18:45:43,865 autoreload 36 126394254934784 Watching for file changes with StatReloader
+ERROR 2026-04-22 18:46:22,998 log 36 126394170336960 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+psycopg2.errors.UndefinedTable: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 111, in sitemap
+    req_site = get_current_site(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 633, in get
+    num = len(clone)
+          ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 380, in __len__
+    self._fetch_all()
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 1881, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 91, in __iter__
+    results = compiler.execute_sql(
+              ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/sql/compiler.py", line 1562, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 102, in execute
+    return super().execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 84, in _execute
+    with self.db.wrap_database_errors:
+  File "/usr/local/lib/python3.11/site-packages/django/db/utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "/usr/local/lib/python3.11/site-packages/django/db/backends/utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+django.db.utils.ProgrammingError: relation "django_site" does not exist
+LINE 1: ..."django_site"."domain", "django_site"."name" FROM "django_si...
+                                                             ^
+
+ERROR 2026-04-22 18:46:23,004 basehttp 36 126394170336960 "GET /sitemap.xml HTTP/1.1" 500 143926
+ERROR 2026-04-22 18:46:48,747 log 36 126394170336960 Internal Server Error: /robots.txt
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: seo/robots.txt
+ERROR 2026-04-22 18:46:48,749 basehttp 36 126394170336960 "GET /robots.txt HTTP/1.1" 500 78139
+ERROR 2026-04-22 18:50:29,545 log 36 126394170336960 Internal Server Error: /robots.txt
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: seo/robots.txt
+ERROR 2026-04-22 18:50:29,549 basehttp 36 126394170336960 "GET /robots.txt HTTP/1.1" 500 78276
+ERROR 2026-04-22 18:50:31,716 log 36 126394170336960 Internal Server Error: /robots.txt
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: seo/robots.txt
+ERROR 2026-04-22 18:50:31,718 basehttp 36 126394170336960 "GET /robots.txt HTTP/1.1" 500 78276
+INFO 2026-04-22 18:51:44,499 basehttp 36 126394170336960 "GET /robots.txt HTTP/1.1" 200 312
+INFO 2026-04-22 18:52:35,501 autoreload 36 126394254934784 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 18:52:37,113 autoreload 48 135033619366656 Watching for file changes with StatReloader
+ERROR 2026-04-22 18:53:58,283 log 48 135033534801600 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 111, in sitemap
+    req_site = get_current_site(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:53:58,286 basehttp 48 135033534801600 "GET /sitemap.xml HTTP/1.1" 500 104224
+INFO 2026-04-22 18:55:44,426 basehttp 48 135033534801600 "GET /admin/news/news/ HTTP/1.1" 302 0
+ERROR 2026-04-22 18:55:44,475 log 48 135033534801600 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:55:44,477 basehttp 48 135033534801600 "GET /admin/login/?next=/admin/news/news/ HTTP/1.1" 500 165152
+INFO 2026-04-22 18:55:47,115 basehttp 48 135033534801600 "GET /contacts/ HTTP/1.1" 200 14058
+ERROR 2026-04-22 18:55:49,840 log 48 135033534801600 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:55:49,842 basehttp 48 135033534801600 "GET /admin/login/?next=/admin/news/news/ HTTP/1.1" 500 165152
+INFO 2026-04-22 18:55:52,871 basehttp 48 135033534801600 "GET /admin/ HTTP/1.1" 302 0
+ERROR 2026-04-22 18:55:52,952 log 48 135033534801600 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:55:52,955 basehttp 48 135033534801600 "GET /admin/login/?next=/admin/ HTTP/1.1" 500 164564
+INFO 2026-04-22 18:55:56,884 basehttp 48 135033534801600 "GET /admin/ HTTP/1.1" 302 0
+ERROR 2026-04-22 18:55:56,979 log 48 135033534801600 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:55:56,982 basehttp 48 135033534801600 "GET /admin/login/?next=/admin/ HTTP/1.1" 500 164564
+WARNING 2026-04-22 18:56:05,359 log 48 135033534801600 Not Found: /admi
+WARNING 2026-04-22 18:56:05,361 basehttp 48 135033534801600 "GET /admi HTTP/1.1" 404 4265
+INFO 2026-04-22 18:56:10,027 basehttp 48 135033534801600 "GET /admin/ HTTP/1.1" 302 0
+ERROR 2026-04-22 18:56:10,072 log 48 135033534801600 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:56:10,075 basehttp 48 135033534801600 "GET /admin/login/?next=/admin/ HTTP/1.1" 500 164564
+INFO 2026-04-22 18:58:01,714 autoreload 7 133935100142336 Watching for file changes with StatReloader
+ERROR 2026-04-22 18:58:04,898 log 7 133935016175296 Internal Server Error: /admin/login/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 39, in _get_site_by_request
+    SITE_CACHE[host] = self.get(domain__iexact=host)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 441, in login
+    return LoginView.as_view(**defaults)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 90, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/base.py", line 143, in dispatch
+    return handler(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/generic/edit.py", line 144, in get
+    return self.render_to_response(self.get_context_data())
+                                   ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/auth/views.py", line 114, in get_context_data
+    current_site = get_current_site(self.request)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/shortcuts.py", line 16, in get_current_site
+    return Site.objects.get_current(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 61, in get_current
+    return self._get_site_by_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sites/models.py", line 45, in _get_site_by_request
+    SITE_CACHE[domain] = self.get(domain__iexact=domain)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+django.contrib.sites.models.Site.DoesNotExist: Site matching query does not exist.
+ERROR 2026-04-22 18:58:04,906 basehttp 7 133935016175296 "GET /admin/login/?next=/admin/ HTTP/1.1" 500 164707
+ERROR 2026-04-22 19:00:49,502 log 7 133935007782592 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:00:49,518 basehttp 7 133935007782592 "GET /sitemap.xml HTTP/1.1" 500 106584
+INFO 2026-04-22 19:01:51,370 autoreload 7 133935100142336 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 19:01:53,352 autoreload 19 140126257652480 Watching for file changes with StatReloader
+INFO 2026-04-22 19:01:56,547 autoreload 19 140126257652480 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 19:01:58,197 autoreload 21 138504857027328 Watching for file changes with StatReloader
+INFO 2026-04-22 19:02:36,934 basehttp 21 138504764905152 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 3752
+WARNING 2026-04-22 19:02:36,993 basehttp 21 138504764905152 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:02:42,617 basehttp 21 138504773297856 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:02:42,658 basehttp 21 138504773297856 "GET /admin/ HTTP/1.1" 200 13887
+WARNING 2026-04-22 19:02:42,712 basehttp 21 138504773297856 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+ERROR 2026-04-22 19:02:47,972 log 21 138504764905152 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:02:47,983 basehttp 21 138504764905152 "GET /sitemap.xml HTTP/1.1" 500 106967
+INFO 2026-04-22 19:16:31,691 autoreload 21 138504857027328 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 19:16:34,029 autoreload 46 138858356790016 Watching for file changes with StatReloader
+INFO 2026-04-22 19:16:36,277 basehttp 46 138858272384704 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 19:16:37,030 basehttp 46 138858272384704 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-22 19:16:37,380 basehttp 46 138858272384704 "GET /news/ HTTP/1.1" 200 9752
+INFO 2026-04-22 19:16:37,790 basehttp 46 138858272384704 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 19:16:38,430 basehttp 46 138858272384704 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 19:16:48,103 basehttp 46 138858272384704 "POST /contacts/ HTTP/1.1" 200 14327
+INFO 2026-04-22 19:16:54,082 basehttp 46 138858272384704 "GET /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:16:54,154 basehttp 46 138858272384704 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 19:16:54,210 basehttp 46 138858272384704 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:17:00,234 basehttp 46 138858263992000 "POST /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:17:00,383 basehttp 46 138858263992000 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 20511
+WARNING 2026-04-22 19:17:00,453 basehttp 46 138858272384704 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:17:00,461 basehttp 46 138858263992000 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:17:20,659 autoreload 46 138858356790016 /app/contacts/urls.py changed, reloading.
+INFO 2026-04-22 19:17:22,751 autoreload 51 140179618693888 Watching for file changes with StatReloader
+INFO 2026-04-22 19:17:24,916 basehttp 51 140179533719232 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 19:17:26,204 basehttp 51 140179533719232 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 19:17:39,325 basehttp 51 140179533719232 "POST /contacts/ HTTP/1.1" 200 14306
+INFO 2026-04-22 19:17:41,368 basehttp 51 140179533719232 "GET /admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:17:41,430 basehttp 51 140179533719232 "GET /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 200 3800
+WARNING 2026-04-22 19:17:41,473 basehttp 51 140179533719232 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:17:48,344 basehttp 51 140179525326528 "POST /admin/login/?next=/admin/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:17:48,455 basehttp 51 140179525326528 "GET /admin/contacts/contactmessage/ HTTP/1.1" 200 20998
+WARNING 2026-04-22 19:17:48,507 basehttp 51 140179533719232 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:17:48,509 basehttp 51 140179525326528 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:18:20,951 autoreload 51 140179618693888 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:18:23,198 autoreload 56 135130630468352 Watching for file changes with StatReloader
+INFO 2026-04-22 19:18:32,901 autoreload 56 135130630468352 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:18:34,395 autoreload 58 136365323932416 Watching for file changes with StatReloader
+ERROR 2026-04-22 19:19:51,920 log 58 136365239953088 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:19:51,936 basehttp 58 136365239953088 "GET /sitemap.xml HTTP/1.1" 500 106976
+ERROR 2026-04-22 19:19:52,629 log 58 136365239953088 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:19:52,633 basehttp 58 136365239953088 "GET /sitemap.xml HTTP/1.1" 500 106827
+ERROR 2026-04-22 19:19:53,463 log 58 136365239953088 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:19:53,468 basehttp 58 136365239953088 "GET /sitemap.xml HTTP/1.1" 500 106827
+INFO 2026-04-22 19:20:40,919 autoreload 58 136365323932416 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:20:43,132 autoreload 74 126637093344000 Watching for file changes with StatReloader
+ERROR 2026-04-22 19:20:44,290 log 74 126637009004224 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contact'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 16, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contact' is not a registered namespace
+ERROR 2026-04-22 19:20:44,301 basehttp 74 126637009004224 "GET /sitemap.xml HTTP/1.1" 500 106816
+INFO 2026-04-22 19:20:48,729 autoreload 74 126637093344000 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:20:50,966 autoreload 78 131206447416064 Watching for file changes with StatReloader
+INFO 2026-04-22 19:21:25,985 autoreload 78 131206447416064 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:21:27,787 autoreload 80 127200968291072 Watching for file changes with StatReloader
+ERROR 2026-04-22 19:21:29,254 log 80 127200883893952 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'services'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 30, in location
+    return reverse('services:detail', kwargs={'slug': obj.slug})
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'services' is not a registered namespace
+ERROR 2026-04-22 19:21:29,277 basehttp 80 127200883893952 "GET /sitemap.xml HTTP/1.1" 500 106341
+INFO 2026-04-22 19:27:33,678 basehttp 80 127200883893952 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03å³Ô\x83')
+ERROR 2026-04-22 19:27:33,678 basehttp 80 127200883893952 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 19:27:33,689 basehttp 80 127200883893952 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03fÞ\x83%å?»gõVùª\x00ÉDêæt\x9fA\x06É³X\x89\x88Ü-6dÖ')
+ERROR 2026-04-22 19:27:33,690 basehttp 80 127200883893952 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 19:32:05,792 autoreload 80 127200968291072 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:32:08,079 autoreload 86 130619913253632 Watching for file changes with StatReloader
+ERROR 2026-04-22 19:32:27,843 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:27,855 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:28,707 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:28,714 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:29,438 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:29,445 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:29,858 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:29,865 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:30,050 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:30,054 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:30,398 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:30,403 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+ERROR 2026-04-22 19:32:30,570 log 86 130619753363136 Internal Server Error: /sitemap.xml
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 71, in reverse
+    extra, resolver = resolver.namespace_dict[ns]
+                      ~~~~~~~~~~~~~~~~~~~~~~~^^^^
+KeyError: 'contacts'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 34, in inner
+    response = func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/views.py", line 128, in sitemap
+    urls.extend(site.get_urls(page=page, site=req_site, protocol=req_protocol))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 167, in get_urls
+    return self._urls(page, protocol, domain)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 187, in _urls
+    loc = f"{protocol}://{domain}{self._location(item)}"
+                                  ^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 122, in _location
+    return self._get("location", item)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/sitemaps/__init__.py", line 92, in _get
+    return attr(item)
+           ^^^^^^^^^^
+  File "/app/core/sitemaps.py", line 25, in location
+    return reverse(item)
+           ^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/urls/base.py", line 82, in reverse
+    raise NoReverseMatch("%s is not a registered namespace" % key)
+django.urls.exceptions.NoReverseMatch: 'contacts' is not a registered namespace
+ERROR 2026-04-22 19:32:30,574 basehttp 86 130619753363136 "GET /sitemap.xml HTTP/1.1" 500 107542
+INFO 2026-04-22 19:41:04,013 basehttp 86 130619753363136 "GET /admin/sites/site/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:41:04,075 basehttp 86 130619753363136 "GET /admin/login/?next=/admin/sites/site/ HTTP/1.1" 200 3774
+WARNING 2026-04-22 19:41:04,128 basehttp 86 130619753363136 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:41:10,507 basehttp 86 130619744970432 "POST /admin/login/?next=/admin/sites/site/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:41:10,592 basehttp 86 130619744970432 "GET /admin/sites/site/ HTTP/1.1" 200 13201
+WARNING 2026-04-22 19:41:10,658 basehttp 86 130619753363136 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:41:10,664 basehttp 86 130619744970432 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:41:13,562 basehttp 86 130619744970432 "GET /admin/sites/site/1/change/ HTTP/1.1" 200 12847
+WARNING 2026-04-22 19:41:13,603 basehttp 86 130619744970432 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:41:13,610 basehttp 86 130619753363136 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:41:23,555 basehttp 86 130619753363136 "POST /admin/sites/site/1/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:41:23,580 basehttp 86 130619753363136 "GET /admin/sites/site/ HTTP/1.1" 200 13421
+WARNING 2026-04-22 19:41:23,630 basehttp 86 130619744970432 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:41:23,634 basehttp 86 130619753363136 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:41:26,942 basehttp 86 130619753363136 "GET /admin/sites/site/1/change/ HTTP/1.1" 200 12852
+WARNING 2026-04-22 19:41:26,986 basehttp 86 130619753363136 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:41:26,993 basehttp 86 130619744970432 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 19:48:46,416 autoreload 86 130619913253632 /app/core/sitemaps.py changed, reloading.
+INFO 2026-04-22 19:48:48,757 autoreload 102 135393183748864 Watching for file changes with StatReloader
+INFO 2026-04-22 19:49:24,590 autoreload 102 135393183748864 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 19:49:26,425 autoreload 104 125717974721280 Watching for file changes with StatReloader
+INFO 2026-04-22 19:49:52,606 autoreload 104 125717974721280 /app/core/urls.py changed, reloading.
+INFO 2026-04-22 19:49:54,298 autoreload 112 129983478633216 Watching for file changes with StatReloader
+INFO 2026-04-22 19:49:59,550 basehttp 112 129983394604736 "GET /sitemap.xml HTTP/1.1" 200 1435
+INFO 2026-04-22 19:50:31,212 basehttp 112 129983394604736 "GET /sitemap.xml HTTP/1.1" 200 1435
+INFO 2026-04-22 19:50:33,737 basehttp 112 129983394604736 "GET /admin/sites/site/1/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:50:33,806 basehttp 112 129983394604736 "GET /admin/login/?next=/admin/sites/site/1/change/ HTTP/1.1" 200 3792
+WARNING 2026-04-22 19:50:33,864 basehttp 112 129983394604736 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:50:37,746 basehttp 112 129983386212032 "POST /admin/login/?next=/admin/sites/site/1/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 19:50:37,844 basehttp 112 129983386212032 "GET /admin/sites/site/1/change/ HTTP/1.1" 200 12852
+WARNING 2026-04-22 19:50:37,915 basehttp 112 129983386212032 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 19:50:37,924 basehttp 112 129983394604736 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+WARNING 2026-04-22 19:50:44,549 log 112 129983394604736 Forbidden (CSRF token from POST incorrect.): /contacts/
+WARNING 2026-04-22 19:50:44,551 basehttp 112 129983394604736 "POST /contacts/ HTTP/1.1" 403 2560
+WARNING 2026-04-22 19:50:47,016 log 112 129983394604736 Forbidden (CSRF token from POST incorrect.): /contacts/
+WARNING 2026-04-22 19:50:47,018 basehttp 112 129983394604736 "POST /contacts/ HTTP/1.1" 403 2560
+INFO 2026-04-22 19:50:52,399 basehttp 112 129983394604736 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 19:50:54,515 basehttp 112 129983394604736 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 19:50:55,059 basehttp 112 129983394604736 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-22 19:50:55,443 basehttp 112 129983394604736 "GET /news/ HTTP/1.1" 200 9752
+INFO 2026-04-22 19:50:55,844 basehttp 112 129983394604736 "GET /partners/ HTTP/1.1" 200 18971
+INFO 2026-04-22 19:50:56,273 basehttp 112 129983394604736 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 19:50:57,106 basehttp 112 129983394604736 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 19:57:39,422 autoreload 112 129983478633216 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 19:57:41,748 autoreload 118 133153602036480 Watching for file changes with StatReloader
+INFO 2026-04-22 19:58:06,454 autoreload 118 133153602036480 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 19:58:08,397 autoreload 120 136177625711360 Watching for file changes with StatReloader
+INFO 2026-04-22 19:58:24,902 autoreload 120 136177625711360 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 19:58:26,531 autoreload 122 126562182390528 Watching for file changes with StatReloader
+INFO 2026-04-22 20:01:07,128 autoreload 122 126562182390528 /app/core/views.py changed, reloading.
+INFO 2026-04-22 20:01:09,404 autoreload 124 135094198588160 Watching for file changes with StatReloader
+INFO 2026-04-22 20:01:27,820 autoreload 124 135094198588160 /app/core/views.py changed, reloading.
+INFO 2026-04-22 20:01:29,622 autoreload 126 136262201475840 Watching for file changes with StatReloader
+INFO 2026-04-22 20:01:46,463 autoreload 126 136262201475840 /app/core/views.py changed, reloading.
+INFO 2026-04-22 20:01:48,124 autoreload 128 133744584872704 Watching for file changes with StatReloader
+INFO 2026-04-22 20:02:14,424 autoreload 128 133744584872704 /app/services/views.py changed, reloading.
+INFO 2026-04-22 20:02:16,141 autoreload 130 137843205845760 Watching for file changes with StatReloader
+INFO 2026-04-22 20:02:36,965 autoreload 130 137843205845760 /app/services/views.py changed, reloading.
+INFO 2026-04-22 20:02:38,682 autoreload 132 125665958384384 Watching for file changes with StatReloader
+INFO 2026-04-22 20:02:48,418 autoreload 132 125665958384384 /app/news/views.py changed, reloading.
+INFO 2026-04-22 20:02:50,005 autoreload 134 125778958353152 Watching for file changes with StatReloader
+INFO 2026-04-22 20:02:57,239 autoreload 134 125778958353152 /app/news/views.py changed, reloading.
+INFO 2026-04-22 20:02:58,687 autoreload 136 130567532708608 Watching for file changes with StatReloader
+INFO 2026-04-22 20:03:49,054 autoreload 136 130567532708608 /app/pages/views.py changed, reloading.
+INFO 2026-04-22 20:03:51,513 autoreload 138 136848602301184 Watching for file changes with StatReloader
+INFO 2026-04-22 20:04:00,049 autoreload 138 136848602301184 /app/pages/views.py changed, reloading.
+INFO 2026-04-22 20:04:01,745 autoreload 140 139921292661504 Watching for file changes with StatReloader
+INFO 2026-04-22 20:04:30,323 autoreload 140 139921292661504 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 20:04:32,042 autoreload 142 125450894385920 Watching for file changes with StatReloader
+INFO 2026-04-22 20:04:37,716 autoreload 142 125450894385920 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-04-22 20:04:39,492 autoreload 144 138235311604480 Watching for file changes with StatReloader
+INFO 2026-04-22 20:05:24,800 autoreload 144 138235311604480 /app/services/models.py changed, reloading.
+INFO 2026-04-22 20:05:27,072 autoreload 146 128021631668992 Watching for file changes with StatReloader
+INFO 2026-04-22 20:05:38,080 autoreload 146 128021631668992 /app/news/models.py changed, reloading.
+INFO 2026-04-22 20:05:40,022 autoreload 148 134876179698432 Watching for file changes with StatReloader
+INFO 2026-04-22 20:05:47,028 autoreload 148 134876179698432 /app/pages/models.py changed, reloading.
+INFO 2026-04-22 20:05:48,890 autoreload 150 127659773108992 Watching for file changes with StatReloader
+INFO 2026-04-22 20:08:40,791 autoreload 150 127659773108992 /app/services/views.py changed, reloading.
+INFO 2026-04-22 20:08:43,362 autoreload 152 124081377403648 Watching for file changes with StatReloader
+INFO 2026-04-22 20:09:12,750 autoreload 152 124081377403648 /app/services/urls.py changed, reloading.
+INFO 2026-04-22 20:09:14,496 autoreload 154 139329929278208 Watching for file changes with StatReloader
+INFO 2026-04-22 20:09:19,238 autoreload 154 139329929278208 /app/services/urls.py changed, reloading.
+INFO 2026-04-22 20:09:20,779 autoreload 156 131240200033024 Watching for file changes with StatReloader
+INFO 2026-04-22 20:10:46,662 autoreload 156 131240200033024 /app/services/admin.py changed, reloading.
+INFO 2026-04-22 20:10:48,973 autoreload 158 125894075708160 Watching for file changes with StatReloader
+INFO 2026-04-22 20:17:53,997 autoreload 158 125894075708160 /app/services/views.py changed, reloading.
+INFO 2026-04-22 20:17:55,852 autoreload 160 127020598797056 Watching for file changes with StatReloader
+INFO 2026-04-22 20:18:10,867 autoreload 160 127020598797056 /app/services/urls.py changed, reloading.
+INFO 2026-04-22 20:18:12,899 autoreload 162 139508771046144 Watching for file changes with StatReloader
+INFO 2026-04-22 20:18:17,742 autoreload 162 139508771046144 /app/services/urls.py changed, reloading.
+INFO 2026-04-22 20:18:19,842 autoreload 164 137419471319808 Watching for file changes with StatReloader
+INFO 2026-04-22 20:18:27,441 autoreload 164 137419471319808 /app/services/admin.py changed, reloading.
+INFO 2026-04-22 20:18:29,031 autoreload 166 126420395389696 Watching for file changes with StatReloader
+INFO 2026-04-22 20:18:46,678 autoreload 7 133837527778048 Watching for file changes with StatReloader
+INFO 2026-04-22 20:18:53,984 autoreload 7 128061965038336 Watching for file changes with StatReloader
+INFO 2026-04-22 20:24:43,528 autoreload 7 128061965038336 /app/services/views.py changed, reloading.
+INFO 2026-04-22 20:24:45,760 autoreload 9 130262252147456 Watching for file changes with StatReloader
+INFO 2026-04-22 20:25:02,532 autoreload 9 130262252147456 /app/services/urls.py changed, reloading.
+INFO 2026-04-22 20:25:04,404 autoreload 11 126480891671296 Watching for file changes with StatReloader
+INFO 2026-04-22 20:25:05,630 basehttp 11 126480806831808 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 20:25:06,928 basehttp 11 126480806831808 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 20:25:07,585 basehttp 11 126480806831808 "GET /services/ HTTP/1.1" 200 11482
+INFO 2026-04-22 20:25:44,760 basehttp 11 126480806831808 "GET /admin/sites/site/1/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:25:44,858 basehttp 11 126480806831808 "GET /admin/login/?next=/admin/sites/site/1/change/ HTTP/1.1" 200 3792
+WARNING 2026-04-22 20:25:44,914 basehttp 11 126480806831808 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:25:51,385 basehttp 11 126480798439104 "POST /admin/login/?next=/admin/sites/site/1/change/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:25:51,474 basehttp 11 126480798439104 "GET /admin/sites/site/1/change/ HTTP/1.1" 200 12852
+WARNING 2026-04-22 20:25:51,545 basehttp 11 126480798439104 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:25:51,553 basehttp 11 126480806831808 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:25:54,763 basehttp 11 126480806831808 "GET /admin/services/service/add/ HTTP/1.1" 200 18308
+WARNING 2026-04-22 20:25:54,810 basehttp 11 126480806831808 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:25:54,818 basehttp 11 126480798439104 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:26:07,974 basehttp 11 126480798439104 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 20:26:09,652 basehttp 11 126480798439104 "GET /admin/services/service/add/ HTTP/1.1" 200 18308
+INFO 2026-04-22 20:26:13,358 basehttp 11 126480798439104 "GET /contacts/ HTTP/1.1" 200 14058
+INFO 2026-04-22 20:26:14,162 basehttp 11 126480798439104 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 20:27:33,709 basehttp 11 126480806831808 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x01.Ú7\\\x00æµ2Êb\x837È7\x9dM\x9c\x99/à`èõ^Lï')
+ERROR 2026-04-22 20:27:33,710 basehttp 11 126480806831808 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 20:27:33,718 basehttp 11 126480806831808 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x15(\x8f\x00AE@8\x11¬±\x99\x97È·¾\x81µök§ÓÁ&[{Öc\x01F\x18.\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-04-22 20:27:33,719 basehttp 11 126480806831808 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 20:27:33,725 basehttp 11 126480806831808 code 400, message Bad request syntax ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03.0þ?\x8dF8+\x11f|\x8bÍ±Ç\x165\x96Ô\x84Vë\x91"\x80)|5càã\x95\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À\'\x00gÀ')
+ERROR 2026-04-22 20:27:33,726 basehttp 11 126480806831808 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-04-22 20:33:02,226 autoreload 11 126480891671296 /app/pages/views.py changed, reloading.
+INFO 2026-04-22 20:33:04,518 autoreload 21 136922400953088 Watching for file changes with StatReloader
+INFO 2026-04-22 20:33:14,500 autoreload 21 136922400953088 /app/pages/urls.py changed, reloading.
+INFO 2026-04-22 20:33:16,304 autoreload 23 138985641317120 Watching for file changes with StatReloader
+INFO 2026-04-22 20:33:29,315 autoreload 23 138985641317120 /app/pages/admin.py changed, reloading.
+INFO 2026-04-22 20:33:31,220 autoreload 25 129353439978240 Watching for file changes with StatReloader
+INFO 2026-04-22 20:33:37,196 basehttp 25 129353355617984 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 20:33:39,475 basehttp 25 129353355617984 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 20:33:47,771 basehttp 25 129353355617984 "GET /admin/pages/page/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:33:47,855 basehttp 25 129353355617984 "GET /admin/login/?next=/admin/pages/page/ HTTP/1.1" 200 3774
+WARNING 2026-04-22 20:33:47,901 basehttp 25 129353355617984 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:33:53,840 basehttp 25 129353274881728 "POST /admin/login/?next=/admin/pages/page/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:33:53,957 basehttp 25 129353274881728 "GET /admin/pages/page/ HTTP/1.1" 200 16338
+WARNING 2026-04-22 20:33:54,017 basehttp 25 129353355617984 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:33:54,025 basehttp 25 129353274881728 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:33:56,954 basehttp 25 129353274881728 "GET /admin/pages/page/1/change/ HTTP/1.1" 200 20030
+WARNING 2026-04-22 20:33:57,008 basehttp 25 129353274881728 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:33:57,017 basehttp 25 129353355617984 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:33:57,042 basehttp 25 129353355617984 "GET /static/admin/img/tooltag-arrowright.svg HTTP/1.1" 200 280
+WARNING 2026-04-22 20:34:16,608 log 25 129353355617984 Not Found: /pages/
+WARNING 2026-04-22 20:34:16,609 basehttp 25 129353355617984 "GET /pages/ HTTP/1.1" 404 4271
+INFO 2026-04-22 20:34:23,864 basehttp 25 129353355617984 "GET /page/test HTTP/1.1" 301 0
+INFO 2026-04-22 20:34:23,902 basehttp 25 129353274881728 "GET /page/test/ HTTP/1.1" 200 1414
+INFO 2026-04-22 20:43:56,126 autoreload 25 129353439978240 /app/news/views.py changed, reloading.
+INFO 2026-04-22 20:43:58,368 autoreload 32 126016986600192 Watching for file changes with StatReloader
+INFO 2026-04-22 20:44:03,097 autoreload 32 126016986600192 /app/news/urls.py changed, reloading.
+INFO 2026-04-22 20:44:04,792 autoreload 34 127392738317056 Watching for file changes with StatReloader
+INFO 2026-04-22 20:44:21,463 basehttp 34 127392653764288 "GET /about/ HTTP/1.1" 200 22920
+INFO 2026-04-22 20:44:22,646 basehttp 34 127392653764288 "GET / HTTP/1.1" 200 20294
+INFO 2026-04-22 20:44:23,422 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 9752
+INFO 2026-04-22 20:45:43,544 basehttp 34 127392653764288 "GET /admin/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:45:43,631 basehttp 34 127392653764288 "GET /admin/login/?next=/admin/news/news/add/ HTTP/1.1" 200 3780
+WARNING 2026-04-22 20:45:43,691 basehttp 34 127392653764288 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:45:48,589 basehttp 34 127392645371584 "POST /admin/login/?next=/admin/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:45:48,667 basehttp 34 127392645371584 "GET /admin/news/news/add/ HTTP/1.1" 200 17881
+WARNING 2026-04-22 20:45:48,728 basehttp 34 127392645371584 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:45:48,739 basehttp 34 127392653764288 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:45:51,126 basehttp 34 127392653764288 "GET /admin/news/news/add/ HTTP/1.1" 200 17881
+WARNING 2026-04-22 20:45:51,181 basehttp 34 127392653764288 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:45:51,190 basehttp 34 127392645371584 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-22 20:46:12,950 basehttp 34 127392645371584 "POST /admin/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-04-22 20:46:13,055 basehttp 34 127392645371584 "GET /admin/news/news/ HTTP/1.1" 200 18943
+INFO 2026-04-22 20:46:13,118 basehttp 34 127392645371584 "GET /admin/jsi18n/ HTTP/1.1" 200 16066
+WARNING 2026-04-22 20:46:13,127 basehttp 34 127392420984512 "GET /static/admin/custom_admin.css HTTP/1.1" 404 1926
+INFO 2026-04-22 20:46:13,326 basehttp 34 127392653764288 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 200 1420182
+INFO 2026-04-22 20:46:17,354 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+INFO 2026-04-22 20:46:17,415 basehttp 34 127392653764288 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+WARNING 2026-04-22 21:03:12,833 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:03:12,834 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:03:17,452 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:03:17,495 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:03:17,500 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:03:17,513 basehttp 34 127392645371584 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:04:36,024 basehttp 34 127392645371584 "GET /news/test-shrift/ HTTP/1.1" 200 9873
+WARNING 2026-04-22 21:04:36,073 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:04:36,074 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:04:37,294 basehttp 34 127392645371584 "GET /news/test-shrift/ HTTP/1.1" 200 9873
+WARNING 2026-04-22 21:04:37,334 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:04:37,335 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:04:58,526 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:04:58,527 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:05:00,328 basehttp 34 127392645371584 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:05:00,369 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:05:00,372 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:05:00,387 basehttp 34 127392653764288 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:07:59,705 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+INFO 2026-04-22 21:07:59,766 basehttp 34 127392653764288 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+WARNING 2026-04-22 21:07:59,771 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:07:59,773 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:08:20,254 basehttp 34 127392645371584 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:08:20,296 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:08:20,297 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:09:31,472 basehttp 34 127392645371584 "GET /services/ HTTP/1.1" 200 11482
+WARNING 2026-04-22 21:09:31,530 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:09:31,532 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:09:43,167 basehttp 34 127392645371584 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:09:43,226 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:09:43,228 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:09:54,710 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:09:54,712 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:10:38,643 basehttp 34 127392645371584 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:10:38,706 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:10:38,707 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:10:38,714 basehttp 34 127392653764288 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+INFO 2026-04-22 21:10:43,095 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:10:43,150 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:10:43,155 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:10:53,425 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:10:53,478 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:10:53,480 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:10:58,671 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:10:58,672 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:11:03,069 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:11:03,129 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:03,131 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:11:11,651 basehttp 34 127392653764288 "GET /partners/ HTTP/1.1" 200 18971
+WARNING 2026-04-22 21:11:11,703 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:11,704 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:11:16,744 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:16,745 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:11:18,115 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:11:18,165 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:18,169 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:11:38,253 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:38,255 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:11:51,766 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:11:51,849 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:11:51,857 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:12:30,449 basehttp 34 127392653764288 "GET /news/test-shrift/ HTTP/1.1" 200 9873
+WARNING 2026-04-22 21:12:30,501 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:12:30,503 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:12:41,237 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:12:41,304 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:12:41,306 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+WARNING 2026-04-22 21:12:46,553 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:12:46,554 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:13:06,140 basehttp 34 127392653764288 "GET /news/ HTTP/1.1" 200 10346
+WARNING 2026-04-22 21:13:06,187 log 34 127392653764288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:13:06,190 basehttp 34 127392653764288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:13:06,203 basehttp 34 127392645371584 "GET /media/news/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA_%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0_2023-02-11_161559.png HTTP/1.1" 304 0
+WARNING 2026-04-22 21:15:35,267 log 34 127392645371584 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-04-22 21:15:35,269 basehttp 34 127392645371584 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4397
+INFO 2026-04-22 21:19:30,090 autoreload 34 127392738317056 /app/news/views.py changed, reloading.
+INFO 2026-04-22 21:19:32,306 autoreload 45 130257156387584 Watching for file changes with StatReloader
+INFO 2026-04-22 21:19:44,867 autoreload 45 130257156387584 /app/news/urls.py changed, reloading.
+INFO 2026-04-22 21:19:46,601 autoreload 47 137599249158912 Watching for file changes with StatReloader
+INFO 2026-04-22 21:19:56,767 autoreload 47 137599249158912 /app/news/admin.py changed, reloading.
+INFO 2026-04-22 21:19:58,651 autoreload 49 132833872315136 Watching for file changes with StatReloader

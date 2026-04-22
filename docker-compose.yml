@@ -12,6 +12,8 @@ services:
       - postgres_data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+  redis:
+    image: redis:7-alpine
 
   web:
     build: .
@@ -28,6 +30,17 @@ services:
       - DEBUG=True
       - SECRET_KEY=your-secret-key-here-1234567890
       - DATABASE_URL=postgresql://corp_lis_user:corp_lis_pass@db:5432/corp_lis
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "8000:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
+    depends_on:
+      - web
 
 volumes:
   postgres_data:

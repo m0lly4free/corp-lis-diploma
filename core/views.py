@@ -5,6 +5,10 @@ from django.conf import settings
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from django.views.generic import View
+from django.views.decorators.cache import cache_page
+from django.views.generic import TemplateView
+from services.models import Service
+from news.models import News
 
 @login_required
 def protected_media(request, path):
@@ -62,6 +66,25 @@ def page_view(request, slug):
         return HttpResponse(content)
     else:
         return HttpResponse(f"Файл не найден: {template_path}")
+    
+@method_decorator(cache_page(60 * 15), name='dispatch')  # Кеширование на 15 минут
+class HomeView(TemplateView):
+    template_name = 'core/home.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # Оптимизированные запросы с select_related/prefetch_related
+        context['services'] = Service.objects.filter(is_active=True).select_related()
+        context['news'] = News.objects.filter(is_active=True).select_related()[:5]
+        return context
+
+@method_decorator(cache_page(60 * 60), name='dispatch')  # Кеширование на 1 час
+class AboutView(TemplateView):
+    template_name = 'core/about.html'
+
+@method_decorator(cache_page(60 * 60), name='dispatch')
+class PartnersView(TemplateView):
+    template_name = 'core/partners.html'
     
 
     

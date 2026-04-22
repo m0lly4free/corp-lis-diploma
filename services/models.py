@@ -3,6 +3,10 @@ from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
 
+# Метод для получения оптимизированного queryset
+@classmethod
+def get_active_services(cls):
+    return cls.objects.filter(is_active=True).select_related()
 class Service(models.Model):
     """Модель для услуг компании"""
     
@@ -54,6 +58,18 @@ class Service(models.Model):
         return reverse('services:detail', kwargs={'slug': self.slug})
     
     def save(self, *args, **kwargs):
+        if not self.slug:
+            from django.utils.text import slugify
+            self.slug = slugify(self.title)
+        
         if self.pk:
             self.version += 1
+        
         super().save(*args, **kwargs)
+        
+        # Автоматическое обновление sitemap при сохранении
+        from django.contrib.sitemaps import ping_google
+        try:
+            ping_google()
+        except Exception:
+            pass  # Игнорируем ошибки пинга Google

@@ -56,7 +56,7 @@ class ServiceAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
     
     def get_queryset(self, request):
-        # Оптимизация запросов к базе данных
+        # Оптимизация запросов к базе данных - уменьшение количества SQL-запросов
         return super().get_queryset(request)
     
     # Отображение категории с переводом

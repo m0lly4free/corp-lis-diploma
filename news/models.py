@@ -2,7 +2,9 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
-
+@classmethod
+def get_active_news(cls):
+    return cls.objects.filter(is_active=True).select_related()
 class News(models.Model):
     """Модель для новостей компании"""
     title = models.CharField(max_length=255, verbose_name=_('Заголовок'))
@@ -42,3 +44,10 @@ class News(models.Model):
             self.version += 1
             
         super().save(*args, **kwargs)
+        
+        # Автоматическое обновление sitemap при сохранении
+        from django.contrib.sitemaps import ping_google
+        try:
+            ping_google()
+        except Exception:
+            pass  # Игнорируем ошибки пинга Google
