@@ -2,182 +2,473 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>АО «Корпорация ЛИС»</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', 'Roboto', sans-serif; line-height: 1.6; color: #2d3748; background: #f8fafc; }
-    .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-    header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px 0; position: sticky; top: 0; z-index: 100; }
-    .header-inner { display: flex; justify-content: space-between; align-items: center; }
-    .logo { font-size: 1.8rem; font-weight: 700; color: #0066cc; text-decoration: none; display: flex; align-items: center; }
-    .logo span { color: #ff7e05; margin-left: 5px; }
-    nav ul { display: flex; list-style: none; }
-    nav ul li { margin-left: 25px; }
-    nav ul li a { text-decoration: none; color: #4a5568; font-weight: 500; padding: 5px 0; position: relative; }
-    nav ul li a:hover { color: #0066cc; }
-    nav ul li a.active::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 3px; background: #0066cc; border-radius: 2px; }
-    main { min-height: 70vh; padding: 40px 0; }
-    footer { background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%); color: white; padding: 40px 0 20px; margin-top: 40px; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; }
-    .footer-col h3 { font-size: 1.4rem; margin-bottom: 20px; position: relative; padding-bottom: 10px; }
-    .footer-col h3::after { content: ''; position: absolute; bottom: 0; left: 0; width: 40px; height: 3px; background: #ff7e05; border-radius: 2px; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 12px; }
-    .footer-col ul li a { color: rgba(255,255,255,0.85); text-decoration: none; }
-    .footer-col ul li a:hover { color: white; text-decoration: underline; }
-    .copyright { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.7); margin-top: 20px; }
-    @media (max-width: 768px) {
-      .header-inner { flex-direction: column; gap: 15px; }
-      nav ul { flex-direction: column; align-items: center; }
-      nav ul li { margin: 8px 0; }
-      .footer-grid { grid-template-columns: 1fr; text-align: center; }
+    body { 
+        font-family: 'Segoe UI', 'Roboto', sans-serif; 
+        line-height: 1.6; 
+        color: #2d3748; 
+        background: #f8fafc;
+        overflow-x: hidden; /* Запрет горизонтальной прокрутки */
+    }
+    .container { 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 15px; /* Уменьшено для мобильных */
+        
+    }
+    header { 
+        background: white; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        padding: 12px 0; /* Уменьшено для мобильных */
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+    }
+    .header-inner { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        flex-wrap: wrap; /* Разрешаем перенос на мобильных */
+        gap: 10px;
+    }
+    .logo { 
+        font-size: 1.6rem; /* Уменьшено для мобильных */
+        font-weight: 700; 
+        color: #0066cc; 
+        text-decoration: none; 
+        display: flex; 
+        align-items: center; 
+    }
+    .logo span { 
+        color: #ff7e05; 
+        margin-left: 5px; 
+    }
+    nav ul { 
+        display: flex; 
+        list-style: none; 
+        flex-wrap: wrap;
+        gap: 15px; /* Уменьшено для мобильных */
+    }
+    nav ul li { 
+        margin: 0; 
+    }
+    nav ul li a { 
+        text-decoration: none; 
+        color: #4a5568; 
+        font-weight: 500; 
+        padding: 5px 0; 
+        position: relative;
+        font-size: 0.95rem; /* Уменьшено для мобильных */
+    }
+    nav ul li a:hover { 
+        color: #0066cc; 
+    }
+    nav ul li a.active::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 2px; /* Уменьшено для мобильных */
+        background: #0066cc; 
+        border-radius: 2px; 
+    }
+    main { 
+        min-height: 70vh; 
+        padding: 30px 0; /* Уменьшено для мобильных */
+    }
+    footer { 
+        background: linear-gradient(135deg, #0066cc 0%, #00a8e8 100%); 
+        color: white; 
+        padding: 30px 0 15px; /* Уменьшено для мобильных */
+        margin-top: 30px; 
+    }
+    .footer-grid { 
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+        gap: 25px; /* Уменьшено для мобильных */
+    }
+    .footer-col h3 { 
+        font-size: 1.3rem; /* Уменьшено для мобильных */
+        margin-bottom: 15px; 
+        position: relative; 
+        padding-bottom: 8px; 
+    }
+    .footer-col h3::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; 
+        left: 0; 
+        width: 35px; /* Уменьшено для мобильных */
+        height: 2px; /* Уменьшено для мобильных */
+        background: #ff7e05; 
+        border-radius: 2px; 
+    }
+    .footer-col ul { 
+        list-style: none; 
+    }
+    .footer-col ul li { 
+        margin-bottom: 10px; /* Уменьшено для мобильных */
+    }
+    .footer-col ul li a { 
+        color: rgba(255,255,255,0.85); 
+        text-decoration: none; 
+    }
+    .footer-col ul li a:hover { 
+        color: white; 
+        text-decoration: underline; 
+    }
+    .copyright { 
+        text-align: center; 
+        padding-top: 20px; 
+        border-top: 1px solid rgba(255,255,255,0.2); 
+        color: rgba(255,255,255,0.7); 
+        margin-top: 15px; 
+        font-size: 0.9rem; /* Уменьшено для мобильных */
     }
     
     /* Дополнительные стили для контента */
     .hero {
- background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
-      color: white;
-      padding: 8rem 0 6rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
+        background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
+        color: white;
+        padding: 6rem 0 4rem; /* Уменьшено для мобильных */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
     }
     .hero h1 {
-      font-size: 3.2rem;
-      font-weight: 700;
-      margin-bottom: 1.5rem;
-      line-height: 1.2;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        font-size: 2.2rem; /* Уменьшено для мобильных */
+        font-weight: 700;
+        margin-bottom: 1.2rem; /* Уменьшено для мобильных */
+        line-height: 1.3; /* Увеличено для мобильных */
+        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
     }
     .hero p {
-      font-size: 1.5rem;
-      opacity: 0.95;
-      margin-bottom: 2.5rem;
-      line-height: 1.6;
-      max-width: 700px;
-      margin: 0 auto;
+        font-size: 1.2rem; /* Уменьшено для мобильных */
+        opacity: 0.95;
+        margin-bottom: 2rem; /* Уменьшено для мобильных */
+        line-height: 1.6;
+        max-width: 700px;
+        margin: 0 auto;
     }
     .btn {
-      display: inline-block;
-      background: white;
-      color: #0066cc;
-      padding: 1rem 2.5rem;
-      border-radius: 6px;
-      font-weight: 700;
-      text-decoration: none;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        display: inline-block;
+        background: white;
+        color: #0066cc;
+        padding: 0.8rem 2rem; /* Уменьшено для мобильных */
+        border-radius: 6px;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1.1rem; /* Уменьшено для мобильных */
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        text-align: center;
     }
     .btn:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     }
     
     .section {
-      padding: 5rem 0;
+        padding: 40px 0; /* Уменьшено для мобильных */
+        position: relative;
+        overflow: hidden;
     }
+    .section-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
     .section-title {
-      text-align: center;
-      margin-bottom: 3.5rem;
+        text-align: center;
+        margin-bottom: 2.5rem; /* Уменьшено для мобильных */
     }
     .section-title h2 {
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: #2d3748;
-      margin-bottom: 1rem;
+        font-size: 1.8rem; /* Уменьшено для мобильных */
+        font-weight: 700;
+        color: #2d3748;
+        margin-bottom: 1rem;
     }
     .section-title p {
-      color: #718096;
-      font-size: 1.2rem;
-      max-width: 700px;
-      margin: 0 auto;
+        color: #718096;
+        font-size: 1.1rem; /* Уменьшено для мобильных */
+        max-width: 700px;
+        margin: 0 auto;
     }
     
     .card {
-      background: white;
-      border-radius: 16px;
-      overflow: hidden;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-      transition: all 0.3s ease;
+        background: white;
+        border-radius: 12px; /* Уменьшено для мобильных */
+        overflow: hidden;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
     }
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+        transform: translateY(-8px);
+        box-shadow: 0 12px 25px rgba(0,0,0,0.15);
     }
     .card h3 {
-      color: #0066cc;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 1.5rem 0 1rem;
-      padding: 0 1.8rem;
+        color: #0066cc;
+        font-size: 1.4rem; /* Уменьшено для мобильных */
+        font-weight: 700;
+        margin: 1.2rem 0 1rem; /* Уменьшено для мобильных */
+        padding: 0 1.5rem; /* Уменьшено для мобильных */
     }
     .card p {
-      color: #4a5568;
-      line-height: 1.7;
-      margin: 0 1.8rem 1.5rem;
+        color: #4a5568;
+        line-height: 1.7;
+        margin: 0 1.5rem 1.2rem; /* Уменьшено для мобильных */
     }
     .card a {
-      color: #0066cc;
-      font-weight: 600;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      margin: 0 1.8rem 1.5rem;
+        color: #0066cc;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        margin: 0 1.5rem 1.2rem; /* Уменьшено для мобильных */
     }
     .card a i {
-      margin-left: 0.5rem;
+        margin-left: 0.5rem;
     }
     
     .advantages-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2.5rem;
-      text-align: center;
-    }
-    .advantage {
-      margin: 0 auto 1.5rem;
-    }
-    .advantage-icon {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #0066cc, #00a8e8);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.5rem;
-      font-size: 2.2rem;
-      color: white;
-    }
-    .advantage h3 {
-      color: #0066cc;
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-    }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.advantage-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #0066cc, #00a8e8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.2rem;
+    color: white;
+}
+
+.advantage h3 {
+    color: #0066cc;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.advantage p {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 250px;
+}
+
     
     .contact-info {
-      display: flex;
-      justify-content: center;
-      gap: 2.5rem;
-      flex-wrap: wrap;
-      margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+        gap: 2rem; /* Уменьшено для мобильных */
+        flex-wrap: wrap;
+        margin-bottom: 2rem; /* Уменьшено для мобильных */
     }
     .contact-item {
-      text-align: center;
+        text-align: center;
     }
     .contact-item div {
-      font-size: 1.1rem;
-      opacity: 0.9;
-      margin-bottom: 0.5rem;
+        font-size: 1rem; /* Уменьшено для мобильных */
+        opacity: 0.9;
+        margin-bottom: 0.4rem; /* Уменьшено для мобильных */
     }
     .contact-item strong {
-      font-size: 1.4rem;
-      font-weight: 700;
+        font-size: 1.2rem; /* Уменьшено для мобильных */
+        font-weight: 700;
+    }
+    
+    /* Media Queries для разных устройств */
+    
+    /* Мобильные устройства (360px - 767px) */
+    @media (max-width: 767px) {
+      
+        .header-inner {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        nav ul {
+            flex-direction: column;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        nav ul li {
+            width: 100%;
+        }
+        
+        nav ul li a {
+            display: block;
+            padding: 10px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+        }
+        .container {
+            padding: 0 10px;
+        }
+        
+            .advantages-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .advantage {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-grid {
+            grid-template-columns: 1fr;
+            text-align: center;
+        }
+        
+        .copyright {
+            text-align: center;
+        }
+    }
+    
+    /* Планшеты (768px - 1023px) */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .container {
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 2.6rem;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.1rem;
+        }
+        
+        .advantages-grid {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    
+    /* Десктопы (1024px - 1439px) */
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        .container {
+            padding: 0 30px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+        }
+        
+        .hero p {
+            font-size: 1.4rem;
+        }
+        
+        .advantages-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+    
+    /* Широкоформатные мониторы (1440px+) */
+    @media (min-width: 1440px) {
+        .container {
+            padding: 0 40px;
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+        }
+        
+        .advantages-grid {
+            max-width: 1600px;
+            gap: 4rem;
+        }
+        
+        .footer-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    
+    /* Очень большие экраны (1920px+) */
+    @media (min-width: 1920px) {
+        .container {
+            max-width: 1600px;
+            padding: 0 50px;
+        }
+        
+        .hero {
+            padding: 10rem 0 8rem;
+        }
+        
+        .section {
+            padding: 6rem 0;
+        }
+        .advantages-grid {
+            max-width: 1600px;
+            gap: 4rem;
+        }
+    }
+    
+    /* Защита от горизонтального скролла */
+    img, video, iframe {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    table {
+        width: 100%;
+        table-layout: fixed;
     }
   </style>
+  <!--{% include 'analytics.html' %}-->
 </head>
 <body>
   <!-- Шапка сайта с логотипом и меню -->
@@ -320,34 +611,35 @@
   </section>
 
   <!-- Advantages Section (Преимущества) -->
-  <section class="section">
+  <section class="section" style="background: white;">
     <div class="container">
-      <div class="section-title">
-        <h2>Почему выбирают нас</h2>
-        <p>Более 20 лет опыта в области промышленных решений и переработки металлолома</p>
-      </div>
-      
-      <div class="advantages-grid">
-        <div class="advantage">
-          <div class="advantage-icon">✓</div>
-          <h3>Надёжность</h3>
-          <p>Более 5000 успешно завершённых проектов и опыт работы на рынке с 2004 года.</p>
+        <div class="section-title">
+            <h2>Почему выбирают нас</h2>
+            <p>Более 20 лет опыта в области промышленных решений и переработки металлолома</p>
         </div>
         
-        <div class="advantage">
-          <div class="advantage-icon">⚡</div>
-          <h3>Скорость</h3>
-          <p>Решения под ключ в кратчайшие сроки с использованием современных технологий.</p>
+        <!-- Исправленная сетка с центрированием -->
+        <div class="advantages-grid" style="justify-content: center;">
+            <div class="advantage" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="advantage-icon">✓</div>
+                <h3>Надёжность</h3>
+                <p>Более 5000 успешно завершённых проектов и опыт работы на рынке с 2004 года.</p>
+            </div>
+            
+            <div class="advantage" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="advantage-icon">⚡</div>
+                <h3>Скорость</h3>
+                <p>Решения под ключ в кратчайшие сроки с использованием современных технологий.</p>
+            </div>
+            
+            <div class="advantage" style="display: flex; flex-direction: column; align-items: center;">
+                <div class="advantage-icon">💼</div>
+                <h3>Экспертиза</h3>
+                <p>Команда сертифицированных специалистов с глубокими знаниями в области металлургии.</p>
+            </div>
         </div>
-        
-        <div class="advantage">
-          <div class="advantage-icon">💼</div>
-          <h3>Экспертиза</h3>
-          <p>Команда сертифицированных специалистов с глубокими знаниями в области металлургии.</p>
-        </div>
-      </div>
     </div>
-  </section>
+</section>
 
   <!-- Contacts Section (Краткая контактная информация) -->
   <section class="section" style="background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%); color: white;">

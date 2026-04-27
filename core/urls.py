@@ -16,6 +16,8 @@ from core.sitemaps import (
 from django.views.generic import TemplateView
 from django.urls import get_resolver
 from core.views import custom_404, custom_500
+from django.conf.urls.i18n import i18n_patterns
+from django.views.i18n import set_language
 
 
 
@@ -48,7 +50,9 @@ urlpatterns = [
     path('test-404/', lambda request: custom_404(request, Exception("Тестовая 404 ошибка"))),
     path('test-500/', lambda request: custom_500(request)),
 
+
 ]
+
 
 urlpatterns += [
     re_path(r'^about/static/(?P<path>.*)$', serve, {
@@ -56,9 +60,9 @@ urlpatterns += [
     }),
 ]
 
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
 def check_sitemaps():
@@ -74,3 +78,5 @@ if __name__ == '__main__':
 # Обработчики ошибок
 handler404 = 'core.views.custom_404'
 handler500 = 'core.views.custom_500'
+
+

@@ -37,9 +37,13 @@ class Service(models.Model):
     )
     image = MediaImageField(
         upload_to='services/', 
-        verbose_name=_('Основное изображение'), 
+        verbose_name=_('Изображение'), 
         null=True, 
-        blank=True
+        blank=True,
+        max_size=(1920, 1080),
+        quality=85,
+        max_upload_size=10*1024*1024,  # 10MB
+        formats=['JPEG', 'PNG', 'WEBP']
     )
     is_active = models.BooleanField(default=True, verbose_name=_('Активна'))
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата создания'))

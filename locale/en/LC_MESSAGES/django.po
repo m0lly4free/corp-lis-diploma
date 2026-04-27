@@ -1,0 +1,73 @@
+# English translations
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+# Menu
+msgid "Главная"
+msgstr "Home"
+
+msgid "О компании"
+msgstr "About"
+
+msgid "Услуги"
+msgstr "Services"
+
+msgid "Новости"
+msgstr "News"
+
+msgid "Клиентам/Партнерам"
+msgstr "For Clients/Partners"
+
+msgid "Контакты"
+msgstr "Contacts"
+
+# Footer
+msgid "Разделы сайта"
+msgstr "Site Sections"
+
+msgid "Все права защищены."
+msgstr "All rights reserved."
+
+msgid "г. Москва, 1-ый Дорожный проезд, д. 9"
+msgstr "9, 1st Dorozhny Proezd, Moscow"
+
+msgid "с 7:00 до 19:00 (без выходных)"
+msgstr "7:00 AM - 7:00 PM (daily)"
+
+msgid "АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года."
+msgstr "AO «Corporation LIS» — leader in the field of scrap and waste collection and processing of ferrous and non-ferrous metals since 2004."
+
+# Contact form
+msgid "Ваше имя"
+msgstr "Your name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Телефон"
+msgstr "Phone"
+
+msgid "Сообщение"
+msgstr "Message"
+
+msgid "Отправить сообщение"
+msgstr "Send message"
+
+# Success messages
+msgid "Ваше сообщение успешно отправлено!"
+msgstr "Your message has been successfully sent!"
+
+# Validation errors
+msgid "Имя должно содержать минимум 2 символа."
+msgstr "Name must contain at least 2 characters."
+
+msgid "Сообщение должно содержать минимум 10 символов."
+msgstr "Message must contain at least 10 characters."
+
+msgid "Сообщение отправлено слишком быстро. Пожалуйста, подождите несколько секунд."
+msgstr "Message sent too quickly. Please wait a few seconds."
+
+msgid "Сообщение заблокировано как спам."
+msgstr "Message blocked as spam."

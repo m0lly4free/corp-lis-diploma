@@ -6,6 +6,8 @@ except ImportError:
     config = lambda key, default=None: os.environ.get(key, default)
 
 from datetime import timedelta
+from pathlib import Path
+
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -35,6 +37,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -55,6 +58,7 @@ TEMPLATES = [{
             'django.template.context_processors.request',
             'django.contrib.auth.context_processors.auth',
             'django.contrib.messages.context_processors.messages',
+            'core.context_processors.analytics_context',
         ],
     },
 }]
@@ -281,14 +285,22 @@ USE_TZ = True
 
 LANGUAGES = [
     ('ru', 'Русский'),
+    ('en', 'English'),
 ]
 
 LOCALE_PATHS = [
     os.path.join(BASE_DIR, 'locale'),
 ]
 
-# Настройки электронной почты
 
+# Аналитика
+YANDEX_METRIKA_ID = config('YANDEX_METRIKA_ID', default='')
+GOOGLE_ANALYTICS_ID = config('GOOGLE_ANALYTICS_ID', default='')
+
+# Флаг для включения аналитики (по умолчанию выключена)
+ENABLE_ANALYTICS = config('ENABLE_ANALYTICS', default=False, cast=bool)
+
+# Настройки электронной почты
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = config('EMAIL_HOST', default='smtp.gmail.com')
 EMAIL_PORT = config('EMAIL_PORT', default=587, cast=int)
