@@ -9,7 +9,7 @@ from .models import News
 @admin.register(News)
 class NewsAdmin(admin.ModelAdmin):
     """
-    Административная панель для новостей с инструкцией внутри текстбокса
+    Административная панель для новостей с инструкцией в label
     Соответствует требованиям ТЗ 3.2.10
     """
     
@@ -81,15 +81,20 @@ class NewsAdmin(admin.ModelAdmin):
     def get_form(self, request, obj=None, **kwargs):
         form = super().get_form(request, obj, **kwargs)
         
-        # ИНСТРУКЦИЯ ВНУТРИ ТЕКСТБОКСА КАК PLACEHOLDER
+        # ИНСТРУКЦИЯ В LABEL (рядом с "Основной текст")
+        form.base_fields['short_description'].label = _('Краткое описание')
         form.base_fields['short_description'].widget.attrs.update({
-            'placeholder': _('Примеры HTML-разметки:\n<b>жирный</b>\n<i>курсив</i>\n<u>подчеркнутый</u>\n<h2>заголовок 2</h2>\n<ul><li>список</li></ul>'),
-            'style': 'min-height: 150px !important; font-family: monospace; white-space: pre-wrap;'
+            'style': 'min-height: 100px !important;'
         })
         
+        # Добавляем инструкцию прямо в label поля content
+        form.base_fields['content'].label = _(
+            'Основной текст      (Примеры HTML:\n<b>жирный</b>,\n<i>курсив</i>,\n'
+            '<u>подчеркнутый</u>,\n<h2>заголовок</h2>,\n<ul><li>список</li></ul>)'
+        )
         form.base_fields['content'].widget.attrs.update({
-            'placeholder': _('Примеры HTML-разметки:\n<b>жирный</b>\n<i>курсив</i>\n<u>подчеркнутый</u>\n<h2>заголовок 2</h2>\n<ul><li>список</li></ul>'),
-            'style': 'min-height: 300px !important; font-family: monospace; white-space: pre-wrap;'
+            'style': 'min-height: 300px !important; font-family: monospace;',
+            'placeholder': 'Введите текст с HTML-разметкой...'
         })
         
         return form

@@ -2,6 +2,12 @@ from django.db import models
 from django.urls import reverse
 from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
+from django.core.cache import cache
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
+import logging
+
+logger = logging.getLogger('system_errors')
 
 # Метод для получения оптимизированного queryset
 @classmethod
@@ -77,3 +83,16 @@ class Service(models.Model):
             ping_google()
         except Exception:
             pass  # Игнорируем ошибки пинга Google
+
+@receiver([post_save, post_delete], sender='services.Service')
+def invalidate_service_cache(sender, instance, **kwargs):
+    """
+    Автоматическая очистка кеша при изменении/удалении услуги.
+    """
+    try:
+        cache.delete_pattern('*services*')
+        cache.delete_pattern('*corp_lis*')
+        logger.info(f"Cache invalidated for Service: {instance}")
+    except Exception as e:
+        cache.clear()
+        logger.warning(f"Pattern delete failed, full cache clear triggered: {e}")

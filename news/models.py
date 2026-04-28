@@ -1,10 +1,23 @@
 from django.db import models
 from django.urls import reverse
+from django.core.cache import cache
+from django.db.models.signals import post_save, post_delete
+from django.dispatch import receiver
 from django.utils.translation import gettext_lazy as _
 from core.fields import MediaImageField
+
+import logging
+
+logger = logging.getLogger('system_errors')
+
 @classmethod
 def get_active_news(cls):
     return cls.objects.filter(is_active=True).select_related()
+
+@receiver(post_save)
+def clear_page_cache(sender, instance, **kwargs):
+    if sender.__name__ in ['News']:
+        cache.clear() 
 class News(models.Model):
     """Модель для новостей компании"""
     title = models.CharField(max_length=255, verbose_name=_('Заголовок'))
@@ -55,3 +68,20 @@ class News(models.Model):
             ping_google()
         except Exception:
             pass  # Игнорируем ошибки пинга Google
+
+@receiver([post_save, post_delete], sender='news.News')
+def invalidate_news_cache(sender, instance, **kwargs):
+    """
+    Автоматическая очистка кеша при изменении/удалении новости.
+    Корректно работает с Redis (production) и LocMem (development).
+    """
+    try:
+        # Очищаем ключи, содержащие 'news' (список и детали)
+        cache.delete_pattern('*news*')
+        # Дополнительно очищаем ключи с префиксом middleware, если они не попали выше
+        cache.delete_pattern('*corp_lis*')
+        logger.info(f"Cache invalidated for News: {instance}")
+    except Exception as e:
+        # Fallback для бэкендов без поддержки delete_pattern (например, locmem на локалке)
+        cache.clear()
+        logger.warning(f"Pattern delete failed, full cache clear triggered: {e}")

@@ -34,4 +34,5 @@ RUN echo "0 2 * * * /app/backup.sh >> /app/backups/backup.log 2>&1" | crontab -
 EXPOSE 8000
 
 # Запуск сервера
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+CMD service cron start && python manage.py runserver 0.0.0.0:8000
+

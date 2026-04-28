@@ -3,16 +3,16 @@
 
 {% block title %}{{ title }} | АО «Корпорация ЛИС»{% endblock %}
 
-{% block extrahead %}
-    <link rel="stylesheet" type="text/css" href="{% static 'admin/custom_admin.css' %}">
-{% endblock %}
-
 {% block branding %}
 <h1 id="site-name">
     <a href="{% url 'admin:index' %}">
         АО «Корпорация ЛИС» — Админ-панель
     </a>
 </h1>
+{% endblock %}
+
+{% block extrastyle %}
+<link rel="stylesheet" type="text/css" href="{% static 'admin/css/admin.css' %}">
 {% endblock %}
 
 {% block nav-global %}{% endblock %}

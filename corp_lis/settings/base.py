@@ -83,8 +83,9 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'app/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 SECRET_KEY = config('SECRET_KEY', default='fallback-key-123')
 
 AUTHENTICATION_BACKENDS = [
@@ -99,7 +100,11 @@ X_FRAME_OPTIONS = 'DENY'
 
 # CSRF защита (включена по умолчанию в Django)
 CSRF_COOKIE_HTTPONLY = True
-CSRF_TRUSTED_ORIGINS = ['http://localhost:8000', 'http://127.0.0.1:8000']
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
+    "https://localhost",  # <--- ДОБАВИТЬ ЭТУ СТРОКУ!
+]
 
 # Сессии
 SESSION_COOKIE_HTTPONLY = True
@@ -320,10 +325,12 @@ SITEMAP_URL = 'http://localhost:8000/sitemap.xml'
 os.makedirs(os.path.join(BASE_DIR, 'logs'), exist_ok=True)
 
 # DEBUG режим (по умолчанию True для разработки)
-DEBUG = config('DEBUG', default=True, cast=bool)
 
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+USE_X_FORWARDED_HOST = True 
 # Соответствие ТЗ 3.2.8 - Использование HTTPS
 # В production (DEBUG=False) автоматически включаются все HTTPS-настройки
+DEBUG = config('DEBUG', default=True, cast=bool)
 if DEBUG:
     EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
     SESSION_ENGINE = 'django.contrib.sessions.backends.cache'
@@ -356,5 +363,14 @@ else:
 
 # Настройки Cache-Control для статических файлов
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
+# === ТРЕБОВАНИЯ 4.1: ОПТИМИЗАЦИЯ ЗАГРУЗКИ СТРАНИЦ ===
+# Корректная работа HTTPS за обратным прокси Nginx
 
+# Переиспользование соединений с БД (снижает время ответа на 20-40 мс)
+DATABASES['default']['CONN_MAX_AGE'] = 60
+
+# ManifestStaticFilesStorage уже включен выше.
+# Он добавляет хэши к именам файлов (style.a1b2c3.css), что позволяет
+# Nginx безопасно кэшировать статику на 1 год с заголовком immutable.
+# === КОНЕЦ ТРЕБОВАНИЙ 4.1 ===
 DEBUG=False
