@@ -13,26 +13,21 @@ class UserRoleInline(admin.StackedInline):
     can_delete = False
     verbose_name = _('Роль')
     verbose_name_plural = _('Роли')
-    classes = ('collapse',)  # Сворачиваем блок по умолчанию
+    extra = 0  # ← Запрещаем создание дублей ролей
+    # Убрали classes=('collapse',) чтобы форма всегда корректно отправлялась
 
 class UserAdmin(BaseUserAdmin):
     """
     Расширенная админ-панель для управления пользователями
-    Соответствует требованиям ТЗ 3.2.6 и 3.2.10
+    Соответствует требованиям ТЗ 3.2.6, 3.2.10 и 5.4
     """
     
-    # 1. Просмотр всех пользователей
     list_display = ('username', 'email', 'role_display', 'is_active_status', 'date_joined', 'last_login')
     list_display_links = ('username',)
-    
-    # 5. Фильтр по ролям и статусу
     list_filter = ('user_role__role', 'is_active', 'date_joined', 'last_login')
-    
-    # Поиск по основным полям
     search_fields = ('username', 'email', 'first_name', 'last_name')
     search_help_text = _('Поиск по имени пользователя, email, имени и фамилии')
     
-    # Поля формы создания/редактирования
     fieldsets = (
         (_('Основная информация'), {
             'fields': ('username', 'password'),
@@ -52,7 +47,6 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
     
-    # Поля при создании нового пользователя
     add_fieldsets = (
         (None, {
             'classes': ('wide',),
@@ -60,18 +54,13 @@ class UserAdmin(BaseUserAdmin):
         }),
     )
     
-    # Параметры отображения
     ordering = ['-date_joined']
     list_per_page = 20
-    
-    # Добавляем inline для роли
     inlines = [UserRoleInline]
     
-    # Оптимизация запросов
     def get_queryset(self, request):
         return super().get_queryset(request).select_related('user_role')
     
-    # 1. Отображение роли в списке
     def role_display(self, obj):
         try:
             role = obj.user_role.role
@@ -79,22 +68,33 @@ class UserAdmin(BaseUserAdmin):
                 return format_html('<span style="color: #d9534f; font-weight: bold;">{}</span>', _('Администратор'))
             elif role == 'editor':
                 return format_html('<span style="color: #5bc0de; font-weight: bold;">{}</span>', _('Редактор'))
-            else:
-                return '-'
+            return '-'
         except UserRole.DoesNotExist:
             return '-'
     role_display.short_description = _('Роль')
     role_display.admin_order_field = 'user_role__role'
     
-    # 1. Отображение статуса активности
     def is_active_status(self, obj):
         if obj.is_active:
             return format_html('<span style="color: green; font-weight: bold;">✓ {}</span>', _('Активен'))
-        return format_html('<span style="color: red; font-weight: bold;">✗ {}</span>', _('Неактивен'))
+        return format_html('<span style="color: red; font-weight: bold;"> {}</span>', _('Неактивен'))
     is_active_status.short_description = _('Статус')
     is_active_status.admin_order_field = 'is_active'
     
-    # Обработка конфликтов при одновременном редактировании
+    # 🔥 КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: Синхронизация прав ПОСЛЕ сохранения инлайна
+    def save_formset(self, request, form, formset, change):
+        super().save_formset(request, form, formset, change)
+        # Если сохраняется инлайн UserRole — применяем права немедленно
+        if formset.model == UserRole:
+            for form_obj in formset:
+                if form_obj.instance.pk:
+                    try:
+                        form_obj.instance._sync_permissions()
+                        if form_obj.changed_data:  # Если роль изменилась
+                            messages.info(request, _('Права пользователя обновлены. Для применения разделов админки необходимо перезайти в систему.'))
+                    except Exception as e:
+                        messages.error(request, f'Ошибка синхронизации прав: {e}')
+
     def response_change(self, request, obj):
         original_version = request.POST.get('original_version')
         if hasattr(obj, 'user_role') and original_version:
@@ -116,19 +116,14 @@ class UserAdmin(BaseUserAdmin):
                 extra_context['original_version'] = str(obj.user_role.version)
         return super().change_view(request, object_id, form_url, extra_context)
     
-    # 6. Логирование действий пользователей
     def save_model(self, request, obj, form, change):
         super().save_model(request, obj, form, change)
-        
-        # Создаем запись о роли, если она не существует
         if not hasattr(obj, 'user_role'):
             UserRole.objects.create(user=obj)
         
-        # Логирование действий
         action = _("обновлен") if change else _("создан")
         print(f"Пользователь {obj.username} был {action} администратором {request.user.username}")
 
-# Отменяем регистрацию стандартной модели User
+# Перерегистрация
 admin.site.unregister(User)
-# Регистрируем с нашим расширением
 admin.site.register(User, UserAdmin)

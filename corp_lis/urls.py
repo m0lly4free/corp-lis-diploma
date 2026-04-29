@@ -20,7 +20,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import set_language
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+    path('corp-lis-secure-portal/', admin.site.urls),
     path('', include('core.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
     

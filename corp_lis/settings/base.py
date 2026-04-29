@@ -99,7 +99,8 @@ SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
 # CSRF защита (включена по умолчанию в Django)
-CSRF_COOKIE_HTTPONLY = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = False 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
@@ -345,6 +346,9 @@ else:
     handler500 = 'core.views.custom_500'
 
 if not DEBUG:
+    SECURE_CONTENT_TYPE_NOSNIFF = True 
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CSP_EXCLUDE_URL_PREFIXES = ('/admin/',)
     SECURE_SSL_REDIRECT = True
     SESSION_COOKIE_SECURE = True
     CSRF_COOKIE_SECURE = True
@@ -363,14 +367,9 @@ else:
 
 # Настройки Cache-Control для статических файлов
 STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-# === ТРЕБОВАНИЯ 4.1: ОПТИМИЗАЦИЯ ЗАГРУЗКИ СТРАНИЦ ===
-# Корректная работа HTTPS за обратным прокси Nginx
 
 # Переиспользование соединений с БД (снижает время ответа на 20-40 мс)
 DATABASES['default']['CONN_MAX_AGE'] = 60
 
-# ManifestStaticFilesStorage уже включен выше.
-# Он добавляет хэши к именам файлов (style.a1b2c3.css), что позволяет
-# Nginx безопасно кэшировать статику на 1 год с заголовком immutable.
-# === КОНЕЦ ТРЕБОВАНИЙ 4.1 ===
+
 DEBUG=False

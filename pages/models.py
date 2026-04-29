@@ -1,41 +1,26 @@
-from django.db import models
+from django.db import models, transaction
 from django.urls import reverse
 from django.utils.text import slugify
 from django.utils.translation import gettext_lazy as _
-from core.fields import MediaImageField
-@classmethod
-def get_active_pages(cls):
-    return cls.objects.filter(is_active=True).select_related()
+# from core.fields import MediaImageField  ← Удалено: импорт не используется
+
 class Page(models.Model):
     """Модель для управления основными страницами сайта"""
     
-    # Основные поля страницы
     title = models.CharField(max_length=255, verbose_name=_('Название страницы'))
     slug = models.SlugField(
         unique=True, 
+        db_index=True,  # ← Ускорение поиска по slug
         verbose_name=_('Слаг'), 
         help_text=_('URL-часть страницы (автоматически генерируется из названия)')
     )
     content = models.TextField(verbose_name=_('Текстовое содержимое'))
     
-    # SEO-мета-данные
-    meta_title = models.CharField(
-        max_length=255, 
-        verbose_name=_('SEO Заголовок (meta title)'), 
-        blank=True
-    )
-    meta_description = models.TextField(
-        verbose_name=_('SEO Описание (meta description)'), 
-        blank=True
-    )
-    meta_keywords = models.CharField(
-        max_length=255, 
-        verbose_name=_('SEO Ключевые слова (meta keywords)'), 
-        blank=True
-    )
+    meta_title = models.CharField(max_length=255, verbose_name=_('SEO Заголовок'), blank=True)
+    meta_description = models.TextField(verbose_name=_('SEO Описание'), blank=True)
+    meta_keywords = models.CharField(max_length=255, verbose_name=_('SEO Ключевые слова'), blank=True)
     
-    # Служебные поля
-    is_active = models.BooleanField(default=True, verbose_name=_('Активна'))
+    is_active = models.BooleanField(default=True, db_index=True, verbose_name=_('Активна'))  # ← Индекс для фильтрации
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата создания'))
     updated_at = models.DateTimeField(auto_now=True, verbose_name=_('Дата последнего изменения'))
     version = models.IntegerField(default=0, editable=False)
@@ -50,19 +35,27 @@ class Page(models.Model):
         return self.title
 
     def save(self, *args, **kwargs):
-        # Автоматическая генерация slug, если не указан
         if not self.slug:
             self.slug = slugify(self.title)
         if self.pk:
             self.version += 1
+            
         super().save(*args, **kwargs)
         
-        # Автоматическое обновление sitemap при сохранении
-        from django.contrib.sitemaps import ping_google
+        # ⚠️ КРИТИЧЕСКАЯ ОПТИМИЗАЦИЯ ДЛЯ ТЗ 4.4:
+        # ping_google() делал синхронный HTTP-запрос к Google на каждом сохранении.
+        # Под нагрузкой это блокировало поток Gunicorn и увеличивало время ответа.
+        # Переносим в transaction.on_commit() → выполнится ПОСЛЕ успешной записи в БД, 
+        # не блокируя основной поток ответа.
+        transaction.on_commit(self._notify_search_engines)
+
+    def _notify_search_engines(self):
+        """Асинхронное уведомление поисковиков (не блокирует save)"""
         try:
+            from django.contrib.sitemaps import ping_google
             ping_google()
         except Exception:
-            pass  # Игнорируем ошибки пинга Google
-    
+            pass  # Игнорируем ошибки сети в production
+
     def get_absolute_url(self):
         return reverse('pages:detail', kwargs={'slug': self.slug})

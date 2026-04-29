@@ -5,78 +5,88 @@ from django.utils.translation import gettext_lazy as _
 from django.views.decorators.csrf import csrf_protect
 from django.views.decorators.http import require_http_methods
 from django.views.decorators.cache import cache_page
-from django.core.mail import send_mail
-from django.conf import settings
 from django.core.cache import cache
-from .forms import ContactForm
+from django.conf import settings
+
+from .forms import ContactForm  # Убедись, что forms.py существует
 from .models import ContactMessage
 from core.util.email import send_contact_notification
+from .serializers import ContactMessageSerializer
+
+from rest_framework.permissions import AllowAny
+from rest_framework import generics
 
 logger = logging.getLogger(__name__)
 
-@cache_page(60 * 5)  # Кэширование страницы на 5 минут
-@csrf_protect
+
+# ==========================================
+# API View (для отправки через AJAX/Fetch)
+# ==========================================
+class ContactMessageCreateView(generics.CreateAPIView):
+    """
+    API точка для создания обращения.
+    Валидация происходит автоматически через Serializer (ТЗ 5.5).
+    """
+    model = ContactMessage  # ← Исправлено на model
+    serializer_class = ContactMessageSerializer
+    permission_classes = [AllowAny]
+
+
+# ==========================================
+# Functional View (для классической HTML формы)
+# ==========================================
+@cache_page(60 * 5)  # Кэш страницы на 5 минут
+@csrf_protect        # Защита от CSRF
 @require_http_methods(["GET", "POST"])
 def contact_view(request):
-    """Страница формы обратной связи с улучшенной защитой от спама и оптимизацией производительности"""
+    """Страница формы обратной связи"""
+    
     if request.method == 'POST':
         form = ContactForm(request.POST)
         
         if form.is_valid():
             try:
-                # Получаем IP-адрес отправителя
+                # 1. Получаем IP
                 x_forwarded_for = request.META.get('HTTP_X_FORWARDED_FOR')
-                if x_forwarded_for:
-                    ip_address = x_forwarded_for.split(',')[0]
-                else:
-                    ip_address = request.META.get('REMOTE_ADDR')
+                ip_address = x_forwarded_for.split(',')[0] if x_forwarded_for else request.META.get('REMOTE_ADDR')
                 
-                # Проверка ограничения по IP (защита от спама)
+                # 2. Проверка на спам (Лимит: 3 запроса за 5 минут)
                 spam_cache_key = f"contact_spam_{ip_address}"
                 spam_count = cache.get(spam_cache_key, 0)
                 
-                if spam_count >= 3:  # Максимум 3 сообщения в течение времени кэширования
-                    logger.warning(f"Слишком много попыток от IP {ip_address}")
+                if spam_count >= 3:
+                    logger.warning(f"Spam detected from IP {ip_address}")
                     messages.error(request, _('Слишком много попыток. Попробуйте позже.'))
                     return render(request, 'contacts.html', {'form': form})
                 
-                # Сохраняем сообщение
-                contact_message = ContactMessage.objects.create(
-                    name=form.cleaned_data['name'],
-                    email=form.cleaned_data['email'],
-                    phone=form.cleaned_data['phone'],
-                    message=form.cleaned_data['message'],
-                    ip_address=ip_address
-                )
+                # 3. Сохраняем в БД
+                contact_message = form.save() # ← form.save() делает то же самое, но короче
+                contact_message.ip_address = ip_address
+                contact_message.save()
                 
-                # Увеличиваем счетчик для IP
-                cache.set(spam_cache_key, spam_count + 1, 300)  # 5 минут
+                # 4. Увеличиваем счетчик спама
+                cache.set(spam_cache_key, spam_count + 1, 300) 
                 
-                # Отправляем уведомление администратору
-                if not send_contact_notification(contact_message):
-                    logger.error(
-                        _("Не удалось отправить уведомление для обращения #{id}").format(id=contact_message.id)
-                    )
-                    # Не прерываем выполнение, но добавляем предупреждение
-                    messages.warning(request, _('Уведомление не отправлено, но сообщение сохранено.'))
-                else:
+                # 5. Отправка уведомления
+                try:
+                    send_contact_notification(contact_message)
                     messages.success(request, _('Ваше сообщение успешно отправлено!'))
+                except Exception as email_err:
+                    logger.error(f"Email notification failed: {email_err}")
+                    messages.warning(request, _('Сообщение сохранено, но уведомление не отправлено.'))
                 
+                # 6. Редирект (чтобы не отправлять повторно при F5)
                 return redirect('contacts:contact')
                 
             except Exception as e:
-                logger.error(f"Ошибка при сохранении обращения: {str(e)}")
-                messages.error(request, _('Произошла ошибка при отправке сообщения. Попробуйте позже.'))
+                logger.error(f"Critical error saving message: {str(e)}")
+                messages.error(request, _('Произошла ошибка при сохранении.'))
         else:
-            # Логирование ошибок валидации (возможный спам)
-            for field, errors in form.errors.items():
-                for error in errors:
-                    logger.warning(
-                        f"Ошибка валидации формы контактов: поле={field}, ошибка={error}, "
-                        f"IP={request.META.get('REMOTE_ADDR', 'unknown')}"
-                    )
+            # Форма не валидна (ошибки валидации)
+            logger.warning(f"Validation failed for IP {request.META.get('REMOTE_ADDR')}")
             messages.error(request, _('Пожалуйста, исправьте ошибки в форме.'))
+            
     else:
         form = ContactForm()
-    
+
     return render(request, 'contacts.html', {'form': form})

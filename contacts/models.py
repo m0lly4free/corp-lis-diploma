@@ -1,26 +1,56 @@
 from django.db import models
-from django.core.validators import EmailValidator
+from django.core.validators import RegexValidator, MinLengthValidator
 from django.utils.translation import gettext_lazy as _
-from django.core.exceptions import ValidationError
-from django.core.mail import send_mail
+
+# Валидаторы вынесены на уровень модуля для чистоты и переиспользования
+PHONE_REGEX = RegexValidator(
+    regex=r'^\+?[0-9\s\-\(\)]{7,15}$',
+    message=_("Введите корректный номер телефона (от 7 до 15 цифр).")
+)
 
 class ContactMessage(models.Model):
-    """Модель для хранения обращений с формы контактов"""
+    """
+    Модель для хранения обращений с формы контактов.
+    Соответствует ТЗ 5.5: серверная валидация типа, длины, формата и обязательности.
+    """
     
-    # Основные поля обращения
-    name = models.CharField(max_length=255, verbose_name=_('Имя отправителя'))
-    phone = models.CharField(max_length=50, verbose_name=_('Телефон'), blank=True)
-    email = models.EmailField(
-        verbose_name=_('E-mail'), 
-        validators=[EmailValidator()]
+    name = models.CharField(
+        max_length=100,
+        verbose_name=_('Имя отправителя'),
+        validators=[MinLengthValidator(2)]
     )
-    message = models.TextField(verbose_name=_('Текст обращения'))
+    
+    email = models.EmailField(
+        max_length=254,
+        verbose_name=_('E-mail')
+        # EmailField автоматически проверяет корректность формата
+    )
+    
+    phone = models.CharField(
+        max_length=50, 
+        validators=[PHONE_REGEX],
+        blank=True,
+        null=True,
+        verbose_name=_('Телефон')
+    )
+    
+    message = models.TextField(
+        verbose_name=_('Текст обращения'),
+        validators=[MinLengthValidator(10)]
+    )
     
     # Статус обработки
-    is_processed = models.BooleanField(default=False, verbose_name=_('Обработано'))
+    is_processed = models.BooleanField(
+        default=False,
+        verbose_name=_('Обработано')
+    )
     
-    # IP-адрес отправителя для логирования и блокировок
-    ip_address = models.GenericIPAddressField(verbose_name=_('IP адрес'), null=True, blank=True)
+    # IP-адрес отправителя
+    ip_address = models.GenericIPAddressField(
+        verbose_name=_('IP адрес'),
+        null=True,
+        blank=True
+    )
     
     # Служебные поля
     created_at = models.DateTimeField(auto_now_add=True, verbose_name=_('Дата отправки'))
@@ -37,10 +67,7 @@ class ContactMessage(models.Model):
         return f'{_("Обращение от")} {self.name} ({self.email})'
     
     def save(self, *args, **kwargs):
-        # Проверка на пустые поля перед сохранением
-        if not self.name or not self.email or not self.message:
-            raise ValidationError(_('Все обязательные поля должны быть заполнены'))
-        
+        # Обновление версии при редактировании
         if self.pk:
             self.version += 1
         super().save(*args, **kwargs)

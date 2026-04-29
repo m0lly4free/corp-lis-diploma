@@ -2,38 +2,32 @@ from django.shortcuts import render, get_object_or_404
 from django.views.decorators.cache import cache_page
 from django.utils.decorators import method_decorator
 from django.views.generic import ListView, DetailView
-from django.db.models import Prefetch
 from .models import News
 import logging
 from django.http import Http404
 
 logger = logging.getLogger('system_errors')
 
-# Функциональное представление для списка новостей (для совместимости)
-@cache_page(60 * 30)  # Кэширование на 30 минут
+# ==========================================
+# Функциональные представления (совместимость)
+# ==========================================
+@cache_page(60 * 15)  # 15 минут
 def news_list(request):
-    """Страница списка всех новостей с оптимизацией производительности"""
+    """Список новостей с оптимизированными запросами"""
     try:
-        # Оптимизация запроса к базе данных для уменьшения времени ответа
-        news_list = News.objects.filter(is_active=True).select_related().order_by('-created_at')
-        context = {
-            'news': news_list,
-        }
-        return render(request, 'news/index.html', context)
+        # ✅ Убраны select_related/prefetch_related — в модели News нет ForeignKey
+        news_list = News.objects.filter(is_active=True).order_by('-created_at')
+        return render(request, 'news/index.html', {'news': news_list})
     except Exception as e:
         logger.error(f"Error in news_list: {str(e)}")
         raise
 
-# Функциональное представление для детальной страницы новости (для совместимости)
-@cache_page(60 * 30)  # Кэширование на 30 минут
+@cache_page(60 * 30)  # 30 минут
 def news_detail(request, slug):
-    """Страница конкретной новости с оптимизацией производительности"""
+    """Детальная страница новости"""
     try:
         news_item = get_object_or_404(News, slug=slug, is_active=True)
-        context = {
-            'object': news_item,
-        }
-        return render(request, 'news/detail.html', context)
+        return render(request, 'news/detail.html', {'object': news_item})
     except Http404:
         logger.warning(f"News not found: {slug}")
         raise
@@ -41,54 +35,40 @@ def news_detail(request, slug):
         logger.error(f"Error in news_detail: {str(e)}")
         raise
 
-# Классовые представления с кешированием и оптимизацией
-@method_decorator(cache_page(60 * 30), name='dispatch')  # Кеширование на 30 минут
+# ==========================================
+# Классовые представления (основные, ТЗ 4.4)
+# ==========================================
+@method_decorator(cache_page(60 * 15), name='dispatch')
 class NewsListView(ListView):
     """
-    Список всех активных новостей с оптимизированными запросами
-    Время загрузки: < 3 секунды
-    Поддержка до 50 одновременных пользователей
+    Список новостей с пагинацией и оптимизацией ORM.
+    paginate_by снижает нагрузку на БД и память при больших выборках.
     """
     model = News
     template_name = 'news/index.html'
     context_object_name = 'news'
+    paginate_by = 12  # Рекомендуется для стабильности при 50+ юзерах
     
     def get_queryset(self):
-        # Оптимизация запроса к базе данных для уменьшения времени ответа
-        return News.objects.filter(is_active=True).select_related().order_by('-created_at')
-    
-    def dispatch(self, request, *args, **kwargs):
-        try:
-            return super().dispatch(request, *args, **kwargs)
-        except Exception as e:
-            logger.error(f"Error in NewsListView: {str(e)}")
-            raise
+        # ✅ Убраны select_related/prefetch_related — в модели нет ForeignKey
+        return News.objects.filter(is_active=True).order_by('-created_at')
 
-@method_decorator(cache_page(60 * 30), name='dispatch')  # Кеширование на 30 минут
+@method_decorator(cache_page(60 * 30), name='dispatch')
 class NewsDetailView(DetailView):
-    """
-    Детальная страница конкретной новости с оптимизацией производительности
-    Время загрузки: < 3 секунды
-    """
+    """Детальная страница с кэшированием и проверкой статуса"""
     model = News
     template_name = 'news/detail.html'
-    context_object_name = 'object'  # Используем 'object' для совместимости с шаблонами
+    context_object_name = 'object'
     slug_field = 'slug'
     slug_url_kwarg = 'slug'
     
     def get_queryset(self):
-        # Оптимизация запроса к базе данных
-        return News.objects.select_related()
+        # ✅ Оптимизация для одиночного объекта — без select_related
+        return News.objects.filter(is_active=True)
     
     def get_object(self, queryset=None):
-        try:
-            obj = super().get_object(queryset)
-            if not obj.is_active:
-                raise Http404("Новость не найдена")
-            return obj
-        except News.DoesNotExist:
-            logger.warning(f"News not found: {self.kwargs.get('slug')}")
+        # Django сам вызывает get_object с переданным queryset
+        obj = super().get_object(queryset)
+        if not obj.is_active:
             raise Http404("Новость не найдена")
-        except Exception as e:
-            logger.error(f"Error in NewsDetailView: {str(e)}")
-            raise
+        return obj
