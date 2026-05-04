@@ -15,13 +15,14 @@ class ContactMessage(models.Model):
     """
     
     name = models.CharField(
-        max_length=100,
+        max_length=255,
         verbose_name=_('Имя отправителя'),
         validators=[MinLengthValidator(2)]
     )
     
     email = models.EmailField(
-        max_length=254,
+        max_length=255,
+        db_index=True,
         verbose_name=_('E-mail')
         # EmailField автоматически проверяет корректность формата
     )

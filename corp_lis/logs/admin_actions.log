@@ -11693,3 +11693,80 @@ INFO 2026-04-29 20:48:00,759 autoreload 31 139066805023488 Watching for file cha
 INFO 2026-04-29 20:49:34,723 autoreload 31 139066805023488 /app/core/fields.py changed, reloading.
 INFO 2026-04-29 20:49:37,144 autoreload 33 137594796925696 Watching for file changes with StatReloader
 INFO 2026-04-29 20:50:20,890 autoreload 18 132678848750336 Watching for file changes with StatReloader
+INFO 2026-04-29 20:50:37,072 basehttp 18 132678761309888 "GET /services/ HTTP/1.1" 200 14794
+INFO 2026-04-29 20:50:37,151 basehttp 18 132678761309888 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-04-29 20:50:37,665 basehttp 18 132678761309888 "GET /services/ HTTP/1.1" 200 14794
+INFO 2026-04-29 20:50:37,742 basehttp 18 132678761309888 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-04-29 20:50:38,672 basehttp 18 132678761309888 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-04-29 20:50:38,759 basehttp 18 132678743475904 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-04-29 20:50:38,770 basehttp 18 132678751868608 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-04-29 20:50:38,781 basehttp 18 132678761309888 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-04-29 20:50:39,979 basehttp 18 132678761309888 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-04-29 20:50:41,162 basehttp 18 132678761309888 "GET /services/ HTTP/1.1" 200 14794
+INFO 2026-04-29 20:50:43,171 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 302 0
+INFO 2026-04-29 20:50:43,236 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 200 3867
+INFO 2026-04-29 20:50:51,519 basehttp 18 132678761309888 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 302 0
+INFO 2026-04-29 20:50:51,607 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 200 19342
+INFO 2026-04-29 20:50:51,688 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-29 20:50:57,243 basehttp 18 132678761309888 "POST /corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 302 0
+INFO 2026-04-29 20:50:57,299 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-04-29 20:50:57,356 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4082
+INFO 2026-04-29 20:51:01,070 basehttp 18 132678761309888 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-04-29 20:51:01,183 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 18888
+INFO 2026-04-29 20:51:01,257 basehttp 18 132678761309888 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-04-29 20:51:01,278 basehttp 18 132678761309888 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-04-29 20:51:01,299 basehttp 18 132678751868608 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-04-29 20:51:02,874 basehttp 18 132678761309888 "GET /services/ HTTP/1.1" 200 14801
+INFO 2026-04-29 20:51:02,962 basehttp 18 132678761309888 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-04-29 20:51:04,648 basehttp 18 132678761309888 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-04-29 20:51:05,867 basehttp 18 132678761309888 "GET /services/ HTTP/1.1" 200 14801
+INFO 2026-04-29 20:51:05,933 basehttp 18 132678761309888 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 304 0
+INFO 2026-04-29 20:51:13,572 basehttp 18 132678761309888 "GET /about/ HTTP/1.1" 200 26974
+INFO 2026-04-29 20:51:13,699 basehttp 18 132678743475904 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-04-29 20:51:13,707 basehttp 18 132678751868608 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-04-29 20:51:13,726 basehttp 18 132678384875200 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-04-29 20:51:14,080 basehttp 18 132678731937472 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-04-29 20:51:14,222 basehttp 18 132678761309888 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-04-29 20:51:14,289 basehttp 18 132678376482496 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-04-29 20:51:14,341 basehttp 18 132678368089792 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-04-29 20:51:15,948 basehttp 18 132678368089792 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-05-04 16:04:43,417 autoreload 18 129796660769536 Watching for file changes with StatReloader
+INFO 2026-05-04 16:04:48,265 basehttp 18 129796574013120 "GET / HTTP/1.1" 200 27610
+WARNING 2026-05-04 16:04:48,502 log 18 129796574013120 Not Found: /favicon.ico
+WARNING 2026-05-04 16:04:48,503 basehttp 18 129796574013120 "GET /favicon.ico HTTP/1.1" 404 8223
+INFO 2026-05-04 16:04:49,950 basehttp 18 129796574013120 "GET /about/ HTTP/1.1" 200 26974
+INFO 2026-05-04 16:04:50,068 basehttp 18 129796556179136 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-04 16:04:50,079 basehttp 18 129796564571840 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-04 16:04:50,102 basehttp 18 129796539393728 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-04 16:04:50,560 basehttp 18 129796547786432 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-04 16:04:50,764 basehttp 18 129796574013120 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-04 16:04:50,881 basehttp 18 129796193384128 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-04 16:04:50,950 basehttp 18 129796184991424 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-04 16:04:51,090 basehttp 18 129796184991424 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-05-04 16:04:51,140 basehttp 18 129796574013120 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-04 16:04:51,151 basehttp 18 129796193384128 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-04 16:04:51,171 basehttp 18 129796184991424 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-04 16:04:52,194 basehttp 18 129796184991424 "GET /services/ HTTP/1.1" 200 14801
+INFO 2026-05-04 16:04:52,269 basehttp 18 129796193384128 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-04 16:04:52,286 basehttp 18 129796184991424 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-04 16:13:55,169 autoreload 18 127410423141120 Watching for file changes with StatReloader
+INFO 2026-05-04 16:15:35,699 autoreload 18 130312489669376 Watching for file changes with StatReloader
+INFO 2026-05-04 16:15:37,053 basehttp 18 130312327657152 "GET / HTTP/1.1" 200 27610
+INFO 2026-05-04 16:15:37,339 basehttp 18 130312327657152 "GET / HTTP/1.1" 200 27610
+INFO 2026-05-04 16:15:38,398 basehttp 18 130312327657152 "GET /about/ HTTP/1.1" 200 26974
+INFO 2026-05-04 16:15:38,570 basehttp 18 130312310871744 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-04 16:15:38,613 basehttp 18 130312319264448 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-04 16:15:38,649 basehttp 18 130312294086336 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-04 16:15:38,943 basehttp 18 130312294086336 "GET /services/ HTTP/1.1" 200 14801
+INFO 2026-05-04 16:15:38,999 basehttp 18 130312319264448 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-04 16:15:39,021 basehttp 18 130312294086336 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-04 16:15:39,395 basehttp 18 130312294086336 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-05-04 16:15:39,462 basehttp 18 130312310871744 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-04 16:15:39,475 basehttp 18 130312319264448 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-04 16:15:39,483 basehttp 18 130312294086336 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-04 16:15:40,242 basehttp 18 130312294086336 "GET /news/ HTTP/1.1" 200 13799
+INFO 2026-05-04 16:15:40,495 basehttp 18 130312294086336 "GET /services/ HTTP/1.1" 200 14801
+INFO 2026-05-04 16:21:27,455 autoreload 18 130312489669376 /app/contacts/models.py changed, reloading.
+INFO 2026-05-04 16:21:29,192 autoreload 31 123850003456768 Watching for file changes with StatReloader
+INFO 2026-05-04 16:21:35,477 autoreload 31 123850003456768 /app/contacts/models.py changed, reloading.
+INFO 2026-05-04 16:21:37,375 autoreload 33 140027695473408 Watching for file changes with StatReloader
