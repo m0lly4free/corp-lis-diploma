@@ -117,7 +117,7 @@ LOGIN_URL = '/admin/login/'
 LOGIN_REDIRECT_URL = '/admin/'
 LOGOUT_REDIRECT_URL = '/admin/'
 
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default='True').lower() == 'true'
 # Django Axes - ограничение попыток входа
 if not DEBUG:
     AXES_ENABLED = True
@@ -265,7 +265,7 @@ CACHES = {
         }
     }
 }
-DEBUG = config('DEBUG', default=True, cast=bool)
+DEBUG = config('DEBUG', default='True').lower() == 'true'
 if DEBUG:
     CACHES = {
         'default': {

@@ -33,8 +33,10 @@ admin.site.login = axes_dispatch(admin.site.login)
 app_name = 'core'
 
 urlpatterns = [
-    path('', views.home_view, name='home'),
-    path('about/', views.about_view, name='about'),
+    # Статика
+    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
+
     path('services/', include('services.urls', namespace='services')),
     path('news/', include('news.urls', namespace='news')),
     path('partners/', views.partners_view, name='partners'),
