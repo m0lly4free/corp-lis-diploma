@@ -102,7 +102,29 @@ def custom_500(request):
     logger.error(f"500 error: {request.path}")
     return HttpResponseServerError(render(request, 'errors/500.html'))
 
-
+@method_decorator(cache_page(60 * 15), name='dispatch')
+class HomeView(TemplateView):
+    """
+    Главная страница с динамическими услугами и новостями.
+    Кэшируется на 15 минут для снижения нагрузки на БД.
+    """
+    # Правильный путь к шаблону (без папки core/)
+    template_name = 'home.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        
+        # 3 последние активные услуги
+        context['latest_services'] = Service.objects.filter(
+            is_active=True
+        ).order_by('-created_at')[:3]
+        
+        # 3 последние активные новости
+        context['latest_news'] = News.objects.filter(
+            is_active=True
+        ).order_by('-created_at')[:3]
+        
+        return context
     
 
 

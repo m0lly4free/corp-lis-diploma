@@ -15,7 +15,7 @@ from core.sitemaps import (
 )
 from django.views.generic import TemplateView
 from django.urls import get_resolver
-from core.views import custom_404, custom_500
+from core.views import custom_404, custom_500, HomeView
 from django.conf.urls.i18n import i18n_patterns
 from django.views.i18n import set_language
 
@@ -34,7 +34,7 @@ app_name = 'core'
 
 urlpatterns = [
     # Статика
-    path('', TemplateView.as_view(template_name='home.html'), name='home'),
+    path('', HomeView.as_view(), name='home'),
     path('about/', TemplateView.as_view(template_name='about.html'), name='about'),
 
     path('services/', include('services.urls', namespace='services')),

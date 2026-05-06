@@ -19385,3 +19385,1482 @@ WARNING 2026-05-05 16:44:34,057 log 56 133059879236352 Not Found: /services/
 WARNING 2026-05-05 16:44:34,268 log 56 133059879236352 Not Found: /static/css/main.css
 WARNING 2026-05-05 16:44:34,324 log 56 133059879236352 Forbidden (CSRF cookie not set.): /contacts/
 ERROR 2026-05-05 16:44:34,343 log 56 133059879236352 Internal Server Error: /api/services/
+INFO 2026-05-05 16:47:01,219 basehttp 18 126094993778368 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-05 16:47:01,371 basehttp 18 126094976992960 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-05 16:47:01,386 basehttp 18 126094985385664 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-05 16:47:01,401 basehttp 18 126094960207552 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-05 16:47:01,762 basehttp 18 126094960207552 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-05 16:55:28,108 basehttp 18 126094960207552 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-05-05 16:55:28,336 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 22061
+INFO 2026-05-05 16:55:28,461 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:33,979 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 22061
+INFO 2026-05-05 16:55:34,074 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:35,828 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-05 16:55:35,877 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:35,916 basehttp 18 126094993778368 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 16:55:35,926 basehttp 18 126094960207552 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-05 16:55:35,929 basehttp 18 126094976992960 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 16:55:35,929 basehttp 18 126094985385664 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 16:55:38,648 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/pages/page/ HTTP/1.1" 200 16858
+INFO 2026-05-05 16:55:38,694 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:42,026 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-05 16:55:42,084 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:44,427 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19563
+INFO 2026-05-05 16:55:44,481 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 16:55:44,494 basehttp 18 126094960207552 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 16:55:44,520 basehttp 18 126094985385664 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 16:55:44,535 basehttp 18 126094960207552 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:02:54,629 basehttp 18 126094960207552 code 400, message Bad request version ("\x8f5`oï\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 17:02:54,630 basehttp 18 126094960207552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 17:02:54,640 basehttp 18 126094960207552 code 400, message Bad request version ("Hm\x13Í´z!/\x91Á®\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 17:02:54,640 basehttp 18 126094960207552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 17:02:54,646 basehttp 18 126094960207552 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03´ø~¥[A\x97£´¸0ê:`\x04$È\x19\x9d%º\x03>ÍhéÓl\x9fL¸\x95\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 17:02:54,647 basehttp 18 126094960207552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 17:34:12,468 basehttp 18 126094976992960 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-05 17:34:12,468 basehttp 18 126094960207552 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-05 17:42:39,270 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19563
+INFO 2026-05-05 17:42:39,381 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 17:42:39,533 basehttp 18 126094976992960 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 17:42:39,557 basehttp 18 126094960207552 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:42:39,600 basehttp 18 126094976992960 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:42:41,001 basehttp 18 126094976992960 "POST /corp-lis-secure-portal/logout/ HTTP/1.1" 302 0
+WARNING 2026-05-05 17:42:41,069 log 18 126094976992960 Not Found: /admin/
+WARNING 2026-05-05 17:42:41,071 basehttp 18 126094976992960 "GET /admin/ HTTP/1.1" 404 5410
+INFO 2026-05-05 17:42:42,588 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-05 17:42:42,621 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 3847
+INFO 2026-05-05 17:55:26,136 basehttp 18 126094976992960 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-05 17:55:26,163 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19563
+INFO 2026-05-05 17:55:26,282 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 17:55:26,441 basehttp 18 126094976992960 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 17:55:26,460 basehttp 18 126094960207552 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:55:26,506 basehttp 18 126094976992960 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:55:27,883 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-05 17:55:27,978 basehttp 18 126094976992960 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 17:55:28,190 basehttp 18 126094993778368 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 17:55:28,195 basehttp 18 126094976992960 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:55:28,198 basehttp 18 126094985385664 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-05 17:55:28,199 basehttp 18 126094960207552 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:55:29,744 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/news/news/20/change/ HTTP/1.1" 200 18665
+INFO 2026-05-05 17:55:29,811 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 17:56:36,485 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-05 17:56:36,556 basehttp 18 126094960207552 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 17:56:36,605 basehttp 18 126094993778368 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-05 17:56:36,608 basehttp 18 126094976992960 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 17:56:36,609 basehttp 18 126094960207552 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 17:56:36,610 basehttp 18 126094985385664 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 18:02:55,015 basehttp 18 126094993778368 code 400, message Bad request version ("\x8cI\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 18:02:55,015 basehttp 18 126094993778368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 18:02:55,024 basehttp 18 126094993778368 code 400, message Bad request syntax ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03-Çö-ë\x8df\x9d¤')
+ERROR 2026-05-05 18:02:55,025 basehttp 18 126094993778368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 18:02:55,031 basehttp 18 126094993778368 code 400, message Bad request syntax ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x9a')
+ERROR 2026-05-05 18:02:55,032 basehttp 18 126094993778368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 18:02:55,039 basehttp 18 126094993778368 code 400, message Bad request version ("7f\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 18:02:55,040 basehttp 18 126094993778368 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 18:24:20,165 basehttp 18 126094993778368 "POST /corp-lis-secure-portal/logout/ HTTP/1.1" 302 0
+WARNING 2026-05-05 18:24:20,183 log 18 126094993778368 Not Found: /admin/
+WARNING 2026-05-05 18:24:20,184 basehttp 18 126094993778368 "GET /admin/ HTTP/1.1" 404 5410
+INFO 2026-05-05 18:24:21,491 basehttp 18 126094993778368 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-05 18:24:21,505 basehttp 18 126094993778368 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 3833
+INFO 2026-05-05 18:25:46,222 basehttp 18 126094993778368 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-05 18:25:46,252 basehttp 18 126094993778368 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-05 18:25:46,367 basehttp 18 126094993778368 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:25:46,516 basehttp 18 126094993778368 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 18:25:46,516 basehttp 18 126094960207552 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 18:25:46,526 basehttp 18 126094985385664 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-05 18:25:46,530 basehttp 18 126094976992960 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-05 18:25:51,451 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-05 18:25:51,534 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:25:54,296 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accesslog/ HTTP/1.1" 200 16805
+INFO 2026-05-05 18:25:54,343 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:25:55,784 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessattempt/ HTTP/1.1" 200 13091
+INFO 2026-05-05 18:25:55,835 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:25:56,656 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accesslog/ HTTP/1.1" 200 16805
+INFO 2026-05-05 18:25:56,718 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:25:59,059 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-05 18:25:59,110 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:26:00,670 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/sites/site/ HTTP/1.1" 200 13726
+INFO 2026-05-05 18:26:00,729 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:26:06,344 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/auth/group/ HTTP/1.1" 200 13687
+INFO 2026-05-05 18:26:06,395 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:26:07,502 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/auth/user/ HTTP/1.1" 200 18985
+INFO 2026-05-05 18:26:07,556 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:26:12,711 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-05 18:26:12,769 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:27:37,112 basehttp 18 126094985385664 "POST /corp-lis-secure-portal/logout/ HTTP/1.1" 302 0
+WARNING 2026-05-05 18:27:37,125 log 18 126094985385664 Not Found: /admin/
+WARNING 2026-05-05 18:27:37,126 basehttp 18 126094985385664 "GET /admin/ HTTP/1.1" 404 5410
+INFO 2026-05-05 18:27:38,182 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 302 0
+INFO 2026-05-05 18:27:38,198 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 3857
+INFO 2026-05-05 18:27:45,256 basehttp 18 126094985385664 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 302 0
+WARNING 2026-05-05 18:27:45,288 log 18 126094985385664 Forbidden (Permission denied): /corp-lis-secure-portal/axes/accessfailurelog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2026-05-05 18:27:45,299 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 403 135
+WARNING 2026-05-05 18:27:49,441 log 18 126094985385664 Forbidden (Permission denied): /corp-lis-secure-portal/axes/accessfailurelog/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1923, in changelist_view
+    raise PermissionDenied
+django.core.exceptions.PermissionDenied
+WARNING 2026-05-05 18:27:49,444 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 403 135
+INFO 2026-05-05 18:27:53,045 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 9401
+INFO 2026-05-05 18:29:14,710 basehttp 18 126094985385664 "POST /corp-lis-secure-portal/logout/ HTTP/1.1" 302 0
+WARNING 2026-05-05 18:29:14,724 log 18 126094985385664 Not Found: /admin/
+WARNING 2026-05-05 18:29:14,725 basehttp 18 126094985385664 "GET /admin/ HTTP/1.1" 404 5410
+INFO 2026-05-05 18:29:16,084 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-05 18:29:16,101 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 200 3813
+INFO 2026-05-05 18:29:21,313 basehttp 18 126094985385664 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-05 18:29:21,333 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14422
+INFO 2026-05-05 18:33:26,756 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/auth/user/add/ HTTP/1.1" 200 17486
+INFO 2026-05-05 18:33:26,832 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:36:48,629 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/pages/page/ HTTP/1.1" 200 16858
+INFO 2026-05-05 18:36:48,735 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:37:04,521 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-05 18:37:04,622 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:40:12,835 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-05 18:40:12,929 basehttp 18 126094985385664 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-05 18:49:12,621 basehttp 18 126094985385664 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-05 18:49:12,720 basehttp 18 126094993778368 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-05 18:49:12,726 basehttp 18 126094985385664 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 18:49:12,734 basehttp 18 126094976992960 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-05 19:02:55,629 basehttp 18 126094976992960 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03ècä')
+ERROR 2026-05-05 19:02:55,630 basehttp 18 126094976992960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 19:02:55,639 basehttp 18 126094976992960 code 400, message Bad request version ("\x01Ù\x10T¹!®\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 19:02:55,639 basehttp 18 126094976992960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 19:02:55,647 basehttp 18 126094976992960 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03lð\x10tÆr·Ê')
+ERROR 2026-05-05 19:02:55,648 basehttp 18 126094976992960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 19:02:55,654 basehttp 18 126094976992960 code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03'ÅH\x96·!\x86À&K\x92Âý\x8e9\x87")
+ERROR 2026-05-05 19:02:55,655 basehttp 18 126094976992960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-05 19:02:55,663 basehttp 18 126094976992960 code 400, message Bad request version ("O\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-05 19:02:55,663 basehttp 18 126094976992960 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 13:53:24,149 autoreload 18 131206282748672 Watching for file changes with StatReloader
+INFO 2026-05-06 13:53:52,579 basehttp 18 131206195701440 "GET / HTTP/1.1" 200 28365
+WARNING 2026-05-06 13:53:52,765 log 18 131206195701440 Not Found: /favicon.ico
+WARNING 2026-05-06 13:53:52,767 basehttp 18 131206195701440 "GET /favicon.ico HTTP/1.1" 404 5424
+INFO 2026-05-06 13:53:54,674 basehttp 18 131206195701440 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 13:53:54,783 basehttp 18 131206177867456 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 13:53:54,803 basehttp 18 131206186260160 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 13:53:54,821 basehttp 18 131206161082048 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 13:53:55,418 basehttp 18 131206169474752 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 13:53:55,663 basehttp 18 131206195701440 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 13:53:55,751 basehttp 18 131205815072448 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 13:53:55,860 basehttp 18 131206177867456 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 13:54:00,867 basehttp 18 131206177867456 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 13:54:01,052 basehttp 18 131206195701440 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 13:54:01,071 basehttp 18 131205815072448 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 13:54:01,100 basehttp 18 131206161082048 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 13:54:01,470 basehttp 18 131206169474752 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 13:54:01,613 basehttp 18 131206177867456 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 13:54:01,691 basehttp 18 131206186260160 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 13:54:01,719 basehttp 18 131205806679744 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+WARNING 2026-05-06 13:54:01,736 log 18 131205806679744 Not Found: /favicon.ico
+WARNING 2026-05-06 13:54:01,737 basehttp 18 131205806679744 "GET /favicon.ico HTTP/1.1" 404 5425
+INFO 2026-05-06 13:54:03,727 basehttp 18 131205806679744 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 13:54:04,907 basehttp 18 131205806679744 "GET /services/ HTTP/1.1" 200 17293
+INFO 2026-05-06 13:54:04,962 basehttp 18 131206186260160 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-06 13:54:04,992 basehttp 18 131205806679744 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 13:54:04,999 basehttp 18 131206177867456 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 13:54:07,165 basehttp 18 131206177867456 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 13:54:07,236 basehttp 18 131206186260160 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-06 13:54:07,254 basehttp 18 131206177867456 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 13:54:07,255 basehttp 18 131205806679744 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 13:54:07,452 basehttp 18 131205806679744 "GET /partners/ HTTP/1.1" 200 24593
+INFO 2026-05-06 13:54:07,816 basehttp 18 131205806679744 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 13:54:09,066 basehttp 18 131205806679744 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 13:54:09,720 basehttp 18 131205806679744 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 13:59:21,325 basehttp 18 131205806679744 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 13:59:21,459 basehttp 18 131206186260160 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 13:59:21,472 basehttp 18 131206177867456 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 13:59:21,486 basehttp 18 131206195701440 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 13:59:21,844 basehttp 18 131206169474752 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 13:59:22,010 basehttp 18 131205806679744 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 13:59:22,092 basehttp 18 131206161082048 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 13:59:22,138 basehttp 18 131205815072448 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 14:00:23,696 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 17293
+INFO 2026-05-06 14:00:23,764 basehttp 18 131205815072448 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-06 14:00:23,783 basehttp 18 131206161082048 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:00:23,783 basehttp 18 131205806679744 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:01:10,679 basehttp 18 131205806679744 "GET /corp-lis-secure-portal HTTP/1.1" 301 0
+INFO 2026-05-06 14:01:10,719 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:10,793 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 200 3813
+INFO 2026-05-06 14:01:15,771 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:15,817 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14422
+INFO 2026-05-06 14:01:18,718 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19563
+INFO 2026-05-06 14:01:18,769 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:01:18,936 basehttp 18 131206161082048 "GET /app/media/services/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-06 14:01:18,960 basehttp 18 131205815072448 "GET /app/media/services/img_2dc4cfa9.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:01:18,989 basehttp 18 131206161082048 "GET /app/media/services/img_8138840c.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:01:34,826 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 200 19661
+INFO 2026-05-06 14:01:34,897 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:01:36,889 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/13/change/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:36,896 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:36,948 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4082
+INFO 2026-05-06 14:01:40,198 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:40,223 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19558
+INFO 2026-05-06 14:01:40,282 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:01:42,382 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/12/change/ HTTP/1.1" 200 19751
+INFO 2026-05-06 14:01:42,426 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+ERROR 2026-05-06 14:01:44,627 log 18 131206161082048 Internal Server Error: /corp-lis-secure-portal/services/service/12/change/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/services/admin.py", line 103, in change_view
+    return super().change_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 435, in full_clean
+    self._post_clean()
+  File "/usr/local/lib/python3.11/site-packages/django/forms/models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1470, in full_clean
+    self.clean_fields(exclude=exclude)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1522, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/core/fields.py", line 57, in clean
+    if value.size > self.max_upload_size:
+       ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/fields/files.py", line 74, in size
+    return self.storage.size(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/files/storage/filesystem.py", line 182, in size
+    return os.path.getsize(self.path(name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen genericpath>", line 50, in getsize
+FileNotFoundError: [Errno 2] No such file or directory: '/app/corp_lis/media/services/SIGIL.jpeg'
+ERROR 2026-05-06 14:01:44,648 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/12/change/ HTTP/1.1" 500 153424
+INFO 2026-05-06 14:01:50,490 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/12/change/ HTTP/1.1" 200 19751
+ERROR 2026-05-06 14:01:52,393 log 18 131206161082048 Internal Server Error: /corp-lis-secure-portal/services/service/12/change/
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 688, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/views/decorators/cache.py", line 62, in _wrapper_view_func
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/services/admin.py", line 103, in change_view
+    return super().change_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1889, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/utils/decorators.py", line 134, in _wrapper_view
+    response = view_func(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1747, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/contrib/admin/options.py", line 1792, in _changeform_view
+    form_validated = form.is_valid()
+                     ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 201, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 196, in errors
+    self.full_clean()
+  File "/usr/local/lib/python3.11/site-packages/django/forms/forms.py", line 435, in full_clean
+    self._post_clean()
+  File "/usr/local/lib/python3.11/site-packages/django/forms/models.py", line 486, in _post_clean
+    self.instance.full_clean(exclude=exclude, validate_unique=False)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1470, in full_clean
+    self.clean_fields(exclude=exclude)
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/base.py", line 1522, in clean_fields
+    setattr(self, f.attname, f.clean(raw_value, self))
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/app/core/fields.py", line 57, in clean
+    if value.size > self.max_upload_size:
+       ^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/db/models/fields/files.py", line 74, in size
+    return self.storage.size(self.name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/files/storage/filesystem.py", line 182, in size
+    return os.path.getsize(self.path(name))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen genericpath>", line 50, in getsize
+FileNotFoundError: [Errno 2] No such file or directory: '/app/corp_lis/media/services/SIGIL.jpeg'
+ERROR 2026-05-06 14:01:52,405 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/12/change/ HTTP/1.1" 500 153424
+INFO 2026-05-06 14:01:55,889 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/12/change/ HTTP/1.1" 200 19751
+INFO 2026-05-06 14:01:56,959 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/12/delete/ HTTP/1.1" 200 11711
+INFO 2026-05-06 14:01:57,888 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/12/delete/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:57,937 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:01:57,989 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4022
+INFO 2026-05-06 14:02:00,624 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:02:00,648 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 18853
+INFO 2026-05-06 14:02:00,698 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:02:10,356 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 11991
+INFO 2026-05-06 14:02:11,515 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:02:11,522 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:02:11,575 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 3998
+INFO 2026-05-06 14:02:14,552 basehttp 18 131206161082048 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:02:14,574 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 15023
+INFO 2026-05-06 14:02:14,621 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:02:41,333 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:02:41,390 basehttp 18 131206161082048 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:02:47,651 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:19,494 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:20,229 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:20,598 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:20,748 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:21,644 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:22,111 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:22,849 basehttp 18 131206161082048 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:23,351 basehttp 18 131206161082048 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 14:03:23,429 basehttp 18 131205806679744 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-06 14:03:23,432 basehttp 18 131206161082048 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:03:23,442 basehttp 18 131205815072448 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:03:23,847 basehttp 18 131205815072448 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:03:35,885 autoreload 19 127308561400576 Watching for file changes with StatReloader
+INFO 2026-05-06 14:03:37,857 basehttp 19 127308400686784 "GET /services/ HTTP/1.1" 200 15713
+INFO 2026-05-06 14:04:46,716 autoreload 18 137831799374592 Watching for file changes with StatReloader
+INFO 2026-05-06 14:04:48,963 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:07:32,454 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:07:32,545 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 3855
+INFO 2026-05-06 14:07:37,857 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:07:37,935 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:07:38,028 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:07:40,676 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 15023
+INFO 2026-05-06 14:07:40,726 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:07:42,207 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:07:42,248 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:07:44,195 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:07:44,252 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:08:03,456 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:08:04,501 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:08:04,915 basehttp 18 137831712286400 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 14:08:04,993 basehttp 18 137831692355264 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-06 14:08:04,999 basehttp 18 137831712286400 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:08:05,007 basehttp 18 137831700747968 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:08:05,438 basehttp 18 137831700747968 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:08:05,771 basehttp 18 137831700747968 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 14:08:05,903 basehttp 18 137831692355264 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 14:08:05,914 basehttp 18 137831712286400 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 14:08:05,930 basehttp 18 137831338997440 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 14:08:06,173 basehttp 18 137831338997440 "GET /services/ HTTP/1.1" 200 15867
+INFO 2026-05-06 14:08:29,365 basehttp 18 137831338997440 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:08:29,372 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:08:29,425 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4097
+INFO 2026-05-06 14:08:34,129 basehttp 18 137831338997440 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:08:34,165 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 18066
+INFO 2026-05-06 14:08:34,226 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:08:34,265 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:08:37,190 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 16404
+INFO 2026-05-06 14:08:37,259 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:08:38,502 basehttp 18 137831712286400 "GET /services/pokupka-loma/ HTTP/1.1" 200 18077
+INFO 2026-05-06 14:08:38,550 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:08:47,198 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 16404
+INFO 2026-05-06 14:08:47,259 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 304 0
+WARNING 2026-05-06 14:08:51,759 log 18 137831712286400 Not Found: /services/all/
+WARNING 2026-05-06 14:08:51,761 basehttp 18 137831712286400 "GET /services/all/ HTTP/1.1" 404 3372
+INFO 2026-05-06 14:09:04,764 basehttp 18 137831712286400 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 14:09:08,626 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 16404
+INFO 2026-05-06 14:09:08,672 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:09:16,433 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:09:16,504 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:12:04,436 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:12:04,444 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:12:04,500 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4090
+INFO 2026-05-06 14:12:11,789 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:12:11,823 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 18755
+INFO 2026-05-06 14:12:11,919 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:12:12,090 basehttp 18 137831338997440 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:12:12,095 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+WARNING 2026-05-06 14:12:16,657 log 18 137831338997440 Not Found: /services/all/
+WARNING 2026-05-06 14:12:16,658 basehttp 18 137831338997440 "GET /services/all/ HTTP/1.1" 404 3372
+WARNING 2026-05-06 14:12:18,113 log 18 137831338997440 Not Found: /services/all/
+WARNING 2026-05-06 14:12:18,115 basehttp 18 137831338997440 "GET /services/all/ HTTP/1.1" 404 3372
+INFO 2026-05-06 14:12:20,850 basehttp 18 137831338997440 "GET /services/ HTTP/1.1" 200 16963
+INFO 2026-05-06 14:12:20,910 basehttp 18 137831338997440 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:12:20,930 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:12:45,914 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 14:12:46,013 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:14:10,782 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:14:10,788 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:14:10,840 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4092
+INFO 2026-05-06 14:14:15,635 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:14:15,659 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19448
+INFO 2026-05-06 14:14:15,748 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:14:15,921 basehttp 18 137831338997440 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:14:15,925 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:14:15,935 basehttp 18 137831692355264 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:14:21,896 basehttp 18 137831692355264 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:14:21,963 basehttp 18 137831692355264 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:14:21,964 basehttp 18 137831338997440 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:14:21,968 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:14:31,393 basehttp 18 137831712286400 "GET /services/samovyvoz/ HTTP/1.1" 200 17068
+INFO 2026-05-06 14:14:31,457 basehttp 18 137831712286400 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:14:34,456 basehttp 18 137831712286400 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 14:14:36,994 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:14:37,052 basehttp 18 137831338997440 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:14:37,052 basehttp 18 137831712286400 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:15:28,678 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:15:28,744 basehttp 18 137831712286400 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:15:28,746 basehttp 18 137831692355264 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:15:28,749 basehttp 18 137831338997440 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:15:42,641 basehttp 18 137831338997440 "GET /services/demontazh/ HTTP/1.1" 200 18105
+INFO 2026-05-06 14:15:47,016 basehttp 18 137831338997440 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 14:15:54,524 basehttp 18 137831338997440 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:15:54,587 basehttp 18 137831692355264 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:15:54,589 basehttp 18 137831338997440 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:15:56,247 basehttp 18 137831338997440 "GET /services/pokupka-loma/ HTTP/1.1" 200 18077
+INFO 2026-05-06 14:16:01,948 basehttp 18 137831338997440 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:16:02,914 basehttp 18 137831338997440 "GET /services/samovyvoz/ HTTP/1.1" 200 17068
+INFO 2026-05-06 14:16:29,407 basehttp 18 137831338997440 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 14:16:29,528 basehttp 18 137831712286400 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 14:16:29,540 basehttp 18 137831692355264 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 14:16:29,555 basehttp 18 137831330604736 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 14:16:29,934 basehttp 18 137831683962560 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 14:16:30,015 basehttp 18 137831683962560 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:16:30,054 basehttp 18 137831338997440 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 14:16:30,066 basehttp 18 137831683962560 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:16:30,073 basehttp 18 137831338997440 "GET /app/media/services/i.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:16:30,073 basehttp 18 137831330604736 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:16:32,068 basehttp 18 137831338997440 "GET /news/ HTTP/1.1" 200 17598
+INFO 2026-05-06 14:16:32,159 basehttp 18 137831330604736 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-06 14:16:32,160 basehttp 18 137831338997440 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:16:32,173 basehttp 18 137831683962560 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:18:54,184 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20882
+INFO 2026-05-06 14:18:54,281 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:18:54,461 basehttp 18 137831683962560 "GET /app/media/news/img_e75c354e.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:18:54,461 basehttp 18 137831330604736 "GET /app/media/news/%D0%BA%D0%BE%D1%82%D0%B8%D0%BA.jpeg HTTP/1.1" 200 155274
+INFO 2026-05-06 14:18:54,474 basehttp 18 137831330604736 "GET /app/media/news/SIGIL.webp HTTP/1.1" 200 5028
+INFO 2026-05-06 14:18:54,477 basehttp 18 137831338997440 "GET /app/media/news/photo_2026-03-17_16-18-45.webp HTTP/1.1" 200 59610
+INFO 2026-05-06 14:18:58,925 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 12812
+INFO 2026-05-06 14:19:00,225 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:19:00,234 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:19:00,287 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 3986
+INFO 2026-05-06 14:19:05,620 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:19:05,639 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 14329
+INFO 2026-05-06 14:19:05,712 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:19:10,506 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:19:10,559 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:19:14,783 basehttp 18 137831330604736 "GET /news/ HTTP/1.1" 200 14443
+INFO 2026-05-06 14:19:20,764 basehttp 18 137831330604736 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 14:19:27,812 basehttp 18 137831330604736 "GET /news/ HTTP/1.1" 200 14443
+INFO 2026-05-06 14:19:50,019 basehttp 18 137831330604736 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 14:25:28,791 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:25:28,798 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:25:28,851 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4127
+INFO 2026-05-06 14:25:32,408 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:25:32,431 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 17188
+INFO 2026-05-06 14:25:32,493 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:25:32,660 basehttp 18 137831338997440 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:25:57,535 basehttp 18 137831338997440 "GET /news/ HTTP/1.1" 200 14948
+INFO 2026-05-06 14:25:57,613 basehttp 18 137831338997440 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:26:04,419 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:26:04,491 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:26:30,639 basehttp 18 137831338997440 "GET /news/rasshirenie-proizvodstvennyh-moshnostej/ HTTP/1.1" 200 17991
+INFO 2026-05-06 14:26:30,705 basehttp 18 137831338997440 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:26:50,172 basehttp 18 137831338997440 "GET /news/ HTTP/1.1" 200 14948
+INFO 2026-05-06 14:26:50,233 basehttp 18 137831338997440 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:27:20,912 basehttp 18 137831338997440 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:27:20,919 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:27:20,972 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4102
+INFO 2026-05-06 14:27:30,168 basehttp 18 137831338997440 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:27:30,195 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 17872
+INFO 2026-05-06 14:27:30,268 basehttp 18 137831338997440 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:27:30,304 basehttp 18 137831330604736 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:27:30,306 basehttp 18 137831338997440 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:27:34,355 basehttp 18 137831338997440 "GET /news/ HTTP/1.1" 200 15607
+INFO 2026-05-06 14:27:34,419 basehttp 18 137831330604736 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:27:34,423 basehttp 18 137831338997440 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:27:35,649 basehttp 18 137831338997440 "GET /news/ekologicheskaya-iniciativa/ HTTP/1.1" 200 17876
+INFO 2026-05-06 14:27:35,709 basehttp 18 137831338997440 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:27:53,324 basehttp 18 137831338997440 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 14:27:56,558 basehttp 18 137831338997440 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 14:27:56,698 basehttp 18 137831683962560 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 14:27:56,715 basehttp 18 137831330604736 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 14:27:56,739 basehttp 18 137831712286400 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 14:27:56,999 basehttp 18 137831712286400 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:27:57,060 basehttp 18 137831712286400 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:27:57,069 basehttp 18 137831683962560 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:27:57,078 basehttp 18 137831330604736 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:27:58,937 basehttp 18 137831330604736 "GET /news/ HTTP/1.1" 200 15607
+INFO 2026-05-06 14:27:58,986 basehttp 18 137831330604736 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:27:59,031 basehttp 18 137831683962560 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:28:02,834 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:28:02,905 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:28:59,072 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:28:59,078 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:28:59,134 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4134
+INFO 2026-05-06 14:29:02,965 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:29:02,996 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 18565
+INFO 2026-05-06 14:29:03,055 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:29:03,210 basehttp 18 137831330604736 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:29:03,212 basehttp 18 137831683962560 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:29:03,222 basehttp 18 137831712286400 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:29:06,956 basehttp 18 137831712286400 "GET /news/ HTTP/1.1" 200 16346
+INFO 2026-05-06 14:29:07,030 basehttp 18 137831683962560 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:29:07,031 basehttp 18 137831712286400 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:29:07,034 basehttp 18 137831330604736 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:29:08,218 basehttp 18 137831330604736 "GET /news/partnerstvo-s-mezhdunarodnymi-korporaciyami/ HTTP/1.1" 200 18051
+INFO 2026-05-06 14:29:08,272 basehttp 18 137831330604736 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:16,520 basehttp 18 137831330604736 "GET /news/ekologicheskaya-iniciativa/ HTTP/1.1" 200 17876
+INFO 2026-05-06 14:29:18,188 basehttp 18 137831330604736 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:29:18,247 basehttp 18 137831330604736 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:29:18,261 basehttp 18 137831683962560 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:29:18,264 basehttp 18 137831712286400 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:29:19,200 basehttp 18 137831712286400 "GET /news/ HTTP/1.1" 200 16346
+INFO 2026-05-06 14:29:19,243 basehttp 18 137831712286400 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:19,280 basehttp 18 137831683962560 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:22,705 basehttp 18 137831712286400 "GET /news/partnerstvo-s-mezhdunarodnymi-korporaciyami/ HTTP/1.1" 200 18051
+INFO 2026-05-06 14:29:22,771 basehttp 18 137831712286400 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:44,354 basehttp 18 137831712286400 "GET /news/ HTTP/1.1" 200 16346
+INFO 2026-05-06 14:29:44,412 basehttp 18 137831683962560 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:44,413 basehttp 18 137831712286400 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:44,413 basehttp 18 137831330604736 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:29:56,888 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:29:56,953 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:31:20,732 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:31:20,740 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:31:20,792 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4104
+INFO 2026-05-06 14:31:23,475 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:31:23,502 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 19233
+INFO 2026-05-06 14:31:23,562 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:31:23,603 basehttp 18 137831330604736 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:31:23,615 basehttp 18 137831712286400 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:31:23,625 basehttp 18 137831683962560 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:31:23,627 basehttp 18 137831692355264 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:31:32,382 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:31:32,451 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:31:36,945 basehttp 18 137831692355264 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 14:32:13,305 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:32:13,336 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14438
+INFO 2026-05-06 14:32:19,210 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:32:19,277 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:38:17,141 basehttp 18 137831692355264 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:38:17,149 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:38:17,204 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4106
+INFO 2026-05-06 14:38:20,579 basehttp 18 137831692355264 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:38:20,607 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 19886
+INFO 2026-05-06 14:38:20,673 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:38:20,845 basehttp 18 137831712286400 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:38:20,875 basehttp 18 137831683962560 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:38:20,876 basehttp 18 137831330604736 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:38:20,878 basehttp 18 137831712286400 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:38:20,890 basehttp 18 137831692355264 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:38:32,632 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/news/news/?created_at__year=2026 HTTP/1.1" 200 20526
+INFO 2026-05-06 14:38:32,695 basehttp 18 137831692355264 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:38:32,709 basehttp 18 137831712286400 "GET /app/media/news/csr.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:38:37,192 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:38:37,252 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:39:24,821 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:39:24,828 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:39:24,883 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4102
+INFO 2026-05-06 14:39:28,621 basehttp 18 137831712286400 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:39:28,646 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 20538
+INFO 2026-05-06 14:39:28,698 basehttp 18 137831712286400 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:39:28,736 basehttp 18 137831692355264 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 14:39:28,745 basehttp 18 137831712286400 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:39:28,763 basehttp 18 137831338997440 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:39:28,765 basehttp 18 137831683962560 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:39:28,766 basehttp 18 137831322212032 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:39:28,782 basehttp 18 137831330604736 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:39:46,101 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 14:39:46,158 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:42:16,211 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:42:16,219 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:42:16,275 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4092
+INFO 2026-05-06 14:42:27,090 basehttp 18 137831330604736 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 14:42:27,123 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21178
+INFO 2026-05-06 14:42:27,193 basehttp 18 137831330604736 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 14:42:27,356 basehttp 18 137831330604736 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 14:42:27,371 basehttp 18 137831322212032 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 14:42:27,391 basehttp 18 137831338997440 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:42:27,414 basehttp 18 137831683962560 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:42:27,432 basehttp 18 137831699699392 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:42:27,434 basehttp 18 137831712286400 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:42:27,435 basehttp 18 137831312770752 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:42:30,337 basehttp 18 137831312770752 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 14:42:30,433 basehttp 18 137831712286400 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 14:42:30,436 basehttp 18 137831322212032 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:42:30,439 basehttp 18 137831338997440 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:42:30,440 basehttp 18 137831312770752 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 14:42:30,441 basehttp 18 137831699699392 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:42:30,456 basehttp 18 137831683962560 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:42:33,823 basehttp 18 137831683962560 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 18077
+INFO 2026-05-06 14:42:33,889 basehttp 18 137831683962560 "GET /app/media/news/fef3.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:43:00,522 basehttp 18 137831683962560 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 18077
+INFO 2026-05-06 14:43:00,588 basehttp 18 137831683962560 "GET /app/media/news/fef3.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:43:14,269 autoreload 19 128475843138304 Watching for file changes with StatReloader
+INFO 2026-05-06 14:43:19,169 basehttp 19 128475756226240 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 17658
+INFO 2026-05-06 14:43:19,216 basehttp 19 128475756226240 "GET /app/media/news/fef3.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,510 basehttp 19 128475756226240 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 14:44:05,576 basehttp 19 128475756226240 "GET /app/media/news/fef3.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,580 basehttp 19 128475746784960 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,580 basehttp 19 128475738392256 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,583 basehttp 19 128475729999552 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,584 basehttp 19 128475721606848 "GET /app/media/news/csr.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:44:05,590 basehttp 19 128475713214144 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 304 0
+INFO 2026-05-06 14:45:46,644 basehttp 19 128475729999552 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03¢Î»\x81Ä\x06\x06\xadKÐ×>ÿ0Hh!bh\x11\x90Æù\x0fòt\x022wRÙ\x83\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 14:45:46,645 basehttp 19 128475729999552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 14:45:46,657 basehttp 19 128475729999552 code 400, message Bad request version ("'Î¸ÏB:Z¶Q\x94KA\x9c\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 14:45:46,658 basehttp 19 128475729999552 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 14:46:19,415 basehttp 19 128475729999552 "GET /news/?page=2 HTTP/1.1" 200 15655
+INFO 2026-05-06 14:46:19,489 basehttp 19 128475729999552 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:46:21,632 basehttp 19 128475729999552 "GET /news/rasshirenie-proizvodstvennyh-moshnostej/ HTTP/1.1" 200 17572
+INFO 2026-05-06 14:46:21,700 basehttp 19 128475729999552 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 14:46:24,547 basehttp 19 128475729999552 "GET /news/?page=1 HTTP/1.1" 200 18783
+INFO 2026-05-06 14:46:24,627 basehttp 19 128475746784960 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 14:46:24,631 basehttp 19 128475738392256 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:46:24,634 basehttp 19 128475721606848 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:46:24,636 basehttp 19 128475713214144 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:46:24,646 basehttp 19 128475729999552 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 14:46:24,654 basehttp 19 128475756226240 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:46:28,108 basehttp 19 128475756226240 "GET /news/socialnaya-otvetstvennost/ HTTP/1.1" 200 17551
+INFO 2026-05-06 14:46:31,809 basehttp 19 128475756226240 "GET /news/ekologicheskaya-iniciativa/ HTTP/1.1" 200 17457
+INFO 2026-05-06 14:47:46,982 basehttp 19 128475756226240 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 14:47:47,124 basehttp 19 128475746784960 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 14:47:47,132 basehttp 19 128475713214144 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 14:47:47,153 basehttp 19 128475738392256 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 14:47:47,635 basehttp 19 128475721606848 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 14:47:47,801 basehttp 19 128475756226240 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 14:47:47,887 basehttp 19 128475729999552 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 14:47:47,955 basehttp 19 128475704821440 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 14:47:49,390 basehttp 19 128475704821440 "GET /about/static/about/static/images/reck.jpg HTTP/1.1" 200 2356939
+INFO 2026-05-06 14:48:14,215 basehttp 19 128475704821440 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 14:48:16,200 basehttp 19 128475704821440 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 14:48:16,258 basehttp 19 128475704821440 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 14:48:16,269 basehttp 19 128475756226240 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 14:48:16,272 basehttp 19 128475729999552 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 14:48:16,781 basehttp 19 128475729999552 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 14:48:16,858 basehttp 19 128475756226240 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 14:48:16,866 basehttp 19 128475704821440 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 14:48:16,870 basehttp 19 128475713214144 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 14:48:16,871 basehttp 19 128475738392256 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 14:48:16,873 basehttp 19 128475729999552 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 14:48:16,887 basehttp 19 128475721606848 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 14:48:18,947 basehttp 19 128475721606848 "GET /partners/ HTTP/1.1" 200 24593
+INFO 2026-05-06 15:04:52,769 autoreload 18 131105718952704 Watching for file changes with StatReloader
+INFO 2026-05-06 15:04:54,581 basehttp 18 131105632020160 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 15:04:54,640 basehttp 18 131105632020160 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 15:04:54,643 basehttp 18 131105546036928 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 15:04:54,646 basehttp 18 131105554429632 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 15:04:55,730 basehttp 18 131105554429632 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 15:04:55,816 basehttp 18 131105546036928 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 15:04:55,822 basehttp 18 131105632020160 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 15:04:55,826 basehttp 18 131105529251520 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 15:04:55,827 basehttp 18 131105520858816 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 15:04:55,832 basehttp 18 131105554429632 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 15:04:55,842 basehttp 18 131105537644224 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 15:04:56,264 basehttp 18 131105537644224 "GET /partners/ HTTP/1.1" 200 28697
+INFO 2026-05-06 15:05:08,005 basehttp 18 131105537644224 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 15:06:10,857 basehttp 18 131105537644224 "GET /partners/ HTTP/1.1" 200 27786
+INFO 2026-05-06 15:09:52,529 basehttp 18 131105537644224 "GET /partners/ HTTP/1.1" 200 27786
+INFO 2026-05-06 15:13:26,022 basehttp 18 131105537644224 "GET /partners/ HTTP/1.1" 200 27801
+WARNING 2026-05-06 15:13:26,087 log 18 131105537644224 Not Found: /staticfiles/images/cases/metallurgical-plant.jpg
+WARNING 2026-05-06 15:13:26,088 basehttp 18 131105537644224 "GET /staticfiles/images/cases/metallurgical-plant.jpg HTTP/1.1" 404 5536
+WARNING 2026-05-06 15:13:26,107 log 18 131105529251520 Not Found: /staticfiles/images/cases/ecology-project.jpg
+WARNING 2026-05-06 15:13:26,109 log 18 131105537644224 Not Found: /staticfiles/images/cases/auto-plant-logistics.jpg
+WARNING 2026-05-06 15:13:26,110 basehttp 18 131105529251520 "GET /staticfiles/images/cases/ecology-project.jpg HTTP/1.1" 404 5524
+WARNING 2026-05-06 15:13:26,110 basehttp 18 131105537644224 "GET /staticfiles/images/cases/auto-plant-logistics.jpg HTTP/1.1" 404 5539
+INFO 2026-05-06 15:16:07,522 basehttp 18 131105537644224 "GET /partners/ HTTP/1.1" 200 27801
+WARNING 2026-05-06 15:16:07,577 log 18 131105537644224 Not Found: /staticfiles/images/cases/metallurgical-plant.jpg
+WARNING 2026-05-06 15:16:07,579 basehttp 18 131105537644224 "GET /staticfiles/images/cases/metallurgical-plant.jpg HTTP/1.1" 404 5536
+WARNING 2026-05-06 15:16:07,602 log 18 131105529251520 Not Found: /staticfiles/images/cases/ecology-project.jpg
+WARNING 2026-05-06 15:16:07,607 log 18 131105537644224 Not Found: /staticfiles/images/cases/auto-plant-logistics.jpg
+WARNING 2026-05-06 15:16:07,608 basehttp 18 131105529251520 "GET /staticfiles/images/cases/ecology-project.jpg HTTP/1.1" 404 5524
+WARNING 2026-05-06 15:16:07,609 basehttp 18 131105537644224 "GET /staticfiles/images/cases/auto-plant-logistics.jpg HTTP/1.1" 404 5539
+INFO 2026-05-06 15:16:39,263 autoreload 18 131771141591808 Watching for file changes with StatReloader
+INFO 2026-05-06 15:16:41,083 basehttp 18 131771054155456 "GET /partners/ HTTP/1.1" 200 27801
+WARNING 2026-05-06 15:16:41,141 log 18 131771054155456 Not Found: /staticfiles/images/cases/metallurgical-plant.jpg
+WARNING 2026-05-06 15:16:41,142 basehttp 18 131771054155456 "GET /staticfiles/images/cases/metallurgical-plant.jpg HTTP/1.1" 404 5536
+WARNING 2026-05-06 15:16:41,158 log 18 131771045762752 Not Found: /staticfiles/images/cases/ecology-project.jpg
+WARNING 2026-05-06 15:16:41,159 log 18 131771054155456 Not Found: /staticfiles/images/cases/auto-plant-logistics.jpg
+WARNING 2026-05-06 15:16:41,160 basehttp 18 131771045762752 "GET /staticfiles/images/cases/ecology-project.jpg HTTP/1.1" 404 5524
+WARNING 2026-05-06 15:16:41,160 basehttp 18 131771054155456 "GET /staticfiles/images/cases/auto-plant-logistics.jpg HTTP/1.1" 404 5539
+INFO 2026-05-06 15:16:42,166 basehttp 18 131771054155456 "GET /partners/ HTTP/1.1" 200 27801
+WARNING 2026-05-06 15:16:42,212 log 18 131771054155456 Not Found: /staticfiles/images/cases/metallurgical-plant.jpg
+WARNING 2026-05-06 15:16:42,213 basehttp 18 131771054155456 "GET /staticfiles/images/cases/metallurgical-plant.jpg HTTP/1.1" 404 5536
+WARNING 2026-05-06 15:16:42,237 log 18 131771054155456 Not Found: /staticfiles/images/cases/auto-plant-logistics.jpg
+WARNING 2026-05-06 15:16:42,239 log 18 131771045762752 Not Found: /staticfiles/images/cases/ecology-project.jpg
+WARNING 2026-05-06 15:16:42,240 basehttp 18 131771054155456 "GET /staticfiles/images/cases/auto-plant-logistics.jpg HTTP/1.1" 404 5539
+WARNING 2026-05-06 15:16:42,241 basehttp 18 131771045762752 "GET /staticfiles/images/cases/ecology-project.jpg HTTP/1.1" 404 5524
+INFO 2026-05-06 15:21:01,906 basehttp 18 131771054155456 "GET /partners/ HTTP/1.1" 200 27786
+INFO 2026-05-06 15:21:34,899 basehttp 18 131771054155456 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 15:21:35,019 basehttp 18 131771036321472 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 15:21:35,028 basehttp 18 131771045762752 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 15:21:35,040 basehttp 18 131771019536064 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 15:21:35,468 basehttp 18 131771027928768 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 15:21:35,675 basehttp 18 131771054155456 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 15:21:35,759 basehttp 18 131770670380736 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 15:21:35,803 basehttp 18 131770661988032 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 15:21:42,074 basehttp 18 131770661988032 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 15:21:42,134 basehttp 18 131770661988032 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 15:21:42,139 basehttp 18 131771054155456 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 15:21:42,142 basehttp 18 131770670380736 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 15:21:43,505 basehttp 18 131770670380736 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 15:21:43,581 basehttp 18 131771054155456 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 15:21:43,587 basehttp 18 131770661988032 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 15:21:43,588 basehttp 18 131771045762752 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 15:21:43,593 basehttp 18 131771019536064 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 15:21:43,598 basehttp 18 131770670380736 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 15:21:43,610 basehttp 18 131771027928768 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 15:21:44,909 basehttp 18 131771027928768 "GET /partners/ HTTP/1.1" 200 27786
+INFO 2026-05-06 15:22:22,129 basehttp 18 131771027928768 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 15:23:06,810 basehttp 18 131771027928768 "GET /partners/ HTTP/1.1" 200 27786
+INFO 2026-05-06 15:23:59,352 basehttp 18 131771027928768 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-06 15:24:08,049 basehttp 18 131771027928768 "GET / HTTP/1.1" 200 28365
+INFO 2026-05-06 15:36:14,538 basehttp 18 131771027928768 "GET / HTTP/1.1" 200 25714
+INFO 2026-05-06 15:36:19,137 basehttp 18 131771027928768 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 15:36:19,212 basehttp 18 131771027928768 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 15:36:19,224 basehttp 18 131771045762752 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 15:36:19,226 basehttp 18 131771019536064 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 15:45:46,713 basehttp 18 131771045762752 code 400, message Bad request version ("àu³´îO²F\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 15:45:46,714 basehttp 18 131771045762752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 15:45:46,726 basehttp 18 131771045762752 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03òäEV\x9f÷\x80æ©¹\x80j6\x8eK\x8eg\x9aú²z')
+ERROR 2026-05-06 15:45:46,727 basehttp 18 131771045762752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 15:45:46,733 basehttp 18 131771045762752 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03ÇÁ\x10\x9cvTJ>\x8eÌ:éÂ\x8d\x06\x92ä¿Øöî\x8fHb\x17\x8a¸ðîÐG.\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 15:45:46,734 basehttp 18 131771045762752 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 15:51:19,427 autoreload 18 131771141591808 /app/core/views.py changed, reloading.
+INFO 2026-05-06 15:51:21,891 autoreload 52 139220354478848 Watching for file changes with StatReloader
+INFO 2026-05-06 15:51:49,239 autoreload 52 139220354478848 /app/core/urls.py changed, reloading.
+INFO 2026-05-06 15:51:51,179 autoreload 54 133862352937728 Watching for file changes with StatReloader
+INFO 2026-05-06 15:52:05,058 autoreload 54 133862352937728 /app/core/urls.py changed, reloading.
+INFO 2026-05-06 15:52:07,313 autoreload 56 127655864910592 Watching for file changes with StatReloader
+INFO 2026-05-06 15:52:12,069 autoreload 56 127655864910592 /app/core/urls.py changed, reloading.
+INFO 2026-05-06 15:52:13,696 autoreload 58 126137463554816 Watching for file changes with StatReloader
+INFO 2026-05-06 15:53:09,499 autoreload 18 123927085064960 Watching for file changes with StatReloader
+INFO 2026-05-06 15:55:23,159 autoreload 18 138903585280768 Watching for file changes with StatReloader
+INFO 2026-05-06 15:55:39,683 autoreload 18 138903585280768 /app/core/views.py changed, reloading.
+INFO 2026-05-06 15:55:41,857 autoreload 20 130084628628224 Watching for file changes with StatReloader
+INFO 2026-05-06 15:55:53,628 autoreload 18 124156640375552 Watching for file changes with StatReloader
+INFO 2026-05-06 15:55:54,983 basehttp 18 124156553193152 "GET /about HTTP/1.1" 301 0
+INFO 2026-05-06 15:55:55,013 basehttp 18 124156553193152 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 15:55:55,151 basehttp 18 124156536407744 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 15:55:55,164 basehttp 18 124156544800448 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 15:55:55,190 basehttp 18 124156519622336 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 15:55:55,645 basehttp 18 124156528015040 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 15:55:55,862 basehttp 18 124156553193152 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 15:55:55,956 basehttp 18 124156511229632 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 15:55:56,027 basehttp 18 124156028909248 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+ERROR 2026-05-06 15:55:56,839 log 18 124156028909248 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: core/home.html
+ERROR 2026-05-06 15:55:56,842 basehttp 18 124156028909248 "GET / HTTP/1.1" 500 82166
+ERROR 2026-05-06 15:55:58,454 log 18 124156028909248 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: core/home.html
+ERROR 2026-05-06 15:55:58,456 basehttp 18 124156028909248 "GET / HTTP/1.1" 500 82154
+ERROR 2026-05-06 15:55:59,048 log 18 124156028909248 Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/core/handlers/base.py", line 220, in _get_response
+    response = response.render()
+               ^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 114, in render
+    self.content = self.rendered_content
+                   ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 90, in rendered_content
+    template = self.resolve_template(self.template_name)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/response.py", line 72, in resolve_template
+    return select_template(template, using=self.using)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.11/site-packages/django/template/loader.py", line 47, in select_template
+    raise TemplateDoesNotExist(", ".join(template_name_list), chain=chain)
+django.template.exceptions.TemplateDoesNotExist: core/home.html
+ERROR 2026-05-06 15:55:59,052 basehttp 18 124156028909248 "GET / HTTP/1.1" 500 82154
+INFO 2026-05-06 15:59:08,881 autoreload 18 124156640375552 /app/core/views.py changed, reloading.
+INFO 2026-05-06 15:59:10,599 autoreload 28 129325501637376 Watching for file changes with StatReloader
+INFO 2026-05-06 15:59:28,321 autoreload 18 137701848843008 Watching for file changes with StatReloader
+INFO 2026-05-06 15:59:42,952 basehttp 18 137701761214144 "GET / HTTP/1.1" 200 29173
+INFO 2026-05-06 15:59:43,032 basehttp 18 137701761214144 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 15:59:43,042 basehttp 18 137701683623616 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 15:59:43,050 basehttp 18 137701675230912 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 15:59:43,058 basehttp 18 137701658445504 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 15:59:43,062 basehttp 18 137701650052800 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 15:59:43,068 basehttp 18 137701666838208 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:00:20,200 basehttp 18 137701666838208 "GET / HTTP/1.1" 200 29173
+INFO 2026-05-06 16:00:20,282 basehttp 18 137701666838208 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:00:20,292 basehttp 18 137701650052800 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:00:20,296 basehttp 18 137701658445504 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:00:20,297 basehttp 18 137701683623616 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:00:20,301 basehttp 18 137701761214144 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:00:20,310 basehttp 18 137701675230912 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:00:25,560 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:25,646 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 3841
+INFO 2026-05-06 16:00:31,496 basehttp 18 137701675230912 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:31,574 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 16:00:31,648 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 16:00:35,790 basehttp 18 137701675230912 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:35,799 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:35,851 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4061
+INFO 2026-05-06 16:00:38,545 basehttp 18 137701675230912 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:38,657 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21737
+INFO 2026-05-06 16:00:38,735 basehttp 18 137701675230912 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 16:00:38,772 basehttp 18 137701675230912 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:00:38,792 basehttp 18 137701761214144 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:00:38,805 basehttp 18 137701658445504 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:00:38,818 basehttp 18 137701650052800 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 16:00:38,818 basehttp 18 137701666838208 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 16:00:38,829 basehttp 18 137701683623616 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 16:00:38,843 basehttp 18 137701639562944 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 16:00:42,114 basehttp 18 137701639562944 "GET / HTTP/1.1" 200 28925
+INFO 2026-05-06 16:00:42,182 basehttp 18 137701639562944 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:00:42,192 basehttp 18 137701683623616 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:00:42,198 basehttp 18 137701666838208 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:00:42,204 basehttp 18 137701675230912 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:00:42,217 basehttp 18 137701650052800 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:00:46,752 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/news/news/28/change/ HTTP/1.1" 200 18591
+INFO 2026-05-06 16:00:46,811 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 16:00:47,678 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/news/news/28/delete/ HTTP/1.1" 200 11659
+INFO 2026-05-06 16:00:48,804 basehttp 18 137701639562944 "POST /corp-lis-secure-portal/news/news/28/delete/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:48,813 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:48,871 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4002
+INFO 2026-05-06 16:00:51,673 basehttp 18 137701639562944 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 16:00:51,707 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21178
+INFO 2026-05-06 16:00:51,761 basehttp 18 137701639562944 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 16:03:14,824 basehttp 18 137701639562944 "GET / HTTP/1.1" 200 29173
+INFO 2026-05-06 16:03:14,898 basehttp 18 137701639562944 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:03:16,729 basehttp 18 137701639562944 "GET /news/socialnaya-otvetstvennost/ HTTP/1.1" 200 17551
+INFO 2026-05-06 16:03:16,791 basehttp 18 137701639562944 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:03:52,576 basehttp 18 137701639562944 "GET /services/samovyvoz/ HTTP/1.1" 200 17068
+INFO 2026-05-06 16:03:52,646 basehttp 18 137701639562944 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:03:53,960 basehttp 18 137701639562944 "GET / HTTP/1.1" 200 29173
+INFO 2026-05-06 16:03:54,029 basehttp 18 137701639562944 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:03:54,044 basehttp 18 137701650052800 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:03:54,051 basehttp 18 137701666838208 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:03:54,054 basehttp 18 137701761214144 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:03:54,058 basehttp 18 137701675230912 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:03:54,068 basehttp 18 137701683623616 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:03:55,100 basehttp 18 137701639562944 "GET /services/demontazh/ HTTP/1.1" 200 18105
+INFO 2026-05-06 16:03:58,948 basehttp 18 137701639562944 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 17658
+INFO 2026-05-06 16:04:05,486 basehttp 18 137701639562944 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 16:23:59,429 basehttp 18 137701639562944 "GET / HTTP/1.1" 200 26572
+INFO 2026-05-06 16:23:59,516 basehttp 18 137701639562944 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:23:59,528 basehttp 18 137701675230912 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:23:59,535 basehttp 18 137701650052800 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:23:59,541 basehttp 18 137701683623616 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:23:59,545 basehttp 18 137701666838208 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:23:59,551 basehttp 18 137701761214144 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:24:36,944 basehttp 18 137701761214144 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 16:24:37,077 basehttp 18 137701683623616 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 16:24:37,086 basehttp 18 137701666838208 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 16:24:37,105 basehttp 18 137701675230912 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 16:24:37,541 basehttp 18 137701650052800 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 16:24:37,697 basehttp 18 137701761214144 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 16:24:37,775 basehttp 18 137701639562944 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 16:24:37,820 basehttp 18 137701658445504 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 16:24:40,552 basehttp 18 137701658445504 "GET / HTTP/1.1" 200 26572
+INFO 2026-05-06 16:24:40,623 basehttp 18 137701658445504 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:24:40,636 basehttp 18 137701639562944 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:24:40,642 basehttp 18 137701761214144 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:24:40,646 basehttp 18 137701675230912 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:24:40,648 basehttp 18 137701666838208 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:24:40,661 basehttp 18 137701650052800 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:30:54,789 basehttp 18 137701666838208 "GET / HTTP/1.1" 200 26572
+INFO 2026-05-06 16:30:54,860 basehttp 18 137701666838208 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:30:54,873 basehttp 18 137701650052800 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:30:54,879 basehttp 18 137701675230912 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:30:54,881 basehttp 18 137701683623616 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:30:54,884 basehttp 18 137701658445504 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:30:54,893 basehttp 18 137701761214144 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:30:56,399 basehttp 18 137701666838208 "GET / HTTP/1.1" 200 26572
+INFO 2026-05-06 16:30:56,481 basehttp 18 137701666838208 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:30:56,496 basehttp 18 137701761214144 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:30:56,507 basehttp 18 137701658445504 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:30:56,510 basehttp 18 137701675230912 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:30:56,514 basehttp 18 137701650052800 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:30:56,525 basehttp 18 137701683623616 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:31:21,529 autoreload 18 126059247600384 Watching for file changes with StatReloader
+INFO 2026-05-06 16:31:23,221 basehttp 18 126059160790720 "GET / HTTP/1.1" 200 26515
+INFO 2026-05-06 16:32:38,972 autoreload 18 133348503511808 Watching for file changes with StatReloader
+INFO 2026-05-06 16:32:40,750 basehttp 18 133348416546496 "GET / HTTP/1.1" 200 26515
+INFO 2026-05-06 16:32:40,826 basehttp 18 133348416546496 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:32:40,829 basehttp 18 133348332664512 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:32:40,834 basehttp 18 133348324271808 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:32:40,838 basehttp 18 133348307486400 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:32:40,841 basehttp 18 133348299093696 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:32:40,850 basehttp 18 133348315879104 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+WARNING 2026-05-06 16:35:31,138 log 18 133348324271808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:35:31,139 basehttp 18 133348324271808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:35:52,303 basehttp 18 133348324271808 "GET / HTTP/1.1" 200 26515
+INFO 2026-05-06 16:35:52,392 basehttp 18 133348315879104 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:35:52,393 basehttp 18 133348324271808 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:35:52,420 log 18 133348324271808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-05-06 16:35:52,421 basehttp 18 133348299093696 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+WARNING 2026-05-06 16:35:52,422 basehttp 18 133348324271808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:35:52,425 basehttp 18 133348416546496 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:35:52,429 basehttp 18 133348332664512 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:35:52,437 basehttp 18 133348307486400 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:36:43,810 autoreload 18 128084913951488 Watching for file changes with StatReloader
+INFO 2026-05-06 16:37:34,627 basehttp 18 128084827170496 "GET / HTTP/1.1" 200 26515
+WARNING 2026-05-06 16:37:34,688 log 18 128084827170496 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:37:34,690 basehttp 18 128084827170496 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:37:35,539 basehttp 18 128084827170496 "GET / HTTP/1.1" 200 26515
+INFO 2026-05-06 16:37:35,605 basehttp 18 128084827170496 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:37:35,656 log 18 128084439197376 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:37:35,659 basehttp 18 128084439197376 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:37:35,661 basehttp 18 128084817729216 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:37:35,667 basehttp 18 128084809336512 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:37:35,670 basehttp 18 128084792551104 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:37:35,674 basehttp 18 128084447590080 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:37:35,681 basehttp 18 128084800943808 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:37:36,271 basehttp 18 128084800943808 "GET / HTTP/1.1" 200 26515
+WARNING 2026-05-06 16:37:36,341 log 18 128084800943808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:37:36,343 basehttp 18 128084800943808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:38:04,354 basehttp 18 128084800943808 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 16:38:04,447 log 18 128084800943808 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:38:04,449 basehttp 18 128084800943808 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:41:38,830 autoreload 18 139552765039360 Watching for file changes with StatReloader
+INFO 2026-05-06 16:41:40,503 basehttp 18 139552678209216 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-06 16:41:42,691 basehttp 18 139552678209216 "GET / HTTP/1.1" 200 26498
+INFO 2026-05-06 16:41:42,755 basehttp 18 139552678209216 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:41:42,756 basehttp 18 139552668767936 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:41:42,761 basehttp 18 139552660375232 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:41:42,765 basehttp 18 139552643589824 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:41:42,769 basehttp 18 139552635197120 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:41:42,780 basehttp 18 139552651982528 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+WARNING 2026-05-06 16:41:46,977 log 18 139552678209216 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:41:46,978 basehttp 18 139552678209216 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:41:49,832 basehttp 18 139552678209216 "GET / HTTP/1.1" 200 26498
+WARNING 2026-05-06 16:41:49,905 log 18 139552678209216 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:41:49,907 basehttp 18 139552678209216 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:42:24,673 basehttp 18 139552678209216 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 16:42:24,749 log 18 139552678209216 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:42:24,750 basehttp 18 139552678209216 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:43:23,331 basehttp 18 139552678209216 "GET / HTTP/1.1" 200 26498
+INFO 2026-05-06 16:43:23,440 basehttp 18 139552678209216 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:43:23,443 basehttp 18 139552643589824 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+WARNING 2026-05-06 16:43:23,449 log 18 139552626804416 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:43:23,453 basehttp 18 139552626804416 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:43:23,462 basehttp 18 139552635197120 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:43:23,470 basehttp 18 139552668767936 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:43:23,474 basehttp 18 139552651982528 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:43:23,482 basehttp 18 139552660375232 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:43:36,506 basehttp 18 139552660375232 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 16:43:36,606 log 18 139552660375232 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:43:36,608 basehttp 18 139552660375232 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:43:47,322 basehttp 18 139552660375232 "GET / HTTP/1.1" 200 26498
+INFO 2026-05-06 16:43:47,407 basehttp 18 139552660375232 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:43:47,414 basehttp 18 139552651982528 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+WARNING 2026-05-06 16:43:47,425 log 18 139552678209216 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-05-06 16:43:47,428 basehttp 18 139552668767936 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+WARNING 2026-05-06 16:43:47,429 basehttp 18 139552678209216 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:43:47,432 basehttp 18 139552626804416 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:43:47,440 basehttp 18 139552643589824 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:43:47,453 basehttp 18 139552635197120 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:44:08,832 autoreload 18 124238324241152 Watching for file changes with StatReloader
+INFO 2026-05-06 16:44:10,394 basehttp 18 124238169110208 "GET / HTTP/1.1" 200 26497
+WARNING 2026-05-06 16:44:10,457 log 18 124238169110208 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:44:10,458 basehttp 18 124238169110208 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:44:52,108 autoreload 18 134881041855232 Watching for file changes with StatReloader
+INFO 2026-05-06 16:44:53,541 basehttp 18 134880954410688 "GET / HTTP/1.1" 200 26500
+WARNING 2026-05-06 16:44:53,623 log 18 134880944969408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:44:53,626 basehttp 18 134880944969408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:44:53,641 basehttp 18 134880954410688 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:44:53,644 basehttp 18 134880936576704 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:44:53,651 basehttp 18 134880928184000 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:44:53,653 basehttp 18 134880911398592 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:44:53,661 basehttp 18 134880428029632 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:44:53,668 basehttp 18 134880919791296 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:44:53,839 basehttp 18 134880919791296 "GET / HTTP/1.1" 200 26500
+WARNING 2026-05-06 16:44:53,899 log 18 134880919791296 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:44:53,902 basehttp 18 134880919791296 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:45:50,445 autoreload 19 123887309853440 Watching for file changes with StatReloader
+INFO 2026-05-06 16:45:51,770 basehttp 19 123887223301824 "GET / HTTP/1.1" 200 26492
+INFO 2026-05-06 16:45:51,864 basehttp 19 123887214909120 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+WARNING 2026-05-06 16:45:51,870 log 19 123886964295360 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2026-05-06 16:45:51,870 basehttp 19 123887223301824 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:45:51,874 basehttp 19 123886964295360 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:45:51,878 basehttp 19 123887206516416 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:45:51,881 basehttp 19 123886981080768 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:45:51,887 basehttp 19 123886972688064 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:45:51,895 basehttp 19 123886989473472 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:45:52,047 basehttp 19 123886989473472 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:45:52,112 log 19 123886989473472 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:45:52,113 basehttp 19 123886989473472 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:46:23,643 autoreload 18 129683700880128 Watching for file changes with StatReloader
+INFO 2026-05-06 16:46:26,395 basehttp 18 129683614066368 "GET / HTTP/1.1" 200 26492
+INFO 2026-05-06 16:46:26,489 basehttp 18 129683604625088 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:46:26,495 basehttp 18 129683614066368 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:46:26,498 log 18 129683358205632 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:46:26,502 basehttp 18 129683358205632 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:46:26,511 basehttp 18 129683596232384 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:46:26,514 basehttp 18 129683374991040 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:46:26,518 basehttp 18 129683366598336 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:46:26,529 basehttp 18 129683383383744 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:47:26,563 basehttp 18 129683374991040 "GET / HTTP/1.1" 200 26492
+INFO 2026-05-06 16:47:26,637 basehttp 18 129683374991040 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:47:26,675 log 18 129683358205632 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:26,683 basehttp 18 129683358205632 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:47:26,695 basehttp 18 129683596232384 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:47:26,701 basehttp 18 129683366598336 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:47:26,704 basehttp 18 129683604625088 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:47:26,707 basehttp 18 129683383383744 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:47:26,719 basehttp 18 129683614066368 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:47:27,378 basehttp 18 129683614066368 "GET / HTTP/1.1" 200 26492
+INFO 2026-05-06 16:47:27,458 basehttp 18 129683614066368 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:47:27,482 log 18 129683374991040 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:27,483 basehttp 18 129683374991040 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:47:27,486 basehttp 18 129683383383744 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:47:27,493 basehttp 18 129683604625088 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:47:27,498 basehttp 18 129683596232384 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:47:27,501 basehttp 18 129683358205632 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:47:27,509 basehttp 18 129683366598336 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:47:28,104 basehttp 18 129683366598336 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:47:28,181 log 18 129683366598336 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:28,183 basehttp 18 129683366598336 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:47:32,704 basehttp 18 129683366598336 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:47:32,766 log 18 129683366598336 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:32,768 basehttp 18 129683366598336 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:47:33,203 basehttp 18 129683366598336 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:47:33,272 log 18 129683366598336 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:33,274 basehttp 18 129683366598336 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:47:45,461 autoreload 18 128374380315392 Watching for file changes with StatReloader
+INFO 2026-05-06 16:47:46,891 basehttp 18 128374223664832 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:47:46,972 log 18 128374223664832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:47:46,974 basehttp 18 128374223664832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:27,401 basehttp 18 128374223664832 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:27,484 log 18 128374223664832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:27,486 basehttp 18 128374223664832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:27,898 basehttp 18 128374223664832 "GET / HTTP/1.1" 200 26492
+INFO 2026-05-06 16:48:27,964 basehttp 18 128374223664832 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:48:28,001 log 18 128374173308608 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:28,010 basehttp 18 128374173308608 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:28,018 basehttp 18 128374215272128 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:48:28,023 basehttp 18 128374206879424 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:48:28,023 basehttp 18 128374190094016 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:48:28,031 basehttp 18 128374181701312 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:48:28,040 basehttp 18 128374198486720 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:48:28,425 basehttp 18 128374198486720 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:28,493 log 18 128374198486720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:28,495 basehttp 18 128374198486720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:29,240 basehttp 18 128374198486720 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:29,313 log 18 128374198486720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:29,315 basehttp 18 128374198486720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:30,712 basehttp 18 128374198486720 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:30,771 log 18 128374198486720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:30,774 basehttp 18 128374198486720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:37,844 basehttp 18 128374198486720 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:37,919 log 18 128374198486720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:37,924 basehttp 18 128374198486720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:38,288 basehttp 18 128374198486720 "GET / HTTP/1.1" 200 26492
+WARNING 2026-05-06 16:48:38,361 log 18 128374198486720 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:38,363 basehttp 18 128374198486720 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:50,249 autoreload 18 133233363305216 Watching for file changes with StatReloader
+INFO 2026-05-06 16:48:51,578 basehttp 18 133233275561664 "GET / HTTP/1.1" 200 26496
+WARNING 2026-05-06 16:48:51,653 log 18 133233275561664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:51,655 basehttp 18 133233275561664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:48:51,812 basehttp 18 133233275561664 "GET / HTTP/1.1" 200 26496
+WARNING 2026-05-06 16:48:51,887 log 18 133233275561664 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:48:51,888 basehttp 18 133233275561664 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:50:06,614 autoreload 18 137902860595968 Watching for file changes with StatReloader
+INFO 2026-05-06 16:50:36,237 basehttp 18 137902773233344 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 16:50:36,311 log 18 137902773233344 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:50:36,314 basehttp 18 137902773233344 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:50:36,906 basehttp 18 137902773233344 "GET / HTTP/1.1" 200 26486
+INFO 2026-05-06 16:50:36,989 basehttp 18 137902773233344 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:50:37,021 log 18 137902516324032 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:50:37,024 basehttp 18 137902516324032 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:50:37,044 basehttp 18 137902763792064 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:50:37,052 basehttp 18 137902533109440 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:50:37,054 basehttp 18 137902755399360 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:50:37,060 basehttp 18 137902524716736 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:50:37,071 basehttp 18 137902541502144 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:50:37,203 basehttp 18 137902541502144 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 16:50:37,268 log 18 137902541502144 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:50:37,269 basehttp 18 137902541502144 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:50:37,412 basehttp 18 137902541502144 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 16:50:37,467 log 18 137902541502144 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:50:37,467 basehttp 18 137902541502144 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:52:14,209 autoreload 19 129448742146816 Watching for file changes with StatReloader
+INFO 2026-05-06 16:52:15,430 basehttp 19 129448654399168 "GET / HTTP/1.1" 200 26495
+WARNING 2026-05-06 16:52:15,523 log 19 129448646006464 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:52:15,533 basehttp 19 129448646006464 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+WARNING 2026-05-06 16:52:15,542 log 19 129448392238784 Not Found: /corp_lis/static/images/cases/speed.jpg
+INFO 2026-05-06 16:52:15,543 basehttp 19 129448654399168 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 16:52:15,545 basehttp 19 129448392238784 "GET /corp_lis/static/images/cases/speed.jpg HTTP/1.1" 404 5506
+INFO 2026-05-06 16:52:15,545 basehttp 19 129448435250880 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:52:15,554 basehttp 19 129448426858176 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:52:15,557 basehttp 19 129448409024192 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:52:15,560 basehttp 19 129448400631488 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:52:15,570 basehttp 19 129448417416896 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:55:02,005 autoreload 18 128564388070144 Watching for file changes with StatReloader
+INFO 2026-05-06 16:55:07,517 basehttp 18 128564301129408 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:07,594 log 18 128564301129408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:07,598 basehttp 18 128564301129408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:07,622 basehttp 18 128564074641088 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 16:55:07,623 basehttp 18 128564291688128 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:55:07,630 basehttp 18 128564066248384 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:55:07,644 basehttp 18 128564049462976 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:55:07,648 basehttp 18 128564041070272 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:55:07,652 basehttp 18 128564057855680 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:55:08,113 basehttp 18 128564057855680 "GET / HTTP/1.1" 200 26487
+INFO 2026-05-06 16:55:08,184 basehttp 18 128564057855680 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 16:55:08,205 basehttp 18 128564041070272 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+WARNING 2026-05-06 16:55:08,212 log 18 128564301129408 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:08,215 basehttp 18 128564301129408 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:08,219 basehttp 18 128564049462976 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 16:55:08,223 basehttp 18 128564291688128 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 16:55:08,228 basehttp 18 128564074641088 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 16:55:08,236 basehttp 18 128564066248384 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 16:55:08,645 basehttp 18 128564066248384 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:08,724 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:08,726 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:09,065 basehttp 18 128564066248384 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:09,134 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:09,136 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:09,512 basehttp 18 128564066248384 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:09,579 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:09,581 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:09,698 basehttp 18 128564066248384 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:09,772 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:09,773 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:09,902 basehttp 18 128564066248384 "GET / HTTP/1.1" 200 26487
+WARNING 2026-05-06 16:55:09,974 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:09,976 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 16:55:44,963 basehttp 18 128564066248384 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 16:55:45,066 log 18 128564066248384 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 16:55:45,068 basehttp 18 128564066248384 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:04:46,384 autoreload 18 130048383771392 Watching for file changes with StatReloader
+INFO 2026-05-06 17:04:48,168 basehttp 18 130048297264832 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 17:04:48,263 log 18 130048297264832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:04:48,265 basehttp 18 130048297264832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:04:49,242 basehttp 18 130048297264832 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:04:49,312 log 18 130048287823552 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:04:49,316 basehttp 18 130048287823552 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:04:49,334 basehttp 18 130048279430848 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:04:49,335 basehttp 18 130048297264832 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:04:49,346 basehttp 18 130048271038144 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:04:49,348 basehttp 18 130047910340288 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:04:49,352 basehttp 18 130047901947584 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:04:49,364 basehttp 18 130047918732992 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:05:17,870 basehttp 18 130048297264832 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:05:17,931 log 18 130048297264832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:17,932 basehttp 18 130048297264832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:05:18,420 basehttp 18 130048297264832 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:05:18,482 log 18 130048297264832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:18,484 basehttp 18 130048297264832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:05:51,728 basehttp 18 130048297264832 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:05:51,801 log 18 130048297264832 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:51,804 basehttp 18 130048297264832 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:05:52,284 basehttp 18 130048297264832 "GET / HTTP/1.1" 200 26486
+INFO 2026-05-06 17:05:52,342 basehttp 18 130048297264832 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 17:05:52,377 log 18 130048279430848 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:52,378 basehttp 18 130048279430848 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:05:52,394 basehttp 18 130048271038144 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:05:52,402 basehttp 18 130047901947584 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:05:52,405 basehttp 18 130047918732992 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:05:52,411 basehttp 18 130048287823552 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:05:52,421 basehttp 18 130047910340288 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:05:53,049 basehttp 18 130047910340288 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:05:53,117 log 18 130047910340288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:53,118 basehttp 18 130047910340288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:05:53,583 basehttp 18 130047910340288 "GET / HTTP/1.1" 200 26486
+WARNING 2026-05-06 17:05:53,642 log 18 130047910340288 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:05:53,644 basehttp 18 130047910340288 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:06:09,528 autoreload 18 126607272264448 Watching for file changes with StatReloader
+INFO 2026-05-06 17:06:11,512 basehttp 18 126607113057984 "GET / HTTP/1.1" 200 26477
+WARNING 2026-05-06 17:06:11,583 log 18 126607113057984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:06:11,585 basehttp 18 126607113057984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:06:12,385 basehttp 18 126607113057984 "GET / HTTP/1.1" 200 26477
+WARNING 2026-05-06 17:06:12,455 log 18 126607113057984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:06:12,457 basehttp 18 126607113057984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:06:12,918 basehttp 18 126607113057984 "GET / HTTP/1.1" 200 26477
+WARNING 2026-05-06 17:06:12,993 log 18 126607113057984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:06:12,995 basehttp 18 126607113057984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:06:13,123 basehttp 18 126607113057984 "GET / HTTP/1.1" 200 26477
+WARNING 2026-05-06 17:06:13,199 log 18 126607113057984 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:06:13,200 basehttp 18 126607113057984 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:09:45,129 autoreload 18 134034342249216 Watching for file changes with StatReloader
+INFO 2026-05-06 17:09:46,537 basehttp 18 134034185254592 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:09:46,643 log 18 134034176861888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:09:46,650 basehttp 18 134034176861888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:09:46,654 basehttp 18 134034185254592 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:09:46,654 basehttp 18 134034168469184 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:09:46,667 basehttp 18 134034160076480 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:09:46,675 basehttp 18 134034143291072 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:09:46,680 basehttp 18 134034134898368 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:09:46,691 basehttp 18 134034151683776 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:09:46,840 basehttp 18 134034151683776 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:09:46,915 log 18 134034151683776 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:09:46,916 basehttp 18 134034151683776 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:38,745 basehttp 18 134034151683776 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:13:38,800 log 18 134034151683776 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:38,805 basehttp 18 134034151683776 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:39,288 basehttp 18 134034151683776 "GET / HTTP/1.1" 200 26483
+INFO 2026-05-06 17:13:39,354 basehttp 18 134034151683776 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 17:13:39,382 log 18 134034134898368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:39,384 basehttp 18 134034134898368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:39,400 basehttp 18 134034168469184 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:13:39,407 basehttp 18 134034160076480 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:13:39,407 basehttp 18 134034185254592 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:13:39,413 basehttp 18 134034143291072 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:13:39,421 basehttp 18 134034176861888 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:13:39,729 basehttp 18 134034176861888 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:13:39,794 log 18 134034176861888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:39,796 basehttp 18 134034176861888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:39,964 basehttp 18 134034176861888 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:13:40,027 log 18 134034176861888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:40,029 basehttp 18 134034176861888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:40,275 basehttp 18 134034176861888 "GET / HTTP/1.1" 200 26483
+WARNING 2026-05-06 17:13:40,327 log 18 134034176861888 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:40,329 basehttp 18 134034176861888 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:53,365 autoreload 18 123728818189056 Watching for file changes with StatReloader
+INFO 2026-05-06 17:13:56,715 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:56,792 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:56,794 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:57,174 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:57,234 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:57,236 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:57,609 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:57,677 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:57,679 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:57,782 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:57,856 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:57,857 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:57,915 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:58,022 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:58,022 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:58,088 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:58,179 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:58,179 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:58,278 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:58,362 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:58,364 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:58,422 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:58,511 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:58,512 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:58,799 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:58,872 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:58,874 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:58,988 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:59,068 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:59,069 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:13:59,179 basehttp 18 123728731039424 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:13:59,246 log 18 123728731039424 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:13:59,247 basehttp 18 123728731039424 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:14:12,395 autoreload 18 135908572640000 Watching for file changes with StatReloader
+INFO 2026-05-06 17:14:13,621 basehttp 18 135908485490368 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:14:13,699 log 18 135908485490368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:14:13,700 basehttp 18 135908485490368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:14:13,857 basehttp 18 135908485490368 "GET / HTTP/1.1" 200 26484
+WARNING 2026-05-06 17:14:13,923 log 18 135908485490368 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:14:13,926 basehttp 18 135908485490368 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:25:19,619 autoreload 19 139044518556416 Watching for file changes with StatReloader
+INFO 2026-05-06 17:25:21,188 basehttp 19 139044431324864 "GET / HTTP/1.1" 200 26490
+INFO 2026-05-06 17:25:21,274 basehttp 19 139044421883584 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:25:21,276 basehttp 19 139044431324864 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 17:25:21,286 log 19 139044172318400 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:25:21,288 basehttp 19 139044172318400 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:25:21,293 basehttp 19 139044413490880 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:25:21,294 basehttp 19 139044189103808 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:25:21,300 basehttp 19 139044180711104 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:25:21,307 basehttp 19 139044197496512 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:27:07,625 autoreload 24 133074648695552 Watching for file changes with StatReloader
+INFO 2026-05-06 17:27:39,166 basehttp 24 133074561001152 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:39,253 log 24 133074561001152 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:39,256 basehttp 24 133074561001152 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:39,607 basehttp 24 133074561001152 "GET / HTTP/1.1" 200 26490
+INFO 2026-05-06 17:27:39,678 basehttp 24 133074561001152 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 17:27:39,706 log 24 133074301994688 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:39,714 basehttp 24 133074301994688 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:39,721 basehttp 24 133074551559872 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:27:39,730 basehttp 24 133074543167168 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:27:39,731 basehttp 24 133074318780096 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:27:39,733 basehttp 24 133074310387392 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:27:39,744 basehttp 24 133074327172800 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:27:39,927 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:39,988 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:39,990 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:40,094 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:40,160 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:40,162 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:40,255 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:40,320 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:40,322 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:40,941 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:41,014 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:41,016 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:41,274 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:41,346 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:41,349 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:41,461 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:41,519 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:41,535 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:27:41,625 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:27:41,703 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:27:41,705 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:28:26,502 basehttp 24 133074327172800 "GET /partners/ HTTP/1.1" 200 27771
+WARNING 2026-05-06 17:28:26,601 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:28:26,603 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:28:40,909 basehttp 24 133074327172800 "GET / HTTP/1.1" 200 26490
+WARNING 2026-05-06 17:28:40,984 log 24 133074327172800 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:28:40,991 basehttp 24 133074327172800 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:28:41,006 basehttp 24 133074301994688 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:28:41,017 basehttp 24 133074310387392 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:28:41,026 basehttp 24 133074318780096 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:28:41,031 basehttp 24 133074561001152 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:28:41,037 basehttp 24 133074543167168 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:28:41,046 basehttp 24 133074551559872 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:30:23,598 autoreload 18 134072815342336 Watching for file changes with StatReloader
+INFO 2026-05-06 17:30:25,192 basehttp 18 134072727758528 "GET / HTTP/1.1" 200 26475
+WARNING 2026-05-06 17:30:25,252 log 18 134072727758528 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:30:25,264 basehttp 18 134072727758528 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:30:25,288 basehttp 18 134072504415936 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:30:25,289 basehttp 18 134072719365824 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:30:25,297 basehttp 18 134072496023232 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:30:25,300 basehttp 18 134072479237824 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:30:25,305 basehttp 18 134072470845120 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:30:25,313 basehttp 18 134072487630528 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:30:40,753 basehttp 18 134072487630528 "GET / HTTP/1.1" 200 26475
+WARNING 2026-05-06 17:30:40,813 log 18 134072487630528 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:30:40,815 basehttp 18 134072487630528 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:30:41,249 basehttp 18 134072487630528 "GET / HTTP/1.1" 200 26475
+WARNING 2026-05-06 17:30:41,308 log 18 134072487630528 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:30:41,309 basehttp 18 134072487630528 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:30:53,796 autoreload 18 137892915413760 Watching for file changes with StatReloader
+INFO 2026-05-06 17:30:55,341 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+WARNING 2026-05-06 17:30:55,418 log 18 137892828538560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:30:55,420 basehttp 18 137892828538560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:30:55,534 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+WARNING 2026-05-06 17:30:55,591 log 18 137892828538560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:30:55,592 basehttp 18 137892828538560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:32:12,202 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+WARNING 2026-05-06 17:32:12,267 log 18 137892828538560 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:32:12,268 basehttp 18 137892828538560 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:32:14,186 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:32:14,253 basehttp 18 137892828538560 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+WARNING 2026-05-06 17:32:14,305 log 18 137892701644480 Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2026-05-06 17:32:14,306 basehttp 18 137892701644480 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5536
+INFO 2026-05-06 17:32:14,325 basehttp 18 137892743608000 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:32:14,330 basehttp 18 137892735215296 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:32:14,333 basehttp 18 137892718429888 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:32:14,335 basehttp 18 137892710037184 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:32:14,345 basehttp 18 137892726822592 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
