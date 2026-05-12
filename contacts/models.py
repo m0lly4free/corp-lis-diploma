@@ -24,7 +24,7 @@ class ContactMessage(models.Model):
         max_length=255,
         db_index=True,
         verbose_name=_('E-mail')
-        # EmailField автоматически проверяет корректность формата
+        
     )
     
     phone = models.CharField(

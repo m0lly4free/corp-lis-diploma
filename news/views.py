@@ -12,14 +12,14 @@ logger = logging.getLogger('system_errors')
 # ==========================================
 # Функциональные представления (совместимость)
 # ==========================================
-@cache_page(60 * 15)  # 15 минут
+@cache_page(60 * 15)
 def news_list(request):
     """Список новостей с пагинацией (6 на страницу) и оптимизированными запросами"""
     try:
-        # ✅ Получаем активные новости, сортируем по дате (новые сверху)
+        # Безопасный запрос - ORM автоматически экранирует параметры
         news_list = News.objects.filter(is_active=True).order_by('-created_at')
         
-        # ✅ Пагинация: 6 новостей на страницу
+        # Пагинация: 6 новостей на страницу
         paginator = Paginator(news_list, 6)
         page = request.GET.get('page')
         
@@ -37,10 +37,11 @@ def news_list(request):
         logger.error(f"Error in news_list: {str(e)}")
         raise
 
-@cache_page(60 * 30)  # 30 минут
+@cache_page(60 * 30) 
 def news_detail(request, slug):
     """Детальная страница новости"""
     try:
+         # get_object_or_404 предотвращает инъекции через slug
         news_item = get_object_or_404(News, slug=slug, is_active=True)
         return render(request, 'news/detail.html', {'object': news_item})
     except Http404:
@@ -62,17 +63,15 @@ class NewsListView(ListView):
     model = News
     template_name = 'news/index.html'
     context_object_name = 'news'
-    paginate_by = 6  # ✅ 6 новостей на страницу (по ТЗ)
+    paginate_by = 6  
     
     def get_queryset(self):
-        # ✅ Оптимизация: фильтруем только активные новости, сортируем по дате
-        # Убраны select_related/prefetch_related — в модели News нет сложных связей
+        
         return News.objects.filter(is_active=True).order_by('-created_at')
     
     def get_context_data(self, **kwargs):
         """Добавляем в контекст информацию о пагинации для шаблона"""
         context = super().get_context_data(**kwargs)
-        # Django автоматически добавляет: page_obj, paginator, is_paginated
         return context
 
 @method_decorator(cache_page(60 * 30), name='dispatch')

@@ -20864,3 +20864,555 @@ INFO 2026-05-06 17:32:14,330 basehttp 18 137892735215296 "GET /app/media/service
 INFO 2026-05-06 17:32:14,333 basehttp 18 137892718429888 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
 INFO 2026-05-06 17:32:14,335 basehttp 18 137892710037184 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
 INFO 2026-05-06 17:32:14,345 basehttp 18 137892726822592 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:32:23,758 basehttp 18 137892726822592 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 17:32:23,876 basehttp 18 137892718429888 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 17:32:23,890 basehttp 18 137892710037184 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 17:32:23,901 basehttp 18 137892743608000 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 17:32:24,294 basehttp 18 137892735215296 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 17:32:24,446 basehttp 18 137892726822592 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 17:32:24,524 basehttp 18 137892701644480 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 17:32:24,574 basehttp 18 137892828538560 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 17:32:29,599 basehttp 18 137892828538560 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-06 17:33:40,350 basehttp 18 137892828538560 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 17:34:30,225 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:36:49,315 basehttp 18 137892828538560 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:36:49,376 basehttp 18 137892828538560 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:36:49,420 basehttp 18 137892701644480 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:36:49,429 basehttp 18 137892726822592 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:36:49,430 basehttp 18 137892743608000 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:36:49,434 basehttp 18 137892718429888 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:36:49,441 basehttp 18 137892735215296 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:37:38,714 basehttp 18 137892735215296 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:37:38,785 basehttp 18 137892735215296 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:37:38,788 basehttp 18 137892743608000 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:37:38,790 basehttp 18 137892718429888 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:37:40,816 basehttp 18 137892718429888 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 17:37:40,895 basehttp 18 137892743608000 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:37:40,903 basehttp 18 137892701644480 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:37:40,906 basehttp 18 137892735215296 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:37:40,907 basehttp 18 137892828538560 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:37:40,908 basehttp 18 137892718429888 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:37:40,923 basehttp 18 137892726822592 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:41:07,166 basehttp 18 137892735215296 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:41:07,248 basehttp 18 137892735215296 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:41:07,294 basehttp 18 137892743608000 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:41:07,299 basehttp 18 137892718429888 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:41:07,300 basehttp 18 137892828538560 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:41:07,305 basehttp 18 137892710037184 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:41:07,310 basehttp 18 137892726822592 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:41:07,715 basehttp 18 137892726822592 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 17:41:07,857 basehttp 18 137892718429888 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 17:41:07,879 basehttp 18 137892710037184 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 17:41:07,897 basehttp 18 137892743608000 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 17:41:08,253 basehttp 18 137892743608000 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:41:08,323 basehttp 18 137892743608000 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:41:08,333 basehttp 18 137892718429888 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:41:08,337 basehttp 18 137892710037184 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:44:52,176 autoreload 18 133160189199104 Watching for file changes with StatReloader
+INFO 2026-05-06 17:44:54,069 basehttp 18 133160101734080 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:44:54,138 basehttp 18 133160101734080 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:44:54,139 basehttp 18 133160015750848 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:44:54,141 basehttp 18 133160025192128 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:44:54,321 basehttp 18 133160025192128 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:44:56,550 basehttp 18 133160025192128 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:44:56,615 basehttp 18 133160015750848 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:44:56,619 basehttp 18 133160101734080 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:44:56,637 basehttp 18 133160025192128 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:45:02,298 basehttp 18 133160025192128 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 17:45:17,203 basehttp 18 133160025192128 "POST /contacts/ HTTP/1.1" 200 22355
+INFO 2026-05-06 17:45:23,503 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:45:23,594 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 3861
+INFO 2026-05-06 17:45:28,677 basehttp 18 133160025192128 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:45:28,806 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 22572
+INFO 2026-05-06 17:45:28,883 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:45:34,697 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-06 17:45:34,751 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:45:39,771 basehttp 18 133160025192128 "POST /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:45:39,780 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:45:39,837 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 4068
+INFO 2026-05-06 17:45:43,141 basehttp 18 133160025192128 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:45:43,209 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21744
+INFO 2026-05-06 17:45:43,265 basehttp 18 133160025192128 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:45:43,297 basehttp 18 133160015750848 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:45:43,315 basehttp 18 133160025192128 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:45:43,316 basehttp 18 133160101734080 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:45:43,318 basehttp 18 133159996868288 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:45:43,319 basehttp 18 133159988475584 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:45:43,328 basehttp 18 133159980082880 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 17:45:43,339 basehttp 18 133160005260992 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:45:45,258 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-06 17:45:45,303 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:45:46,632 basehttp 18 133159971690176 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03Ùy\x1bi\x80NÝuwfA')
+ERROR 2026-05-06 17:45:46,632 basehttp 18 133159971690176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 17:45:46,641 basehttp 18 133159971690176 code 400, message Bad request version ("|üè\x93Û\x89'\x12Øk\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 17:45:46,641 basehttp 18 133159971690176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 17:45:46,648 basehttp 18 133159971690176 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x1aJJ6~ïbÜü\x9aÜªÞuô;\x96\x87d\x80D\x03$|Ý§&\x17\x8bKt\x05\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 17:45:46,648 basehttp 18 133159971690176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 17:45:46,655 basehttp 18 133159971690176 code 400, message Bad request version ("c²\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 17:45:46,656 basehttp 18 133159971690176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 17:45:46,662 basehttp 18 133159971690176 code 400, message Bad request version ("Pä\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-06 17:45:46,663 basehttp 18 133159971690176 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-06 17:45:56,780 basehttp 18 133160005260992 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 19016
+INFO 2026-05-06 17:45:56,853 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:46:00,591 basehttp 18 133160005260992 "POST /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:46:00,599 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:46:00,652 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 4087
+INFO 2026-05-06 17:46:03,285 basehttp 18 133160005260992 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:46:03,350 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 20076
+INFO 2026-05-06 17:46:03,422 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:46:03,452 basehttp 18 133159980082880 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:46:03,456 basehttp 18 133160005260992 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:46:03,465 basehttp 18 133159988475584 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:46:05,579 basehttp 18 133159988475584 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 17:46:05,726 basehttp 18 133160005260992 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 17:46:05,743 basehttp 18 133159980082880 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 17:46:05,771 basehttp 18 133160101734080 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 17:46:06,220 basehttp 18 133159996868288 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 17:46:06,368 basehttp 18 133159988475584 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 17:46:06,435 basehttp 18 133160025192128 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 17:46:06,505 basehttp 18 133160015750848 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-06 17:46:06,929 basehttp 18 133160015750848 "GET /services/ HTTP/1.1" 200 17850
+INFO 2026-05-06 17:46:41,866 basehttp 18 133160015750848 "GET /news/ HTTP/1.1" 200 18515
+INFO 2026-05-06 17:46:41,947 basehttp 18 133160025192128 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:46:41,963 basehttp 18 133160015750848 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:46:44,938 basehttp 18 133160015750848 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-06 17:46:45,475 basehttp 18 133160015750848 "GET /news/ HTTP/1.1" 200 18515
+INFO 2026-05-06 17:46:45,564 basehttp 18 133160025192128 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:46:45,568 basehttp 18 133160015750848 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:46:45,572 basehttp 18 133159988475584 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:46:45,573 basehttp 18 133160101734080 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:46:45,589 basehttp 18 133159996868288 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:46:45,885 basehttp 18 133159996868288 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 17:46:49,084 basehttp 18 133159996868288 "GET /news/ HTTP/1.1" 200 18515
+INFO 2026-05-06 17:46:51,829 basehttp 18 133159996868288 "GET /services/ HTTP/1.1" 200 17850
+INFO 2026-05-06 17:46:51,897 basehttp 18 133159996868288 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:46:51,910 basehttp 18 133159988475584 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:46:51,912 basehttp 18 133160101734080 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:46:53,205 basehttp 18 133160101734080 "GET /news/ HTTP/1.1" 200 18515
+INFO 2026-05-06 17:46:53,779 basehttp 18 133160101734080 "GET /services/ HTTP/1.1" 200 17850
+INFO 2026-05-06 17:46:54,558 basehttp 18 133160101734080 "GET /news/ HTTP/1.1" 200 18515
+INFO 2026-05-06 17:47:03,149 basehttp 18 133160101734080 "POST /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 11801
+INFO 2026-05-06 17:47:04,310 basehttp 18 133160101734080 "POST /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:04,319 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:04,371 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 200 3998
+INFO 2026-05-06 17:47:07,901 basehttp 18 133160101734080 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/services/service/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:07,937 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19448
+INFO 2026-05-06 17:47:08,010 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:47:08,028 basehttp 18 133159988475584 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-06 17:47:08,034 basehttp 18 133160101734080 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-06 17:47:08,062 basehttp 18 133159988475584 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-06 17:47:09,780 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21744
+INFO 2026-05-06 17:47:09,843 basehttp 18 133160101734080 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:47:09,873 basehttp 18 133159996868288 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:47:09,908 basehttp 18 133159988475584 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:47:09,911 basehttp 18 133160005260992 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:47:09,916 basehttp 18 133160101734080 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:47:09,919 basehttp 18 133160025192128 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:47:09,921 basehttp 18 133159980082880 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 17:47:09,934 basehttp 18 133160015750848 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:47:12,853 basehttp 18 133160015750848 "POST /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 11780
+INFO 2026-05-06 17:47:14,553 basehttp 18 133160015750848 "POST /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:14,563 basehttp 18 133160015750848 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:14,615 basehttp 18 133160015750848 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 200 3986
+INFO 2026-05-06 17:47:17,676 basehttp 18 133160015750848 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/news/news/ HTTP/1.1" 302 0
+INFO 2026-05-06 17:47:17,704 basehttp 18 133160015750848 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21178
+INFO 2026-05-06 17:47:17,784 basehttp 18 133160015750848 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:47:17,820 basehttp 18 133160015750848 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:47:17,847 basehttp 18 133160025192128 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:47:17,852 basehttp 18 133159980082880 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:47:17,862 basehttp 18 133160005260992 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:47:17,870 basehttp 18 133159988475584 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 17:47:17,873 basehttp 18 133160015750848 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:47:17,882 basehttp 18 133160101734080 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:47:19,749 basehttp 18 133160015750848 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 17:47:19,816 basehttp 18 133160015750848 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:47:20,664 basehttp 18 133160015750848 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:47:27,464 basehttp 18 133160015750848 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:47:30,332 basehttp 18 133160015750848 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 17:47:30,475 basehttp 18 133159988475584 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 17:47:30,483 basehttp 18 133160101734080 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 17:47:30,499 basehttp 18 133159980082880 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 17:47:30,907 basehttp 18 133160005260992 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 17:47:30,942 basehttp 18 133160005260992 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:47:34,336 basehttp 18 133160005260992 "GET /services/demontazh/ HTTP/1.1" 200 18105
+INFO 2026-05-06 17:47:37,076 basehttp 18 133160005260992 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:47:54,677 basehttp 18 133160005260992 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:47:55,610 basehttp 18 133160005260992 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:47:59,450 basehttp 18 133160005260992 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 17658
+INFO 2026-05-06 17:48:01,047 basehttp 18 133160005260992 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 17:48:03,007 basehttp 18 133160005260992 "GET /news/?page=2 HTTP/1.1" 200 15655
+INFO 2026-05-06 17:48:03,078 basehttp 18 133160005260992 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 17:48:04,407 basehttp 18 133160005260992 "GET /news/?page=1 HTTP/1.1" 200 18783
+INFO 2026-05-06 17:48:05,581 basehttp 18 133160005260992 "GET /news/?page=2 HTTP/1.1" 200 15655
+INFO 2026-05-06 17:48:07,336 basehttp 18 133160005260992 "GET /news/?page=1 HTTP/1.1" 200 18783
+INFO 2026-05-06 17:48:08,990 basehttp 18 133160005260992 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:48:22,919 basehttp 18 133160005260992 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 17:48:26,644 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 22572
+INFO 2026-05-06 17:48:26,706 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:48:38,402 basehttp 18 133160005260992 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:48:41,013 basehttp 18 133160005260992 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:48:46,232 basehttp 18 133160005260992 "GET /services/demontazh/ HTTP/1.1" 200 18105
+INFO 2026-05-06 17:48:47,922 basehttp 18 133160005260992 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-06 17:48:51,687 basehttp 18 133160005260992 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 17:48:53,437 basehttp 18 133160005260992 "GET /news/ustojchivoe-razvitie/ HTTP/1.1" 200 17658
+INFO 2026-05-06 17:48:59,014 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21178
+INFO 2026-05-06 17:48:59,078 basehttp 18 133160005260992 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:48:59,107 basehttp 18 133160101734080 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-06 17:48:59,135 basehttp 18 133159980082880 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-06 17:48:59,138 basehttp 18 133160005260992 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-06 17:48:59,143 basehttp 18 133160015750848 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-06 17:48:59,145 basehttp 18 133160025192128 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-06 17:48:59,148 basehttp 18 133159996868288 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-06 17:48:59,168 basehttp 18 133159988475584 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-06 17:49:00,151 basehttp 18 133159988475584 "GET /corp-lis-secure-portal/news/news/27/change/ HTTP/1.1" 200 20731
+INFO 2026-05-06 17:49:00,217 basehttp 18 133159988475584 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-06 17:49:12,217 basehttp 18 133159988475584 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-06 17:49:16,291 basehttp 18 133159988475584 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-06 17:49:16,802 basehttp 18 133159988475584 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-06 17:49:16,943 basehttp 18 133160025192128 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-06 17:49:16,952 basehttp 18 133159996868288 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-06 17:49:16,969 basehttp 18 133160005260992 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-06 17:49:17,395 basehttp 18 133160015750848 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-06 17:49:17,556 basehttp 18 133159988475584 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-06 17:49:17,649 basehttp 18 133159980082880 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-06 17:49:17,655 basehttp 18 133159980082880 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-06 17:49:17,702 basehttp 18 133160101734080 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-11 17:21:31,849 autoreload 18 124269684556544 Watching for file changes with StatReloader
+INFO 2026-05-11 17:21:35,720 basehttp 18 124269597025984 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-11 17:21:35,789 basehttp 18 124269597025984 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-11 17:21:35,791 basehttp 18 124269587584704 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-11 17:21:35,799 basehttp 18 124269375780544 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-11 17:21:35,809 basehttp 18 124269358995136 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-11 17:21:35,813 basehttp 18 124269350602432 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-11 17:21:35,823 basehttp 18 124269367387840 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+WARNING 2026-05-11 17:21:35,900 log 18 124269367387840 Not Found: /favicon.ico
+WARNING 2026-05-11 17:21:35,901 basehttp 18 124269367387840 "GET /favicon.ico HTTP/1.1" 404 5425
+INFO 2026-05-11 17:21:41,592 basehttp 18 124269367387840 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-11 17:21:41,713 basehttp 18 124269358995136 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-11 17:21:41,729 basehttp 18 124269350602432 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-11 17:21:41,745 basehttp 18 124269587584704 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-11 17:21:42,201 basehttp 18 124269375780544 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-11 17:21:42,386 basehttp 18 124269367387840 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-11 17:21:42,484 basehttp 18 124269597025984 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-11 17:21:42,554 basehttp 18 124269342209728 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-11 17:21:42,562 basehttp 18 124269597025984 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-11 17:21:44,372 basehttp 18 124269597025984 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-11 17:21:44,459 basehttp 18 124269367387840 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-11 17:21:44,461 basehttp 18 124269342209728 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-11 17:21:44,474 basehttp 18 124269597025984 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-11 17:21:45,071 basehttp 18 124269597025984 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-11 17:21:45,699 basehttp 18 124269597025984 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-11 17:21:46,759 basehttp 18 124269597025984 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-11 18:11:25,592 basehttp 18 124269597025984 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03¢\x11¯ûqoË\x837(\x13-Âó\x06RáKÙ\x0eS)Ë\x06^\x1b')
+ERROR 2026-05-11 18:11:25,598 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 18:11:25,612 basehttp 18 124269597025984 code 400, message Bad request version ("ÂÝ\x88OòK3§òT3Xa9ùë\x17\x87\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 18:11:25,613 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 18:30:43,694 basehttp 18 124269597025984 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-11 18:30:43,855 basehttp 18 124269342209728 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-11 18:30:43,874 basehttp 18 124269367387840 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-11 18:30:43,889 basehttp 18 124269587584704 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-11 18:30:44,245 basehttp 18 124269587584704 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-11 18:30:44,315 basehttp 18 124269587584704 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-11 18:30:44,320 basehttp 18 124269342209728 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-11 18:30:44,323 basehttp 18 124269367387840 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-11 18:30:44,570 basehttp 18 124269367387840 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-11 18:30:44,675 basehttp 18 124269342209728 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-11 18:30:44,683 basehttp 18 124269350602432 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-11 18:30:44,684 basehttp 18 124269587584704 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-11 18:30:44,684 basehttp 18 124269358995136 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-11 18:30:44,686 basehttp 18 124269367387840 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-11 18:30:44,703 basehttp 18 124269597025984 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-11 18:30:44,958 basehttp 18 124269597025984 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-11 18:30:45,432 basehttp 18 124269597025984 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-11 18:30:46,509 basehttp 18 124269597025984 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-11 18:30:46,636 basehttp 18 124269358995136 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-11 18:30:46,650 basehttp 18 124269367387840 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-11 18:30:46,664 basehttp 18 124269350602432 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-11 18:30:47,025 basehttp 18 124269587584704 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-11 18:30:47,187 basehttp 18 124269597025984 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-11 18:30:47,255 basehttp 18 124269342209728 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-11 18:30:47,298 basehttp 18 124269375780544 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+WARNING 2026-05-11 18:31:17,871 log 18 124269375780544 Not Found: /api/
+WARNING 2026-05-11 18:31:17,873 basehttp 18 124269375780544 "GET /api/ HTTP/1.1" 404 6890
+WARNING 2026-05-11 18:31:23,831 log 18 124269375780544 Not Found: /api/service
+WARNING 2026-05-11 18:31:23,833 basehttp 18 124269375780544 "GET /api/service HTTP/1.1" 404 6911
+INFO 2026-05-11 18:31:28,485 basehttp 18 124269375780544 "GET /api/services HTTP/1.1" 301 0
+ERROR 2026-05-11 18:31:28,569 log 18 124269342209728 Internal Server Error: /api/services/
+ERROR 2026-05-11 18:31:28,571 basehttp 18 124269342209728 "GET /api/services/ HTTP/1.1" 500 5418
+ERROR 2026-05-11 18:31:35,201 log 18 124269342209728 Internal Server Error: /api/services/
+ERROR 2026-05-11 18:31:35,203 basehttp 18 124269342209728 "GET /api/services/ HTTP/1.1" 500 5418
+ERROR 2026-05-11 18:31:37,292 log 18 124269342209728 Internal Server Error: /api/services/
+ERROR 2026-05-11 18:31:37,294 basehttp 18 124269342209728 "GET /api/services/?format=api HTTP/1.1" 500 5462
+INFO 2026-05-11 18:31:39,103 basehttp 18 124269342209728 "OPTIONS /api/services/?format=api HTTP/1.1" 200 5806
+WARNING 2026-05-11 18:31:54,803 log 18 124269342209728 Method Not Allowed: /api/contact/
+WARNING 2026-05-11 18:31:54,805 basehttp 18 124269342209728 "GET /api/contact/ HTTP/1.1" 405 8154
+INFO 2026-05-11 18:32:00,930 basehttp 18 124269342209728 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-11 18:32:01,362 basehttp 18 124269342209728 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-11 18:32:02,020 basehttp 18 124269342209728 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-11 19:11:25,706 basehttp 18 124269342209728 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03W\x00M,àøK\x07\x87M\x81\\\x87\x18æ>ééndUã>QîaZë¡\x9c\x8f¡\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 19:11:25,710 basehttp 18 124269342209728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 19:11:25,722 basehttp 18 124269342209728 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x0364úñ[6J}XmÌD\x12ÞÁî¿'\x8eÐÔ]\x16\x87B\x9d\x7ft\x93¿\x17c\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 19:11:25,723 basehttp 18 124269342209728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 19:11:25,730 basehttp 18 124269342209728 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x8a/5\x13¡½g\x8eý»Z4?Z4Ø\x9ad¨øó\x12UÆ¬=\x88\x8e2ÌX¯\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 19:11:25,731 basehttp 18 124269342209728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 19:17:28,853 basehttp 18 124269342209728 "GET /services/pokupka-loma/ HTTP/1.1" 200 18077
+INFO 2026-05-11 19:17:28,929 basehttp 18 124269342209728 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-11 19:17:33,880 basehttp 18 124269342209728 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-11 19:17:33,945 basehttp 18 124269342209728 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-11 19:17:33,948 basehttp 18 124269587584704 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-11 19:17:33,951 basehttp 18 124269597025984 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-11 19:17:37,662 basehttp 18 124269597025984 "GET /services/samovyvoz/ HTTP/1.1" 200 17068
+INFO 2026-05-11 20:11:50,002 basehttp 18 124269597025984 code 400, message Bad request version ("{\x173¹\x84Hû\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 20:11:50,007 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 20:11:50,018 basehttp 18 124269597025984 code 400, message Bad request version ("Àô\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 20:11:50,019 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 20:11:50,025 basehttp 18 124269597025984 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03¹±Ä\x01ÿP\x19\x8a³ëò¶Ìdy:1Z')
+ERROR 2026-05-11 20:11:50,026 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-11 20:11:50,032 basehttp 18 124269597025984 code 400, message Bad request version ("ALkâ\x14ú¦Ô\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-11 20:11:50,033 basehttp 18 124269597025984 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 12:58:19,795 autoreload 18 135328500626176 Watching for file changes with StatReloader
+INFO 2026-05-12 12:58:28,711 basehttp 18 135328413247168 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 12:58:28,776 basehttp 18 135328413247168 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 12:58:28,779 basehttp 18 135328403805888 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 12:58:28,784 basehttp 18 135328395413184 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 12:58:28,808 basehttp 18 135328178370240 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 12:58:28,812 basehttp 18 135328169977536 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 12:58:28,818 basehttp 18 135328161584832 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+WARNING 2026-05-12 12:58:28,907 log 18 135328161584832 Not Found: /favicon.ico
+WARNING 2026-05-12 12:58:28,908 basehttp 18 135328161584832 "GET /favicon.ico HTTP/1.1" 404 5425
+INFO 2026-05-12 12:58:31,088 basehttp 18 135328161584832 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-12 12:58:31,212 basehttp 18 135328178370240 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-12 12:58:31,228 basehttp 18 135328169977536 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-12 12:58:31,251 basehttp 18 135328403805888 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-12 12:58:31,736 basehttp 18 135328395413184 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-12 12:58:31,815 basehttp 18 135328395413184 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 12:58:32,644 basehttp 18 135328395413184 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-12 12:58:33,566 basehttp 18 135328395413184 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 13:02:09,765 basehttp 18 135328395413184 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-12 13:02:09,907 basehttp 18 135328169977536 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-12 13:02:09,921 basehttp 18 135328403805888 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-12 13:02:09,946 basehttp 18 135328413247168 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-12 13:02:10,572 basehttp 18 135328178370240 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-12 13:02:10,796 basehttp 18 135328395413184 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-12 13:02:10,953 basehttp 18 135328161584832 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-12 13:02:11,063 basehttp 18 135328153192128 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-12 13:03:09,068 basehttp 18 135328153192128 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 13:03:09,144 basehttp 18 135328153192128 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 13:03:09,144 basehttp 18 135328161584832 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 13:03:09,153 basehttp 18 135328413247168 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 13:03:09,155 basehttp 18 135328395413184 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 13:03:09,160 basehttp 18 135328403805888 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 13:03:09,173 basehttp 18 135328178370240 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 13:03:19,306 basehttp 18 135328178370240 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-12 13:03:19,375 basehttp 18 135328178370240 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 13:03:19,376 basehttp 18 135328395413184 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 13:03:19,380 basehttp 18 135328403805888 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 13:03:20,407 basehttp 18 135328403805888 "GET /services/demontazh/ HTTP/1.1" 200 18105
+INFO 2026-05-12 13:03:21,821 basehttp 18 135328403805888 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-12 13:03:28,218 basehttp 18 135328403805888 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-12 13:03:29,660 basehttp 18 135328403805888 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 13:03:29,738 basehttp 18 135328395413184 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 13:03:29,741 basehttp 18 135328178370240 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 13:03:29,751 basehttp 18 135328403805888 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 13:24:37,125 basehttp 18 135328178370240 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-12 13:24:37,268 basehttp 18 135328403805888 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-12 13:24:37,279 basehttp 18 135328395413184 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-12 13:24:37,301 basehttp 18 135328413247168 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-12 13:24:37,785 basehttp 18 135328161584832 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-12 13:24:37,938 basehttp 18 135328178370240 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-12 13:24:38,018 basehttp 18 135328169977536 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-12 13:24:38,070 basehttp 18 135328153192128 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-12 13:24:48,471 basehttp 18 135328153192128 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-12 13:24:48,540 basehttp 18 135328153192128 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 13:24:48,542 basehttp 18 135328178370240 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 13:24:48,543 basehttp 18 135328169977536 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 13:24:58,892 basehttp 18 135328169977536 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-12 13:24:58,972 basehttp 18 135328178370240 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 13:24:58,976 basehttp 18 135328153192128 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 13:24:58,978 basehttp 18 135328395413184 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-12 13:24:58,983 basehttp 18 135328413247168 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-12 13:24:58,990 basehttp 18 135328169977536 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 13:24:59,003 basehttp 18 135328161584832 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-12 13:25:08,335 basehttp 18 135328161584832 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-12 13:25:20,186 basehttp 18 135328161584832 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-12 13:33:17,959 autoreload 19 131831103382272 Watching for file changes with StatReloader
+INFO 2026-05-12 13:33:27,232 basehttp 19 131831015925440 "GET /contacts/ HTTP/1.1" 200 22000
+WARNING 2026-05-12 13:33:27,423 log 19 131831015925440 Not Found: /favicon.ico
+WARNING 2026-05-12 13:33:27,425 basehttp 19 131831015925440 "GET /favicon.ico HTTP/1.1" 404 5425
+INFO 2026-05-12 14:22:55,631 basehttp 19 131831015925440 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 14:22:55,701 basehttp 19 131831015925440 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 14:22:55,754 basehttp 19 131830934140608 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 14:22:55,762 basehttp 19 131830908962496 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 14:22:55,763 basehttp 19 131830925747904 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 14:22:55,769 basehttp 19 131830900569792 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 14:22:55,780 basehttp 19 131830917355200 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 14:27:59,609 basehttp 19 131830925747904 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-12 14:27:59,776 basehttp 19 131830908962496 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-12 14:27:59,802 basehttp 19 131830934140608 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-12 14:27:59,855 basehttp 19 131831015925440 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-12 14:28:00,397 basehttp 19 131830900569792 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-12 14:28:00,595 basehttp 19 131830925747904 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-12 14:28:00,699 basehttp 19 131830917355200 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-12 14:28:00,769 basehttp 19 131830892177088 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-12 14:28:41,029 basehttp 19 131830883784384 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03\x82\x83åUÏÕ+#%\x04\x7f]å\x16EÙ\x017ÒjþY\x00/fH3ä5LÚw\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 14:28:41,030 basehttp 19 131830883784384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 14:28:41,041 basehttp 19 131830883784384 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03N!ð¥ãfWQ')
+ERROR 2026-05-12 14:28:41,042 basehttp 19 131830883784384 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 14:28:42,850 basehttp 19 131830892177088 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-12 14:28:42,915 basehttp 19 131830892177088 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 14:28:42,916 basehttp 19 131830925747904 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 14:28:42,919 basehttp 19 131830917355200 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 14:29:34,107 basehttp 19 131830917355200 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-12 14:29:34,193 basehttp 19 131830925747904 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 14:29:34,203 basehttp 19 131830892177088 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 14:29:34,210 basehttp 19 131831015925440 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-12 14:29:34,214 basehttp 19 131830908962496 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-12 14:29:34,218 basehttp 19 131830917355200 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 14:29:34,233 basehttp 19 131830900569792 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-12 14:30:22,502 basehttp 19 131830900569792 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-12 14:30:42,707 basehttp 19 131830900569792 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-12 14:32:53,550 autoreload 19 131831103382272 /app/contacts/views.py changed, reloading.
+INFO 2026-05-12 14:32:55,945 autoreload 44 128987037684480 Watching for file changes with StatReloader
+INFO 2026-05-12 14:36:21,250 basehttp 44 128986950657728 "GET /corp-lis-secure-portal HTTP/1.1" 301 0
+INFO 2026-05-12 14:36:21,280 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 14:36:21,392 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 200 3813
+INFO 2026-05-12 14:37:58,032 basehttp 44 128986950657728 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 14:37:58,073 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14506
+INFO 2026-05-12 14:38:30,643 basehttp 44 128986950657728 "POST /corp-lis-secure-portal/logout/ HTTP/1.1" 302 0
+WARNING 2026-05-12 14:38:30,696 log 44 128986950657728 Not Found: /admin/
+WARNING 2026-05-12 14:38:30,698 basehttp 44 128986950657728 "GET /admin/ HTTP/1.1" 404 5410
+INFO 2026-05-12 14:38:31,716 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 14:38:31,728 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 200 3813
+INFO 2026-05-12 14:38:37,891 basehttp 44 128986950657728 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 14:38:37,922 basehttp 44 128986950657728 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 9401
+INFO 2026-05-12 15:28:41,598 basehttp 44 128986950657728 code 400, message Bad request version ("\x0fá4!#ÃumÙ%\x99m¹À\x80|\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 15:28:41,604 basehttp 44 128986950657728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 15:28:41,620 basehttp 44 128986950657728 code 400, message Bad request version ("V\x13þW\xad×p1\x03¤\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 15:28:41,620 basehttp 44 128986950657728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 15:28:41,627 basehttp 44 128986950657728 code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03¶\x87\x86ÑtVÿ`\x95ôH'D\x80Où$\x1b")
+ERROR 2026-05-12 15:28:41,628 basehttp 44 128986950657728 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 16:17:29,532 autoreload 19 139728756736768 Watching for file changes with StatReloader
+INFO 2026-05-12 16:20:03,534 basehttp 19 139728669107904 "GET /contacts/ HTTP/1.1" 200 22000
+WARNING 2026-05-12 16:20:03,885 log 19 139728669107904 Not Found: /favicon.ico
+WARNING 2026-05-12 16:20:03,886 basehttp 19 139728669107904 "GET /favicon.ico HTTP/1.1" 404 5425
+INFO 2026-05-12 16:20:05,212 basehttp 19 139728669107904 "GET / HTTP/1.1" 200 26457
+INFO 2026-05-12 16:20:05,273 basehttp 19 139728669107904 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 16:20:05,277 basehttp 19 139728659666624 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 16:20:05,285 basehttp 19 139728651273920 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 16:20:05,289 basehttp 19 139728431081152 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 16:20:05,295 basehttp 19 139728422688448 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 16:20:05,303 basehttp 19 139728439473856 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 16:22:12,640 basehttp 19 139728431081152 "GET /about/ HTTP/1.1" 200 26857
+INFO 2026-05-12 16:22:12,779 basehttp 19 139728422688448 "GET /about/static/about/static/images/14.jpg HTTP/1.1" 200 195098
+INFO 2026-05-12 16:22:12,791 basehttp 19 139728651273920 "GET /about/static/about/static/images/13.jpg HTTP/1.1" 200 252045
+INFO 2026-05-12 16:22:12,816 basehttp 19 139728669107904 "GET /about/static/about/static/images/16.jpg HTTP/1.1" 200 335938
+INFO 2026-05-12 16:22:13,396 basehttp 19 139728439473856 "GET /about/static/about/static/images/15.jpg HTTP/1.1" 200 3591813
+INFO 2026-05-12 16:22:13,588 basehttp 19 139728431081152 "GET /about/static/about/static/images/12.jpg HTTP/1.1" 200 5066172
+INFO 2026-05-12 16:22:13,692 basehttp 19 139728659666624 "GET /about/static/about/static/images/17.jpg HTTP/1.1" 200 5872181
+INFO 2026-05-12 16:22:13,761 basehttp 19 139728414295744 "GET /about/static/about/static/images/18.jpg HTTP/1.1" 200 6480513
+INFO 2026-05-12 16:23:39,551 basehttp 19 139728414295744 "GET /services/ HTTP/1.1" 200 17475
+INFO 2026-05-12 16:23:39,611 basehttp 19 139728414295744 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 16:23:39,623 basehttp 19 139728431081152 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 16:23:39,626 basehttp 19 139728659666624 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 16:25:25,895 autoreload 19 139728756736768 /app/services/views.py changed, reloading.
+INFO 2026-05-12 16:25:27,720 autoreload 37 125911047684864 Watching for file changes with StatReloader
+INFO 2026-05-12 16:25:35,196 autoreload 37 125911047684864 /app/contacts/models.py changed, reloading.
+INFO 2026-05-12 16:25:36,669 autoreload 39 133493741490944 Watching for file changes with StatReloader
+INFO 2026-05-12 16:26:27,923 autoreload 39 133493741490944 /app/services/views.py changed, reloading.
+INFO 2026-05-12 16:26:29,896 autoreload 41 139035814609664 Watching for file changes with StatReloader
+INFO 2026-05-12 16:28:34,161 basehttp 41 139035728144064 "GET /news/ HTTP/1.1" 200 18783
+INFO 2026-05-12 16:28:34,236 basehttp 41 139035718702784 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 16:28:34,242 basehttp 41 139035710310080 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 16:28:34,244 basehttp 41 139035685131968 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-12 16:28:34,247 basehttp 41 139035693524672 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-12 16:28:34,253 basehttp 41 139035728144064 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 16:28:34,266 basehttp 41 139035701917376 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-12 16:29:18,513 autoreload 41 139035814609664 /app/news/views.py changed, reloading.
+INFO 2026-05-12 16:29:20,802 autoreload 49 134247658668800 Watching for file changes with StatReloader
+INFO 2026-05-12 16:30:43,075 basehttp 49 134247571515072 "GET /partners/ HTTP/1.1" 200 27771
+INFO 2026-05-12 16:31:43,583 basehttp 49 134247571515072 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-12 17:11:41,685 basehttp 49 134247571515072 code 400, message Bad request version ("!ÇA&µ\x92Äú§ÙÑú<Ë©_\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 17:11:41,688 basehttp 49 134247571515072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 17:11:41,698 basehttp 49 134247571515072 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03Ì\x1a·rO¢Ãå²1\x1aùË*`Ô')
+ERROR 2026-05-12 17:11:41,699 basehttp 49 134247571515072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 17:14:17,799 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 17:14:17,949 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 200 3813
+INFO 2026-05-12 17:14:24,583 basehttp 49 134247571515072 "POST /corp-lis-secure-portal/login/?next=/corp-lis-secure-portal/ HTTP/1.1" 302 0
+INFO 2026-05-12 17:14:24,640 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14506
+INFO 2026-05-12 17:49:07,873 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/news/news/ HTTP/1.1" 200 21178
+INFO 2026-05-12 17:49:07,971 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:49:08,173 basehttp 49 134247571515072 "GET /app/media/news/fewfwe.jpeg HTTP/1.1" 200 53527
+INFO 2026-05-12 17:49:08,193 basehttp 49 134247559976640 "GET /app/media/news/fef3.jpeg HTTP/1.1" 200 146866
+INFO 2026-05-12 17:49:08,199 basehttp 49 134247551583936 "GET /app/media/news/csr.jpeg HTTP/1.1" 200 75435
+INFO 2026-05-12 17:49:08,240 basehttp 49 134247571515072 "GET /app/media/news/partnerstvo-map.jpeg HTTP/1.1" 200 78939
+INFO 2026-05-12 17:49:08,243 basehttp 49 134247543191232 "GET /app/media/news/hm19-application-pic.jpeg HTTP/1.1" 200 188360
+INFO 2026-05-12 17:49:08,285 basehttp 49 134247534798528 "GET /app/media/news/04-2017-green-school-detail-1200x627-1.jpeg HTTP/1.1" 200 69539
+INFO 2026-05-12 17:49:08,287 basehttp 49 134247188788928 "GET /app/media/news/scale-1200.jpeg HTTP/1.1" 200 85354
+INFO 2026-05-12 17:49:48,132 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/news/news/add/ HTTP/1.1" 200 18111
+INFO 2026-05-12 17:49:48,234 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:50:25,764 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/auth/user/ HTTP/1.1" 200 18987
+INFO 2026-05-12 17:50:25,862 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:50:26,630 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/auth/user/ HTTP/1.1" 200 18987
+INFO 2026-05-12 17:50:26,709 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:50:31,648 basehttp 49 134247188788928 "POST /corp-lis-secure-portal/auth/user/ HTTP/1.1" 200 12906
+INFO 2026-05-12 17:50:33,049 basehttp 49 134247188788928 "POST /corp-lis-secure-portal/auth/user/ HTTP/1.1" 302 0
+INFO 2026-05-12 17:50:33,075 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/auth/user/ HTTP/1.1" 200 18530
+INFO 2026-05-12 17:50:33,125 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:53:11,249 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-12 17:53:11,340 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:53:12,583 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/axes/accessfailurelog/ HTTP/1.1" 200 13315
+INFO 2026-05-12 17:53:12,659 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 17:53:16,136 basehttp 49 134247188788928 "GET /corp-lis-secure-portal HTTP/1.1" 301 0
+INFO 2026-05-12 17:53:16,174 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/ HTTP/1.1" 200 14412
+INFO 2026-05-12 18:04:59,933 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/auth/user/add/ HTTP/1.1" 200 17486
+INFO 2026-05-12 18:05:00,026 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:05:40,765 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/services/service/ HTTP/1.1" 200 19448
+INFO 2026-05-12 18:05:40,854 basehttp 49 134247188788928 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:05:40,994 basehttp 49 134247534798528 "GET /app/media/services/img-1718.jpeg HTTP/1.1" 200 24142
+INFO 2026-05-12 18:05:40,999 basehttp 49 134247188788928 "GET /app/media/services/i.jpeg HTTP/1.1" 200 49578
+INFO 2026-05-12 18:05:41,007 basehttp 49 134247571515072 "GET /app/media/services/img-1717.jpeg HTTP/1.1" 200 24651
+INFO 2026-05-12 18:06:00,262 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/services/service/add/ HTTP/1.1" 200 18794
+INFO 2026-05-12 18:06:00,357 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:06:32,336 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 22572
+INFO 2026-05-12 18:06:32,447 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:06:46,691 basehttp 49 134247571515072 "POST /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 14632
+INFO 2026-05-12 18:06:48,058 basehttp 49 134247571515072 "POST /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-05-12 18:06:48,078 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 13523
+INFO 2026-05-12 18:06:48,133 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+WARNING 2026-05-12 18:07:19,072 log 49 134247571515072 Forbidden (CSRF token from POST incorrect.): /contacts/
+WARNING 2026-05-12 18:07:19,074 basehttp 49 134247571515072 "POST /contacts/ HTTP/1.1" 403 2560
+INFO 2026-05-12 18:07:23,510 basehttp 49 134247571515072 "GET /contacts/ HTTP/1.1" 200 22000
+INFO 2026-05-12 18:07:25,091 basehttp 49 134247571515072 "POST /contacts/ HTTP/1.1" 200 22396
+INFO 2026-05-12 18:07:28,130 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 16231
+INFO 2026-05-12 18:07:28,210 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:07:36,708 basehttp 49 134247571515072 "POST /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 302 0
+INFO 2026-05-12 18:07:36,733 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/contacts/contactmessage/ HTTP/1.1" 200 16413
+INFO 2026-05-12 18:07:36,791 basehttp 49 134247571515072 "GET /corp-lis-secure-portal/jsi18n/ HTTP/1.1" 200 16066
+INFO 2026-05-12 18:11:41,657 basehttp 49 134247571515072 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03h®\x17"]_sÅ§:¨\x82ÙÎìÉÅa\x19ä\\vxëPS,')
+ERROR 2026-05-12 18:11:41,658 basehttp 49 134247571515072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 18:11:41,667 basehttp 49 134247571515072 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03Ú\x95Ho\x86B½\x8eUéêÄPé')
+ERROR 2026-05-12 18:11:41,668 basehttp 49 134247571515072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 18:11:41,674 basehttp 49 134247571515072 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03êKï¨z×\x02Vzô\x11\x8cµÁlcerd\x9c@ñ¢½\x01\x99ùà\x97-\x88')
+ERROR 2026-05-12 18:11:41,675 basehttp 49 134247571515072 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 18:27:46,310 autoreload 49 134247658668800 /app/users/admin.py changed, reloading.
+INFO 2026-05-12 18:27:48,851 autoreload 78 123198121775872 Watching for file changes with StatReloader
+INFO 2026-05-12 19:03:52,922 autoreload 78 123198121775872 /app/news/views.py changed, reloading.
+INFO 2026-05-12 19:03:55,219 autoreload 80 124041133495040 Watching for file changes with StatReloader
+INFO 2026-05-12 19:06:23,263 autoreload 80 124041133495040 /app/news/views.py changed, reloading.
+INFO 2026-05-12 19:06:25,415 autoreload 82 135143471465216 Watching for file changes with StatReloader
+INFO 2026-05-12 19:11:36,619 autoreload 82 135143471465216 /app/news/views.py changed, reloading.
+INFO 2026-05-12 19:11:38,908 autoreload 84 140543327322880 Watching for file changes with StatReloader
+INFO 2026-05-12 19:11:41,605 basehttp 84 140543240693440 code 400, message Bad request version ("\x80dÂ>\x12²7\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 19:11:41,606 basehttp 84 140543240693440 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 19:11:41,615 basehttp 84 140543240693440 code 400, message Bad request version ("Q\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 19:11:41,616 basehttp 84 140543240693440 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 19:11:41,622 basehttp 84 140543240693440 code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03ÙJí\x03ø^\x10\x13®&P\x9e§eiúoXg\x06k¶_r')
+ERROR 2026-05-12 19:11:41,623 basehttp 84 140543240693440 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 19:11:41,630 basehttp 84 140543240693440 code 400, message Bad request syntax ("\x16\x03\x01\x00Ï\x01\x00\x00Ë\x03\x03v¹Z\x89{\\^bË&±6±\x12e\x06\x14.´#\x94\x03á\x11r\x83\x96.ÂªaÎ\x00\x008À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+ERROR 2026-05-12 19:11:41,631 basehttp 84 140543240693440 You're accessing the development server over HTTPS, but it only supports HTTP.
+INFO 2026-05-12 19:12:57,332 autoreload 84 140543327322880 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-05-12 19:12:59,264 autoreload 90 140565919085312 Watching for file changes with StatReloader
+INFO 2026-05-12 19:14:24,338 autoreload 90 140565919085312 /app/corp_lis/settings/local.py changed, reloading.
+INFO 2026-05-12 19:14:26,854 autoreload 92 129783404135168 Watching for file changes with StatReloader
+INFO 2026-05-12 19:15:13,845 autoreload 92 129783404135168 /app/corp_lis/settings/base.py changed, reloading.
+INFO 2026-05-12 19:15:15,746 autoreload 94 124136599220992 Watching for file changes with StatReloader

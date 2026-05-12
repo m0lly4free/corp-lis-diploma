@@ -15,8 +15,6 @@ logger = logging.getLogger('system_errors')
 def services_list(request):
     """Страница списка всех услуг с оптимизацией производительности"""
     try:
-        # ✅ Оптимизация: Убран пустой select_related(), который не работает
-        # Если есть ForeignKey (например, category), добавьте: .select_related('category')
         services = Service.objects.filter(is_active=True).order_by('name')
         
         return render(request, 'services/index.html', {'services': services})
@@ -53,10 +51,6 @@ class ServiceListView(ListView):
     paginate_by = 10  #  Важно для нагрузки: ограничивает выборку
     
     def get_queryset(self):
-        # ✅ Оптимизация ORM:
-        # .select_related('category') -> для ForeignKey
-        # .prefetch_related('features') -> для ManyToMany
-        # Оставьте пустым, если связей нет (тогда запрос оптимален)
         return Service.objects.filter(is_active=True).order_by('name')
 
 @method_decorator(cache_page(60 * 30), name='dispatch')

@@ -57,7 +57,7 @@ class HoneypotFormMixin(forms.Form):
         return cleaned_data
 
 class ContactForm(HoneypotFormMixin, forms.Form):
-    """Форма обратной связи с улучшенной защитой от спама"""
+    """Форма обратной связи"""
     name = forms.CharField(
         max_length=255,
         label=_('Имя'),

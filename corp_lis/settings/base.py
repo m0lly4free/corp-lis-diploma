@@ -11,6 +11,31 @@ from pathlib import Path
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',  # Основной алгоритм
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',  # Альтернатива
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+]
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'OPTIONS': {'user_attributes': ['username', 'email']}
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'OPTIONS': {'min_length': 8}
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -45,6 +70,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'axes.middleware.AxesMiddleware',
 ]
+
 
 ROOT_URLCONF = 'corp_lis.urls'
 
@@ -104,7 +130,7 @@ CSRF_COOKIE_HTTPONLY = False
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:8000",
     "http://127.0.0.1:8000",
-    "https://localhost",  # <--- ДОБАВИТЬ ЭТУ СТРОКУ!
+    "https://localhost",  
 ]
 
 # Сессии
@@ -113,9 +139,9 @@ SESSION_COOKIE_AGE = 3600  # 1 час
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 # Аутентификация
-LOGIN_URL = '/admin/login/'
-LOGIN_REDIRECT_URL = '/admin/'
-LOGOUT_REDIRECT_URL = '/admin/'
+LOGIN_URL = '/corp-lis-secure-portal/login/'
+LOGIN_REDIRECT_URL = '/corp-lis-secure-portal/'
+LOGOUT_REDIRECT_URL = '/corp-lis-secure-portal/'
 
 DEBUG = config('DEBUG', default='True').lower() == 'true'
 # Django Axes - ограничение попыток входа

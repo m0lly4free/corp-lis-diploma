@@ -81,7 +81,7 @@ class UserAdmin(BaseUserAdmin):
     is_active_status.short_description = _('Статус')
     is_active_status.admin_order_field = 'is_active'
     
-    # 🔥 КЛЮЧЕВОЕ ИСПРАВЛЕНИЕ: Синхронизация прав ПОСЛЕ сохранения инлайна
+    # Синхронизация прав ПОСЛЕ сохранения инлайна
     def save_formset(self, request, form, formset, change):
         super().save_formset(request, form, formset, change)
         # Если сохраняется инлайн UserRole — применяем права немедленно

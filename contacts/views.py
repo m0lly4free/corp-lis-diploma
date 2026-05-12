@@ -8,7 +8,7 @@ from django.views.decorators.cache import cache_page
 from django.core.cache import cache
 from django.conf import settings
 
-from .forms import ContactForm  # Убедись, что forms.py существует
+from .forms import ContactForm
 from .models import ContactMessage
 from core.util.email import send_contact_notification
 from .serializers import ContactMessageSerializer
@@ -60,7 +60,7 @@ def contact_view(request):
                     return render(request, 'contacts.html', {'form': form})
                 
                 # 3. Сохраняем в БД
-                contact_message = form.save() # ← form.save() делает то же самое, но короче
+                contact_message = form.save() 
                 contact_message.ip_address = ip_address
                 contact_message.save()
                 
