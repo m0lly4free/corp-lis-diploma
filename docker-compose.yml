@@ -1,0 +1,59 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    container_name: corp_lis_db
+    environment:
+      POSTGRES_DB: corp_lis
+      POSTGRES_USER: corp_lis_user
+      POSTGRES_PASSWORD: corp_lis_pass
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backups:/app/backups
+    ports:
+      - "5432:5432"
+      
+  redis:
+    image: redis:7-alpine
+
+  web:
+    build: .
+    container_name: corp_lis_web
+    command: >
+      sh -c "
+        service cron start &&
+        python manage.py runserver 0.0.0.0:8000
+      "
+    volumes:
+      - .:/app  # Весь проект
+      - ./staticfiles:/app/staticfiles  # Прямая папка
+      - ./media:/app/media
+      - ./backups:/app/backups
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - DEBUG=True
+      - SECRET_KEY=your-secret-key-here-1234567890
+      - DATABASE_URL=postgresql://corp_lis_user:corp_lis_pass@db:5432/corp_lis
+      - PGPASSWORD=corp_lis_pass
+
+  nginx:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/certs:/etc/nginx/certs
+      - ./staticfiles:/app/staticfiles  # ← ТА ЖЕ ПАПКА
+      - ./media:/app/media  # ← ТА ЖЕ ПАПКА!
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static_volume:
+ 

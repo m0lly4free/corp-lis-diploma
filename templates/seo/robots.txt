@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Запрещаем индексацию админки и служебных страниц
+Disallow: /admin/
+Disallow: /api/
+
+# Указываем путь к карте сайта
+Sitemap: {{ site.domain }}/sitemap.xml
+
+# Задержка между запросами (секунды)
+Crawl-delay: 10

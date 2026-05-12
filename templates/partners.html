@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Клиентам / Партнерам — АО «Корпорация ЛИС»</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { 
+        font-family: 'Segoe UI', 'Roboto', sans-serif; 
+        line-height: 1.6; 
+        color: #2d3748; 
+        background: #f8fafc;
+        overflow-x: hidden;
+        width: 100%;
+    }
+    img, video, iframe { max-width: 100%; height: auto; display: block; }
+    table { width: 100%; table-layout: fixed; }
+    a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+    ul, ol { list-style: none; }
+    
+    /* ===== LAYOUT ===== */
+    .container { 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 15px;
+    }
+    main { min-height: 70vh; padding: 30px 0; width: 100%; }
+    
+    /* ===== HEADER ===== */
+    header { 
+        background: white; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        padding: 12px 0; 
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+        width: 100%;
+    }
+    .header-inner { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .logo { 
+        font-size: 1.6rem; 
+        font-weight: 700; 
+        color: #0066cc; 
+        display: flex; 
+        align-items: center; 
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .logo span { color: #ff7e05; margin-left: 5px; }
+    
+    .nav-list { 
+        display: flex; 
+        gap: 15px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-list li a { 
+        color: #4a5568; 
+        font-weight: 500; 
+        padding: 5px 0; 
+        position: relative;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    .nav-list li a:hover { color: #0066cc; }
+    .nav-list li a.active::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; left: 0; 
+        width: 100%; height: 2px; 
+        background: #0066cc; 
+        border-radius: 2px; 
+    }
+    
+    /* Burger button */
+    .burger { 
+        display: none; 
+        flex-direction: column; 
+        gap: 5px; 
+        background: none; 
+        border: none; 
+        cursor: pointer; 
+        padding: 5px;
+        z-index: 101;
+        flex-shrink: 0;
+    }
+    .burger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #2d3748;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    .burger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+    .burger.active span:nth-child(2) { opacity: 0; }
+    .burger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+    
+    /* ===== FOOTER (ЭТАЛОН) ===== */
+    footer {
+        background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);
+        color: white; 
+        padding: 40px 0 20px; 
+        margin-top: 30px; 
+        width: 100%;
+        text-align: center;
+    }
+    footer > div {
+        max-width: 1200px;
+        margin: 0 auto !important;
+        padding: 0 20px;
+        text-align: left;
+    }
+    .footer-grid { 
+        display: grid; 
+        grid-template-columns: 1fr auto 1fr; 
+        gap: 40px;
+        align-items: start;
+        max-width: 100%;
+    }
+    .footer-col:nth-child(1) { text-align: left !important; }
+    .footer-col:nth-child(2) { text-align: center !important; }
+    .footer-col:nth-child(3) { text-align: right !important; }
+    .footer-col h3 { 
+        font-size: 1.3rem; 
+        margin-bottom: 15px; 
+        position: relative; 
+        padding-bottom: 8px; 
+        display: inline-block;
+        font-weight: 600;
+    }
+    .footer-col h3::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; 
+        width: 35px; 
+        height: 2px; 
+        background: #ff7e05; 
+        border-radius: 2px; 
+    }
+    .footer-col:nth-child(1) h3::after { left: 0; }
+    .footer-col:nth-child(2) h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-col:nth-child(3) h3::after { right: 0; }
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .footer-col ul li a:hover { color: white; text-decoration: underline; }
+    .copyright { 
+        text-align: center; 
+        padding-top: 20px; 
+        border-top: 1px solid rgba(255,255,255,0.2); 
+        color: rgba(255,255,255,0.7); 
+        margin-top: 15px; 
+        font-size: 0.9rem;
+    }
+    
+    /* ===== PARTNERS PAGE ===== */
+    .page-header {
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    .page-header h1 {
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: #0066cc;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+    }
+    .page-header p {
+        color: #4a5568;
+        font-size: 1.1rem;
+        max-width: 800px;
+        margin: 0 auto;
+        word-wrap: break-word;
+    }
+    
+    .section {
+        background: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+    }
+    .section::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        width: 6px; height: 100%;
+        background: linear-gradient(180deg, #0066cc 0%, #00a8e8 100%);
+    }
+    .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .section-title h2 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #0066cc;
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+    }
+    
+    .partnership-info {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+        word-wrap: break-word;
+    }
+    .partnership-info h3 {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: #0066cc;
+        margin-bottom: 1.2rem;
+        text-align: center;
+        word-wrap: break-word;
+    }
+    .partnership-info p {
+        color: #4a5568;
+        line-height: 1.7;
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+        word-wrap: break-word;
+    }
+    .partnership-info ul {
+        margin-left: 2rem;
+        margin-top: 1rem;
+        color: #4a5568;
+        line-height: 1.8;
+    }
+    .partnership-info ul li {
+        margin-bottom: 0.5rem;
+        word-wrap: break-word;
+    }
+    
+    .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .material-item {
+        background: #f8fafc;
+        border-radius: 10px;
+        padding: 1.5rem;
+        border: 1px solid #e2e8f0;
+        transition: all 0.3s ease;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .material-item:hover {
+        box-shadow: 0 6px 20px rgba(0,102,204,0.1);
+        border-color: #0066cc;
+        transform: translateY(-2px);
+    }
+    .material-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    .material-icon {
+        width: 48px; 
+        height: 48px;
+        background: linear-gradient(135deg, #0066cc, #00a8e8);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        color: white;
+        font-size: 1.5rem;
+    }
+    .material-info {
+        flex: 1;
+        min-width: 0;
+    }
+    .material-title {
+        font-weight: 600;
+        color: #2d3748;
+        margin-bottom: 0.3rem;
+        font-size: 1rem;
+        word-wrap: break-word;
+        line-height: 1.3;
+    }
+    .material-meta {
+        display: flex;
+        gap: 1rem;
+        color: #718096;
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+    }
+    .material-meta span { 
+        display: flex; 
+        align-items: center;
+        gap: 0.3rem;
+    }
+    .material-description {
+        color: #4a5568;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+        flex: 1;
+    }
+    .material-download {
+        background: #0066cc;
+        color: white;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        font-weight: 500;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        transition: all 0.3s ease;
+        font-size: 0.9rem;
+        width: 100%;
+    }
+    .material-download:hover {
+        background: #0052a3;
+        transform: translateY(-1px);
+        box-shadow: 0 4px 12px rgba(0,102,204,0.3);
+    }
+    
+    .cases-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+    .case-card {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        transition: all 0.3s ease;
+        border: 1px solid #e2e8f0;
+        min-width: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .case-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    }
+    .case-image {
+        height: 220px;
+        background: linear-gradient(135deg, #0066cc, #00a8e8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+    .case-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .case-card:hover .case-image img {
+        transform: scale(1.05);
+    }
+    .case-content {
+        padding: 1.5rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+    .case-content h3 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: #0066cc;
+        margin-bottom: 0.8rem;
+        word-wrap: break-word;
+        line-height: 1.3;
+    }
+    .case-content p {
+        color: #4a5568;
+        line-height: 1.6;
+        font-size: 0.95rem;
+        flex: 1;
+        word-wrap: break-word;
+    }
+    .case-category {
+        display: inline-block;
+        background: #e0f2fe;
+        color: #0066cc;
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 500;
+        margin-bottom: 0.8rem;
+    }
+    
+    .contact-block {
+        background: linear-gradient(135deg, #0066cc 0%, #ff7e05 100%);
+        color: white;
+        border-radius: 12px;
+        padding: 2.5rem;
+        text-align: center;
+        margin-top: 1.5rem;
+        word-wrap: break-word;
+    }
+    .contact-block h3 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 1.2rem;
+        word-wrap: break-word;
+    }
+    .contact-block p {
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        font-size: 1.05rem;
+    }
+    .contact-email {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin: 1.5rem 0;
+        display: inline-block;
+        color: white;
+        text-decoration: none;
+        transition: all 0.2s;
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        background: rgba(255,255,255,0.1);
+    }
+    .contact-email:hover { 
+        background: rgba(255,255,255,0.2);
+        transform: translateY(-2px);
+    }
+    .contact-btn {
+        display: inline-block;
+        background: #ff7e05;
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 8px;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        margin-top: 1rem;
+    }
+    .contact-btn:hover {
+        background: #e67100;
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255,126,5,0.3);
+    }
+    
+    /* ===== RESPONSIVE ===== */
+    
+    /* Tablet (≤1023px) */
+    @media (max-width: 1023px) {
+        .container { padding: 0 20px; }
+        .page-header h1 { font-size: 2rem; }
+        .page-header p { font-size: 1rem; }
+        .section-title h2 { font-size: 1.6rem; }
+        .materials-grid { grid-template-columns: repeat(2, 1fr); }
+        .cases-grid { grid-template-columns: repeat(2, 1fr); }
+        
+        footer > div { max-width: 90%; padding: 0 15px; }
+        .footer-grid { gap: 30px; }
+        .footer-col h3 { font-size: 1.2rem; }
+    }
+    
+    /* Mobile (≤767px) */
+    @media (max-width: 767px) {
+        .header-inner { flex-wrap: nowrap; justify-content: space-between; }
+        .burger { display: flex; }
+        .nav-list {
+            position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+            background: white; flex-direction: column;
+            align-items: flex-start; padding: 2rem 1.5rem;
+            gap: 0; transform: translateX(100%);
+            transition: transform 0.3s ease; z-index: 100;
+            overflow-y: auto; width: 100%;
+        }
+        .nav-list.active { transform: translateX(0); }
+        .nav-list li { width: 100%; border-bottom: 1px solid #e2e8f0; }
+        .nav-list li a { display: block; padding: 1rem 0; font-size: 1.1rem; width: 100%; }
+        .nav-list li a::after { display: none; }
+        
+        .container { padding: 0 10px; }
+        main { padding: 20px 0; }
+        .page-header h1 { font-size: 1.6rem; }
+        .page-header p { font-size: 1rem; }
+        .section { padding: 1.5rem; }
+        .section-title h2 { font-size: 1.4rem; }
+        
+        .materials-grid { grid-template-columns: 1fr; }
+        .cases-grid { grid-template-columns: 1fr; }
+        
+        .contact-block { padding: 1.5rem; }
+        .contact-email { font-size: 1.1rem; }
+        .contact-btn { width: 100%; max-width: 300px; }
+        
+        /* Footer mobile */
+        footer > div { max-width: 100%; padding: 0 15px; }
+        .footer-grid { 
+            grid-template-columns: 1fr; 
+            text-align: center !important; 
+            gap: 30px;
+        }
+        .footer-col,
+        .footer-col:nth-child(1),
+        .footer-col:nth-child(2),
+        .footer-col:nth-child(3) {
+            text-align: center !important;
+        }
+        .footer-col h3::after {
+            left: 50% !important;
+            transform: translateX(-50%);
+            right: auto !important;
+        }
+    }
+    
+    /* Large desktop (≥1440px) */
+    @media (min-width: 1440px) {
+        .container { padding: 0 40px; }
+        .page-header h1 { font-size: 2.6rem; }
+        .materials-grid { grid-template-columns: repeat(3, 1fr); }
+        .cases-grid { grid-template-columns: repeat(3, 1fr); }
+        
+        footer > div { max-width: 1400px; padding: 0 40px; }
+        .footer-grid { gap: 60px; }
+    }
+    
+    /* Extra large (≥1920px) */
+    @media (min-width: 1920px) {
+        .container { max-width: 1600px; padding: 0 50px; }
+        .page-header h1 { font-size: 2.8rem; }
+        
+        footer > div { max-width: 1600px; padding: 0 50px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">АО «Корпорация <span>ЛИС</span></a>
+        
+        <!-- Burger button -->
+        <button class="burger" id="burger-btn" aria-label="Меню">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <nav>
+          <ul class="nav-list" id="nav-list">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/" class="active">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>Клиентам и Партнерам</h1>
+      <p>Специализированная информация для действующих и потенциальных клиентов и партнёров компании</p>
+    </div>
+
+    <!-- General Info -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Общая информация</h2>
+      </div>
+      
+      <div class="partnership-info">
+        <h3>Условия и формы сотрудничества</h3>
+        <p>АО «Корпорация ЛИС» предлагает гибкие условия сотрудничества для компаний любого масштаба. Мы работаем напрямую с юридическими лицами и обеспечиваем прозрачные условия взаимодействия на всех этапах сотрудничества.</p>
+        <p>Формы сотрудничества включают долгосрочные контракты на поставку металлолома, разовые сделки, а также комплексные решения по демонтажу и переработке промышленных отходов.</p>
+      </div>
+      
+      <div class="partnership-info">
+        <h3>Перечень доступных сервисов и поддержки</h3>
+        <p>Для наших клиентов и партнеров мы предоставляем следующие сервисы:</p>
+        <ul>
+          <li>Консультационная поддержка по вопросам заготовки и переработки металлолома</li>
+          <li>Оперативная логистика и вывоз отходов из любого региона России</li>
+          <li>Профессиональная оценка и классификация металлолома на месте</li>
+          <li>Юридическое сопровождение сделок и оформление необходимой документации</li>
+          <li>Индивидуальные коммерческие предложения с учетом специфики вашего бизнеса</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Materials -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Материалы</h2>
+      </div>
+      
+      <div class="materials-grid">
+        
+        <div class="material-item">
+          <div class="material-header">
+            <div class="material-icon">📋</div>
+            <div class="material-info">
+              <div class="material-title">Брошюра услуг</div>
+              <div class="material-meta">
+                <span>📄 PDF</span>
+                <span>⚖️ 1.8 МБ</span>
+              </div>
+            </div>
+          </div>
+          <div class="material-description">
+            Полный каталог услуг с описанием условий, сроков и технических характеристик
+          </div>
+          <a href="/static/materials/brochure.pdf" class="material-download" download>
+            <span>📥</span>
+            <span>Скачать брошюру</span>
+          </a>
+        </div>
+        
+        <div class="material-item">
+          <div class="material-header">
+            <div class="material-icon">📖</div>
+            <div class="material-info">
+              <div class="material-title">Инструкция по сортировке металлолома</div>
+              <div class="material-meta">
+                <span>📄 PDF</span>
+                <span>⚖️ 3.2 МБ</span>
+              </div>
+            </div>
+          </div>
+          <div class="material-description">
+            Руководство по правильной сортировке и подготовке лома к сдаче. Требования к качеству
+          </div>
+          <a href="/static/materials/sorting-guide.pdf" class="material-download" download>
+            <span>📥</span>
+            <span>Скачать инструкцию</span>
+          </a>
+        </div>
+
+        <div class="material-item">
+          <div class="material-header">
+            <div class="material-icon">📑</div>
+            <div class="material-info">
+              <div class="material-title">Типовой договор поставки</div>
+              <div class="material-meta">
+                <span>📄 PDF</span>
+                <span>⚖️ 856 КБ</span>
+              </div>
+            </div>
+          </div>
+          <div class="material-description">
+            Образец договора для ознакомления. Индивидуальные условия обсуждаются отдельно
+          </div>
+          <a href="/static/materials/contract-template.pdf" class="material-download" download>
+            <span>📥</span>
+            <span>Скачать договор</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cases -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Выполненные проекты</h2>
+      </div>
+      
+      <div class="cases-grid">
+        <div class="case-card">
+          <div class="case-image">
+            <img src="/static/images/cases/metallurgical-plant.jpg" alt="Модернизация металлургического комбината">
+          </div>
+          <div class="case-content">
+            <span class="case-category">Производство</span>
+            <h3>Модернизация производства металлургического комбината</h3>
+            <p>Комплексный проект по модернизации системы заготовки и переработки металлолома для крупнейшего металлургического предприятия Урала. Внедрена автоматизированная система сортировки и переработки.</p>
+          </div>
+        </div>
+        
+        <div class="case-card">
+          <div class="case-image">
+            <img src="/static/images/cases/auto-plant-logistics.jpg" alt="Логистическое решение для автозавода">
+          </div>
+          <div class="case-content">
+            <span class="case-category">Логистика</span>
+            <h3>Логистическое решение для автомобильного завода</h3>
+            <p>Разработка и внедрение системы сбора и вывоза металлолома с производственных площадок автомобильного завода. Организована ежедневная логистика с 12 производственных площадок.</p>
+          </div>
+        </div>
+        
+        <div class="case-card">
+          <div class="case-image">
+            <img src="/static/images/cases/ecology-project.jpg" alt="Экологический проект">
+          </div>
+          <div class="case-content">
+            <span class="case-category">Экология</span>
+            <h3>Экологический проект по переработке отходов</h3>
+            <p>Реализация экологического проекта по переработке промышленных отходов с последующей реализацией вторичного сырья. Достигнуто снижение экологической нагрузки на 40%.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Block -->
+    <section class="section">
+      <div class="section-title">
+        <h2>Контакт для сотрудничества</h2>
+      </div>
+      
+      <div class="contact-block">
+        <h3>Готовы обсудить сотрудничество?</h3>
+        <p>Наша команда всегда на связи и готова ответить на ваши вопросы или подготовить индивидуальное коммерческое предложение.</p>
+        <p>Почта для сотрудничества:</p>
+        <a href="mailto:partners@corp-lis.ru" class="contact-email">partners@corp-lis.ru</a>
+        <p>Или можете оставить заявку и мы обязательно её рассмотрим!</p>
+        <a href="/contacts/" class="contact-btn">Оставить заявку</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>О компании</h3>
+          <p style="color: rgba(255,255,255,0.85); line-height: 1.6;">
+            АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+74953819547">+7 (495) 381-95-47</a></li>
+            <li><a href="mailto:sek@corp-lis.ru">sek@corp-lis.ru</a></li>
+            <li><a href="https://yandex.ru/maps/...">г. Москва, 1-ый Дорожный проезд, д. 9</a></li>
+            <li>с 7:00 до 19:00 (без выходных)</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Разделы сайта</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 АО «Корпорация ЛИС». Все права защищены.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Burger menu
+      const burger = document.getElementById('burger-btn');
+      const nav = document.getElementById('nav-list');
+      if (burger && nav) {
+        burger.addEventListener('click', () => {
+          burger.classList.toggle('active');
+          nav.classList.toggle('active');
+          document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+        });
+        nav.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            burger.classList.remove('active');
+            nav.classList.remove('active');
+            document.body.style.overflow = '';
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>

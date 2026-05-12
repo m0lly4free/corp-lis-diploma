@@ -1,0 +1,250 @@
+/* Улучшенный редактор контента для новостей */
+.news-editor-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.news-editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px 10px;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.news-editor-toolbar button {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+    color: #495057;
+}
+
+.news-editor-toolbar button:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #212529;
+}
+
+.news-editor-toolbar button:active {
+    background: #d3d9df;
+}
+
+.news-editor-toolbar button.bold-btn {
+    font-weight: bold;
+}
+
+.news-editor-toolbar button.italic-btn {
+    font-style: italic;
+}
+
+.news-editor-toolbar button.list-ordered-btn::before {
+    content: "1.";
+    margin-right: 5px;
+}
+
+.news-editor-toolbar button.list-unordered-btn::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.news-editor-toolbar button.h2-btn {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.news-editor-toolbar button.h3-btn {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.news-editor-toolbar button.image-btn::before {
+    content: "🖼️";
+}
+
+.news-editor-toolbar button.link-btn::before {
+    content: "🔗";
+}
+
+.news-editor-textarea {
+    width: 100%;
+    min-height: 300px;
+    border: 1px solid #ced4da;
+    border-radius: 0 0 4px 4px;
+    padding: 10px;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+    background: white;
+}
+
+.news-editor-textarea:focus {
+    outline: none;
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Стили для отображения HTML-контента в редакторе */
+.news-editor-textarea p {
+    margin: 15px 0;
+}
+
+.news-editor-textarea h2 {
+    font-size: 1.5em;
+    margin: 20px 0 15px;
+    font-weight: bold;
+}
+
+.news-editor-textarea h3 {
+    font-size: 1.3em;
+    margin: 18px 0 12px;
+    font-weight: bold;
+}
+
+.news-editor-textarea strong {
+    font-weight: bold;
+}
+
+.news-editor-textarea em {
+    font-style: italic;
+}
+
+.news-editor-textarea ul, 
+.news-editor-textarea ol {
+    margin: 15px 0;
+    padding-left: 25px;
+}
+
+.news-editor-textarea li {
+    margin-bottom: 8px;
+}
+
+.news-editor-textarea img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 15px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Стили для кнопок в админ-панели */
+.admin-textarea-container {
+    position: relative;
+    margin-top: 10px;
+}
+
+.admin-textarea-container .help-text {
+    font-size: 0.85rem;
+    color: #6c757d;
+    margin-top: 5px;
+    display: block;
+}
+
+/* Стили для админ-панели */
+.module .field-content,
+.module .field-short_description {
+    margin-bottom: 15px;
+}
+
+.module .field-content .vLargeTextField,
+.module .field-short_description .vLargeTextField {
+    min-height: 200px !important;
+}
+
+/* Улучшенный вид для редактора в админ-панели */
+.admin-textarea-container {
+    position: relative;
+}
+
+.admin-textarea-container .editor-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px 10px;
+    background: #f8f9fa;
+    border: 1px solid #ced4da;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(to bottom, #f8f9fa, #e9ecef);
+}
+
+.admin-textarea-container .editor-toolbar button {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    padding: 5px 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 14px;
+    transition: all 0.2s;
+    color: #495057;
+}
+
+.admin-textarea-container .editor-toolbar button:hover {
+    background: #e9ecef;
+    border-color: #adb5bd;
+    color: #212529;
+}
+
+.admin-textarea-container .editor-toolbar button:active {
+    background: #d3d9df;
+}
+
+.admin-textarea-container .editor-toolbar button.bold-btn {
+    font-weight: bold;
+}
+
+.admin-textarea-container .editor-toolbar button.italic-btn {
+    font-style: italic;
+}
+
+.admin-textarea-container .editor-toolbar button.list-ordered-btn::before {
+    content: "1.";
+    margin-right: 5px;
+}
+
+.admin-textarea-container .editor-toolbar button.list-unordered-btn::before {
+    content: "•";
+    margin-right: 5px;
+}
+
+.admin-textarea-container .editor-toolbar button.h2-btn {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.admin-textarea-container .editor-toolbar button.h3-btn {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.admin-textarea-container .editor-toolbar button.image-btn::before {
+    content: "🖼️";
+}
+
+.admin-textarea-container .editor-toolbar button.link-btn::before {
+    content: "🔗";
+}
+
+.admin-textarea-container .vLargeTextField {
+    border-radius: 0 0 4px 4px;
+    border-top: none !important;
+    padding: 10px !important;
+    min-height: 300px !important;
+    font-family: 'Segoe UI', 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    resize: vertical;
+}

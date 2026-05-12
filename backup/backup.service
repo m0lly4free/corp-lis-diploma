@@ -1,0 +1,10 @@
+[Unit]
+Description=Backup Service for Corp LIS
+After=network.target
+
+[Service]
+Type=oneshot
+User=www-data
+WorkingDirectory=/app
+ExecStart=/app/backup.sh
+Environment=PGPASSWORD=corp_lis_pass

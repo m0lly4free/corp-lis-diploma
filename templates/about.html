@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>О компании — АО «Корпорация ЛИС»</title>
+  <style>
+    /* ===== RESET & BASE ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { 
+        font-family: 'Segoe UI', 'Roboto', sans-serif; 
+        line-height: 1.6; 
+        color: #2d3748; 
+        background: #f8fafc;
+        overflow-x: hidden;
+        width: 100%;
+    }
+    img, video, iframe { max-width: 100%; height: auto; display: block; }
+    table { width: 100%; table-layout: fixed; }
+    a { text-decoration: none; color: inherit; transition: color 0.2s ease; }
+    ul, ol { list-style: none; }
+    
+    /* ===== LAYOUT ===== */
+    .container { 
+        width: 100%; 
+        max-width: 1200px; 
+        margin: 0 auto; 
+        padding: 0 15px;
+    }
+    main { min-height: 70vh; padding: 30px 0; width: 100%; }
+    
+    /* ===== HEADER ===== */
+    header { 
+        background: white; 
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1); 
+        padding: 12px 0; 
+        position: sticky; 
+        top: 0; 
+        z-index: 100; 
+        width: 100%;
+    }
+    .header-inner { 
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 10px;
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    .logo { 
+        font-size: 1.6rem; 
+        font-weight: 700; 
+        color: #0066cc; 
+        display: flex; 
+        align-items: center; 
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+    .logo span { color: #ff7e05; margin-left: 5px; }
+    
+    .nav-list { 
+        display: flex; 
+        gap: 15px;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-list li a { 
+        color: #4a5568; 
+        font-weight: 500; 
+        padding: 5px 0; 
+        position: relative;
+        font-size: 0.95rem;
+        white-space: nowrap;
+    }
+    .nav-list li a:hover { color: #0066cc; }
+    .nav-list li a.active::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; left: 0; 
+        width: 100%; height: 2px; 
+        background: #0066cc; 
+        border-radius: 2px; 
+    }
+    
+    /* ===== FOOTER (ЭТАЛОННЫЙ ШАБЛОН) ===== */
+    footer {
+        background: linear-gradient(135deg, #0066cc -45%, #ff7e05 100%);
+        color: white; 
+        padding: 40px 0 20px; 
+        margin-top: 30px; 
+        width: 100%;
+        text-align: center;
+    }
+
+    footer > div {
+        max-width: 1200px;
+        margin: 0 auto !important;
+        padding: 0 20px;
+        text-align: left;
+    }
+
+    .footer-grid { 
+        display: grid; 
+        grid-template-columns: 1fr auto 1fr; 
+        gap: 40px;
+        align-items: start;
+        max-width: 100%;
+    }
+
+    .footer-col:nth-child(1) { text-align: left !important; }
+    .footer-col:nth-child(2) { text-align: center !important; }
+    .footer-col:nth-child(3) { text-align: right !important; }
+
+    .footer-col h3 { 
+        font-size: 1.3rem; 
+        margin-bottom: 15px; 
+        position: relative; 
+        padding-bottom: 8px; 
+        display: inline-block;
+        font-weight: 600;
+    }
+
+    .footer-col h3::after { 
+        content: ''; 
+        position: absolute; 
+        bottom: 0; 
+        width: 35px; 
+        height: 2px; 
+        background: #ff7e05; 
+        border-radius: 2px; 
+    }
+
+    .footer-col:nth-child(1) h3::after { left: 0; }
+    .footer-col:nth-child(2) h3::after { left: 50%; transform: translateX(-50%); }
+    .footer-col:nth-child(3) h3::after { right: 0; }
+
+    .footer-col ul { list-style: none; padding: 0; margin: 0; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { color: rgba(255,255,255,0.85); text-decoration: none; }
+    .footer-col ul li a:hover { color: white; text-decoration: underline; }
+
+    .copyright { 
+        text-align: center; 
+        padding-top: 20px; 
+        border-top: 1px solid rgba(255,255,255,0.2); 
+        color: rgba(255,255,255,0.7); 
+        margin-top: 15px; 
+        font-size: 0.9rem;
+    }
+    
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      padding: 1.5rem 0;
+      border-bottom: 2px solid #e2e8f0;
+    }
+    .page-header h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #0066cc;
+      margin-bottom: 1rem;
+      word-wrap: break-word;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.7;
+      word-wrap: break-word;
+    }
+    
+    /* ===== SECTIONS ===== */
+    .section {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 6px; height: 100%;
+      background: linear-gradient(180deg, #0066cc 0%, #00a8e8 100%);
+    }
+    .section-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #0066cc;
+      margin-bottom: 1.2rem;
+      padding-left: 1.2rem;
+      position: relative;
+      word-wrap: break-word;
+    }
+    .section-title::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 10px; height: 10px;
+      background: #0066cc;
+      border-radius: 50%;
+    }
+    
+    .mission-values p {
+      color: #4a5568;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 1.2rem;
+      word-wrap: break-word;
+    }
+    .mission-values ul {
+      list-style: none;
+      padding-left: 1.2rem;
+      margin-top: 1.2rem;
+    }
+    .mission-values ul li {
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: 0.8rem;
+      color: #4a5568;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    .mission-values ul li::before {
+      content: '✓';
+      position: absolute;
+      left: 0; top: 0;
+      width: 20px; height: 20px;
+      background: #e0f2fe;
+      color: #0066cc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 0.8rem;
+    }
+    
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      padding-left: 25px;
+      margin-top: 1.5rem;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 10px; bottom: 10px;
+      width: 3px;
+      background: linear-gradient(180deg, #0066cc 0%, #00a8e8 100%);
+      border-radius: 2px;
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 2rem;
+      padding-left: 20px;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -30px; top: 0;
+      width: 16px; height: 16px;
+      background: white;
+      border: 3px solid #0066cc;
+      border-radius: 50%;
+      z-index: 1;
+    }
+    .timeline-year {
+      font-weight: 700;
+      color: #0066cc;
+      font-size: 1.2rem;
+      margin-bottom: 0.4rem;
+      word-wrap: break-word;
+    }
+    .timeline-content p {
+      color: #4a5568;
+      line-height: 1.6;
+      word-wrap: break-word;
+    }
+    
+    /* ===== LEADERSHIP ===== */
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+      width: 100%;
+    }
+    .leader-card {
+      background: #f8fafc;
+      border-radius: 10px;
+      padding: 1.2rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid #e2e8f0;
+      min-width: 0;
+    }
+    .leader-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-color: #0066cc;
+    }
+    .leader-photo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+    .leader-name {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #0066cc;
+      margin-bottom: 0.2rem;
+      word-wrap: break-word;
+    }
+    .leader-position {
+      color: #4a5568;
+      font-weight: 500;
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+    }
+    .leader-desc {
+      color: #718096;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+    
+    /* ===== DOCUMENTS ===== */
+    .documents-list { margin-top: 1.5rem; width: 100%; }
+    .document-item {
+      display: flex;
+      align-items: center;
+      padding: 0.8rem;
+      margin-bottom: 0.8rem;
+      background: #f8fafc;
+      border-radius: 6px;
+      border-left: 3px solid #0066cc;
+      transition: all 0.3s ease;
+      width: 100%;
+      min-width: 0;
+    }
+    .document-item:hover {
+      background: #e0f2fe;
+      transform: translateX(3px);
+    }
+    .document-icon {
+      width: 40px; height: 40px;
+      background: white;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+      border: 2px solid #e2e8f0;
+    }
+    .document-icon i { font-size: 1.5rem; color: #0066cc; }
+    .document-info { flex: 1; min-width: 0; }
+    .document-title {
+      font-weight: 600;
+      color: #2d3748;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+      word-wrap: break-word;
+    }
+    .document-meta {
+      display: flex;
+      gap: 0.8rem;
+      color: #718096;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .document-meta span { display: flex; align-items: center; }
+    .document-download {
+      background: #0066cc;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.3s ease;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .document-download:hover {
+      background: #0052a3;
+      transform: translateY(-1px);
+    }
+    
+    /* ===== RESPONSIVE FOOTER & LAYOUT ===== */
+    
+    /* Tablet (≤1023px) */
+    @media (max-width: 1023px) {
+        .container { padding: 0 20px; }
+        .page-header h1 { font-size: 2rem; }
+        .page-header p { font-size: 1rem; }
+        .section-title { font-size: 1.4rem; }
+        
+        footer > div { max-width: 90%; padding: 0 15px; }
+        .footer-grid { gap: 30px; }
+        .footer-col h3 { font-size: 1.2rem; }
+        
+        .leadership-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    
+    /* Mobile (≤767px) */
+    @media (max-width: 767px) {
+        .header-inner { flex-wrap: nowrap; justify-content: space-between; }
+        .nav-list {
+            position: fixed; top: 72px; left: 0; right: 0; bottom: 0;
+            background: white; flex-direction: column;
+            align-items: flex-start; padding: 2rem 1.5rem;
+            gap: 0; transform: translateX(100%);
+            transition: transform 0.3s ease; z-index: 100;
+            overflow-y: auto; width: 100%;
+        }
+        .nav-list.active { transform: translateX(0); }
+        .nav-list li { width: 100%; border-bottom: 1px solid #e2e8f0; }
+        .nav-list li a { display: block; padding: 1rem 0; font-size: 1.1rem; width: 100%; }
+        .nav-list li a::after { display: none; }
+        
+        .container { padding: 0 10px; }
+        main { padding: 20px 0; }
+        .page-header h1 { font-size: 1.6rem; }
+        .page-header p { font-size: 1rem; }
+        .section { padding: 1.5rem; }
+        .section-title { font-size: 1.3rem; }
+        
+        .timeline { padding-left: 20px; }
+        .timeline::before { left: -5px; }
+        .timeline-item { padding-left: 15px; }
+        .timeline-item::before { left: -25px; width: 12px; height: 12px; }
+        
+        .leadership-grid { grid-template-columns: 1fr; }
+        
+        /* Footer mobile */
+        footer > div { max-width: 100%; padding: 0 15px; }
+        .footer-grid { 
+            grid-template-columns: 1fr; 
+            text-align: center !important; 
+            gap: 30px;
+        }
+        .footer-col,
+        .footer-col:nth-child(1),
+        .footer-col:nth-child(2),
+        .footer-col:nth-child(3) {
+            text-align: center !important;
+        }
+        .footer-col h3::after {
+            left: 50% !important;
+            transform: translateX(-50%);
+            right: auto !important;
+        }
+        
+        .document-item { flex-direction: column; text-align: center; }
+        .document-icon { margin: 0 0 0.8rem; }
+        .document-download { margin-top: 0.5rem; }
+    }
+    
+    /* Large desktop (≥1440px) */
+    @media (min-width: 1440px) {
+        .container { padding: 0 40px; }
+        .page-header h1 { font-size: 2.6rem; }
+        .page-header p { font-size: 1.2rem; }
+        .leadership-grid { grid-template-columns: repeat(3, 1fr); }
+        
+        footer > div { max-width: 1400px; padding: 0 40px; }
+        .footer-grid { gap: 60px; }
+    }
+    
+    /* Extra large (≥1920px) */
+    @media (min-width: 1920px) {
+        .container { max-width: 1600px; padding: 0 50px; }
+        .page-header h1 { font-size: 2.8rem; }
+        .leadership-grid { grid-template-columns: repeat(4, 1fr); }
+        
+        footer > div { max-width: 1600px; padding: 0 50px; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-inner">
+        <a href="/" class="logo">АО «Корпорация <span>ЛИС</span></a>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/" class="active">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Page Header -->
+    <div class="page-header">
+      <h1>О компании</h1>
+      <p>АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года. Мы являемся полным правопреемником ООО «Корпорация ЛИС» и продолжаем развивать традиции надежности и качества.</p>
+    </div>
+
+    <!-- Mission & Values -->
+    <section class="section mission-values">
+      <h2 class="section-title">Миссия и ценности</h2>
+      <p>Наша миссия — создавать устойчивую систему переработки металлолома, способствуя развитию отечественной металлургической промышленности и сохранению природных ресурсов.</p>
+      <p>Мы максимально открыты и прозрачны для наших партнеров и контролирующих организаций. Всегда готовы ответить на все возникающие вопросы, за исключением относящихся к коммерческой конфиденциальности и государственной тайне. Сотрудничаем только с юридическими лицами.</p>
+      
+      <h3 style="font-size: 1.5rem; font-weight: 700; color: #0066cc; margin: 2rem 0 1rem; padding-left: 1.5rem; position: relative;">
+        <span style="position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 10px; height: 10px; background: #0066cc; border-radius: 50%;"></span>
+        Наши ценности
+      </h3>
+      <ul>
+        <li><strong>Надежность и ответственность</strong> — мы выполняем все обязательства перед партнерами и клиентами в срок и в полном объеме.</li>
+        <li><strong>Экологическая сознательность</strong> — наша деятельность направлена на снижение негативного воздействия на окружающую среду.</li>
+        <li><strong>Инновационный подход</strong> — мы постоянно внедряем современные технологии и методы работы.</li>
+        <li><strong>Клиентоориентированность</strong> — удовлетворение потребностей клиентов является нашим главным приоритетом.</li>
+      </ul>
+    </section>
+
+    <!-- History -->
+    <section class="section">
+      <h2 class="section-title">История компании</h2>
+      <p style="color: #4a5568; line-height: 1.8; margin-bottom: 2rem;">Наша компания прошла большой путь от небольшого предприятия до одного из лидеров рынка металлолома в России. Ключевые этапы развития:</p>
+      
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-year">2004 год</div>
+          <div class="timeline-content"><p>Основание ООО «Корпорация ЛИС» и начало деятельности в сфере заготовки металлолома.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2008 год</div>
+          <div class="timeline-content"><p>Открытие первого производственного комплекса в Москве с современным оборудованием для переработки металлолома.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2012 год</div>
+          <div class="timeline-content"><p>Расширение географии присутствия — открытие филиалов в ключевых регионах России.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2016 год</div>
+          <div class="timeline-content"><p>Модернизация производственных мощностей и внедрение системы автоматической сортировки металлолома.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2020 год</div>
+          <div class="timeline-content"><p>Преобразование в АО «Корпорация ЛИС» и выход на международный рынок.</p></div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-year">2024 год</div>
+          <div class="timeline-content"><p>Запуск программы экологической модернизации и достижение показателя переработки 500 000 тонн металлолома в год.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section class="section">
+      <h2 class="section-title">Руководство</h2>
+      <p style="color: #4a5568; line-height: 1.8; margin-bottom: 2rem;">Наша компания возглавляется опытными специалистами с многолетним стажем работы в металлургической отрасли.</p>
+
+      <div class="leadership-grid">
+        <div class="leader-card">
+          <img src="static/about/static/images/12.jpg" alt="Лисогор Олег Адольфович" class="leader-photo">
+          <div class="leader-name">Лисогор Олег Адольфович</div>
+          <div class="leader-position">Генеральный директор</div>
+          <div class="leader-desc">gen.dir@corp-lis.ru</div>
+          <div class="leader-desc">suggestions@corp-lis.ru</div>
+          <div class="leader-desc">glav.prodazha@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/13.jpg" alt="Лисогор Денис Олегович" class="leader-photo">
+          <div class="leader-name">Лисогор Денис Олегович</div>
+          <div class="leader-position">Начальник отдела заготовки сырья</div>
+          <div class="leader-desc">+7(926)522-40-76</div>
+          <div class="leader-desc">zagotovka@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/14.jpg" alt="Головин Евгений Робертович" class="leader-photo">
+          <div class="leader-name">Головин Евгений Робертович</div>
+          <div class="leader-position">Руководитель проектов</div>
+          <div class="leader-desc">+7(916)008-73-11</div>
+          <div class="leader-desc">proekt02@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/15.jpg" alt="Старых Мария Юрьевна" class="leader-photo">
+          <div class="leader-name">Старых Мария Юрьевна</div>
+          <div class="leader-position">Заместитель главного бухгалтера</div>
+          <div class="leader-desc">+7(985)500-14-29</div>
+          <div class="leader-desc">zam.glav.buh@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/16.jpg" alt="Соловьева Ирина Анатольевна" class="leader-photo">
+          <div class="leader-name">Соловьева Ирина Анатольевна</div>
+          <div class="leader-position">Начальник договорного отдела</div>
+          <div class="leader-desc">+7(985)250-26-64</div>
+          <div class="leader-desc">urist@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/17.jpg" alt="Золина Наталья Васильевна" class="leader-photo">
+          <div class="leader-name">Золина Наталья Васильевна</div>
+          <div class="leader-position">Старший экономист</div>
+          <div class="leader-desc">+7(915)290-66-01</div>
+          <div class="leader-desc">economist01@corp-lis.ru</div>
+        </div>
+        <div class="leader-card">
+          <img src="static/about/static/images/18.jpg" alt="Артемова Ирина Валерьевна" class="leader-photo">
+          <div class="leader-name">Артемова Ирина Валерьевна</div>
+          <div class="leader-position">Референт</div>
+          <div class="leader-desc">+7(919)960-17-13</div>
+          <div class="leader-desc">sek@corp-lis.ru</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Documents -->
+    <section class="section">
+      <h2 class="section-title">Документы, лицензии, сертификаты</h2>
+      <p style="color: #4a5568; line-height: 1.8; margin-bottom: 2rem;">АО «Корпорация ЛИС» работает в полном соответствии с законодательством РФ и обладает всеми необходимыми разрешительными документами.</p>
+      
+      <div class="documents-list">
+        <div class="document-item">
+          <div class="document-icon">📄</div>
+          <div class="document-info">
+            <div class="document-title">Реквизиты</div>
+            <div class="document-meta"><span>Официальные реквизиты компании для юридических операций</span></div>
+          </div>
+          <a href="static/about/static/images/reck.jpg" class="document-download">Скачать ↓</a>
+        </div>
+        <div class="document-item">
+          <div class="document-icon">📜</div>
+          <div class="document-info">
+            <div class="document-title">Лицензии</div>
+            <div class="document-meta"><span>Проверка лицензии: ИНН 9726081479 на портале Росприроднадзора</span></div>
+          </div>
+          <a href="https://knd.gov.ru/licenses-registry" class="document-download">Перейти</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer (ЭТАЛОННЫЙ) -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>О компании</h3>
+          <p style="color: rgba(255,255,255,0.85); line-height: 1.6;">
+            АО «Корпорация ЛИС» — лидер в сфере заготовки и переработки лома и отходов черных и цветных металлов с 2004 года.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Контакты</h3>
+          <ul>
+            <li><a href="tel:+74953819547">+7 (495) 381-95-47</a></li>
+            <li><a href="mailto:sek@corp-lis.ru">sek@corp-lis.ru</a></li>
+            <li><a href="https://yandex.ru/maps/213/moscow/house/1_y_dorozhny_proyezd_9/Z04YcAVlTUwBQFtvfXpwdX5hYg==/?ll=37.625495%2C55.614226&z=16">г. Москва, 1-ый Дорожный проезд, д. 9</a></li>
+            <li>с 7:00 до 19:00 (без выходных)</li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Разделы сайта</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about/">О компании</a></li>
+            <li><a href="/services/">Услуги</a></li>
+            <li><a href="/news/">Новости</a></li>
+            <li><a href="/partners/">Клиентам/Партнерам</a></li>
+            <li><a href="/contacts/">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 АО «Корпорация ЛИС». Все права защищены.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
