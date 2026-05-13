@@ -37,11 +37,9 @@ class PageListView(ListView):
     model = Page
     template_name = 'pages/list.html'
     context_object_name = 'pages'
-    paginate_by = 20  # Ограничивает выборку, снижает нагрузку на БД и память
+    paginate_by = 20 
     
     def get_queryset(self):
-        # ❌ Убрано пустое .select_related() — оно не работает без аргументов
-        # ✅ Если в Page есть ForeignKey/OneToOne, добавьте: .select_related('author', 'category')
         return Page.objects.filter(is_active=True).order_by('title')
 
 @method_decorator(cache_page(60 * 60), name='dispatch')
@@ -56,14 +54,11 @@ class PageDetailView(DetailView):
     slug_url_kwarg = 'slug'
     
     def get_queryset(self):
-        # Фильтр is_active вынесен сюда, чтобы get_object наследовал его автоматически
         return Page.objects.filter(is_active=True)
     
     def get_object(self, queryset=None):
-        # Django сам вызывает get_object с queryset из get_queryset()
         obj = super().get_object(queryset)
         
-        # Дополнительная защита: если somehow is_active=False просочился
         if not obj.is_active:
             raise Http404("Страница не найдена")
         return obj

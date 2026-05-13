@@ -21,19 +21,37 @@ import logging
 
 logger = logging.getLogger('api_errors')
 
-
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from django.urls import reverse
+@method_decorator(cache_page(1800), name='dispatch')
+class APIRootView(APIView):
+    """
+    Корневой эндпоинт API.
+    Предоставляет список всех доступных ресурсов.
+    """
+    permission_classes = [AllowAny]
+    
+    def get(self, request):
+        return Response({
+            'news': request.build_absolute_uri('news/'),          
+            'services': request.build_absolute_uri('services/'),  
+            'contact': request.build_absolute_uri('contact/'),
+            'page': request.build_absolute_uri('page/'),
+            'documentation': 'API для интеграции с внешними системами. Чтобы попасть на детальную новость/услугу вставьте slug имя в конец ссылки'
+        }, status=status.HTTP_200_OK)
 @method_decorator(cache_page(1800), name='dispatch')
 class ServiceListView(generics.ListAPIView):
     """
     GET /api/services/
-    Оптимизация: select_related + prefetch_related + кэш ответа
     """
     serializer_class = ServiceSerializer
     permission_classes = [AllowAny]
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
     
     def get_queryset(self):
-        return Service.objects.filter(is_active=True).select_related('category').prefetch_related('tags').order_by('name')
+        return Service.objects.filter(is_active=True).order_by('name')
     
     def get(self, request, *args, **kwargs):
         try:
@@ -53,12 +71,11 @@ class ServiceDetailView(generics.RetrieveAPIView):
     """
     serializer_class = ServiceSerializer
     permission_classes = [AllowAny]
-    lookup_field = 'id'
+    lookup_field = 'slug'
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
     
     def get_queryset(self):
-        return Service.objects.filter(is_active=True).select_related('category').prefetch_related('tags')
-
+        return Service.objects.filter(is_active=True) 
     def get_object(self):
         try:
             return super().get_object()
@@ -78,8 +95,9 @@ class NewsListView(generics.ListAPIView):
     permission_classes = [AllowAny]
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
     
+    
     def get_queryset(self):
-        return News.objects.filter(is_active=True).select_related('author', 'category').prefetch_related('tags').order_by('-created_at')
+        return News.objects.filter(is_active=True).order_by('-created_at')
     
     def get(self, request, *args, **kwargs):
         try:
@@ -99,11 +117,11 @@ class NewsDetailView(generics.RetrieveAPIView):
     """
     serializer_class = NewsSerializer
     permission_classes = [AllowAny]
-    lookup_field = 'id'
+    lookup_field = 'slug'
     throttle_classes = [AnonRateThrottle, UserRateThrottle]
     
     def get_queryset(self):
-        return News.objects.filter(is_active=True).select_related('author', 'category').prefetch_related('tags')
+        return News.objects.filter(is_active=True)  
 
     def get_object(self):
         try:
@@ -184,3 +202,26 @@ class PageDetailView(generics.RetrieveAPIView):
         except Exception as e:
             logger.error(f"API error in PageDetailView: {str(e)}")
             raise NotFound(_('Ошибка при получении страницы'))
+        
+@method_decorator(cache_page(1800), name='dispatch')
+class PageListView(generics.ListAPIView):
+    """
+    GET /api/page/
+    Список всех активных страниц.
+    """
+    serializer_class = PageSerializer
+    permission_classes = [AllowAny]
+    throttle_classes = [AnonRateThrottle]
+    
+    def get_queryset(self):
+        return Page.objects.filter(is_active=True).order_by('title')
+    
+    def get(self, request, *args, **kwargs):
+        try:
+            return super().get(request, *args, **kwargs)
+        except Exception as e:
+            logger.error(f"API error in PageListView: {str(e)}")
+            return Response(
+                {'error': 'Ошибка при получении списка страниц'}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
