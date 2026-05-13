@@ -80,7 +80,7 @@ def contact_view(request):
                 
             except Exception as e:
                 logger.error(f"Critical error saving message: {str(e)}")
-                messages.error(request, _('Произошла ошибка при сохранении.'))
+                
         else:
             # Форма не валидна (ошибки валидации)
             logger.warning(f"Validation failed for IP {request.META.get('REMOTE_ADDR')}")

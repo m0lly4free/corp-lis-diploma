@@ -9,7 +9,10 @@ class ServiceSerializer(serializers.ModelSerializer):
         fields = ["id", "title", "description", "image_url"]
 
     def get_image_url(self, obj):
-        if obj.image:
+        image_field = getattr(obj, 'image', None)
+        if image_field:
             request = self.context.get("request")
-            return request.build_absolute_uri(obj.image.url) if request else obj.image.url
+            if request:
+                return request.build_absolute_uri(image_field.url)
+            return image_field.url
         return None
