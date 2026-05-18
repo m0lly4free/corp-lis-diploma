@@ -62,7 +62,7 @@ Backend:
   - Python 3.11
   - Django 4.2+
   - Django REST Framework (API)
-  - PostgreSQL 15 (база данных)
+  - PostgreSQL 13 (база данных)
   - Redis (кэширование, очереди)
 
 Frontend:

@@ -35,7 +35,7 @@ fi
 
 # 2. Резервное копирование медиа-файлов
 echo "[$(date)] Копирование медиа-файлов..."
-cp -r /app/media "$TEMP_DIR/media_$DATE"
+cp -r /app/corp_lis/media "$TEMP_DIR/media_$DATE"
 
 if [ $? -eq 0 ]; then
     echo "[$(date)] Медиа-файлы успешно скопированы"
