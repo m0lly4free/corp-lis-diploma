@@ -26,8 +26,8 @@ services:
         python manage.py runserver 0.0.0.0:8000
       "
     volumes:
-      - .:/app  # Весь проект
-      - ./staticfiles:/app/staticfiles  # Прямая папка
+      - .:/app 
+      - ./staticfiles:/app/staticfiles
       - ./media:/app/media
       - ./backups:/app/backups
     ports:
@@ -48,8 +48,8 @@ services:
     volumes:
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/certs:/etc/nginx/certs
-      - ./staticfiles:/app/staticfiles  # ← ТА ЖЕ ПАПКА
-      - ./media:/app/media  # ← ТА ЖЕ ПАПКА!
+      - ./staticfiles:/app/staticfiles
+      - ./media:/app/media
     depends_on:
       - web
 
