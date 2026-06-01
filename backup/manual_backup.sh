@@ -1,12 +1,16 @@
 #!/bin/bash
 
+netstat -ano | findstr :8000
+taskkill /PID 6616 /F
+
 # Ручной запуск резервного копирования
 docker exec -e PGPASSWORD=corp_lis_pass corp_lis_web /app/backup/backup.sh
 
 
 ### БД ЧАСТЬ ###
-# Копироваие БД для *.sql (убедись, что контейнер БД запущен "docker-compose up -d db")
+# Копироваие БД для *.sql (убедись, что контейнер БД запущен "docker-compose up -d db") ```SQL ДАМП```
 docker exec corp_lis_db pg_dump -U corp_lis_user -d corp_lis -F p > corp_lis_backup.sql 
+
 # 1. Запусти только контейнер базы данных
 docker-compose up -d db
 # 2. Восстанови базу из SQL-файла
